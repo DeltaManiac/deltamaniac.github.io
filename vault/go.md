@@ -7,3 +7,10 @@ created: 1602916219989
 stub: false
 ---
 # Go
+
+## Kafka
+
+[[Producer | kafka.producer]]
+
+
+[[Consumer | kafka.consumer]]
