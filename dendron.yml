@@ -1,5 +1,4 @@
 site:
-    copyAssets: true
     siteHierarchies:
         - root
     siteRootDir: docs
