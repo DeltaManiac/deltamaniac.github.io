@@ -8,7 +8,7 @@ stub: false
 nav_order: 0
 ---
 
-![DeltaManiac](https://github.com/DeltaManiac/DeltaManiac/blob/main/assets/banner.svg)
+![DeltaManiac](https://raw.githubusercontent.com/DeltaManiac/DeltaManiac/main/vault/assets/banner.svg)
 
 - 🔭 I’m currently working on [headcrab](https://github.com/headcrab-rs/headcrab) at night and the weekends
 - 🌱 I’m currently learning [Rust](https://www.rust-lang.org) at night and [Go](https://golang.org/) at work

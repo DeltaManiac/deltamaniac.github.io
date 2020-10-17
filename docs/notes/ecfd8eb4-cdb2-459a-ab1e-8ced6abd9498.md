@@ -19,7 +19,7 @@ The surmised version of how to write a Reddit Bot in [rust](18962325-b097-4283-9
 
 Recently while browsing [reddit](https://old.reddit.com) I came up on a [post](https://www.reddit.com/r/rust/comments/i1satq/webference_rusty_days_2020_all_recorded_talks/g01rwq8/?context=3) in the [/r/rust](https://old.reddit.com) subreddit which was a link to a YouTube playlist for the Rusty-Days conference, however there was no way I could find the contents of the playlist without going to YouTube on my phone. This was a nuance so I went to YouTube and curated the list.
 
-![](/assets/images/2020-10-11-18-16-48.png)
+![](DeltaManiac/assets/images/2020-10-11-18-16-48.png)
 
 This was going to be tiresome if I'd have to do it every time I see a post that links to a YouTube playlist. So here we are writing a bot do this task for everyone. This bot will run on a server somewhere (hopefully forever) and curate playlist info for all the people who avail its service.
 
@@ -41,11 +41,11 @@ More info about about the apps can be found [here](https://github.com/reddit-arc
 
 We choose the `script` type, enter a name and description for our bot, and use the dummy url `http://www.example.com/unused/redirect/uri` for the redirect url.
 
-![](/assets/images/2020-10-11-18-17-29.png)
+![](DeltaManiac/assets/images/2020-10-11-18-17-29.png)
 
 We have now created the credentials with Client Id : `TjC0s2uTaTHYCg` and Client Secret : `mrkAaWitnXLf_DiRagIRS_33cD8`.
 
-![](/assets/images/2020-10-11-18-18-29.png)
+![](DeltaManiac/assets/images/2020-10-11-18-18-29.png)
 
 # Using and Storing the credentials
 
@@ -184,13 +184,13 @@ We can follow these steps to setup reddit for testing/developing this bot
 
 3. Create a new [subreddit](https://old.reddit.com/ur/VyomBot) `/r/VyomBot` as a test play ground.
 
-![](/assets/images/2020-10-11-18-20-37.png)
+![](DeltaManiac/assets/images/2020-10-11-18-20-37.png)
 
 4. Create a new [post](https://www.reddit.com/r/VyomBot/comments/i6fk15/test_playlist/?) with the link to the playlist.
 
 5. Mention `/u/VyomBot` in the comments.
 
-![](/assets/images/2020-10-11-18-21-13.png)
+![](DeltaManiac/assets/images/2020-10-11-18-21-13.png)
 
 # Talking to Reddit
 
@@ -359,13 +359,13 @@ Damn!
 IT REPLIED AGAIN!!!😞
 And this is what the subreddit looks like now.
 
-![](/assets/images/2020-10-11-18-22-14.png)
+![](DeltaManiac/assets/images/2020-10-11-18-22-14.png)
 
 Time to find that pesky bug and get rid of it for good.
 
 Lets go to reddit and see what the inbox looks like.
 
-![](/assets/images/2020-10-11-18-22-29.png)
+![](DeltaManiac/assets/images/2020-10-11-18-22-29.png)
 
 Well, its just as we suspected, when we reply to a mention with the `comment` function it does not change the status of the message. Sifting through the [documentation](https://docs.rs/roux/1.0.0/roux/?search=read) of `roux` we can find a method that marks a message as `read`.
 
@@ -548,7 +548,7 @@ Cool, but does it actually mark the message as read? Lets run the program again 
 
 Since there doesn't seem to to be any logs being printed we can confirm that we are not replying again to the message. But it programming and you never know if you're right until you completely verify from reddit side too. Let go take a look at the subreddit.
 
-![](/assets/images/2020-10-11-18-24-11.png)
+![](DeltaManiac/assets/images/2020-10-11-18-24-11.png)
 
 Yep, it has only one comment.
 
@@ -733,22 +733,22 @@ We need to generate a different set of credentials to talk with YouTube. Lets go
 1. Logon to [Google Developer Console](https://console.developer.google.com)
 
 2. Click `Enable Apis and Service`
-   ![](/assets/images/2020-10-11-18-26-54.png)
+   ![](DeltaManiac/assets/images/2020-10-11-18-26-54.png)
 
 3. Search for `YouTube Data API v3`
-   ![](/assets/images/2020-10-11-18-27-09.png)
+   ![](DeltaManiac/assets/images/2020-10-11-18-27-09.png)
 
 4. Click the `Enable` button to enable the API for our account
-   ![](/assets/images/2020-10-11-18-27-17.png)
+   ![](DeltaManiac/assets/images/2020-10-11-18-27-17.png)
 
 5. Click the `Create Credentials` button to start creating credentials for us to use.
-   ![](/assets/images/2020-10-11-18-27-29.png)
+   ![](DeltaManiac/assets/images/2020-10-11-18-27-29.png)
 
 6. We need to first describe what kind of credentials have to be generated. Don't worry, just follow the screenshot.
-   ![](/assets/images/2020-10-11-18-27-39.png)
+   ![](DeltaManiac/assets/images/2020-10-11-18-27-39.png)
 
 7. We're Done!
-   ![](/assets/images/2020-10-11-18-27-51.png)
+   ![](DeltaManiac/assets/images/2020-10-11-18-27-51.png)
 
 # Handling JSON better
 
@@ -1079,7 +1079,7 @@ Lets try it out!
 ```
 
 And on Reddit it looks just as beautiful!
-![](/assets/images/2020-10-11-18-30-04.png)
+![](DeltaManiac/assets/images/2020-10-11-18-30-04.png)
 
 # Fin
 
