@@ -32,7 +32,7 @@ Store schema identifier in produced message
 Crate : [kafka](https://crates.io/crates/kafka)
 
 ```rust
-/// Producer Code
+// Producer Code
 use std::fmt::Write;
 use std::time::Duration;
 use kafka::producer::{Producer, Record, RequiredAcks};
