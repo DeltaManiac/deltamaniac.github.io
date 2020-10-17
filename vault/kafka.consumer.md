@@ -28,11 +28,11 @@ stub: false
 
 # Creating a Consumer
 
-## In [[rust]]
+## In [[Rust | rust]]
 
 Crate : [kafka](https://crates.io/crates/kafka)
 
-```Rust
+```rust
 use kafka::consumer::{Consumer, FetchOffset, GroupOffsetStorage};
 let mut consumer =
    Consumer::from_hosts(vec!("localhost:9092".to_owned()))
@@ -55,7 +55,7 @@ loop {
 
 Crate : [rdkafka](https://crates.io/crates/rdkafka)
 
-```Rust
+```rust
 async fn consume(brokers: &str, group_id: &str, topics: &[&str]) {
     let context = CustomContext;
 
@@ -144,25 +144,25 @@ func main() {
 ## Package : [SegmentIO](https://github.com/segmentio/kafka-go)
 
 ```golang
-func consumer(){}
-r := kafka.NewReader(kafka.ReaderConfig{
-    Brokers:   []string{"localhost:9092"},
-    Topic:     "topic-A",
-    Partition: 0,
-    MinBytes:  10e3, // 10KB
-    MaxBytes:  10e6, // 10MB
-})
-r.SetOffset(42)
+func consumer(){
+  r := kafka.NewReader(kafka.ReaderConfig{
+      Brokers:   []string{"localhost:9092"},
+      Topic:     "topic-A",
+      Partition: 0,
+      MinBytes:  10e3, // 10KB
+      MaxBytes:  10e6, // 10MB
+  })
+  r.SetOffset(42)
 
-for {
-    m, err := r.ReadMessage(context.Background())
-    if err != nil {
-        break
-    }
-    fmt.Printf("message at offset %d: %s = %s\n", m.Offset, string(m.Key), string(m.Value))
-}
+  for {
+      m, err := r.ReadMessage(context.Background())
+      if err != nil {
+          break
+      }
+      fmt.Printf("message at offset %d: %s = %s\n", m.Offset, string(m.Key), string(m.Value))
+  }
 
-r.Close()
+  r.Close()
 }
 ```
 

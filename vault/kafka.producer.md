@@ -53,7 +53,7 @@ buf.clear();
 
 Crate : [rdkafka](https://crates.io/crates/rdkafka)
 
-```Rust
+```rust
  sync fn produce(brokers: &str, topic_name: &str) {
     let producer: &FutureProducer = &ClientConfig::new()
         .set("bootstrap.servers", brokers)
