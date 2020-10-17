@@ -3,4 +3,3 @@ site:
         - root
     siteRootDir: docs
     usePrettyRefs: true
-    assetsPrefix: "DeltaManiac"

@@ -21,7 +21,7 @@ author:
 defaults:
   -
     scope:
-      path: "notes" # an empty string here means all files in the project
+      path: "" # an empty string here means all files in the project
     values:
       layout: "default"
       image: "/assets/images/logo.png"
