@@ -7,8 +7,6 @@ created: 1602919762613
 stub: false
 ---
 
----
-
 # Producer
 
 Kafka has a binary wire protocol.This means that it is possible for applications to read messages from Kafka or write messages to Kafka simply by sending the correct byte sequences to Kafka’s network port.
