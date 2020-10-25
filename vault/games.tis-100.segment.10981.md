@@ -43,3 +43,6 @@ MOV ACC,DOWN
 
 @9
 ```
+
+# Solution
+![](/assets/images/2020-10-25-21-46-17.png)

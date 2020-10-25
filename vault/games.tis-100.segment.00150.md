@@ -36,3 +36,7 @@ MOV UP,RIGHT
 @7
 MOV LEFT,DOWN
 ```
+
+# Solution
+
+![](/assets/images/2020-10-25-21-45-52.png)
