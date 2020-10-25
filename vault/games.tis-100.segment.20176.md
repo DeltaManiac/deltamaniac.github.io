@@ -1,0 +1,54 @@
+---
+id: c2e71c4f-5214-4c80-a678-4e2f1cde11ad
+title: '20176'
+desc: ''
+updated: 1603641982728
+created: 1603641982728
+stub: false
+---
+
+# Differential Converter
+
+# Solution
+```
+@0
+
+
+@1
+MOV UP,ACC
+MOV ACC,RIGHT
+SUB RIGHT
+MOV ACC,DOWN
+
+@2
+MOV UP,ACC
+SAV
+SUB LEFT
+MOV ACC,DOWN
+SWP
+MOV ACC,LEFT
+
+@3
+
+
+@4
+
+
+@5
+MOV UP,DOWN
+
+@6
+MOV UP,DOWN
+
+@7
+
+
+@8
+MOV UP,DOWN
+
+@9
+MOV UP,DOWN
+
+@10
+
+```
