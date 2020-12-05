@@ -1,0 +1,79 @@
+---
+id: c6de8a46-6510-46dd-a8fd-9eac3b993fb3
+title: '30647'
+desc: ''
+updated: 1604591974172
+created: 1604591909867
+---
+
+# Sequence Generator
+
+# Solution
+
+```
+@0
+
+
+@1
+MOV UP, ACC
+MOV ACC,RIGHT
+MOV ACC,DOWN
+
+@2
+MOV UP,ACC
+SAV
+SUB LEFT
+MOV ACC,DOWN
+SWP
+MOV ACC DOWN
+
+@3
+
+
+@4
+
+
+@5
+MOV UP,RIGHT
+
+@6
+START:
+MOV UP,ACC
+JLZ ACCEPT_TOP
+
+ACCEPT_LEFT:
+MOV LEFT,DOWN
+MOV UP,DOWN
+JMP START
+
+ACCEPT_TOP:
+MOV UP,DOWN
+MOV LEFT,DOWN
+JMP START
+
+@7
+
+
+@8
+
+
+@9
+MOV -2,ACC
+START:
+JEZ RESET
+MOV UP,DOWN
+ADD 1
+JMP START
+
+RESET:
+MOV 0,DOWN
+MOV -2,ACC
+JMP START
+
+@10
+
+```
+
+# Solution
+
+![](/assets/images/2020-11-05-21-29-23.png)

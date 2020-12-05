@@ -2,7 +2,7 @@
 id: c2e71c4f-5214-4c80-a678-4e2f1cde11ad
 title: '20176'
 desc: ''
-updated: 1603641982728
+updated: 1604591808021
 created: 1603641982728
 stub: false
 ---
@@ -10,6 +10,7 @@ stub: false
 # Differential Converter
 
 # Solution
+
 ```
 @0
 
