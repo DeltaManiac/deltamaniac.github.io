@@ -3,3 +3,7 @@ site:
         - root
     siteRootDir: docs
     usePrettyRefs: true
+vaults:
+    -
+        fsPath: vault
+version: 0

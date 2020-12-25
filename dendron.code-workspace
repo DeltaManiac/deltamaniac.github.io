@@ -8,7 +8,7 @@
         "dendron.rootDir": ".",
         "editor.minimap.enabled": false,
         "files.autoSave": "onFocusChange",
-        "workbench.colorTheme": "Default Dark+",
+        "workbench.colorTheme": "Gruvbox Dark Hard",
         "pasteImage.path": "${currentFileDir}/assets/images",
         "pasteImage.prefix": "/",
         "markdown-preview-enhanced.enableWikiLinkSyntax": true,
@@ -27,7 +27,6 @@
             "dendron.dendron-markdown-shortcuts",
             "dendron.dendron-markdown-preview-enhanced",
             "dendron.dendron-markdown-links",
-            "dendron.dendron-markdown-notes",
             "github.github-vscode-theme"
         ],
         "unwantedRecommendations": [
