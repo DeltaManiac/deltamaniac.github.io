@@ -3,7 +3,7 @@ nav_order: 0
 id: root
 title: Root
 desc: ''
-updated: 1602915435296
+updated: 1608875535164
 created: 1602915435296
 data: {}
 fname: root
@@ -20,7 +20,7 @@ permalink: /
 ---
 ![DeltaManiac](https://raw.githubusercontent.com/DeltaManiac/DeltaManiac/main/vault/assets/banner.svg)
 
-- 🔭 I’m currently working on [headcrab](https://github.com/headcrab-rs/headcrab) at night and the weekends
+- 🔭 I’m currently playing Destiny 2
 - 🌱 I’m currently learning [Rust](https://www.rust-lang.org) at night and [Go](https://golang.org/) at work
 - 📫 How to reach me: [twitter](https://twitter.com/Delta_Maniac)
 - 😄 Pronouns: He/Him
