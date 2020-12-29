@@ -5,6 +5,8 @@ site:
         - root
     siteRootDir: docs
     usePrettyRefs: false
+    assetsPrefix: bond
+    copyAssets: true
     # seo stuff
     title: Cerebellum
     # description: "Dendron is a local-first, markdown based, hierarchical note taking tool. It is meant to help you create, organize, and collaborate on knowledge bases of any size."
