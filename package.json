@@ -1,0 +1,26 @@
+{
+  "name": "cerebellum",
+  "version": "1.0.0",
+  "description": "![DeltaManiac](/assets/banner.svg)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dendron-cli" : "dendron-cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeltaManiac/DeltaManiac.git"
+  },
+  "author": "DeltaManiac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeltaManiac/DeltaManiac/issues"
+  },
+  "homepage": "https://github.com/DeltaManiac/DeltaManiac#readme",
+  "dependencies": {
+    "@dendronhq/dendron-11ty": "^1.22.0",
+    "@dendronhq/dendron-cli": "^0.22.0"
+  }
+}

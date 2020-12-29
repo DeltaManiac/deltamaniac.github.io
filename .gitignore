@@ -2,3 +2,4 @@
 build
 stdout
 stdout.old
+node_modules
