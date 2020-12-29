@@ -2,7 +2,7 @@
 id: 42bff885-549f-422e-8ef8-d17ecd01ca52
 title: Todo
 desc: ''
-updated: 1608875351468
+updated: 1609224274788
 created: 1602915697835
 stub: false
 ---
@@ -27,5 +27,5 @@ stub: false
 - [ ] k8s + Nats.io
 - [ ] Little Man Computer
   - [ ] WASM Support
-- [] Advent of Code 2020
+- [x] Advent of Code 2020
 
