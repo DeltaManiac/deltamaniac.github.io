@@ -5,7 +5,6 @@ site:
         - root
     siteRootDir: docs
     usePrettyRefs: false
-    assetsPrefix: bond
     copyAssets: true
     # seo stuff
     title: Cerebellum
