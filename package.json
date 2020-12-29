@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "dendron-cli" : "dendron-cli"
+    "dendron-cli": "dendron-cli"
   },
   "repository": {
     "type": "git",
