@@ -2,7 +2,7 @@
 id: f6d391d5-db6b-46bb-a432-4a6592355b34
 title: Day 4
 desc: ''
-updated: 1609210189981
+updated: 1609223131083
 created: 1609156334056
 ---
 
@@ -43,6 +43,10 @@ pub fn solve_part1(input: &str) -> u32 {
 
 
 Now find one that starts with six zeroes.
+
+## Solution
+
+A small change from `.starts_with("00000")` to `.starts_with("000000")` provides the answer.
 
 ```rust
 #[aoc(day4, part2)]
