@@ -7,7 +7,8 @@ site:
     usePrettyRefs: false
     copyAssets: true
     # seo stuff
-    title: Cerebellum
+    title: BrainMatter
+    gh_edit_repository: "https://github.com/DeltaManiac/deltamaniac.github.io" # the github URL for your repo
     # description: "Dendron is a local-first, markdown based, hierarchical note taking tool. It is meant to help you create, organize, and collaborate on knowledge bases of any size."
     author: "DeltaManiac"
     twitter: "delta_maniac"
