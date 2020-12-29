@@ -3,3 +3,5 @@ build
 stdout
 stdout.old
 node_modules
+.dendron.port
+.dendron.ws
