@@ -5,3 +5,4 @@ stdout.old
 node_modules
 .dendron.port
 .dendron.ws
+.dendron.port
