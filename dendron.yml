@@ -1,6 +1,6 @@
 version: 1
 site:
-    siteUrl: "deltamaniac.github.io"
+    siteUrl: "https://deltamaniac.github.io"
     siteHierarchies:
         - root
     siteRootDir: docs
