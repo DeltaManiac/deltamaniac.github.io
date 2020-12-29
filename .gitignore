@@ -1,0 +1,4 @@
+.dendron.*
+build
+stdout
+stdout.old
