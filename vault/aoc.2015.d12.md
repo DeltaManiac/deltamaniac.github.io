@@ -2,7 +2,7 @@
 id: 17b52896-7604-4e3d-b0b5-f8d18f3258d5
 title: Day 12
 desc: ''
-updated: 1610873123624
+updated: 1610873551648
 created: 1610872529055
 ---
 
@@ -91,6 +91,13 @@ fn sum(v: Value, use_red: bool) -> i64 {
         }
     }
 }
+
+#[aoc(day11, part1, Serde)]
+pub fn part1_serde(input: &str) -> i64 {
+    let a = serde_json::from_str(&input).unwrap();
+    sum(a, true)
+}
+
 ```
 
 ## Part II
@@ -130,7 +137,10 @@ fn sum(v: Value, use_red: bool) -> i64 {
         }
     }
 }
-```
 
-```rust
+#[aoc(day11, part2, Serde)]
+pub fn part2_serde(input: &str) -> i64 {
+    let a = serde_json::from_str(&input).unwrap();
+    sum(a, false)
+}
 ```
