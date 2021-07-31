@@ -9,6 +9,9 @@ site:
     gh_edit_repository: 'https://github.com/DeltaManiac/deltamaniac.github.io'
     author: DeltaManiac
     twitter: delta_maniac
+    config: 
+      root:
+        publishByDefault: true
 vaults:
     -
         fsPath: vault
