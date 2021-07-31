@@ -1,16 +1,16 @@
 version: 1
 site:
     siteUrl: 'https://deltamaniac.github.io/'
-    publish: 
-      siteHierarchies: [root]
+    siteHierarchies: i
+      - root
     siteRootDir: docs
-    usePrettyRefs: false
+    usePrettyRefs: true
     copyAssets: true
     title: BrainMatter
     gh_edit_repository: 'https://github.com/DeltaManiac/deltamaniac.github.io'
     author: DeltaManiac
     twitter: delta_maniac
-    config: 
+    config:
       root:
         publishByDefault: true
 vaults:
