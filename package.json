@@ -21,6 +21,6 @@
   "homepage": "https://github.com/DeltaManiac/DeltaManiac#readme",
   "dependencies": {
     "@dendronhq/dendron-11ty": "^1.50.0",
-    "@dendronhq/dendron-cli": "^0.24.1"
+    "@dendronhq/dendron-cli": "*"
   }
 }
