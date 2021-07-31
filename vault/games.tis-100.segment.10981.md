@@ -7,6 +7,7 @@ created: 1603640628573
 stub: false
 ---
 
+
 # Signal Amplifier
 
 # Solution

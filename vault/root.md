@@ -8,6 +8,7 @@ stub: false
 nav_order: 0
 ---
 
+
 ![DeltaManiac](https://raw.githubusercontent.com/DeltaManiac/DeltaManiac/main/vault/assets/banner.svg)
 
 - 🔭 I’m currently playing Destiny 2

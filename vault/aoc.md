@@ -1,7 +1,7 @@
 ---
 id: 941adaa5-d22f-4bf9-831a-35bb5ac4100c
 title: Advent of Code
-desc: 'Following along Advent of Code'
+desc: Following along Advent of Code
 updated: 1609003140194
 created: 1609002966632
 stub: false

@@ -8,6 +8,7 @@ stub: false
 ---
 
 
+
 # Consumer
 
 - Subscribes to topics and receives message

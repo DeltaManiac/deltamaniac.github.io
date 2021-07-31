@@ -8,6 +8,7 @@ stub: false
 ---
 
 
+
 # Apache Kafka
 
 - pub-sub messaging system
