@@ -4,6 +4,7 @@ title: Day 1
 desc: ''
 updated: 1609049130527
 created: 1609002966621
+nav_order: 1
 ---
 
 # Not Quite Lisp

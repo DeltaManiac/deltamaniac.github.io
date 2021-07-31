@@ -4,6 +4,7 @@ title: Day 9
 desc: ''
 updated: 1609239564760
 created: 1609239266974
+nav_order: 9
 ---
 
 # All in a Single Night

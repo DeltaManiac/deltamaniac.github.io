@@ -4,6 +4,7 @@ title: Day 2
 desc: ''
 updated: 1609050828312
 created: 1609048951788
+nav_order: 2
 ---
 
 #  I Was Told There Would Be No Math

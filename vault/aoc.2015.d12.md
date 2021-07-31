@@ -4,6 +4,7 @@ title: Day 12
 desc: ''
 updated: 1610873551648
 created: 1610872529055
+nav_order: 12
 ---
 
 # Day 12: JSAbacusFramework.io

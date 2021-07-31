@@ -4,6 +4,7 @@ title: Day 8
 desc: ''
 updated: 1609238687229
 created: 1609237008750
+nav_order: 8
 ---
 
 # Matchsticks

@@ -4,6 +4,7 @@ title: Day 6
 desc: ''
 updated: 1609236479964
 created: 1609235321198
+nav_order: 6
 ---
 
 # Probably a Fire Hazard

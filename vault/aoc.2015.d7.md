@@ -4,6 +4,7 @@ title: Day 7
 desc: ''
 updated: 1609238679234
 created: 1609236534979
+nav_order: 7
 ---
 
 # Some Assembly Required

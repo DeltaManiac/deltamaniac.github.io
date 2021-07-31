@@ -4,6 +4,7 @@ title: Day 3
 desc: ''
 updated: 1609121387371
 created: 1609120611313
+nav_order: 3
 ---
 
 # Perfectly Spherical Houses in a Vacuum

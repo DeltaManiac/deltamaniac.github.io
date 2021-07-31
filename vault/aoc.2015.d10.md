@@ -4,6 +4,7 @@ title: Day 10
 desc: ''
 updated: 1609240088330
 created: 1609239663124
+nav_order: 10
 ---
 
 # Elves Look, Elves Say
