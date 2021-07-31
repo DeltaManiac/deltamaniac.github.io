@@ -1,7 +1,7 @@
 version: 1
 site:
     siteUrl: 'https://deltamaniac.github.io/'
-    siteHierarchies: i
+    siteHierarchies:
       - root
     siteRootDir: docs
     usePrettyRefs: true
