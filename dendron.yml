@@ -29,4 +29,4 @@ journal:
 # dev:
 #     enableWebUI: true
 #     enablePreviewV2: true
-dendronVersion: 0.50.0
+dendronVersion: 0.52.0
