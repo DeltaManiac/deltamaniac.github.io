@@ -23,7 +23,7 @@ journal:
     dateFormat: y.MM.dd
     addBehavior: childOfDomain
     firstDayOfWeek: 1
-dev:
-    enableWebUI: true
-    enablePreviewV2: true
+# dev:
+#     enableWebUI: true
+#     enablePreviewV2: true
 dendronVersion: 0.50.0
