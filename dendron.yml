@@ -1,7 +1,8 @@
 version: 1
 site:
     siteUrl: 'https://deltamaniac.github.io/'
-    siteHierarchies: [root]
+    publish: 
+      siteHierarchies: [root]
     siteRootDir: docs
     usePrettyRefs: false
     copyAssets: true
