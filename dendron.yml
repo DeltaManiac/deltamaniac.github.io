@@ -8,8 +8,11 @@ site:
     copyAssets: true
     title: BrainMatter
     gh_edit_repository: 'https://github.com/DeltaManiac/deltamaniac.github.io'
+    gh_edit_branch: main
     author: DeltaManiac
+    siteLastModified: true
     twitter: delta_maniac
+    writeStubs: true
     config:
       root:
         publishByDefault: true
