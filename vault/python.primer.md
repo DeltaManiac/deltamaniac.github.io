@@ -4,6 +4,7 @@ title: Primer
 desc: ''
 updated: 1627752610103
 created: 1627745030734
+nav_order: 1
 ---
 
 Interpreted Language

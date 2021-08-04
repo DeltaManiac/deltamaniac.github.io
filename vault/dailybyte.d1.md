@@ -2,21 +2,20 @@
 id: 8G20ZdvZxsbNNsw2
 title: Day 1
 desc: ''
-updated: 1627951953652
+updated: 1628005848242
 created: 1627950805305
 nav_order: 1
 ---
 
 
-#Problem
+# Problem
 This question is asked by Google. Given a string, reverse all of its characters and return the resulting string.
 
 Ex: Given the following strings...
-```
-“Cat”, return “taC”
-“The Daily Byte”, return "etyB yliaD ehT”
-“civic”, return “civic”
-```
+
+> "Cat", return "taC"
+> "The Daily Byte", return "etyB yliaD ehT"
+> "civic", return "civic"
 
 ## [[python]]
 
