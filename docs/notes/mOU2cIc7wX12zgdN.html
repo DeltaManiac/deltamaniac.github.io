@@ -168,7 +168,7 @@
     <meta itemprop="headline" content="maxDepth">
     
     <meta itemprop="datePublished" content="2021-08-01T07:47:21+00:00">
-    <meta itemprop="dateModified" content="2021-08-01T08:55:56+00:00">
+    <meta itemprop="dateModified" content="2021-08-03T06:45:10+00:00">
 
     <div class="page__inner-wrap">
 
@@ -190,6 +190,17 @@
     <span class="token keyword">else</span><span class="token punctuation">:</span>
         <span class="token builtin">max</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span>
 </code></pre>
+<h3 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Go</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">import</span><span class="token punctuation">(</span>
+<span class="token string">"math"</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">func</span> <span class="token function">maxDepth</span><span class="token punctuation">(</span>root <span class="token operator">*</span>TreeNode<span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> root <span class="token operator">==</span> <span class="token boolean">nil</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">int</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span><span class="token function">Max</span><span class="token punctuation">(</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>Left<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>Right<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <h3 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Rust</h3>
 <pre class="language-rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span><span class="token class-name">Option</span><span class="token operator">&#x3C;</span><span class="token class-name">Rc</span><span class="token operator">&#x3C;</span><span class="token class-name">RefCell</span><span class="token operator">&#x3C;</span><span class="token class-name">TreeNode</span><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">-></span> <span class="token keyword">i32</span><span class="token punctuation">{</span>
  <span class="token keyword">match</span> root <span class="token punctuation">{</span>
@@ -200,17 +211,6 @@
             <span class="token punctuation">}</span>
             <span class="token class-name">None</span> <span class="token operator">=></span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h3 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Go</h3>
-<pre class="language-go"><code class="language-go"><span class="token keyword">import</span><span class="token punctuation">(</span>
-<span class="token string">"math"</span>
-<span class="token punctuation">)</span>
-<span class="token keyword">func</span> <span class="token function">maxDepth</span><span class="token punctuation">(</span>root <span class="token operator">*</span>TreeNode<span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> root <span class="token operator">==</span> <span class="token boolean">nil</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token number">0</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token function">int</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span><span class="token function">Max</span><span class="token punctuation">(</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>Left<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>Right<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span><span class="token number">1</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <hr>
@@ -244,7 +244,7 @@
             
               <div class="d-flex mt-2">
               <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">1/8/2021</span>.
+                Page last modified: <span class="d-inline-block">3/8/2021</span>.
               </p>
             
                 

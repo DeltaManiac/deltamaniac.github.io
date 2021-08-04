@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>Day 1 - BrainMatter</title>
+  <title>D2 - BrainMatter</title>
   
 
   <link
@@ -43,22 +43,22 @@
 <meta name="description" content="Personal knowledge space">
 <meta name="author" content="DeltaManiac">
 
-<link rel="canonical" href="https://deltamaniac.github.io//notes/8G20ZdvZxsbNNsw2.html">
+<link rel="canonical" href="https://deltamaniac.github.io//notes/8CvV1rkawfYZGgMX.html">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://deltamaniac.github.io//notes/8G20ZdvZxsbNNsw2.html">
+<meta property="og:url" content="https://deltamaniac.github.io//notes/8CvV1rkawfYZGgMX.html">
 <meta property="og:description" content="Personal knowledge space">
 <meta property="og:image" content="https://deltamaniac.github.io/undefined">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@delta_maniac">
-<meta name="twitter:url" content="https://deltamaniac.github.io//notes/8G20ZdvZxsbNNsw2.html">
+<meta name="twitter:url" content="https://deltamaniac.github.io//notes/8CvV1rkawfYZGgMX.html">
 <meta name="twitter:description" content="Personal knowledge space">
 <meta name="twitter:image" content="https://deltamaniac.github.io/undefined">
 
 
-  <meta property="og:title" content="Day 1 - BrainMatter" />
-  <meta name="twitter:title" content="Day 1 - BrainMatter" />
+  <meta property="og:title" content="D2 - BrainMatter" />
+  <meta name="twitter:title" content="D2 - BrainMatter" />
   
 </head>
 
@@ -132,7 +132,7 @@
       
         
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">Dailybyte</a></li><li class="breadcrumb-nav-list-item">Day 1</li></ol>
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">Dailybyte</a></li><li class="breadcrumb-nav-list-item">D2</li></ol>
           </nav>
         
       
@@ -165,10 +165,10 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Day 1">
+    <meta itemprop="headline" content="D2">
     
-    <meta itemprop="datePublished" content="2021-08-03T06:03:25+00:00">
-    <meta itemprop="dateModified" content="2021-08-03T21:20:48+00:00">
+    <meta itemprop="datePublished" content="2021-08-03T21:14:30+00:00">
+    <meta itemprop="dateModified" content="2021-08-04T06:59:56+00:00">
 
     <div class="page__inner-wrap">
 
@@ -179,44 +179,61 @@
         
 
         <h1 id="problem"><a aria-hidden="true" class="anchor-heading" href="#problem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Problem</h1>
-<p>This question is asked by Google. Given a string, reverse all of its characters and return the resulting string.</p>
+<p>This question is asked by Facebook. Given a string, return whether or not it forms a palindrome ignoring case and non-alphabetical characters.
+Note: a palindrome is a sequence of characters that reads the same forwards and backwards.</p>
 <p>Ex: Given the following strings...</p>
 <blockquote>
-<p>"Cat", return "taC"
-"The Daily Byte", return "etyB yliaD ehT"
-"civic", return "civic"</p>
+<p>"level", return true
+"algorithm", return false
+"A man, a plan, a canal: Panama.", return true</p>
 </blockquote>
 <h2 id="python"><a aria-hidden="true" class="anchor-heading" href="#python"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">python</a></h2>
-<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">reverse</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> word<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">is_palindrome</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span><span class="token builtin">bool</span><span class="token punctuation">:</span>
+    w1 <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>word<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> w1<span class="token operator">==</span>w1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
 </code></pre>
 <h2 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">go</a></h2>
-<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">reverse</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
-    <span class="token comment">// Handle UTF-16</span>
-    rns <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">rune</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
-    <span class="token keyword">for</span> i<span class="token punctuation">,</span> j <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>rns<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> j<span class="token punctuation">;</span> i<span class="token punctuation">,</span> j <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> j<span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">{</span>
-        rns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> rns<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> rns<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> rns<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span>word<span class="token punctuation">:</span>str<span class="token punctuation">)</span> <span class="token builtin">bool</span><span class="token punctuation">{</span>
+    s <span class="token operator">:=</span> strings<span class="token punctuation">.</span><span class="token function">ToLower</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span>
+    i<span class="token punctuation">,</span> j <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span>
+    <span class="token keyword">for</span> i <span class="token operator">&#x3C;</span> j <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token operator">!</span><span class="token function">isValid</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            i<span class="token operator">++</span>
+            <span class="token keyword">continue</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token operator">!</span><span class="token function">isValid</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            j<span class="token operator">--</span>
+            <span class="token keyword">continue</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token operator">!</span>strings<span class="token punctuation">.</span><span class="token function">EqualFold</span><span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">string</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+        i<span class="token operator">++</span>
+        j<span class="token operator">--</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token function">string</span><span class="token punctuation">(</span>rns<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">isValid</span><span class="token punctuation">(</span>a <span class="token builtin">byte</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">>=</span> <span class="token string">'a'</span> <span class="token operator">&#x26;&#x26;</span> a <span class="token operator">&#x3C;=</span> <span class="token string">'z'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">rust</a></h2>
-<pre class="language-rust"><code class="language-rust"><span class="token comment">// Handle UTF-16</span>
-<span class="token keyword">use</span> unicode_segementation<span class="token punctuation">:</span><span class="token class-name">UnicodeSegmentation</span><span class="token punctuation">;</span>
-<span class="token keyword">fn</span> <span class="token function-definition function">reverse</span><span class="token punctuation">(</span>word<span class="token punctuation">:</span><span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span><span class="token punctuation">-></span> <span class="token class-name">String</span><span class="token punctuation">{</span>
-    word
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">isPalindrome</span><span class="token punctuation">(</span>word<span class="token punctuation">:</span><span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span><span class="token punctuation">-></span> <span class="token keyword">bool</span><span class="token punctuation">{</span>
+    <span class="token keyword">extern</span> <span class="token keyword">crate</span> <span class="token module-declaration namespace">unicode_segmentation</span><span class="token punctuation">;</span>
+    <span class="token keyword">use</span> <span class="token namespace">unicode_segmentation<span class="token punctuation">::</span></span><span class="token class-name">UnicodeSegmentation</span><span class="token punctuation">;</span>
+    word <span class="token operator">==</span> word
         <span class="token punctuation">.</span><span class="token function">graphemes</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">rev</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">flat_map</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>g<span class="token closure-punctuation punctuation">|</span></span> g<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">::</span><span class="token operator">&#x3C;</span><span class="token class-name">String</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-</code></pre>
-<hr>
-<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
-<ul>
-<li><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></li>
-<li><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></li>
-</ul><span id="navId" data="8G20ZdvZxsbNNsw2"></span>
+
+</code></pre><span id="navId" data="8CvV1rkawfYZGgMX"></span>
 
                 
       </section>
@@ -242,12 +259,12 @@
             
               <div class="d-flex mt-2">
               <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">3/8/2021</span>.
+                Page last modified: <span class="d-inline-block">4/8/2021</span>.
               </p>
             
                 
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/dailybyte.d1.md" id="edit-this-page">Edit this page on GitHub</a>
+                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/dailybyte.d2.md" id="edit-this-page">Edit this page on GitHub</a>
                   </p>
                 
               </div>
