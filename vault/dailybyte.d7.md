@@ -2,7 +2,7 @@
 id: 9thpgc3KCBsS41RPFr2RG
 title: Day 7
 desc: ''
-updated: 1628404131395
+updated: 1628405946329
 created: 1628403175436
 nav_order: 7
 ---
@@ -18,14 +18,14 @@ Ex: Given the following strings...
 
 ## [[python]]
 ```python
-    def validPalindrome(self, s):
-        left, right = 0, len(s) - 1
-        while left < right:
-            if s[left] != s[right]:
-                one, two = s[left:right], s[left + 1:right + 1]
-                return one == one[::-1] or two == two[::-1]
-            left, right = left + 1, right - 1
-        return True
+def validPalindrome(s):
+    left, right = 0, len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            one, two = s[left:right], s[left + 1:right + 1]
+            return one == one[::-1] or two == two[::-1]
+        left, right = left + 1, right - 1
+    return True
 ```
 ## [[go]]
 
