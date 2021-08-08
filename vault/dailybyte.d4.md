@@ -2,7 +2,7 @@
 id: 03eyZc0twc2pjdAY6FnIl
 title: Day4
 desc: ''
-updated: 1628212240901
+updated: 1628397051441
 created: 1628212076920
 ---
 # Problem
@@ -17,9 +17,48 @@ Ex: Given the following strings...
 
 ## [[python]]
 ```python
-
+def check(word:str)->bool:
+    if word.isupper():
+        return True
+    if word.islower():
+        return True
+    if word[0].isupper() and word[1:].islower():
+        return True
+    return False
 ```
-## [[go]]
 
+## [[go]]
+```go
+func check(word string) bool {
+	if isUpper(word) {
+		return true
+	}
+	if isLower(word) {
+		return true
+	}
+	if isUpper(word[:1]) && isLower(word[1:]) {
+		return true
+	}
+	return false
+}
+
+func isUpper(word string) bool {
+	for _, c := range word {
+		if !unicode.IsUpper(c) {
+			return false
+		}
+	}
+	return true
+}
+
+func isLower(word string) bool {
+	for _, c := range word {
+		if !unicode.IsLower(c) {
+			return false
+		}
+	}
+	return true
+}
+```
 ## [[rust]]
 

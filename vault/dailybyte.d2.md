@@ -2,7 +2,7 @@
 id: 8CvV1rkawfYZGgMX
 title: Day 2
 desc: ''
-updated: 1628178362921
+updated: 1628394312627
 created: 1628005470068
 nav_order: 2
 ---
@@ -30,7 +30,7 @@ def is_palindrome(word)->bool:
  ## [[go]]
 
 ```go
-func isPalindrome(word:string) bool{
+func isPalindrome(word string) bool{
     s := strings.ToLower(word)
     i, j := 0, len(s)-1
     for i < j {
