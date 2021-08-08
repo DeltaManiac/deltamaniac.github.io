@@ -1,9 +1,10 @@
 ---
 id: eN5kq8a6uewxD6Lgvlj9V
-title: D5
+title: Day 5
 desc: ''
 updated: 1628397573181
 created: 1628394332314
+nav_order: 5
 ---
 # Problem
 This question is asked by Apple. Given two binary strings (strings containing only 1s and 0s) return their sum (also as a binary string).

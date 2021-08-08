@@ -1,9 +1,10 @@
 ---
 id: diI4VBMv8iMMUStWIFnUE
-title: D6
+title: Day 6
 desc: ''
-updated: 1628402595806
+updated: 1628402561791
 created: 1628398041141
+nav_order: 6
 ---
 # Problem
 
