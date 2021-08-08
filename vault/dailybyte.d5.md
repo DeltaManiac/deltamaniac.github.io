@@ -2,7 +2,7 @@
 id: eN5kq8a6uewxD6Lgvlj9V
 title: Day 5
 desc: ''
-updated: 1628397573181
+updated: 1628434961099
 created: 1628394332314
 nav_order: 5
 ---
@@ -13,8 +13,11 @@ Note: neither binary string will contain leading 0s unless the string itself is 
 Ex: Given the following binary strings...
 
 > "100" + "1", return "101"
+>
 > "11" + "1", return "100"
+>
 > "1" + "0", return  "1"
+
 
 ## [[python]]
 ```python

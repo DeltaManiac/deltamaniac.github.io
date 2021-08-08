@@ -2,7 +2,7 @@
 id: 8G20ZdvZxsbNNsw2
 title: Day 1
 desc: ''
-updated: 1628005848242
+updated: 1628434931101
 created: 1627950805305
 nav_order: 1
 ---
@@ -14,7 +14,9 @@ This question is asked by Google. Given a string, reverse all of its characters 
 Ex: Given the following strings...
 
 > "Cat", return "taC"
+>
 > "The Daily Byte", return "etyB yliaD ehT"
+>
 > "civic", return "civic"
 
 ## [[python]]

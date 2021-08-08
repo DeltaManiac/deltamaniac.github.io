@@ -2,7 +2,7 @@
 id: dFYESCBrjrDtYUYc6l2d4
 title: Day 10
 desc: ''
-updated: 1628434394905
+updated: 1628434922860
 created: 1628433921655
 nav_order: 10
 ---
@@ -16,7 +16,9 @@ Note: An anagram is a word formed by reordering the letters of another word.
 Ex: Given the following strings...
 
 > s = "cat", t = "tac", return true
+>
 > s = "listen", t = "silent", return true
+>
 > s = "program", t = "function", return false
 
 ## [[python]]

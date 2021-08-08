@@ -1,9 +1,9 @@
 ---
-id: 9thpgc3KCBsS41RPFr2RG
+id: OyydTG024M8K7pkeZzgAF
 title: Day 7
 desc: ''
-updated: 1628405946329
-created: 1628403175436
+updated: 1628435096754
+created: 1628435096755
 nav_order: 7
 ---
 # Problem
@@ -13,7 +13,9 @@ Note: a palindrome is a sequence of characters that reads the same forwards and 
 Ex: Given the following strings...
 
 > "abcba", return true
+>
 > "foobof", return true (remove the first 'o', the second 'o', or 'b')
+>
 > "abccab", return false
 
 ## [[python]]
@@ -30,3 +32,4 @@ def validPalindrome(s):
 ## [[go]]
 
 ## [[rust]]
+

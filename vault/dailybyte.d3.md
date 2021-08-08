@@ -2,7 +2,7 @@
 id: eoYphw1j9uLzHmsMBWZHv
 title: Day 3
 desc: ''
-updated: 1628128198614
+updated: 1628434941643
 created: 1628100232230
 nav_order: 3
 ---
@@ -14,7 +14,9 @@ This question is asked by Amazon. Given a string representing the sequence of mo
 Ex: Given the following strings...
 
 > "LR", return true
+>
 > "URURD", return false
+>
 > "RUULLDRD", return true
 
 ## [[python]]

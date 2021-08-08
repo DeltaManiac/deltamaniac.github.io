@@ -2,7 +2,7 @@
 id: 03eyZc0twc2pjdAY6FnIl
 title: Day 4
 desc: ''
-updated: 1628397051441
+updated: 1628434950340
 created: 1628212076920
 nav_order: 4
 ---
@@ -12,9 +12,13 @@ This question is asked by Google. Given a string, return whether or not it uses 
 Ex: Given the following strings...
 
 > "USA", return true
+>
 > "Calvin", return true
+>
 > "compUter", return false
+>
 > "coding", return true
+
 
 ## [[python]]
 ```python

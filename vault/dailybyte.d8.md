@@ -2,7 +2,7 @@
 id: UEoXlw6FLqsYyqXRSSw6C
 title: Day 8
 desc: ''
-updated: 1628431704896
+updated: 1628435019674
 created: 1628431446550
 nav_order: 8
 ---
@@ -14,7 +14,9 @@ Note: you may not sum a number with itself.
 Ex: Given the following...
 
 > [1, 3, 8, 2], k = 10, return true (8 + 2)
+>
 > [3, 9, 13, 7], k = 8, return false
+>
 > [4, 2, 6, 5, 2], k = 4, return true (2 + 2)
 
 ## [[python]]

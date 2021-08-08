@@ -2,7 +2,7 @@
 id: 8CvV1rkawfYZGgMX
 title: Day 2
 desc: ''
-updated: 1628394312627
+updated: 1628434935907
 created: 1628005470068
 nav_order: 2
 ---
@@ -16,7 +16,9 @@ Note: a palindrome is a sequence of characters that reads the same forwards and 
 Ex: Given the following strings...
 
 > "level", return true
+>
 > "algorithm", return false
+>
 > "A man, a plan, a canal: Panama.", return true
 
  ## [[python]]

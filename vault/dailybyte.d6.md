@@ -2,7 +2,7 @@
 id: diI4VBMv8iMMUStWIFnUE
 title: Day 6
 desc: ''
-updated: 1628402561791
+updated: 1628434973356
 created: 1628398041141
 nav_order: 6
 ---
@@ -14,7 +14,9 @@ Note: you may assume all strings only contain lowercase alphabetical characters.
 Ex: Given the following arrays...
 
 > ["colorado", "color", "cold"], return "col"
+>
 > ["a", "b", "c"], return ""
+>
 > ["spot", "spotty", "spotted"], return "spot"
 
 ## [[python]]
