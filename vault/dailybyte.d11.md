@@ -2,7 +2,7 @@
 id: MK4zqoIqZbpAulNuIoBLk
 title: Day 11
 desc: ''
-updated: 1628525059684
+updated: 1628702602884
 created: 1628522961878
 nav_order: 11
 ---
@@ -22,7 +22,7 @@ Ex: Given the following strings...
 
 ## [[python]]
 ```python
-def first_unique_char:
+def first_unique_char(s):
     for i,j in OrderedDict(Counter(s)).items():
         if j == 1:
             return s.index(i)
