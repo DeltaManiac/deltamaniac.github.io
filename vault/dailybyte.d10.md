@@ -2,7 +2,7 @@
 id: dFYESCBrjrDtYUYc6l2d4
 title: Day 10
 desc: ''
-updated: 1628434922860
+updated: 1628784247848
 created: 1628433921655
 nav_order: 10
 ---
@@ -21,7 +21,9 @@ Ex: Given the following strings...
 >
 > s = "program", t = "function", return false
 
+
 ## [[python]]
+
 ```python
 def is_anagram(s1,s2):
     return len(s1)==len(s2) and set(s1) == set(s2)

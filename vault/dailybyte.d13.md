@@ -18,6 +18,7 @@ Ex: Given the following arrays...
 > nums1 = [1, 2, 3, 3], nums2 = [3, 3], return [3]
 >
 > nums1 = [2, 4, 6, 8], nums2 = [1, 3, 5, 7], return []`
+
 ## [[python]]
 ```python
 def intersection(nums1,nums2):
