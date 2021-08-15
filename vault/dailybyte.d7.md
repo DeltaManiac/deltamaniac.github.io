@@ -1,13 +1,18 @@
 ---
 id: OyydTG024M8K7pkeZzgAF
-title: Day 7
-desc: ''
-updated: 1628435096754
+title: Is Palindrome Again ??
+desc: 'You can remove one character to make it a palindrome now'
+updated: 1629045601457
 created: 1628435096755
 nav_order: 7
 ---
+
 # Problem
-This question is asked by Facebook. Given a string and the ability to delete at most one character, return whether or not it can form a palindrome.
+
+This question is asked by Facebook.
+
+Given a string and the ability to delete at most one character, return whether or not it can form a palindrome.
+
 Note: a palindrome is a sequence of characters that reads the same forwards and backwards.
 
 Ex: Given the following strings...

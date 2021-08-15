@@ -1,12 +1,14 @@
 ---
 id: MK4zqoIqZbpAulNuIoBLk
-title: Day 11
+title: First Unique Character Index
 desc: ''
 updated: 1628702602884
 created: 1628522961878
 nav_order: 11
 ---
+
 # Problem
+
 This question is asked by Microsoft.
 
 Given a string, return the index of its first unique character.

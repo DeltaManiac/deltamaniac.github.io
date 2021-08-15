@@ -1,6 +1,6 @@
 ---
 id: dFYESCBrjrDtYUYc6l2d4
-title: Day 10
+title: Is Anagram ??
 desc: ''
 updated: 1628784247848
 created: 1628433921655
@@ -8,9 +8,11 @@ nav_order: 10
 ---
 
 # Problem
+
 This question is asked by Facebook.
 
 Given two strings s and t return whether or not s is an anagram of t.
+
 Note: An anagram is a word formed by reordering the letters of another word.
 
 Ex: Given the following strings...

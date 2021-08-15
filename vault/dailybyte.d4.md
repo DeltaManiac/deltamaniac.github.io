@@ -1,13 +1,17 @@
 ---
 id: 03eyZc0twc2pjdAY6FnIl
-title: Day 4
+title: Capitalized Properly ??
 desc: ''
 updated: 1628434950340
 created: 1628212076920
 nav_order: 4
 ---
+
 # Problem
-This question is asked by Google. Given a string, return whether or not it uses capitalization correctly. A string correctly uses capitalization if all letters are capitalized, no letters are capitalized, or only the first letter is capitalized.
+
+This question is asked by Google.
+
+Given a string, return whether or not it uses capitalization correctly. A string correctly uses capitalization if all letters are capitalized, no letters are capitalized, or only the first letter is capitalized.
 
 Ex: Given the following strings...
 

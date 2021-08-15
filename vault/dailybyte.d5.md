@@ -1,13 +1,18 @@
 ---
 id: eN5kq8a6uewxD6Lgvlj9V
-title: Day 5
+title: Binary Sum
 desc: ''
-updated: 1628434961099
+updated: 1629045496417
 created: 1628394332314
 nav_order: 5
 ---
+
 # Problem
-This question is asked by Apple. Given two binary strings (strings containing only 1s and 0s) return their sum (also as a binary string).
+
+This question is asked by Apple.
+
+Given two binary strings (strings containing only 1s and 0s) return their sum (also as a binary string).
+
 Note: neither binary string will contain leading 0s unless the string itself is 0
 
 Ex: Given the following binary strings...

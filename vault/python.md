@@ -4,7 +4,7 @@ title: Python
 desc: ''
 updated: 1627952090159
 created: 1627745030752
-stub: true
+stub: false
 ---
 
 # DailyByte

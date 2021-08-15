@@ -2,7 +2,7 @@
 id: 18962325-b097-4283-9f8e-23a89a24511b
 title: Rust
 desc: ''
-updated: 1627952022745
+updated: 1629045289278
 created: 1602919579698
 stub: false
 ---
@@ -22,7 +22,3 @@ stub: false
 
 ## LeetCode
 [[MaxDepth |  algos.trees.maxDepth#rust]]
-
-
-# DailyByte
-[[Reverse String |dailybyte.d1#rust]]

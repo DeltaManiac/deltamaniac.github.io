@@ -1,11 +1,12 @@
 ---
 id: Whvb7ZHAghpNfv3WiTZBj
-title: Day 14
+title: String Symmetric Difference
 desc: ''
 updated: 1628785158643
 created: 1628784258606
 nav_order: 14
 ---
+
 # Problem
 
 This question is asked by Amazon.

@@ -1,6 +1,6 @@
 ---
 id: my4RiJMT1PiDRIDt7nKCJ
-title: Day 15
+title: Merge Sorted Linked Lists
 desc: ''
 updated: 1629039673383
 created: 1629038995187

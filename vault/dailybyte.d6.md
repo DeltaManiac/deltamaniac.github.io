@@ -1,14 +1,18 @@
 ---
 id: diI4VBMv8iMMUStWIFnUE
-title: Day 6
+title: Longest Common Shared Prefix
 desc: ''
-updated: 1628434973356
+updated: 1629045544705
 created: 1628398041141
 nav_order: 6
 ---
+
 # Problem
 
-This question is asked by Microsoft. Given an array of strings, return the longest common prefix that is shared amongst all strings.
+This question is asked by Microsoft.
+
+Given an array of strings, return the longest common prefix that is shared amongst all strings.
+
 Note: you may assume all strings only contain lowercase alphabetical characters.
 
 Ex: Given the following arrays...

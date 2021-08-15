@@ -1,16 +1,18 @@
 ---
 id: 8CvV1rkawfYZGgMX
-title: Day 2
+title: Is Palindrome ??
 desc: ''
-updated: 1628434935907
+updated: 1629045670812
 created: 1628005470068
 nav_order: 2
 ---
 
+# Problem
 
- # Problem
+This question is asked by Facebook.
 
-This question is asked by Facebook. Given a string, return whether or not it forms a palindrome ignoring case and non-alphabetical characters.
+Given a string, return whether or not it forms a palindrome ignoring case and non-alphabetical characters.
+
 Note: a palindrome is a sequence of characters that reads the same forwards and backwards.
 
 Ex: Given the following strings...

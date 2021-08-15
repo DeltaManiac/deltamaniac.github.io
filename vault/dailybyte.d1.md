@@ -1,15 +1,17 @@
 ---
 id: 8G20ZdvZxsbNNsw2
-title: Day 1
+title: Reverse String
 desc: ''
-updated: 1628434931101
+updated: 1629045487923
 created: 1627950805305
 nav_order: 1
 ---
 
-
 # Problem
-This question is asked by Google. Given a string, reverse all of its characters and return the resulting string.
+
+This question is asked by Google.
+
+Given a string, reverse all of its characters and return the resulting string.
 
 Ex: Given the following strings...
 

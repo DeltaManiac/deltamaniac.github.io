@@ -1,14 +1,18 @@
 ---
 id: UEoXlw6FLqsYyqXRSSw6C
-title: Day 8
+title: Two Sum
 desc: ''
-updated: 1628435019674
+updated: 1629045654042
 created: 1628431446550
 nav_order: 8
 ---
+
 # Problem
+
 This question is asked by Google.
+
 Given an array of integers, return whether or not two numbers sum to a given target, k.
+
 Note: you may not sum a number with itself.
 
 Ex: Given the following...
