@@ -1,9 +1,10 @@
 ---
 id: 6ywEeMzNQG1KazrhY8KFk
-title: D16
+title: Remove nth to last node
 desc: ''
 updated: 1629157816193
 created: 1629157708624
+nav_order: 16
 ---
 
 # Problem

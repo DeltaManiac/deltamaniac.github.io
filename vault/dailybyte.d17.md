@@ -1,9 +1,10 @@
 ---
 id: K0VoYfbceBQ4Cl0p5VPy0
-title: D17
+title: Remove All Node Containing Value
 desc: ''
 updated: 1629159808525
 created: 1629159719745
+nav_order: 17
 ---
 
 # Problem

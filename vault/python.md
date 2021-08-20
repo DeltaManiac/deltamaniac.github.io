@@ -2,7 +2,7 @@
 id: TloiYhmlCN5QxTpf
 title: Python
 desc: ''
-updated: 1629046453291
+updated: 1629160527575
 created: 1627745030752
 stub: false
 ---
@@ -23,3 +23,5 @@ stub: false
 [[dailybyte.d13#python]]
 [[dailybyte.d14#python]]
 [[dailybyte.d15#python]]
+[[dailybyte.d16#python]]
+[[dailybyte.d17#python]]
