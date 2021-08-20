@@ -140,6 +140,9 @@
 
         
         
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -179,6 +182,7 @@
         
 
         <h1 id="producer"><a aria-hidden="true" class="anchor-heading" href="#producer"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Producer</h1>
+<h1 id="producer-1"><a aria-hidden="true" class="anchor-heading" href="#producer-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Producer</h1>
 <p>Kafka has a binary wire protocol.This means that it is possible for applications to read messages from Kafka or write messages to Kafka simply by sending the correct byte sequences to Kafka’s network port.</p>
 <p>Key Structure is <code>ProducerRecord</code></p>
 <p><img src="/assets/images/2020-10-11-20-37-00.png"></p>
@@ -190,7 +194,7 @@ Store in schema Registry
 Store schema identifier in produced message
 <img src="/assets/images/2020-10-11-20-37-15.png"></p>
 <h1 id="creating-a-producer"><a aria-hidden="true" class="anchor-heading" href="#creating-a-producer"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Creating a Producer</h1>
-<h2 id="in-rust"><a aria-hidden="true" class="anchor-heading" href="#in-rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>In <a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">rust</a></h2>
+<h2 id="in-rust"><a aria-hidden="true" class="anchor-heading" href="#in-rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>In <a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></h2>
 <p>Crate : <a href="https://crates.io/crates/kafka">kafka</a></p>
 <pre class="language-rust"><code class="language-rust"><span class="token comment">// Producer Code</span>
 <span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>fmt<span class="token punctuation">::</span></span><span class="token class-name">Write</span><span class="token punctuation">;</span>
@@ -250,7 +254,7 @@ buf<span class="token punctuation">.</span><span class="token function">clear</s
 <p>Schema Registry for confluent : <a href="https://github.com/gklijs/schema_registry_converter">https://github.com/gklijs/schema_registry_converter</a></p>
 <p>Confluent Write up : <a href="https://www.confluent.io/blog/getting-started-with-rust-and-kafka/">https://www.confluent.io/blog/getting-started-with-rust-and-kafka/</a></p>
 <hr>
-<h2 id="in-go"><a aria-hidden="true" class="anchor-heading" href="#in-go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>In <a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">go</a></h2>
+<h2 id="in-go"><a aria-hidden="true" class="anchor-heading" href="#in-go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>In <a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></h2>
 <p>Package : <a href="https://github.com/confluentinc/confluent-kafka-go">Confluent Inc</a></p>
 <pre class="language-golang"><code class="language-golang">func main() {
 

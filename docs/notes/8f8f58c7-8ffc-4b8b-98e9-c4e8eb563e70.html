@@ -140,6 +140,9 @@
 
         
         
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -179,7 +182,8 @@
         
 
         <h1 id="gokit"><a aria-hidden="true" class="anchor-heading" href="#gokit"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Gokit</h1>
-<p>Spring boot like framework for <a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">go</a>. It has 3 major Components</p>
+<h1 id="gokit-1"><a aria-hidden="true" class="anchor-heading" href="#gokit-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Gokit</h1>
+<p>Spring boot like framework for <a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a>. It has 3 major Components</p>
 <h2 id="service-layer"><a aria-hidden="true" class="anchor-heading" href="#service-layer"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Service Layer</h2>
 <ul>
 <li>Innermost layer where business logic resides.</li>
@@ -225,7 +229,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <h2 id="implement-the-pbservice-interface-on-the-struct"><a aria-hidden="true" class="anchor-heading" href="#implement-the-pbservice-interface-on-the-struct"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Implement the PbService Interface on the struct</h2>
-<p>In <a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">go</a> we do not have a key word to define that this structs implements a specific interface like the <code>implements</code> in Java.</p>
+<p>In <a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a> we do not have a key word to define that this structs implements a specific interface like the <code>implements</code> in Java.</p>
 <p>They way we enforce contracts is by implementing all the methods of the contract interface in our case here its the <code>PbService</code> interface.</p>
 <p>Since our <code>NewPbService</code> method returns the type of <code>PbService</code> the go compiler will ensure that <code>NewPbService</code> confirms to the <code>PbService</code> interface.</p>
 <pre class="language-go"><code class="language-go"><span class="token comment">//Create: Here we store the content and return a uuid</span>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>Is Palindrome Again ?? - BrainMatter</title>
+  <title>Has Cycle ?! - BrainMatter</title>
   
 
   <link
@@ -43,22 +43,22 @@
 <meta name="description" content="Personal knowledge space">
 <meta name="author" content="DeltaManiac">
 
-<link rel="canonical" href="https://deltamaniac.github.io//notes/OyydTG024M8K7pkeZzgAF.html">
+<link rel="canonical" href="https://deltamaniac.github.io//notes/7SLTuaGEjIASOWk6cOxFB.html">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://deltamaniac.github.io//notes/OyydTG024M8K7pkeZzgAF.html">
+<meta property="og:url" content="https://deltamaniac.github.io//notes/7SLTuaGEjIASOWk6cOxFB.html">
 <meta property="og:description" content="Personal knowledge space">
 <meta property="og:image" content="https://deltamaniac.github.io/undefined">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@delta_maniac">
-<meta name="twitter:url" content="https://deltamaniac.github.io//notes/OyydTG024M8K7pkeZzgAF.html">
+<meta name="twitter:url" content="https://deltamaniac.github.io//notes/7SLTuaGEjIASOWk6cOxFB.html">
 <meta name="twitter:description" content="Personal knowledge space">
 <meta name="twitter:image" content="https://deltamaniac.github.io/undefined">
 
 
-  <meta property="og:title" content="Is Palindrome Again ?? - BrainMatter" />
-  <meta name="twitter:title" content="Is Palindrome Again ?? - BrainMatter" />
+  <meta property="og:title" content="Has Cycle ?! - BrainMatter" />
+  <meta name="twitter:title" content="Has Cycle ?! - BrainMatter" />
   
 </head>
 
@@ -132,7 +132,7 @@
       
         
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">DailyByte</a></li><li class="breadcrumb-nav-list-item">Is Palindrome Again ??</li></ol>
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">DailyByte</a></li><li class="breadcrumb-nav-list-item">Has Cycle ?!</li></ol>
           </nav>
         
       
@@ -168,10 +168,10 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Is Palindrome Again ??">
+    <meta itemprop="headline" content="Has Cycle ?!">
     
-    <meta itemprop="datePublished" content="2021-08-08T20:34:56+00:00">
-    <meta itemprop="dateModified" content="2021-08-15T22:10:01+00:00">
+    <meta itemprop="datePublished" content="2021-08-20T05:40:16+00:00">
+    <meta itemprop="dateModified" content="2021-08-20T05:41:58+00:00">
 
     <div class="page__inner-wrap">
 
@@ -181,36 +181,36 @@
 
         
 
-        <h1 id="is-palindrome-again-"><a aria-hidden="true" class="anchor-heading" href="#is-palindrome-again-"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Is Palindrome Again ??</h1>
+        <h1 id="has-cycle-"><a aria-hidden="true" class="anchor-heading" href="#has-cycle-"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Has Cycle ?!</h1>
 <h1 id="problem"><a aria-hidden="true" class="anchor-heading" href="#problem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Problem</h1>
-<p>This question is asked by Facebook.</p>
-<p>Given a string and the ability to delete at most one character, return whether or not it can form a palindrome.</p>
-<p>Note: a palindrome is a sequence of characters that reads the same forwards and backwards.</p>
-<p>Ex: Given the following strings...</p>
+<p>This question is asked by Microsoft.</p>
+<p>Given a linked list, containing unique numbers, return whether or not it has a cycle.</p>
+<p>Note: a cycle is a circular arrangement (i.e. one node points back to a previous node)</p>
+<p>Ex: Given the following linked lists...</p>
 <blockquote>
-<p>"abcba", return true</p>
-<p>"foobof", return true (remove the first 'o', the second 'o', or 'b')</p>
-<p>"abccab", return false</p>
+<p>1->2->3->1 -> true (3 points back to 1)</p>
+<p>1->2->3 -> false</p>
+<p>1->1 true (1 points to itself)</p>
 </blockquote>
 <h2 id="python"><a aria-hidden="true" class="anchor-heading" href="#python"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">Python</a></h2>
-<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">validPalindrome</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    left<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
-    <span class="token keyword">while</span> left <span class="token operator">&#x3C;</span> right<span class="token punctuation">:</span>
-        <span class="token keyword">if</span> s<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">!=</span> s<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">:</span>
-            one<span class="token punctuation">,</span> two <span class="token operator">=</span> s<span class="token punctuation">[</span>left<span class="token punctuation">:</span>right<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span>right <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
-            <span class="token keyword">return</span> one <span class="token operator">==</span> one<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">or</span> two <span class="token operator">==</span> two<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
-        left<span class="token punctuation">,</span> right <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> right <span class="token operator">-</span> <span class="token number">1</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">hasCycle</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> head<span class="token punctuation">:</span> <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token keyword">if</span> head<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+    ptr <span class="token operator">=</span> head<span class="token punctuation">.</span><span class="token builtin">next</span>
+    <span class="token keyword">if</span> head<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    cur <span class="token operator">=</span> head<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+    <span class="token keyword">while</span> cur <span class="token operator">!=</span> ptr<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> cur <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">or</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        ptr <span class="token operator">=</span> ptr<span class="token punctuation">.</span><span class="token builtin">next</span>
+        cur <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
     <span class="token keyword">return</span> <span class="token boolean">True</span>
 </code></pre>
 <h2 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></h2>
-<h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></h2>
-<hr>
-<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
-<ul>
-<li><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></li>
-<li><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">Python</a></li>
-<li><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></li>
-</ul><span id="navId" data="OyydTG024M8K7pkeZzgAF"></span>
+<h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></h2><span id="navId" data="7SLTuaGEjIASOWk6cOxFB"></span>
 
                 
       </section>
@@ -236,12 +236,12 @@
             
               <div class="d-flex mt-2">
               <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">15/8/2021</span>.
+                Page last modified: <span class="d-inline-block">20/8/2021</span>.
               </p>
             
                 
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/dailybyte.d7.md" id="edit-this-page">Edit this page on GitHub</a>
+                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/dailybyte.d19.md" id="edit-this-page">Edit this page on GitHub</a>
                   </p>
                 
               </div>

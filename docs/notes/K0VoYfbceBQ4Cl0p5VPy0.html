@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>D17 - BrainMatter</title>
+  <title>Remove All Node Containing Value - BrainMatter</title>
   
 
   <link
@@ -57,8 +57,8 @@
 <meta name="twitter:image" content="https://deltamaniac.github.io/undefined">
 
 
-  <meta property="og:title" content="D17 - BrainMatter" />
-  <meta name="twitter:title" content="D17 - BrainMatter" />
+  <meta property="og:title" content="Remove All Node Containing Value - BrainMatter" />
+  <meta name="twitter:title" content="Remove All Node Containing Value - BrainMatter" />
   
 </head>
 
@@ -132,13 +132,16 @@
       
         
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">DailyByte</a></li><li class="breadcrumb-nav-list-item">D17</li></ol>
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">DailyByte</a></li><li class="breadcrumb-nav-list-item">Remove All Node Containing Value</li></ol>
           </nav>
         
       
       <div id="main-content" class="main-content" role="main">
 
         
+        
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
         
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -165,7 +168,7 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="D17">
+    <meta itemprop="headline" content="Remove All Node Containing Value">
     
     <meta itemprop="datePublished" content="2021-08-17T05:51:59+00:00">
     <meta itemprop="dateModified" content="2021-08-17T05:53:28+00:00">
@@ -178,7 +181,8 @@
 
         
 
-        <h1 id="problem"><a aria-hidden="true" class="anchor-heading" href="#problem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Problem</h1>
+        <h1 id="remove-all-node-containing-value"><a aria-hidden="true" class="anchor-heading" href="#remove-all-node-containing-value"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Remove All Node Containing Value</h1>
+<h1 id="problem"><a aria-hidden="true" class="anchor-heading" href="#problem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Problem</h1>
 <p>This question is asked by Google.</p>
 <p>Given a linked list and a value, remove all nodes containing the provided value, and return the resulting list.</p>
 <p>Ex: Given the following linked lists and values...</p>
@@ -187,7 +191,7 @@
 <p>8->1->1->4->12->null, value = 1, return 8->4->12->null</p>
 <p>7->12->2->9->null, value = 7, return 12->2->9->null</p>
 </blockquote>
-<h2 id="python"><a aria-hidden="true" class="anchor-heading" href="#python"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">python</a></h2>
+<h2 id="python"><a aria-hidden="true" class="anchor-heading" href="#python"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">Python</a></h2>
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">remove_nodes</span><span class="token punctuation">(</span>head<span class="token punctuation">,</span>val<span class="token punctuation">)</span>
     <span class="token keyword">while</span> head <span class="token keyword">and</span> head<span class="token punctuation">.</span>val <span class="token operator">==</span> val<span class="token punctuation">:</span>
         head <span class="token operator">=</span> head<span class="token punctuation">.</span><span class="token builtin">next</span>
@@ -202,8 +206,15 @@
             prev<span class="token punctuation">,</span> cur <span class="token operator">=</span> prev<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">,</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span>
     <span class="token keyword">return</span> head
 </code></pre>
-<h2 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">go</a></h2>
-<h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">rust</a></h2><span id="navId" data="K0VoYfbceBQ4Cl0p5VPy0"></span>
+<h2 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></h2>
+<h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></h2>
+<hr>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
+<li><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></li>
+<li><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">Python</a></li>
+<li><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></li>
+</ul><span id="navId" data="K0VoYfbceBQ4Cl0p5VPy0"></span>
 
                 
       </section>
