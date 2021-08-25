@@ -1,8 +1,35 @@
 version: 1
+vaults:
+    -
+        fsPath: vault
+useFMTitle: true
+useNoteTitleForLink: true
+noAutoCreateOnDefinition: true
+noLegacyNoteRef: true
+noXVaultWikiLink: true
+lookupConfirmVaultOnCreate: false
+mermaid: true
+useKatex: true
+autoFoldFrontmatter: true
+dev:
+    enablePreviewV2: true
+lookup:
+    note:
+        selectionType: selectionExtract
+journal:
+    dailyDomain: daily
+    name: journal
+    dateFormat: y.MM.dd
+    addBehavior: childOfDomain
+    firstDayOfWeek: 1
+scratch:
+    name: scratch
+    dateFormat: y.MM.dd.HHmmss
+    addBehavior: asOwnDomain
 site:
     siteUrl: 'https://deltamaniac.github.io/'
     siteHierarchies:
-      - root
+        - root
     siteRootDir: docs
     usePrettyRefs: true
     copyAssets: true
@@ -14,19 +41,7 @@ site:
     twitter: delta_maniac
     writeStubs: true
     config:
-      root:
-        publishByDefault: true
-vaults:
-    -
-        fsPath: vault
+        root:
+            publishByDefault: true
 initializeRemoteVaults: true
-journal:
-    dailyDomain: daily
-    name: journal
-    dateFormat: y.MM.dd
-    addBehavior: childOfDomain
-    firstDayOfWeek: 1
-# dev:
-#     enableWebUI: true
-#     enablePreviewV2: true
-dendronVersion: 0.52.0
+dendronVersion: 0.56.0
