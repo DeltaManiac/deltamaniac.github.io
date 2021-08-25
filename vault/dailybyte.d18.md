@@ -4,6 +4,7 @@ title: Middle Node of Linked List
 desc: ''
 updated: 1629418187686
 created: 1629418076186
+nav_order: 18
 ---
 # Problem
 This question is asked by Amazon.

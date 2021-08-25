@@ -1,9 +1,10 @@
 ---
 id: Vr5yZIX8oIXKBoAxdXPfr
-title: D21
+title: Reverse Linked List
 desc: ''
 updated: 1629418720325
 created: 1629418596328
+nav_order: 21
 ---
 
 
