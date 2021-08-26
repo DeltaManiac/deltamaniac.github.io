@@ -2,7 +2,7 @@
 id: 18962325-b097-4283-9f8e-23a89a24511b
 title: Rust
 desc: ''
-updated: 1629537305441
+updated: 1629953869997
 created: 1602919579698
 stub: false
 ---
@@ -64,3 +64,17 @@ stub: false
 [[dailybyte.d19#rust]]
 
 [[dailybyte.d20#rust]]
+
+[[dailybyte.d21#rust]]
+
+[[dailybyte.d22#rust]]
+
+[[dailybyte.d23#rust]]
+
+[[dailybyte.d24#rust]]
+
+[[dailybyte.d25#rust]]
+
+[[dailybyte.d26#rust]]
+
+[[dailybyte.d27#rust]]

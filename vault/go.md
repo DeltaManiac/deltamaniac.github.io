@@ -2,7 +2,7 @@
 id: 72f47187-278f-4a21-a56f-4abda62fea03
 title: Go
 desc: ''
-updated: 1629418812141
+updated: 1629953905755
 created: 1602916219989
 stub: false
 ---
@@ -61,3 +61,17 @@ stub: false
 [[dailybyte.d19#go]]
 
 [[dailybyte.d20#go]]
+
+[[dailybyte.d21#go]]
+
+[[dailybyte.d22#go]]
+
+[[dailybyte.d23#go]]
+
+[[dailybyte.d24#go]]
+
+[[dailybyte.d25#go]]
+
+[[dailybyte.d26#go]]
+
+[[dailybyte.d27#go]]
