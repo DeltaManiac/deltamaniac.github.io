@@ -171,7 +171,7 @@
     <meta itemprop="headline" content="Call Counter">
     
     <meta itemprop="datePublished" content="2021-08-25T12:55:59+00:00">
-    <meta itemprop="dateModified" content="2021-08-25T12:58:05+00:00">
+    <meta itemprop="dateModified" content="2021-08-26T10:15:03+00:00">
 
     <div class="page__inner-wrap">
 
@@ -196,6 +196,26 @@
 <p>ping(7000), return 1 (1 call within the last 3 seconds)</p>
 </blockquote>
 <h2 id="python"><a aria-hidden="true" class="anchor-heading" href="#python"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">Python</a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">CallCounter</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>ts_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">def</span> <span class="token function">ping</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>timestamp<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> timestamp <span class="token keyword">not</span> <span class="token keyword">in</span> self<span class="token punctuation">.</span>ts_dict<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>ts_dict<span class="token punctuation">[</span>timestamp<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>ts_dict<span class="token punctuation">[</span>timestamp<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>getPings<span class="token punctuation">(</span>timestamp<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">getPings</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>timestamp<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        t1 <span class="token operator">=</span> timestamp <span class="token operator">-</span> <span class="token number">3000</span>
+        tc <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">for</span> ts<span class="token punctuation">,</span> c <span class="token keyword">in</span> self<span class="token punctuation">.</span>ts_dict<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> ts <span class="token operator">></span> t1<span class="token punctuation">:</span>
+                tc <span class="token operator">+=</span> c
+        <span class="token keyword">return</span> tc
+</code></pre>
 <h2 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></h2>
 <h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></h2><span id="navId" data="PmgizaDsnrmKkTukqgykG"></span>
 
@@ -223,7 +243,7 @@
             
               <div class="d-flex mt-2">
               <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">25/8/2021</span>.
+                Page last modified: <span class="d-inline-block">26/8/2021</span>.
               </p>
             
                 
