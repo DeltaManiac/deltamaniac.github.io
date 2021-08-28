@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>Remove Adjacent Chars - BrainMatter</title>
+  <title>Find Value in BST - BrainMatter</title>
   
 
   <link
@@ -43,22 +43,22 @@
 <meta name="description" content="Personal knowledge space">
 <meta name="author" content="DeltaManiac">
 
-<link rel="canonical" href="https://deltamaniac.github.io//notes/8t7YNvufpspeCNGMpPBJ3.html">
+<link rel="canonical" href="https://deltamaniac.github.io//notes/HHRv3Y3IE4GqSELhFZWvL.html">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://deltamaniac.github.io//notes/8t7YNvufpspeCNGMpPBJ3.html">
+<meta property="og:url" content="https://deltamaniac.github.io//notes/HHRv3Y3IE4GqSELhFZWvL.html">
 <meta property="og:description" content="Personal knowledge space">
 <meta property="og:image" content="https://deltamaniac.github.io/undefined">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@delta_maniac">
-<meta name="twitter:url" content="https://deltamaniac.github.io//notes/8t7YNvufpspeCNGMpPBJ3.html">
+<meta name="twitter:url" content="https://deltamaniac.github.io//notes/HHRv3Y3IE4GqSELhFZWvL.html">
 <meta name="twitter:description" content="Personal knowledge space">
 <meta name="twitter:image" content="https://deltamaniac.github.io/undefined">
 
 
-  <meta property="og:title" content="Remove Adjacent Chars - BrainMatter" />
-  <meta name="twitter:title" content="Remove Adjacent Chars - BrainMatter" />
+  <meta property="og:title" content="Find Value in BST - BrainMatter" />
+  <meta name="twitter:title" content="Find Value in BST - BrainMatter" />
   
 </head>
 
@@ -132,7 +132,7 @@
       
         
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">DailyByte</a></li><li class="breadcrumb-nav-list-item">Remove Adjacent Chars</li></ol>
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">DailyByte</a></li><li class="breadcrumb-nav-list-item">Find Value in BST</li></ol>
           </nav>
         
       
@@ -168,10 +168,10 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Remove Adjacent Chars">
+    <meta itemprop="headline" content="Find Value in BST">
     
-    <meta itemprop="datePublished" content="2021-08-25T12:26:48+00:00">
-    <meta itemprop="dateModified" content="2021-08-25T12:28:16+00:00">
+    <meta itemprop="datePublished" content="2021-08-28T07:26:35+00:00">
+    <meta itemprop="dateModified" content="2021-08-28T07:33:02+00:00">
 
     <div class="page__inner-wrap">
 
@@ -181,36 +181,51 @@
 
         
 
-        <h1 id="remove-adjacent-chars"><a aria-hidden="true" class="anchor-heading" href="#remove-adjacent-chars"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Remove Adjacent Chars</h1>
+        <h1 id="find-value-in-bst"><a aria-hidden="true" class="anchor-heading" href="#find-value-in-bst"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Find Value in BST</h1>
 <h1 id="problem"><a aria-hidden="true" class="anchor-heading" href="#problem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Problem</h1>
-<p>This question is asked by Facebook.</p>
-<p>Given a string s containing only lowercase letters, continuously remove adjacent characters that are the same and return the result.</p>
-<p>Ex: Given the following strings...</p>
+<p>This question is asked by Google.</p>
+<p>Given the reference to the root of a binary search tree and a search value, return the reference to the node that contains the value if it exists and null otherwise.</p>
+<p>Note: all values in the binary search tree will be unique.</p>
+<p>Ex: Given the tree...</p>
 <blockquote>
-<p>s = "abccba", return ""</p>
-<p>s = "foobar", return "fbar"</p>
-<p>s = "abccbefggfe", return "a"</p>
+<pre><code>   3
+  / \
+ 1   4
+</code></pre>
 </blockquote>
+<p>and the search value 1 return a reference to the node containing 1.</p>
+<p>Ex: Given the following tree...</p>
+<blockquote>
+<pre><code>    7
+   / \
+  5   9
+     / \
+    8   10
+</code></pre>
+</blockquote>
+<p>and the search value 9 return a reference to the node containing 9.</p>
+<p>Ex: Given the following tree...</p>
+<blockquote>
+<pre><code>   8
+  / \
+ 6   9
+</code></pre>
+</blockquote>
+<p>and the search value 7 return null.</p>
 <h2 id="python"><a aria-hidden="true" class="anchor-heading" href="#python"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">Python</a></h2>
-<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">remove_adjacent</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    stk <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token keyword">for</span> x <span class="token keyword">in</span> s1<span class="token punctuation">:</span>
-        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>stk<span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span> <span class="token keyword">and</span> stk<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> x<span class="token punctuation">:</span>
-            stk<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">else</span><span class="token punctuation">:</span>
-            stk<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">
+<span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">def</span> <span class="token function">search_rec</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> root<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> root<span class="token punctuation">.</span>val <span class="token operator">==</span> val<span class="token punctuation">:</span> <span class="token keyword">return</span> root
+                <span class="token keyword">elif</span> root<span class="token punctuation">.</span>val <span class="token operator">&#x3C;</span> val<span class="token punctuation">:</span> <span class="token keyword">return</span> search_rec<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+                <span class="token keyword">return</span> search_rec<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
 
-    <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>stk<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> rec<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
+
 </code></pre>
 <h2 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></h2>
-<h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></h2>
-<hr>
-<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
-<ul>
-<li><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></li>
-<li><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">Python</a></li>
-<li><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></li>
-</ul><span id="navId" data="8t7YNvufpspeCNGMpPBJ3"></span>
+<h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></h2><span id="navId" data="HHRv3Y3IE4GqSELhFZWvL"></span>
 
                 
       </section>
@@ -236,12 +251,12 @@
             
               <div class="d-flex mt-2">
               <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">25/8/2021</span>.
+                Page last modified: <span class="d-inline-block">28/8/2021</span>.
               </p>
             
                 
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/dailybyte.d24.md" id="edit-this-page">Edit this page on GitHub</a>
+                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/dailybyte.d29.md" id="edit-this-page">Edit this page on GitHub</a>
                   </p>
                 
               </div>
