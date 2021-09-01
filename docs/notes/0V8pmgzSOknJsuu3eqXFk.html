@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>This page has not yet sprouted - BrainMatter</title>
+  <title>Convert Binary Search Tree to Sorted Linked List - BrainMatter</title>
   
 
   <link
@@ -43,22 +43,22 @@
 <meta name="description" content="Personal knowledge space">
 <meta name="author" content="DeltaManiac">
 
-<link rel="canonical" href="https://deltamaniac.github.io//notes/403.html">
+<link rel="canonical" href="https://deltamaniac.github.io//notes/0V8pmgzSOknJsuu3eqXFk.html">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://deltamaniac.github.io//notes/403.html">
+<meta property="og:url" content="https://deltamaniac.github.io//notes/0V8pmgzSOknJsuu3eqXFk.html">
 <meta property="og:description" content="Personal knowledge space">
 <meta property="og:image" content="https://deltamaniac.github.io/undefined">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@delta_maniac">
-<meta name="twitter:url" content="https://deltamaniac.github.io//notes/403.html">
+<meta name="twitter:url" content="https://deltamaniac.github.io//notes/0V8pmgzSOknJsuu3eqXFk.html">
 <meta name="twitter:description" content="Personal knowledge space">
 <meta name="twitter:image" content="https://deltamaniac.github.io/undefined">
 
 
-  <meta property="og:title" content="This page has not yet sprouted - BrainMatter" />
-  <meta name="twitter:title" content="This page has not yet sprouted - BrainMatter" />
+  <meta property="og:title" content="Convert Binary Search Tree to Sorted Linked List - BrainMatter" />
+  <meta name="twitter:title" content="Convert Binary Search Tree to Sorted Linked List - BrainMatter" />
   
 </head>
 
@@ -131,6 +131,10 @@
     <div id="main-content-wrap" class="main-content-wrap">
       
         
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">DailyByte</a></li><li class="breadcrumb-nav-list-item">Convert Binary Search Tree to Sorted Linked List</li></ol>
+          </nav>
+        
       
       <div id="main-content" class="main-content" role="main">
 
@@ -164,10 +168,10 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="This page has not yet sprouted">
+    <meta itemprop="headline" content="Convert Binary Search Tree to Sorted Linked List">
     
-    <meta itemprop="datePublished" content="2021-09-01T20:55:27+00:00">
-    <meta itemprop="dateModified" content="2021-09-01T20:55:27+00:00">
+    <meta itemprop="datePublished" content="2021-09-01T20:07:28+00:00">
+    <meta itemprop="dateModified" content="2021-09-01T20:16:27+00:00">
 
     <div class="page__inner-wrap">
 
@@ -177,9 +181,89 @@
 
         
 
-        <h1 id="this-page-has-not-yet-sprouted"><a aria-hidden="true" class="anchor-heading" href="#this-page-has-not-yet-sprouted"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>This page has not yet sprouted</h1>
-<p><a href="https://dendron.so/">Dendron</a> (the tool used to generate this site) lets authors selective publish content. You will see this page whenever you click on a link to an unpublished page</p>
-<p><img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/not-sprouted.png"></p><span id="navId" data="403"></span>
+        <h1 id="convert-binary-search-tree-to-sorted-linked-list"><a aria-hidden="true" class="anchor-heading" href="#convert-binary-search-tree-to-sorted-linked-list"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Convert Binary Search Tree to Sorted Linked List</h1>
+<h1 id="problem"><a aria-hidden="true" class="anchor-heading" href="#problem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Problem</h1>
+<p>Given a binary search tree, rearrange the tree such that it forms a linked list where all its values are in ascending order.</p>
+<p>Ex: Given the following tree...</p>
+<pre>        5
+       / \
+      1   6
+</pre>
+<p>return...</p>
+<pre> 1
+  \
+   5
+    \
+     6
+</pre>
+<p>Ex: Given the following tree...</p>
+<pre>       5
+      / \
+    2    9
+   / \
+  1   3
+</pre>
+<p>return...</p>
+<pre> 1
+  \
+   2
+    \
+     3
+      \
+       5
+        \
+         9
+</pre>
+<p>Ex: Given the following tree...</p>
+<pre> 5
+  \
+   6
+</pre>
+<p>return...</p>
+<pre> 5
+  \
+   6
+</pre>
+<h2 id="python"><a aria-hidden="true" class="anchor-heading" href="#python"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">Python</a></h2>
+<pre class="language-python"><code class="language-python">
+<span class="token keyword">class</span> <span class="token class-name">Node</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>key <span class="token operator">=</span> <span class="token number">0</span>
+        self<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token keyword">def</span> <span class="token function">newNode</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    node <span class="token operator">=</span> Node<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    node<span class="token punctuation">.</span>key <span class="token operator">=</span> key
+    node<span class="token punctuation">.</span>left <span class="token operator">=</span> node<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token boolean">None</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">flatten</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token boolean">None</span> <span class="token keyword">or</span> root<span class="token punctuation">.</span>left <span class="token operator">==</span> <span class="token boolean">None</span> <span class="token keyword">and</span>
+                        root<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>root<span class="token punctuation">.</span>left <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        flatten<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+
+        tmpRight <span class="token operator">=</span> root<span class="token punctuation">.</span>right
+        root<span class="token punctuation">.</span>right <span class="token operator">=</span> root<span class="token punctuation">.</span>left
+        root<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token boolean">None</span>
+
+        t <span class="token operator">=</span> root<span class="token punctuation">.</span>right
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>t<span class="token punctuation">.</span>right <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            t <span class="token operator">=</span> t<span class="token punctuation">.</span>right
+
+        t<span class="token punctuation">.</span>right <span class="token operator">=</span> tmpRight
+
+    flatten<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+
+
+</code></pre>
+<h2 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></h2>
+<h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></h2><span id="navId" data="0V8pmgzSOknJsuu3eqXFk"></span>
 
                 
       </section>
@@ -210,7 +294,7 @@
             
                 
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/403.md" id="edit-this-page">Edit this page on GitHub</a>
+                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/dailybyte.d30.md" id="edit-this-page">Edit this page on GitHub</a>
                   </p>
                 
               </div>

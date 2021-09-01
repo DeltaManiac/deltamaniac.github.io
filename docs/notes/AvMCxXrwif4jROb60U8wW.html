@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>This page has not yet sprouted - BrainMatter</title>
+  <title>Identical Trees - BrainMatter</title>
   
 
   <link
@@ -43,22 +43,22 @@
 <meta name="description" content="Personal knowledge space">
 <meta name="author" content="DeltaManiac">
 
-<link rel="canonical" href="https://deltamaniac.github.io//notes/403.html">
+<link rel="canonical" href="https://deltamaniac.github.io//notes/AvMCxXrwif4jROb60U8wW.html">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://deltamaniac.github.io//notes/403.html">
+<meta property="og:url" content="https://deltamaniac.github.io//notes/AvMCxXrwif4jROb60U8wW.html">
 <meta property="og:description" content="Personal knowledge space">
 <meta property="og:image" content="https://deltamaniac.github.io/undefined">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@delta_maniac">
-<meta name="twitter:url" content="https://deltamaniac.github.io//notes/403.html">
+<meta name="twitter:url" content="https://deltamaniac.github.io//notes/AvMCxXrwif4jROb60U8wW.html">
 <meta name="twitter:description" content="Personal knowledge space">
 <meta name="twitter:image" content="https://deltamaniac.github.io/undefined">
 
 
-  <meta property="og:title" content="This page has not yet sprouted - BrainMatter" />
-  <meta name="twitter:title" content="This page has not yet sprouted - BrainMatter" />
+  <meta property="og:title" content="Identical Trees - BrainMatter" />
+  <meta name="twitter:title" content="Identical Trees - BrainMatter" />
   
 </head>
 
@@ -131,6 +131,10 @@
     <div id="main-content-wrap" class="main-content-wrap">
       
         
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\mVQvTk97aKzhqLZ2.html">DailyByte</a></li><li class="breadcrumb-nav-list-item">Identical Trees</li></ol>
+          </nav>
+        
       
       <div id="main-content" class="main-content" role="main">
 
@@ -164,10 +168,10 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="This page has not yet sprouted">
+    <meta itemprop="headline" content="Identical Trees">
     
-    <meta itemprop="datePublished" content="2021-09-01T20:55:27+00:00">
-    <meta itemprop="dateModified" content="2021-09-01T20:55:27+00:00">
+    <meta itemprop="datePublished" content="2021-09-01T20:47:59+00:00">
+    <meta itemprop="dateModified" content="2021-09-01T20:52:54+00:00">
 
     <div class="page__inner-wrap">
 
@@ -177,9 +181,70 @@
 
         
 
-        <h1 id="this-page-has-not-yet-sprouted"><a aria-hidden="true" class="anchor-heading" href="#this-page-has-not-yet-sprouted"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>This page has not yet sprouted</h1>
-<p><a href="https://dendron.so/">Dendron</a> (the tool used to generate this site) lets authors selective publish content. You will see this page whenever you click on a link to an unpublished page</p>
-<p><img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/not-sprouted.png"></p><span id="navId" data="403"></span>
+        <h1 id="identical-trees"><a aria-hidden="true" class="anchor-heading" href="#identical-trees"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Identical Trees</h1>
+<h1 id="problem"><a aria-hidden="true" class="anchor-heading" href="#problem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Problem</h1>
+<p>Given two binary trees, return whether or not the two trees are identical.</p>
+<p>Note: identical meaning they exhibit the same structure and the same values at each node.</p>
+<p>Ex: Given the following trees...</p>
+<pre>        2
+       / \
+      1   3
+
+    2
+   / \
+  1   3
+
+
+return true.
+</pre>
+<p>Ex: Given the following trees...</p>
+<pre>
+        1
+         \
+          9
+           \
+           18
+
+    1
+   /
+  9
+   \
+    18
+
+
+return false.
+</pre>
+<p>Ex: Given the following trees...</p>
+<pre>        2
+       / \
+      3   1
+
+    2
+   / \
+  1   3
+
+
+return false.
+</pre>
+<h2 id="python"><a aria-hidden="true" class="anchor-heading" href="#python"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/TloiYhmlCN5QxTpf.html">Python</a></h2>
+<pre class="language-python"><code class="language-python">
+<span class="token keyword">class</span> <span class="token class-name">Node</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>val<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> val
+        self<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token keyword">def</span> <span class="token function">isIdentical</span><span class="token punctuation">(</span>r1<span class="token punctuation">,</span>r2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> r1 <span class="token keyword">and</span> <span class="token keyword">not</span> r2<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> r1 <span class="token keyword">or</span> <span class="token keyword">not</span> r2<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token keyword">if</span> r1<span class="token punctuation">.</span>val <span class="token operator">!=</span> r2<span class="token punctuation">.</span>val<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token keyword">return</span> isIdentical<span class="token punctuation">(</span>r1<span class="token punctuation">.</span>right<span class="token punctuation">,</span> r2<span class="token punctuation">.</span>right<span class="token punctuation">)</span> <span class="token keyword">and</span> isIdentical<span class="token punctuation">(</span>r1<span class="token punctuation">.</span>left<span class="token punctuation">,</span> r2<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/72f47187-278f-4a21-a56f-4abda62fea03.html">Go</a></h2>
+<h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/18962325-b097-4283-9f8e-23a89a24511b.html">Rust</a></h2><span id="navId" data="AvMCxXrwif4jROb60U8wW"></span>
 
                 
       </section>
@@ -210,7 +275,7 @@
             
                 
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/403.md" id="edit-this-page">Edit this page on GitHub</a>
+                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/dailybyte.d33.md" id="edit-this-page">Edit this page on GitHub</a>
                   </p>
                 
               </div>
