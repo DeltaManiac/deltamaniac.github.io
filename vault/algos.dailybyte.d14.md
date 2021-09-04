@@ -6,8 +6,7 @@ updated: 1628785158643
 created: 1628784258606
 nav_order: 14
 ---
-
-# Problem
+## Problem
 
 This question is asked by Amazon.
 
@@ -38,3 +37,4 @@ def findCommon(s1,s2):
 ## [[go]]
 
 ## [[rust]]
+

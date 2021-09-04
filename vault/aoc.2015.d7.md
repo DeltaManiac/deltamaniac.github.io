@@ -6,8 +6,7 @@ updated: 1609238679234
 created: 1609236534979
 nav_order: 7
 ---
-
-# Some Assembly Required
+## Some Assembly Required
 
 ## Part I
 
@@ -19,17 +18,18 @@ The included instructions booklet describes how to connect the parts together: `
 
 For example:
 
->`123 -> x` means that the signal 123 is provided to wire `x`.
+> `123 -> x` means that the signal 123 is provided to wire `x`.
 >
->`x AND y -> z` means that the bitwise AND of wire `x` and wire `y` is provided to wire `z`.
+> `x AND y -> z` means that the bitwise AND of wire `x` and wire `y` is provided to wire `z`.
 >
->`p LSHIFT 2 -> q` means that the value from wire `p` is left-shifted by `2` and then provided to wire `q`.
+> `p LSHIFT 2 -> q` means that the value from wire `p` is left-shifted by `2` and then provided to wire `q`.
 >
->`NOT e -> f` means that the bitwise complement of the value from wire `e` is provided to wire `f`.
+> `NOT e -> f` means that the bitwise complement of the value from wire `e` is provided to wire `f`.
 
 Other possible gates include `OR` (bitwise OR) and `RSHIFT` (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.
 
 For example, here is a simple circuit:
+
 ```
 123 -> x
 456 -> y
@@ -57,6 +57,7 @@ y: 456
 In little Bobby's kit's instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire `a`?
 
 ## Solution
+
 ```rust
 use std::collections::HashMap;
 #[derive(Debug)]
@@ -212,3 +213,4 @@ pub fn part2(input: &[Gate]) -> u16 {
     *solve_circuit(&input, &mut map).get("a").unwrap()
 }
 ```
+

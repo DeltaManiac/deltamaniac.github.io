@@ -6,8 +6,7 @@ updated: 1610873551648
 created: 1610872529055
 nav_order: 12
 ---
-
-# Day 12: JSAbacusFramework.io
+## Day 12: JSAbacusFramework.io
 
 # Part I
 
@@ -19,13 +18,13 @@ They have a JSON document which contains a variety of things: arrays (`[1,2,3]`)
 
 For example:
 
->`[1,2,3]` and `{"a":2,"b":4}` both have a sum of `6`.
+> `[1,2,3]` and `{"a":2,"b":4}` both have a sum of `6`.
 >
->`[[[3]]] and {"a":{"b":4},"c":-1}` both have a sum of `3`.
+> `[[[3]]] and {"a":{"b":4},"c":-1}` both have a sum of `3`.
 >
->`{"a":[-1,1]} and [-1,{"a":1}]` both have a sum of `0`.
+> `{"a":[-1,1]} and [-1,{"a":1}]` both have a sum of `0`.
 >
->`[]` and `{}` both have a sum of `0`.
+> `[]` and `{}` both have a sum of `0`.
 
 You will not encounter any strings containing numbers.
 
@@ -115,7 +114,6 @@ Ignore any object (and all of its children) which has any property with the valu
 >
 > [1,"red",5] has a sum of 6, because "red" in an array has no effect.
 
-
 ## Solution
 
 ```rust
@@ -145,3 +143,4 @@ pub fn part2_serde(input: &str) -> i64 {
     sum(a, false)
 }
 ```
+

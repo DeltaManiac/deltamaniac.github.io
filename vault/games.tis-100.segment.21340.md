@@ -5,8 +5,7 @@ desc: ''
 updated: 1604591804221
 created: 1604591513725
 ---
-
-# Signal Comparator
+## Signal Comparator
 
 # Solution
 
@@ -73,3 +72,4 @@ JMP START
 # Solution
 
 ![](/assets/images/2020-11-05-21-23-20.png)
+

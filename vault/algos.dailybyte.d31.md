@@ -6,13 +6,14 @@ updated: 1630508336493
 created: 1630507688524
 nav_order: 31
 ---
-# Problem
+## Problem
 
 Given a binary search tree that contains unique values and two nodes within the tree, a, and b, return their lowest common ancestor.
 
 Note: the lowest common ancestor of two nodes is the deepest node within the tree such that both nodes are descendants of it.
 
 Ex: Given the following tree...
+
 <pre>
        7
       / \
@@ -46,6 +47,7 @@ and a = 6, b = 8, return a reference to the node containing 8.
 </pre>
 
 ## [[python]]
+
 ```python
 class TreeNode:
     def __init__(self, x):
@@ -64,3 +66,4 @@ class Solution:
 ## [[go]]
 
 ## [[rust]]
+

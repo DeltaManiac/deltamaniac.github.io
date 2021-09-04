@@ -6,9 +6,7 @@ updated: 1602919503375
 created: 1602919503375
 stub: false
 ---
-
-
-# Vyom
+## Vyom
 
 The surmised version of how to write a Reddit Bot in [[rust]]
 
@@ -17,7 +15,6 @@ The surmised version of how to write a Reddit Bot in [[rust]]
 Recently while browsing [reddit](https://old.reddit.com) I came up on a [post](https://www.reddit.com/r/rust/comments/i1satq/webference_rusty_days_2020_all_recorded_talks/g01rwq8/?context=3) in the [/r/rust](https://old.reddit.com) subreddit which was a link to a YouTube playlist for the Rusty-Days conference, however there was no way I could find the contents of the playlist without going to YouTube on my phone. This was a nuance so I went to YouTube and curated the list.
 
 ![](/assets/images/2020-10-11-18-16-48.png)
-
 
 This was going to be tiresome if I'd have to do it every time I see a post that links to a YouTube playlist. So here we are writing a bot do this task for everyone. This bot will run on a server somewhere (hopefully forever) and curate playlist info for all the people who avail its service.
 
@@ -364,7 +361,6 @@ Time to find that pesky bug and get rid of it for good.
 Lets go to reddit and see what the inbox looks like.
 
 ![](/assets/images/2020-10-11-18-22-29.png)
-
 
 Well, its just as we suspected, when we reply to a mention with the `comment` function it does not change the status of the message. Sifting through the [documentation](https://docs.rs/roux/1.0.0/roux/?search=read) of `roux` we can find a method that marks a message as `read`.
 
@@ -721,7 +717,6 @@ I know its getting boring now and we're gonna wrap it up in the next part.
 
 Oh BTW the code can be found on the `part-II` branch [here](https://github.com/DeltaManiac/VyomBot)
 
-
 # Part III
 
 We've reached the final chapter. The spoils are just ahead of us, lets go grab em.
@@ -733,23 +728,22 @@ We need to generate a different set of credentials to talk with YouTube. Lets go
 1. Logon to [Google Developer Console](https://console.developer.google.com)
 
 2. Click `Enable Apis and Service`
-    ![](/assets/images/2020-10-11-18-26-54.png)
+   ![](/assets/images/2020-10-11-18-26-54.png)
 
 3. Search for `YouTube Data API v3`
-    ![](/assets/images/2020-10-11-18-27-09.png)
+   ![](/assets/images/2020-10-11-18-27-09.png)
 
 4. Click the `Enable` button to enable the API for our account
-    ![](/assets/images/2020-10-11-18-27-17.png)
+   ![](/assets/images/2020-10-11-18-27-17.png)
 
 5. Click the `Create Credentials` button to start creating credentials for us to use.
-    ![](/assets/images/2020-10-11-18-27-29.png)
+   ![](/assets/images/2020-10-11-18-27-29.png)
 
 6. We need to first describe what kind of credentials have to be generated. Don't worry, just follow the screenshot.
-    ![](/assets/images/2020-10-11-18-27-39.png)
+   ![](/assets/images/2020-10-11-18-27-39.png)
 
 7. We're Done!
-    ![](/assets/images/2020-10-11-18-27-51.png)
-
+   ![](/assets/images/2020-10-11-18-27-51.png)
 
 # Handling JSON better
 
@@ -1086,3 +1080,4 @@ And on Reddit it looks just as beautiful!
 
 Thanks for joining along while we built our first bot :heart:.
 If this journey has taught you something, feel free to give a shout out!
+

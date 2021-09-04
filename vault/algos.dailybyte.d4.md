@@ -6,8 +6,7 @@ updated: 1628434950340
 created: 1628212076920
 nav_order: 4
 ---
-
-# Problem
+## Problem
 
 This question is asked by Google.
 
@@ -23,8 +22,8 @@ Ex: Given the following strings...
 >
 > "coding", return true
 
-
 ## [[python]]
+
 ```python
 def check(word:str)->bool:
     if word.isupper():
@@ -37,6 +36,7 @@ def check(word:str)->bool:
 ```
 
 ## [[go]]
+
 ```go
 func check(word string) bool {
 	if isUpper(word) {
@@ -69,5 +69,6 @@ func isLower(word string) bool {
 	return true
 }
 ```
+
 ## [[rust]]
 

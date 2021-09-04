@@ -6,8 +6,7 @@ updated: 1628784247848
 created: 1628433921655
 nav_order: 10
 ---
-
-# Problem
+## Problem
 
 This question is asked by Facebook.
 
@@ -23,13 +22,14 @@ Ex: Given the following strings...
 >
 > s = "program", t = "function", return false
 
-
 ## [[python]]
 
 ```python
 def is_anagram(s1,s2):
     return len(s1)==len(s2) and set(s1) == set(s2)
 ```
+
 ## [[go]]
 
 ## [[rust]]
+

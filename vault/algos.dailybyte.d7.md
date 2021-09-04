@@ -6,8 +6,7 @@ updated: 1629045601457
 created: 1628435096755
 nav_order: 7
 ---
-
-# Problem
+## Problem
 
 This question is asked by Facebook.
 
@@ -24,6 +23,7 @@ Ex: Given the following strings...
 > "abccab", return false
 
 ## [[python]]
+
 ```python
 def validPalindrome(s):
     left, right = 0, len(s) - 1
@@ -34,6 +34,7 @@ def validPalindrome(s):
         left, right = left + 1, right - 1
     return True
 ```
+
 ## [[go]]
 
 ## [[rust]]

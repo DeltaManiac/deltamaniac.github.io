@@ -6,8 +6,7 @@ updated: 1629953103033
 created: 1629876359628
 nav_order: 26
 ---
-
-# Problem
+## Problem
 
 This question is asked by Google.
 
@@ -19,15 +18,15 @@ Note: you may assume that the time associated with each subsequent call to `ping
 
 Ex: Given the following calls to ping…
 
->ping(1), return 1 (1 call within the last 3 seconds)
+> ping(1), return 1 (1 call within the last 3 seconds)
 >
->ping(300), return 2 (2 calls within the last 3 seconds)
+> ping(300), return 2 (2 calls within the last 3 seconds)
 >
->ping(3000), return 3 (3 calls within the last 3 seconds)
+> ping(3000), return 3 (3 calls within the last 3 seconds)
 >
->ping(3002), return 3 (3 calls within the last 3 seconds)
+> ping(3002), return 3 (3 calls within the last 3 seconds)
 >
->ping(7000), return 1 (1 call within the last 3 seconds)
+> ping(7000), return 1 (1 call within the last 3 seconds)
 
 ## [[python]]
 
@@ -52,6 +51,8 @@ class CallCounter:
                 tc += c
         return tc
 ```
+
 ## [[go]]
 
 ## [[rust]]
+

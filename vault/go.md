@@ -6,19 +6,17 @@ updated: 1629953905755
 created: 1602916219989
 stub: false
 ---
-
-# Go
+## Go
 
 ## Kafka
 
-[[Producer | kafka.producer]]
+[[Producer|kafka.producer]]
 
-
-[[Consumer | kafka.consumer]]
+[[Consumer|kafka.consumer]]
 
 # LetCode
-[[MaxDepth |  algos.trees.maxDepth#go]]
 
+[[MaxDepth|algos.trees.maxDepth#go]]
 
 # DailyByte
 
@@ -75,3 +73,4 @@ stub: false
 [[algos.dailybyte.d26#go]]
 
 [[algos.dailybyte.d27#go]]
+

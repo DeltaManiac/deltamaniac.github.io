@@ -6,18 +6,19 @@ updated: 1629418187686
 created: 1629418076186
 nav_order: 18
 ---
-# Problem
+## Problem
+
 This question is asked by Amazon.
 
 Given a non-empty linked list, return the middle node of the list. If the linked list contains an even number of elements, return the node closer to the end.
 
 Ex: Given the following linked lists...
 
->1->2->3->null, return 2
+> 1->2->3->null, return 2
 >
->1->2->3->4->null, return 3
+> 1->2->3->4->null, return 3
 >
->1->null, return 1
+> 1->null, return 1
 
 ## [[python]]
 
@@ -33,3 +34,4 @@ def middleNode(self, head):
 ## [[go]]
 
 ## [[rust]]
+

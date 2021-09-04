@@ -6,8 +6,7 @@ updated: 1629045907160
 created: 1628607167587
 nav_order: 12
 ---
-
-# Problem
+## Problem
 
 This question is asked by Google.
 
@@ -24,6 +23,7 @@ Ex: Given the following strings...
 > s = "coding", t "ingcod", return ''
 
 ## [[python]]
+
 ```python
 from collections import Counter
 def findDiff(word1,word2):
@@ -31,6 +31,8 @@ def findDiff(word1,word2):
         return x
     return ' '
 ```
+
 ## [[go]]
 
 ## [[rust]]
+

@@ -6,12 +6,10 @@ updated: 1602919741869
 created: 1602919741869
 stub: false
 ---
-
-
-
-# Consumer
+## Consumer
 
 - Subscribes to topics and receives message
+
 - Consumer Group -> method of scaling consumption
 
   - Membership triggered by a `JoinGroup` call
@@ -29,7 +27,7 @@ stub: false
 
 # Creating a Consumer
 
-## In [[Rust | rust]]
+## In [[Rust|rust]]
 
 Crate : [kafka](https://crates.io/crates/kafka)
 
@@ -107,7 +105,7 @@ async fn consume(brokers: &str, group_id: &str, topics: &[&str]) {
 }
 ```
 
----
+* * *
 
 ## In [[go]]
 
@@ -236,3 +234,4 @@ go func() comsumer{
 
     - `CommitAsync` always
     - Trigger a CommitSync just before exit
+

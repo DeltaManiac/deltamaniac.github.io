@@ -5,7 +5,8 @@ desc: ''
 updated: 1626504708724
 created: 1626502788225
 ---
-# Graph
+## Graph
+
 ![](/assets/images/2021-07-17-12-08-23.png)
 
 # PreOrder
@@ -15,6 +16,7 @@ created: 1626502788225
 ## F B A D C E G I H
 
 ## Code
+
 ```python
 def preorderTraversal(self, root: TreeNode) -> List[int]:
     if root == None :
@@ -35,6 +37,7 @@ def preorderTraversal(self, root: TreeNode) -> List[int]:
 ## A B C D E F G I J
 
 ## Code
+
 ```python
 def inorderTraversal(self, root: TreeNode) -> List[int]:
     if root == None :
@@ -47,7 +50,6 @@ def inorderTraversal(self, root: TreeNode) -> List[int]:
         res = res + self.inorderTraversal(root.right)
     return res
 ```
-
 
 # Post Order
 
@@ -91,6 +93,7 @@ def postorderTraversal(self, root: TreeNode) -> List[int]:
 ## F, B G, A D I, C E H
 
 ## Code
+
 ```python
 def levelOrder(self, root: TreeNode) -> List[List[int]]:
     if not root:
@@ -107,3 +110,4 @@ def levelOrder(self, root: TreeNode) -> List[List[int]]:
         flag = flag*-1
     return res
 ```
+

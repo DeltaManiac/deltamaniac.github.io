@@ -6,7 +6,7 @@ updated: 1629868101060
 created: 1629698682065
 nav_order: 22
 ---
-# Problem
+## Problem
 
 This question is asked by Google.
 
@@ -14,11 +14,11 @@ Given a string only containing the following characters `(`, `)`, `{`, `}`, `[`,
 
 Ex: Given the following strings...
 
->"(){}[]", return true
+> "(){}\[]", return true
 >
->"(({[]}))", return true
+> "(({\[]}))", return true
 >
->"{(})", return false
+> "{(})", return false
 
 ## [[python]]
 
@@ -41,3 +41,4 @@ def check_brackets(a):
 ## [[go]]
 
 ## [[rust]]
+

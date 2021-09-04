@@ -6,8 +6,7 @@ updated: 1630116182853
 created: 1630115795114
 nav_order: 29
 ---
-
-# Problem
+## Problem
 
 This question is asked by Google.
 
@@ -17,27 +16,33 @@ Note: all values in the binary search tree will be unique.
 
 Ex: Given the tree...
 
->        3
->       / \
->      1   4
+> ```
+>    3
+>   / \
+>  1   4
+> ```
 
 and the search value 1 return a reference to the node containing 1.
 
 Ex: Given the following tree...
 
->         7
->        / \
->       5   9
->          / \
->         8   10
+> ```
+>     7
+>    / \
+>   5   9
+>      / \
+>     8   10
+> ```
 
 and the search value 9 return a reference to the node containing 9.
 
 Ex: Given the following tree...
 
- >        8
- >       / \
- >      6   9
+> ```
+>    8
+>   / \
+>  6   9
+> ```
 
 and the search value 7 return null.
 
@@ -58,3 +63,4 @@ def search(self, root, val):
 ## [[go]]
 
 ## [[rust]]
+

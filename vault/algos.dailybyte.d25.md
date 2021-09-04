@@ -6,8 +6,7 @@ updated: 1629876324437
 created: 1629875166729
 nav_order: 25
 ---
-
-# Problem
+## Problem
 
 This question is asked by Amazon.
 
@@ -15,10 +14,9 @@ Given two arrays of numbers, where the first array is a subset of the second arr
 
 Ex: Given the following arrays…
 
-
->nums1 = [4,1,2], nums2 = [1,3,4,2], return [-1, 3, -1] because no element in nums2 is greater than 4, 3 is the first number in nums2 greater than 1, and no element in nums2 is greater than 2.
+> nums1 = [4,1,2], nums2 = [1,3,4,2], return [-1, 3, -1] because no element in nums2 is greater than 4, 3 is the first number in nums2 greater than 1, and no element in nums2 is greater than 2.
 >
->nums1 = [2,4], nums2 = [1,2,3,4], return [3, -1] because 3 is the first greater element that occurs in nums2 after 2 and no element is greater than 4.
+> nums1 = [2,4], nums2 = [1,2,3,4], return [3, -1] because 3 is the first greater element that occurs in nums2 after 2 and no element is greater than 4.
 
 ## [[python]]
 
@@ -37,3 +35,4 @@ def nextGreaterElement( nums1, nums2):
 ## [[go]]
 
 ## [[rust]]
+

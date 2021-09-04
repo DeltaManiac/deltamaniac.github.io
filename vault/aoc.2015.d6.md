@@ -6,8 +6,7 @@ updated: 1609236479964
 created: 1609235321198
 nav_order: 6
 ---
-
-# Probably a Fire Hazard
+## Probably a Fire Hazard
 
 ## Part I
 
@@ -30,7 +29,6 @@ For example:
 After following the instructions, how many lights are lit?
 
 ## Solution
-
 
 ```rust
 enum Action {
@@ -117,7 +115,6 @@ pub fn part1(input: &Vec<Instruction>) -> i64 {
 
 ## Part II
 
-
 You just finish implementing your winning light pattern when you realize you mistranslated Santa's message from Ancient Nordic Elvish.
 
 The light grid you bought actually has individual brightness controls; each light can have a brightness of zero or more. The lights all start at zero.
@@ -168,3 +165,4 @@ pub fn part2(input: &Vec<Instruction>) -> i64 {
     bright
 }
 ```
+

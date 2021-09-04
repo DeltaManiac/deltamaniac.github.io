@@ -6,8 +6,8 @@ updated: 1629039673383
 created: 1629038995187
 nav_order: 15
 ---
+## Problem
 
-# Problem
 This question is asked by Apple.
 
 Given two sorted linked lists, merge them together in ascending order and return a reference to the merged list
@@ -46,6 +46,8 @@ def mergeLists(h1,h2):
         ptr1_prev.next = ptr2
     return h1 if h1.value < h2.value else h2
 ```
+
 ## [[go]]
 
 ## [[rust]]
+

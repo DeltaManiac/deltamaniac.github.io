@@ -6,8 +6,7 @@ updated: 1609223131083
 created: 1609156334056
 nav_order: 4
 ---
-
-# The Ideal Stocking Stuffer
+## The Ideal Stocking Stuffer
 
 ## Part I
 
@@ -28,6 +27,7 @@ Brute forcing would be the easiest way to find the solution.
 Taking the input we iterate from 1 to the max u32 using `i` and append it to the input.
 
 This would be the content for which we compute the`md5Sum` and check if it starts with five zeroes.
+
 ```rust
 use md5;
 
@@ -41,7 +41,6 @@ pub fn solve_part1(input: &str) -> u32 {
 ```
 
 ## Part II
-
 
 Now find one that starts with six zeroes.
 
@@ -58,3 +57,4 @@ pub fn solve_part2(input: &str) -> i32 {
         .unwrap()
 }
 ```
+

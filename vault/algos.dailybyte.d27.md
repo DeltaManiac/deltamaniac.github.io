@@ -6,8 +6,7 @@ updated: 1629953802575
 created: 1629953123940
 nav_order: 27
 ---
-
-# Problem
+## Problem
 
 This question is asked by Microsoft.
 
@@ -29,8 +28,8 @@ Ex: Given the following series of events...
 >
 > m.next(6) = returns 6 because (5 + 7 + 6) / 3 = 6
 
-
 MovingAverage class definition:
+
 ```
 public class MovingAverage {
     // TODO: declare any instance variables you require.
@@ -72,3 +71,4 @@ class MovingAverage:
 ## [[go]]
 
 ## [[rust]]
+

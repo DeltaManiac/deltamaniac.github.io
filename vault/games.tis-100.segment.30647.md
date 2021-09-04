@@ -5,8 +5,7 @@ desc: ''
 updated: 1604591974172
 created: 1604591909867
 ---
-
-# Sequence Generator
+## Sequence Generator
 
 # Solution
 
@@ -77,3 +76,4 @@ JMP START
 # Solution
 
 ![](/assets/images/2020-11-05-21-29-23.png)
+

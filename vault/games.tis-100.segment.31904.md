@@ -5,9 +5,7 @@ desc: ''
 updated: 1608970836859
 created: 1608966877189
 ---
-
-
-# Sequence Counter
+## Sequence Counter
 
 # Solution
 
@@ -77,3 +75,4 @@ MOV UP DOWN
 # Solution
 
 ![](/assets/images/2020-12-26-13-50-24.png)
+

@@ -6,7 +6,7 @@ updated: 1630115743926
 created: 1630115262245
 nav_order: 28
 ---
-# Problem
+## Problem
 
 Design a class to implement a stack using only a single queue.
 
@@ -44,3 +44,4 @@ Class QueueStack:
 ## [[go]]
 
 ## [[rust]]
+

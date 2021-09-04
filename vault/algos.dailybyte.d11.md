@@ -6,8 +6,7 @@ updated: 1628702602884
 created: 1628522961878
 nav_order: 11
 ---
-
-# Problem
+## Problem
 
 This question is asked by Microsoft.
 
@@ -23,6 +22,7 @@ Ex: Given the following strings...
 > "developer", return 0
 
 ## [[python]]
+
 ```python
 def first_unique_char(s):
     for i,j in OrderedDict(Counter(s)).items():
@@ -34,3 +34,4 @@ def first_unique_char(s):
 ## [[go]]
 
 ## [[rust]]
+

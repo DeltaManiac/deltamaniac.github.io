@@ -6,8 +6,7 @@ updated: 1629953836994
 created: 1627745030752
 stub: false
 ---
-
-# DailyByte
+## DailyByte
 
 [[algos.dailybyte.d1#python]]
 
@@ -62,3 +61,4 @@ stub: false
 [[algos.dailybyte.d26#python]]
 
 [[algos.dailybyte.d27#python]]
+

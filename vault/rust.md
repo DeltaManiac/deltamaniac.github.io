@@ -6,23 +6,21 @@ updated: 1629953869997
 created: 1602919579698
 stub: false
 ---
-
-
-# Rust
+## Rust
 
 ## Reddit Bot
 
-[[Vyom Bot | rust.bots.reddit]]
-
+[[Vyom Bot|rust.bots.reddit]]
 
 ## Kafka
 
-[[Producer | kafka.producer]]
+[[Producer|kafka.producer]]
 
-[[Consumer | kafka.consumer]]
+[[Consumer|kafka.consumer]]
 
 ## LeetCode
-[[MaxDepth |  algos.trees.maxDepth#rust]]
+
+[[MaxDepth|algos.trees.maxDepth#rust]]
 
 # DailyByte
 
@@ -79,3 +77,4 @@ stub: false
 [[algos.dailybyte.d26#rust]]
 
 [[algos.dailybyte.d27#rust]]
+

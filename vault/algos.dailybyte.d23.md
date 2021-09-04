@@ -6,7 +6,7 @@ updated: 1629874570833
 created: 1629873991703
 nav_order: 23
 ---
-# Problem
+## Problem
 
 This question is asked by Amazon.
 
@@ -19,7 +19,6 @@ Ex: Given the following strings...
 > s = "como#pur#ter", t = "computer", return true
 >
 > s = "cof#dim#ng", t = "code", return false
-
 
 ## [[python]]
 

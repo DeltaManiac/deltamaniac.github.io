@@ -6,9 +6,7 @@ updated: 1604591808021
 created: 1603641982728
 stub: false
 ---
-
-
-# Differential Converter
+## Differential Converter
 
 # Solution
 
@@ -58,3 +56,4 @@ MOV UP,DOWN
 # Solution
 
 ![](/assets/images/2020-10-25-21-46-37.png)
+

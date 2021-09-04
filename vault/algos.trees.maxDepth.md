@@ -5,13 +5,12 @@ desc: ''
 updated: 1627953310187
 created: 1627784241720
 ---
-
-# Maximum Depth of Binary Tree
+## Maximum Depth of Binary Tree
 
 Given the `root` of a binary tree, return its maximum depth
 
-
 ## Binary Tree
+
 ![](/assets/images/2021-07-17-12-08-23.png)
 
 ## Solution
@@ -41,6 +40,7 @@ func maxDepth(root *TreeNode) int {
 ```
 
 ### Rust
+
 ```rust
 fn maxDepth(root:Option<Rc<RefCell<TreeNode>>>>>)-> i32{
  match root {
@@ -53,3 +53,4 @@ fn maxDepth(root:Option<Rc<RefCell<TreeNode>>>>>)-> i32{
         }
 }
 ```
+

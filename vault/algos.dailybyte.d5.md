@@ -6,8 +6,7 @@ updated: 1629045496417
 created: 1628394332314
 nav_order: 5
 ---
-
-# Problem
+## Problem
 
 This question is asked by Apple.
 
@@ -23,12 +22,14 @@ Ex: Given the following binary strings...
 >
 > "1" + "0", return  "1"
 
-
 ## [[python]]
+
 ```python
 def add(num1:str, num2:str)->str:
     return bin(int(num1,2)+int(num2,2))[2:]
 ```
+
 ## [[go]]
 
 ## [[rust]]
+

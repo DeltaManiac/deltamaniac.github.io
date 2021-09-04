@@ -6,7 +6,7 @@ updated: 1629045919578
 created: 1628702202317
 nav_order: 13
 ---
-# Problem
+## Problem
 
 This question is asked by Google. Given two integer arrays, return their intersection.
 
@@ -18,9 +18,10 @@ Ex: Given the following arrays...
 >
 > nums1 = [1, 2, 3, 3], nums2 = [3, 3], return [3]
 >
-> nums1 = [2, 4, 6, 8], nums2 = [1, 3, 5, 7], return []`
+> nums1 = [2, 4, 6, 8], nums2 = [1, 3, 5, 7], return \[]\`
 
 ## [[python]]
+
 ```python
 def intersection(nums1,nums2):
     return set(nums1).intersection(set(nums2))
@@ -29,3 +30,4 @@ def intersection(nums1,nums2):
 ## [[go]]
 
 ## [[rust]]
+

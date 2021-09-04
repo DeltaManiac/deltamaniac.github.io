@@ -6,8 +6,7 @@ updated: 1629045544705
 created: 1628398041141
 nav_order: 6
 ---
-
-# Problem
+## Problem
 
 This question is asked by Microsoft.
 
@@ -24,6 +23,7 @@ Ex: Given the following arrays...
 > ["spot", "spotty", "spotted"], return "spot"
 
 ## [[python]]
+
 ```python
 def longestCommonPrefix(strs)->string:
         sz, ret = zip(*strs), ""
@@ -32,6 +32,8 @@ def longestCommonPrefix(strs)->string:
             ret += c[0]
         return ret
 ```
+
 ## [[go]]
 
 ## [[rust]]
+

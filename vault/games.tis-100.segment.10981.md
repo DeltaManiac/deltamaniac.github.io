@@ -6,9 +6,7 @@ updated: 1603640628573
 created: 1603640628573
 stub: false
 ---
-
-
-# Signal Amplifier
+## Signal Amplifier
 
 # Solution
 
@@ -46,4 +44,6 @@ MOV ACC,DOWN
 ```
 
 # Solution
+
 ![](/assets/images/2020-10-25-21-46-17.png)
+

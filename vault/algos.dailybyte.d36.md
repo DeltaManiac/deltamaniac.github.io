@@ -6,8 +6,7 @@ updated: 1630762378331
 created: 1630761277740
 nav_order: 36
 ---
-
-# Problem
+## Problem
 
 Given a binary tree, return its level order traversal where the nodes in each level are ordered from left to right.
 
@@ -58,6 +57,8 @@ def levelOrder(root):
             temp=[]
     return result
 ```
+
 ## [[go]]
 
 ## [[rust]]
+

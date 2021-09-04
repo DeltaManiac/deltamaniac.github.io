@@ -6,8 +6,7 @@ updated: 1628434941643
 created: 1628100232230
 nav_order: 3
 ---
-
-# Problem
+## Problem
 
 This question is asked by Amazon.
 
@@ -22,6 +21,7 @@ Ex: Given the following strings...
 > "RUULLDRD", return true
 
 ## [[python]]
+
 ```python
 def does_it_return(word)->bool:
     x,y = 0,0
@@ -38,6 +38,7 @@ def does_it_return(word)->bool:
 ```
 
 ## [[go]]
+
 ```go
 func doesitreturn(word string) bool {
 	x := 0
@@ -80,3 +81,4 @@ fn does_it_return(word:&str)->bool{
 
 }
 ```
+

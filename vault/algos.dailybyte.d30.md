@@ -6,11 +6,12 @@ updated: 1630507587787
 created: 1630507048471
 nav_order: 30
 ---
+## Problem
 
-# Problem
 Given a binary search tree, rearrange the tree such that it forms a linked list where all its values are in ascending order.
 
 Ex: Given the following tree...
+
 <pre>
         5
        / \
@@ -67,8 +68,8 @@ return...
    6
 </pre>
 
-
 ## [[python]]
+
 ```python
 class Node:
     def __init__(self):
@@ -105,6 +106,8 @@ def flatten(root):
 
 
 ```
+
 ## [[go]]
 
 ## [[rust]]
+

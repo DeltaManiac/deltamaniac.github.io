@@ -6,11 +6,9 @@ updated: 1609239564760
 created: 1609239266974
 nav_order: 9
 ---
-
-# All in a Single Night
+## All in a Single Night
 
 ## Part I
-
 
 Every year, Santa manages to deliver all of his presents in a single night.
 
@@ -23,6 +21,7 @@ London to Dublin = 464
 London to Belfast = 518
 Dublin to Belfast = 141
 ```
+
 The possible routes are therefore:
 
 ```
@@ -33,11 +32,13 @@ Dublin -> Belfast -> London = 659
 Belfast -> Dublin -> London = 605
 Belfast -> London -> Dublin = 982
 ```
+
 The shortest of these is `London -> Dublin -> Belfast = 605`, and so the answer is `605` in this example.
 
 What is the distance of the shortest route?
 
 ## Solution
+
 ```rust
 use std::collections::HashMap;
 
@@ -122,6 +123,7 @@ pub fn part1(input: &str) -> u16 {
     input_to_graph(input).cheapest()
 }
 ```
+
 ## Part II
 
 The next year, just to show off, Santa decides to take the route with the longest distance instead.
@@ -162,3 +164,4 @@ pub fn part2(input: &str) -> u16 {
     input_to_graph(input).costliest()
 }
 ```
+

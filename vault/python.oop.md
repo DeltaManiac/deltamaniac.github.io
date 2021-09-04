@@ -6,8 +6,7 @@ updated: 1628100102303
 created: 1628035170150
 nav_order: 2
 ---
-
-# Classes
+## Classes
 
 ## Sample
 
@@ -29,48 +28,46 @@ class CreditCard:
 
 ## Special Methods
 
-
-| Syntax                                  | Special Method                                                    |
-|-----------------------------------------|-------------------------------------------------------------------|
-| a + b                                   | a.\__add\\__(b) or b.\__radd\\__(a)                               |
-| a - b                                   | a.\__sub\\__(b) or b.\__rsub\__(a)                                |
-| a * b                                   | a.\__mul\__(b) or b.\__rmul\__(a)                                 |
-| a / b                                   | a.\__truediv\__(b) or b.\__rtruediv\__(a)                         |
-| a // b                                  | a.\__floordiv\__(b) or b.\__rfloordiv\__(a)                       |
-| a % b                                   | a.\__mod\__(b) or b.\__rmod\__(a)                                 |
-| a ** b                                  | a.\__pow\__(b) or b.\__rpow\__(a)                                 |
-| a << b                                  | a.\__lshift\__(b) or b.\__rlshift\__(a)                           |
-| a >> b                                  | a.\__rshift\__(b) or b.\__rrshift\__(a)                           |
-| a & b                                   | a.\__and\__(b) or b.\__rand\__(a)                                 |
-| a ^ b                                   | a.\__xor\__(b) or b.\__rxor\__(a)                                 |
-| a \| b                                  | a.\__or\__(b) or b.\__ror\__(a)                                   |
-| a += b <br> a -= b <br> a *= b <br> ... | a.\__iadd\__(b) <br> a.\__isub\__(b) <br> a.\__imul\__(b)<br> ... |
-| +a                                      | a.\__pos\__()                                                     |
-| -a                                      | a.\__neg\__()                                                     |
-| ~a                                      | a.\__invert\__()                                                  |
-| abs(a)                                  | a.\__abs\__()                                                     |
-| a < b                                   | a.\__lt\__(b)                                                     |
-| a <= b                                  | a.\__le\__(b)                                                     |
-| a > b                                   | a.\__gt\__(b)                                                     |
-| a >= b                                  | a.\__ge\__(b)                                                     |
-| a == b                                  | a.\__eq\__(b)                                                     |
-| a != b                                  | a.\__ne\__(b)                                                     |
-| v in a                                  | a.\__contains\__(v)                                               |
-| a[k]                                    | a.\__getitem\__(k)                                                |
-| a[k]=v                                  | a.\__setitem\__(k,v)                                              |
-| del a[k]                                | a.\__delitem\__(k)                                                |
-| a(arg1, arg2)                           | a.\__call\__(arg1,arg2)                                           |
-| len(a)                                  | a.\__len\__()                                                     |
-| hash(a)                                 | a.\__hash\__()                                                    |
-| iter(a)                                 | a.\__iter\__()                                                    |
-| next(a)                                 | a.\__next\__()                                                    |
-| bool(a)                                 | a.\__bool\__()                                                    |
-| float(a)                                | a.\__float\__()                                                   |
-| int(a)                                  | a.\__int\__()                                                     |
-| repr(a)                                 | a.\__repr\__()                                                    |
-| reversed(a)                             | a.\__reversed\__()                                                |
-| str(a)                                  | a.\__str\__()                                                     |
-
+| Syntax                                   | Special Method                                                          |
+| ---------------------------------------- | ----------------------------------------------------------------------- |
+| a + b                                    | a.\_\_add\\**(b) or b.\_\_radd\\**(a)                                   |
+| a - b                                    | a.\_\_sub\\\_\_(b) or b.\_\_rsub\_\_(a)                                 |
+| a \* b                                   | a.\_\_mul\_\_(b) or b.\_\_rmul\_\_(a)                                   |
+| a / b                                    | a.\_\_truediv\_\_(b) or b.\_\_rtruediv\_\_(a)                           |
+| a // b                                   | a.\_\_floordiv\_\_(b) or b.\_\_rfloordiv\_\_(a)                         |
+| a % b                                    | a.\_\_mod\_\_(b) or b.\_\_rmod\_\_(a)                                   |
+| a \*\* b                                 | a.\_\_pow\_\_(b) or b.\_\_rpow\_\_(a)                                   |
+| a &lt;&lt; b                             | a.\_\_lshift\_\_(b) or b.\_\_rlshift\_\_(a)                             |
+| a >> b                                   | a.\_\_rshift\_\_(b) or b.\_\_rrshift\_\_(a)                             |
+| a & b                                    | a.\_\_and\_\_(b) or b.\_\_rand\_\_(a)                                   |
+| a ^ b                                    | a.\_\_xor\_\_(b) or b.\_\_rxor\_\_(a)                                   |
+| a \| b                                   | a.\_\_or\_\_(b) or b.\_\_ror\_\_(a)                                     |
+| a += b <br> a -= b <br> a \*= b <br> ... | a.\_\_iadd\_\_(b) <br> a.\_\_isub\_\_(b) <br> a.\_\_imul\_\_(b)<br> ... |
+| +a                                       | a.\_\_pos\_\_()                                                         |
+| -a                                       | a.\_\_neg\_\_()                                                         |
+| ~a                                       | a.\_\_invert\_\_()                                                      |
+| abs(a)                                   | a.\_\_abs\_\_()                                                         |
+| a &lt; b                                 | a.\_\_lt\_\_(b)                                                         |
+| a &lt;= b                                | a.\_\_le\_\_(b)                                                         |
+| a > b                                    | a.\_\_gt\_\_(b)                                                         |
+| a >= b                                   | a.\_\_ge\_\_(b)                                                         |
+| a == b                                   | a.\_\_eq\_\_(b)                                                         |
+| a != b                                   | a.\_\_ne\_\_(b)                                                         |
+| v in a                                   | a.\_\_contains\_\_(v)                                                   |
+| a[k]                                     | a.\_\_getitem\_\_(k)                                                    |
+| a[k]=v                                   | a.\_\_setitem\_\_(k,v)                                                  |
+| del a[k]                                 | a.\_\_delitem\_\_(k)                                                    |
+| a(arg1, arg2)                            | a.\_\_call\_\_(arg1,arg2)                                               |
+| len(a)                                   | a.\_\_len\_\_()                                                         |
+| hash(a)                                  | a.\_\_hash\_\_()                                                        |
+| iter(a)                                  | a.\_\_iter\_\_()                                                        |
+| next(a)                                  | a.\_\_next\_\_()                                                        |
+| bool(a)                                  | a.\_\_bool\_\_()                                                        |
+| float(a)                                 | a.\_\_float\_\_()                                                       |
+| int(a)                                   | a.\_\_int\_\_()                                                         |
+| repr(a)                                  | a.\_\_repr\_\_()                                                        |
+| reversed(a)                              | a.\_\_reversed\_\_()                                                    |
+| str(a)                                   | a.\_\_str\_\_()                                                         |
 
 ## Operator Overloading
 
@@ -109,3 +106,4 @@ class Vector:
 ```
 
 ## Iterators
+

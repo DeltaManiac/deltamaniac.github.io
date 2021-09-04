@@ -6,8 +6,7 @@ updated: 1630509774482
 created: 1630509479734
 nav_order: 33
 ---
-
-# Problem
+## Problem
 
 Given two binary trees, return whether or not the two trees are identical.
 
@@ -28,8 +27,8 @@ Ex: Given the following trees...
 return true.
 </pre>
 
-
 Ex: Given the following trees...
+
 <pre>
 
         1
@@ -81,6 +80,8 @@ def isIdentical(r1,r2):
         return False
     return isIdentical(r1.right, r2.right) and isIdentical(r1.left, r2.left)
 ```
+
 ## [[go]]
 
 ## [[rust]]
+

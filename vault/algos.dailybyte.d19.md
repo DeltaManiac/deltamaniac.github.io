@@ -6,7 +6,7 @@ updated: 1629418318120
 created: 1629418216065
 nav_order: 19
 ---
-# Problem
+## Problem
 
 This question is asked by Microsoft.
 
@@ -16,11 +16,11 @@ Note: a cycle is a circular arrangement (i.e. one node points back to a previous
 
 Ex: Given the following linked lists...
 
->1->2->3->1 -> true (3 points back to 1)
+> 1->2->3->1 -> true (3 points back to 1)
 >
->1->2->3 -> false
+> 1->2->3 -> false
 >
->1->1 true (1 points to itself)
+> 1->1 true (1 points to itself)
 
 ## [[python]]
 
@@ -45,3 +45,4 @@ def hasCycle(self, head: ListNode) -> bool:
 ## [[go]]
 
 ## [[rust]]
+

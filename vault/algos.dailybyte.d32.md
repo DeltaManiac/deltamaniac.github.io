@@ -6,8 +6,7 @@ updated: 1630508913173
 created: 1630508380048
 nav_order: 32
 ---
-
-# Problem
+## Problem
 
 Given an array of numbers sorted in ascending order, return a height-balanced binary search tree using every number from the array.
 
@@ -56,3 +55,4 @@ def arrayToBST(arr):
 ## [[go]]
 
 ## [[rust]]
+

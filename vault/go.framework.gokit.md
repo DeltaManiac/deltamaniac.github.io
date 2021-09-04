@@ -6,10 +6,7 @@ updated: 1602916175130
 created: 1602916175130
 stub: false
 ---
-
-
-
-# Gokit
+## Gokit
 
 Spring boot like framework for [[go]]. It has 3 major Components
 
@@ -195,6 +192,7 @@ func getPbEndpoint(svc PbService) endpoint.Endpoint {
 	}
 }
 ```
+
 ## Define Transport
 
 Since this trivial example used JSON over HTTP we would have to decode the JSON to structs that our service can understand
@@ -234,6 +232,7 @@ func decodeGetPbRequest(_ context.Context, r *http.Request) (interface{}, error)
 	return request, nil
 }
 ```
+
 ### Response Encoder
 
 This method would accept an `interface` type and convert it JSON, this allows it to accept `createPbResponse`,`deletePbResponse`,`getPbResponse` as an `interface{}` and encode it as json using the annotations in the struct definition.
@@ -286,7 +285,9 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 ```
+
 ## Divide and Conquer
+
 At this point the `main.go` has a lot of code so lets move to different files so that we have separation of concerns.
 
 ### `service.go`
@@ -475,6 +476,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 ```
+
 ## Logging Middleware
 
 All applications need to log information, this can be enabled by adding a logging middleware that we create in a file called `logging.go`
@@ -484,6 +486,7 @@ Middleware in go-kit work on `Endpoint`
 The interface definition is `type Middleware func(Endpoint) Endpoint`, which means it is a function that takes in an endpoint and returns an endpoint
 
 We can create the `loggingMiddleware` so that it adheres to the `PbService` by implementing the `Create` `Delete` `Get` methods.
+
 ```go
 type loggingMiddleware struct {
 	logger log.Logger
@@ -492,6 +495,7 @@ type loggingMiddleware struct {
 ```
 
 ### Create
+
 ```go
 func (m loggingMiddleware) Create(ctx context.Context, content string) (output string, err error) {
 	// This defered function would be invoked just before the retuen statement
@@ -510,6 +514,7 @@ func (m loggingMiddleware) Create(ctx context.Context, content string) (output s
 ```
 
 ### Delete
+
 ```go
  func (m loggingMiddleware) Delete(ctx context.Context, key string) (output string, err error) {
 	defer func(begin time.Time) {
@@ -527,6 +532,7 @@ func (m loggingMiddleware) Create(ctx context.Context, content string) (output s
 ```
 
 ### Get
+
 ```go
 func (m loggingMiddleware) Get(ctx context.Context, key string) (output string, err error) {
 	defer func(begin time.Time) {
@@ -599,7 +605,9 @@ func encodeResponse(_ context.Context, w http.ResponseWriter, response interface
 ```
 
 ## PasteBin
+
 ### Client
+
 ```sh
 
 $ curl localhost:8080/create -XPOST -d '{"content":"THIS IS SPARTA"}'
@@ -621,6 +629,7 @@ $ curl localhost:8080/get -XPOST -d '{"key":"c449250a-d74c-4d23-acbb-6785b0bd822
 ```
 
 ### Server
+
 ```sh
 $ ./pastebin-II
 
@@ -634,3 +643,4 @@ method=DeletePb input=c449250a-d74c-4d23-acbb-6785b0bd822a output=ok err=null to
 
 method=GetPb input=c449250a-d74c-4d23-acbb-6785b0bd822a output= err="Invalid Uuid" took=803ns
 ```
+

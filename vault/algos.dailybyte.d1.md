@@ -6,8 +6,7 @@ updated: 1629045487923
 created: 1627950805305
 nav_order: 1
 ---
-
-# Problem
+## Problem
 
 This question is asked by Google.
 
@@ -42,6 +41,7 @@ func reverse(s string) string {
 ```
 
 ## [[rust]]
+
 ```rust
 // Handle UTF-16
 use unicode_segementation:UnicodeSegmentation;
@@ -53,3 +53,4 @@ fn reverse(word:&str)-> String{
         .collect()
 }
 ```
+

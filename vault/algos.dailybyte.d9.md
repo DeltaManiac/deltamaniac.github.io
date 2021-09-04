@@ -6,8 +6,7 @@ updated: 1629045767172
 created: 1628431635440
 nav_order: 9
 ---
-
-# Problem
+## Problem
 
 This question is asked by Amazon.
 
@@ -31,3 +30,4 @@ def is_jewel_and_stone(jewels,stones):
 ## [[go]]
 
 ## [[rust]]
+

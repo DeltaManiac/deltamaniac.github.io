@@ -6,8 +6,7 @@ updated: 1630761153418
 created: 1630760693504
 nav_order: 35
 ---
-
-# Problem
+## Problem
 
 Given a binary search tree, return its mode (you may assume the answer is unique). If the tree is empty, return -1.
 
@@ -56,5 +55,5 @@ def findMode(root):
 
 ## [[go]]
 
-
 ## [[rust]]
+

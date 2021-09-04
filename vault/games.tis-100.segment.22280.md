@@ -5,8 +5,7 @@ desc: ''
 updated: 1604591865587
 created: 1604591692143
 ---
-
-# Signal Multiplexer
+## Signal Multiplexer
 
 # Solution
 
@@ -60,4 +59,6 @@ MOV UP,DOWN
 ```
 
 # Solution
+
 ![](/assets/images/2020-11-05-21-27-40.png)
+

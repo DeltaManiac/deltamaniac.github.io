@@ -6,9 +6,7 @@ updated: 1602919762613
 created: 1602919762613
 stub: false
 ---
-
-
-# Producer
+## Producer
 
 Kafka has a binary wire protocol.This means that it is possible for applications to read messages from Kafka or write messages to Kafka simply by sending the correct byte sequences to Kafka’s network port.
 
@@ -92,11 +90,11 @@ Crate : [rdkafka](https://crates.io/crates/rdkafka)
 
 ```
 
-Schema Registry for confluent : https://github.com/gklijs/schema_registry_converter
+Schema Registry for confluent : <https://github.com/gklijs/schema_registry_converter>
 
-Confluent Write up : https://www.confluent.io/blog/getting-started-with-rust-and-kafka/
+Confluent Write up : <https://www.confluent.io/blog/getting-started-with-rust-and-kafka/>
 
----
+* * *
 
 ## In [[go]]
 
@@ -238,3 +236,4 @@ go func sendMessage(){
 		}
 }
 ```
+

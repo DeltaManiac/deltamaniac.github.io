@@ -6,9 +6,7 @@ updated: 1629045670812
 created: 1628005470068
 nav_order: 2
 ---
-
-
-# Problem
+## Problem
 
 This question is asked by Facebook.
 
@@ -24,7 +22,7 @@ Ex: Given the following strings...
 >
 > "A man, a plan, a canal: Panama.", return true
 
- ## [[python]]
+## [[python]]
 
 ```python
 def is_palindrome(word)->bool:
@@ -32,7 +30,7 @@ def is_palindrome(word)->bool:
     return w1==w1[::-1]
 ```
 
- ## [[go]]
+## [[go]]
 
 ```go
 func isPalindrome(word string) bool{
@@ -65,7 +63,7 @@ func isValid(a byte) bool {
 }
 ```
 
- ## [[rust]]
+## [[rust]]
 
 ```rust
 fn isPalindrome(word:&str)-> bool{
@@ -79,3 +77,4 @@ fn isPalindrome(word:&str)-> bool{
 }
 
 ```
+
