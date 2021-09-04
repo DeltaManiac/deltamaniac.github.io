@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>root - BrainMatter</title>
+  <title>Middle Node of Linked List - BrainMatter</title>
   
 
   <link
@@ -43,22 +43,22 @@
 <meta name="description" content="Personal knowledge space">
 <meta name="author" content="DeltaManiac">
 
-<link rel="canonical" href="https://deltamaniac.github.io//">
+<link rel="canonical" href="https://deltamaniac.github.io//notes/uAHrrPQGbQnXmrMZWRmzL.html">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://deltamaniac.github.io//">
+<meta property="og:url" content="https://deltamaniac.github.io//notes/uAHrrPQGbQnXmrMZWRmzL.html">
 <meta property="og:description" content="Personal knowledge space">
 <meta property="og:image" content="https://deltamaniac.github.io/undefined">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@delta_maniac">
-<meta name="twitter:url" content="https://deltamaniac.github.io//">
+<meta name="twitter:url" content="https://deltamaniac.github.io//notes/uAHrrPQGbQnXmrMZWRmzL.html">
 <meta name="twitter:description" content="Personal knowledge space">
 <meta name="twitter:image" content="https://deltamaniac.github.io/undefined">
 
 
-  <meta property="og:title" content="root - BrainMatter" />
-  <meta name="twitter:title" content="root - BrainMatter" />
+  <meta property="og:title" content="Middle Node of Linked List - BrainMatter" />
+  <meta name="twitter:title" content="Middle Node of Linked List - BrainMatter" />
   
 </head>
 
@@ -130,6 +130,12 @@
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
       
+        
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\ovOjtfOpF3vhfFUZi6DHp.html">Algos</a></li><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io/notes\hXfo1GFtYfbMpCOVkr1Gp.html">DailyByte</a></li><li class="breadcrumb-nav-list-item">Middle Node of Linked List</li></ol>
+          </nav>
+        
+      
       <div id="main-content" class="main-content" role="main">
 
         
@@ -162,10 +168,10 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="root">
+    <meta itemprop="headline" content="Middle Node of Linked List">
     
-    <meta itemprop="datePublished" content="2020-10-17T11:47:15+00:00">
-    <meta itemprop="dateModified" content="2020-12-25T11:22:15+00:00">
+    <meta itemprop="datePublished" content="2021-08-20T05:37:56+00:00">
+    <meta itemprop="dateModified" content="2021-08-20T05:39:47+00:00">
 
     <div class="page__inner-wrap">
 
@@ -175,31 +181,33 @@
 
         
 
-        <h1 id="root"><a aria-hidden="true" class="anchor-heading" href="#root"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>root</h1>
-<p><img src="https://raw.githubusercontent.com/DeltaManiac/DeltaManiac/main/vault/assets/banner.svg" alt="DeltaManiac"></p>
-<ul>
-<li>🔭 I’m currently playing Destiny 2</li>
-<li>🌱 I’m currently learning <a href="https://www.rust-lang.org">Rust</a> at night and <a href="https://golang.org/">Go</a> at work</li>
-<li>📫 How to reach me: <a href="https://twitter.com/Delta_Maniac">twitter</a></li>
-<li>😄 Pronouns: He/Him</li>
-<li>⚡ Fun fact: The banner was provided by <a href="https://github.com/pushkar8723">Pushkar Anand</a> sourced from <a href="https://codepen.io/sdras/pen/doZReX">Responsive Cow Jumps Over the Moooooon</a>
-<!-- // - 👯 I’m looking to collaborate on ...
-// - 🤔 I’m looking for help with ...
-// - 💬 Ask me about ... -->
-</li>
-</ul>
+        <h1 id="middle-node-of-linked-list"><a aria-hidden="true" class="anchor-heading" href="#middle-node-of-linked-list"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Middle Node of Linked List</h1>
+<h1 id="problem"><a aria-hidden="true" class="anchor-heading" href="#problem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Problem</h1>
+<p>This question is asked by Amazon.</p>
+<p>Given a non-empty linked list, return the middle node of the list. If the linked list contains an even number of elements, return the node closer to the end.</p>
+<p>Ex: Given the following linked lists...</p>
+<blockquote>
+<p>1->2->3->null, return 2</p>
+<p>1->2->3->4->null, return 3</p>
+<p>1->null, return 1</p>
+</blockquote>
+<h2 id="python"><a aria-hidden="true" class="anchor-heading" href="#python"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/7kyCk8YAkDvIrxLtAUFkG.html">Python</a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">middleNode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    slow <span class="token operator">=</span> fast <span class="token operator">=</span> head
+    <span class="token keyword">while</span> fast <span class="token keyword">and</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">:</span>
+        slow <span class="token operator">=</span> slow<span class="token punctuation">.</span><span class="token builtin">next</span>
+        fast <span class="token operator">=</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+    <span class="token keyword">return</span> slow
+</code></pre>
+<h2 id="go"><a aria-hidden="true" class="anchor-heading" href="#go"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/96Hj5nYpnUciwlTenFpoU.html">Go</a></h2>
+<h2 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://deltamaniac.github.io/notes/A6TBKYAcFVjBqZpdbHuaS.html">Rust</a></h2>
 <hr>
-<h2 id="children"><a aria-hidden="true" class="anchor-heading" href="#children"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Children</h2>
-<ol>
-<li><a href="https://deltamaniac.github.io/notes/3dNch4I3rcDy5xXFn3R6B.html">Advent of Code</a></li>
-<li><a href="https://deltamaniac.github.io/notes/ovOjtfOpF3vhfFUZi6DHp.html">Algos</a></li>
-<li><a href="https://deltamaniac.github.io/notes/BWzIJm01jQ6aNNg56CwnS.html">Games</a></li>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
 <li><a href="https://deltamaniac.github.io/notes/96Hj5nYpnUciwlTenFpoU.html">Go</a></li>
-<li><a href="https://deltamaniac.github.io/notes/6Wl0i0BjF7yD85uM5RTyK.html">Kafka</a></li>
 <li><a href="https://deltamaniac.github.io/notes/7kyCk8YAkDvIrxLtAUFkG.html">Python</a></li>
 <li><a href="https://deltamaniac.github.io/notes/A6TBKYAcFVjBqZpdbHuaS.html">Rust</a></li>
-<li><a href="https://deltamaniac.github.io/notes/w3B0c1Y72MfzhwoVNx7vx.html">Todo</a></li>
-</ol><span id="navId" data="root"></span>
+</ul><span id="navId" data="uAHrrPQGbQnXmrMZWRmzL"></span>
 
                 
       </section>
@@ -225,12 +233,12 @@
             
               <div class="d-flex mt-2">
               <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">25/12/2020</span>.
+                Page last modified: <span class="d-inline-block">20/8/2021</span>.
               </p>
             
                 
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/root.md" id="edit-this-page">Edit this page on GitHub</a>
+                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/algos.dailybyte.d18.md" id="edit-this-page">Edit this page on GitHub</a>
                   </p>
                 
               </div>

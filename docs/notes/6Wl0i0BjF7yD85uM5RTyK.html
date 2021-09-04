@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>root - BrainMatter</title>
+  <title>Kafka - BrainMatter</title>
   
 
   <link
@@ -43,22 +43,22 @@
 <meta name="description" content="Personal knowledge space">
 <meta name="author" content="DeltaManiac">
 
-<link rel="canonical" href="https://deltamaniac.github.io//">
+<link rel="canonical" href="https://deltamaniac.github.io//notes/6Wl0i0BjF7yD85uM5RTyK.html">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://deltamaniac.github.io//">
+<meta property="og:url" content="https://deltamaniac.github.io//notes/6Wl0i0BjF7yD85uM5RTyK.html">
 <meta property="og:description" content="Personal knowledge space">
 <meta property="og:image" content="https://deltamaniac.github.io/undefined">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@delta_maniac">
-<meta name="twitter:url" content="https://deltamaniac.github.io//">
+<meta name="twitter:url" content="https://deltamaniac.github.io//notes/6Wl0i0BjF7yD85uM5RTyK.html">
 <meta name="twitter:description" content="Personal knowledge space">
 <meta name="twitter:image" content="https://deltamaniac.github.io/undefined">
 
 
-  <meta property="og:title" content="root - BrainMatter" />
-  <meta name="twitter:title" content="root - BrainMatter" />
+  <meta property="og:title" content="Kafka - BrainMatter" />
+  <meta name="twitter:title" content="Kafka - BrainMatter" />
   
 </head>
 
@@ -130,6 +130,12 @@
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
       
+        
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://deltamaniac.github.io">root</a></li><li class="breadcrumb-nav-list-item">Kafka</li></ol>
+          </nav>
+        
+      
       <div id="main-content" class="main-content" role="main">
 
         
@@ -162,10 +168,10 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="root">
+    <meta itemprop="headline" content="Kafka">
     
-    <meta itemprop="datePublished" content="2020-10-17T11:47:15+00:00">
-    <meta itemprop="dateModified" content="2020-12-25T11:22:15+00:00">
+    <meta itemprop="datePublished" content="2020-10-17T12:58:31+00:00">
+    <meta itemprop="dateModified" content="2020-10-17T12:58:31+00:00">
 
     <div class="page__inner-wrap">
 
@@ -175,31 +181,121 @@
 
         
 
-        <h1 id="root"><a aria-hidden="true" class="anchor-heading" href="#root"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>root</h1>
-<p><img src="https://raw.githubusercontent.com/DeltaManiac/DeltaManiac/main/vault/assets/banner.svg" alt="DeltaManiac"></p>
+        <h1 id="kafka"><a aria-hidden="true" class="anchor-heading" href="#kafka"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Kafka</h1>
+<h1 id="apache-kafka"><a aria-hidden="true" class="anchor-heading" href="#apache-kafka"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Apache Kafka</h1>
 <ul>
-<li>🔭 I’m currently playing Destiny 2</li>
-<li>🌱 I’m currently learning <a href="https://www.rust-lang.org">Rust</a> at night and <a href="https://golang.org/">Go</a> at work</li>
-<li>📫 How to reach me: <a href="https://twitter.com/Delta_Maniac">twitter</a></li>
-<li>😄 Pronouns: He/Him</li>
-<li>⚡ Fun fact: The banner was provided by <a href="https://github.com/pushkar8723">Pushkar Anand</a> sourced from <a href="https://codepen.io/sdras/pen/doZReX">Responsive Cow Jumps Over the Moooooon</a>
-<!-- // - 👯 I’m looking to collaborate on ...
-// - 🤔 I’m looking for help with ...
-// - 💬 Ask me about ... -->
+<li>
+<p>pub-sub messaging system</p>
+</li>
+<li>
+<p>basic unit --> message =><code>{ Body :[u8], Key:[u8]}</code></p>
+</li>
+<li>
+<p>writes are mainly batch operations => <code>Vec&#x3C;Messages></code></p>
+</li>
+<li>
+<p>does not track acknowledgments from consumers but allows consumers to use Kafka to track their position (offset) in each partition.</p>
+</li>
+<li>
+<p>Schema --> governs structure of message</p>
+<ul>
+<li>eg JSON/XML/<a href="https://avro.apache.org/docs/current/">Apache Avro</a></li>
+</ul>
+</li>
+<li>
+<p>Topics --> collection of messages "about something same"</p>
+</li>
+<li>
+<p>Topics made of n partitions => Append only queue-like
+<img src="/assets/images/2020-10-11-20-30-05.png"></p>
+</li>
+<li>
+<p>Stream => Single topic of data irrespective of partitions</p>
+</li>
+<li>
+<p><a href="https://deltamaniac.github.io/notes/wkazkGBnDMXJcyTJckPiu.html">Producer</a></p>
+<ul>
+<li>produce message for a topic, can sometimes specify which partition to store</li>
+</ul>
+</li>
+<li>
+<p><a href="https://deltamaniac.github.io/notes/PeDQmsjlEYcdja9yj2nNL.html">Consumer</a></p>
+<ul>
+<li>Reads message</li>
+<li>Subscribes 1:n topics</li>
+<li>FIFO Read (Queue like)</li>
+<li>track of consumed messages via offset</li>
+<li><strong>Ownership</strong> mapping of consumer to partitions</li>
+</ul>
+</li>
+<li>
+<p>Consumer Group -> 1 or more consumers that work together to consumer a topic</p>
+</li>
+<li>
+<p>Kafka Broker -> Single Kafka server</p>
+<ul>
+<li>Receives messages from Producers</li>
+<li>Assign offset</li>
+<li>Commit to disk</li>
+</ul>
+</li>
+<li>
+<p>Kafka Cluster</p>
+<ul>
+<li>
+<p>Collection of brokers</p>
+</li>
+<li>
+<p><strong>1</strong> automatically elected broker will function as the cluster <strong>controller</strong></p>
+</li>
+<li>
+<p>Controller responsibilities</p>
+<ul>
+<li>administrative operations</li>
+<li>assigning partitions to broker</li>
+<li>monitor for broker failures</li>
+</ul>
+<p><img src="/assets/images/2020-10-11-20-31-20.png"></p>
 </li>
 </ul>
+</li>
+<li>
+<p>Retention -> Configurable for a period of time or size of topic (GB/MB)</p>
+</li>
+<li>
+<p>Kafka : Pitch</p>
+<ul>
+<li>Multiple Producers x Multiple Topics</li>
+<li>Multiple Consumers</li>
+<li>Disk Based Retention --> No data loss</li>
+<li>Scalable</li>
+<li>High Performance</li>
+</ul>
+</li>
+</ul>
+<h2 id="starting-kafka-on-osx"><a aria-hidden="true" class="anchor-heading" href="#starting-kafka-on-osx"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Starting Kafka on OSX</h2>
+<pre class="language-shell"><code class="language-shell"><span class="token comment"># Start ZooKeeper</span>
+<span class="token comment"># `zkServer` DOESNT WORK IN TMUX!!!</span>
+zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties <span class="token operator">&#x26;</span> kafka-server-start /usr/local/etc/kafka/server.properties
+
+<span class="token comment"># Start kafka server</span>
+kafka-server-start.sh /usr/local/etc/kafka/server.properties
+
+<span class="token comment"># Create a topic</span>
+kafka-topics --create --zookeeper localhost:2181 --replication-factor <span class="token number">1</span> --partitions <span class="token number">1</span> --topic temptopic
+
+<span class="token comment"># Start a producer to temptopic</span>
+kafka-console-producer --broker-list localhost:9092 --topic temptopic
+
+<span class="token comment"># In another tab start a consumer to temptopic</span>
+kafka-console-producer --broker-list localhost:9092 --topic temptopic --from-beginning
+</code></pre>
 <hr>
 <h2 id="children"><a aria-hidden="true" class="anchor-heading" href="#children"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Children</h2>
 <ol>
-<li><a href="https://deltamaniac.github.io/notes/3dNch4I3rcDy5xXFn3R6B.html">Advent of Code</a></li>
-<li><a href="https://deltamaniac.github.io/notes/ovOjtfOpF3vhfFUZi6DHp.html">Algos</a></li>
-<li><a href="https://deltamaniac.github.io/notes/BWzIJm01jQ6aNNg56CwnS.html">Games</a></li>
-<li><a href="https://deltamaniac.github.io/notes/96Hj5nYpnUciwlTenFpoU.html">Go</a></li>
-<li><a href="https://deltamaniac.github.io/notes/6Wl0i0BjF7yD85uM5RTyK.html">Kafka</a></li>
-<li><a href="https://deltamaniac.github.io/notes/7kyCk8YAkDvIrxLtAUFkG.html">Python</a></li>
-<li><a href="https://deltamaniac.github.io/notes/A6TBKYAcFVjBqZpdbHuaS.html">Rust</a></li>
-<li><a href="https://deltamaniac.github.io/notes/w3B0c1Y72MfzhwoVNx7vx.html">Todo</a></li>
-</ol><span id="navId" data="root"></span>
+<li><a href="https://deltamaniac.github.io/notes/PeDQmsjlEYcdja9yj2nNL.html">Consumer</a></li>
+<li><a href="https://deltamaniac.github.io/notes/wkazkGBnDMXJcyTJckPiu.html">Producer</a></li>
+</ol><span id="navId" data="6Wl0i0BjF7yD85uM5RTyK"></span>
 
                 
       </section>
@@ -225,12 +321,12 @@
             
               <div class="d-flex mt-2">
               <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">25/12/2020</span>.
+                Page last modified: <span class="d-inline-block">17/10/2020</span>.
               </p>
             
                 
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/root.md" id="edit-this-page">Edit this page on GitHub</a>
+                    <a href="https://github.com/DeltaManiac/deltamaniac.github.io/edit/main/vault/kafka.md" id="edit-this-page">Edit this page on GitHub</a>
                   </p>
                 
               </div>
