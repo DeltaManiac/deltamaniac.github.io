@@ -1,9 +1,9 @@
 ---
-id: HPMtCuQsICPB5yO5RzVqL
-title: Dailybyte
+id: hXfo1GFtYfbMpCOVkr1Gp
+title: DailyByte
 desc: ''
-updated: 1630763187404
-created: 1630763187404
-stub: true
+updated: 1630766738717
+created: 1627950805366
+stub: false
 ---
 

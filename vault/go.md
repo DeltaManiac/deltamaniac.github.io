@@ -28,50 +28,50 @@ stub: false
 
 [[algos.dailybyte.d3#go]]
 
-[[dailybyte.d4#go]]
+[[algos.dailybyte.d4#go]]
 
-[[dailybyte.d5#go]]
+[[algos.dailybyte.d5#go]]
 
-[[dailybyte.d6#go]]
+[[algos.dailybyte.d6#go]]
 
-[[dailybyte.d7#go]]
+[[algos.dailybyte.d7#go]]
 
-[[dailybyte.d8#go]]
+[[algos.dailybyte.d8#go]]
 
-[[dailybyte.d9#go]]
+[[algos.dailybyte.d9#go]]
 
-[[dailybyte.d10#go]]
+[[algos.dailybyte.d10#go]]
 
-[[dailybyte.d11#go]]
+[[algos.dailybyte.d11#go]]
 
-[[dailybyte.d12#go]]
+[[algos.dailybyte.d12#go]]
 
-[[dailybyte.d13#go]]
+[[algos.dailybyte.d13#go]]
 
-[[dailybyte.d14#go]]
+[[algos.dailybyte.d14#go]]
 
-[[dailybyte.d15#go]]
+[[algos.dailybyte.d15#go]]
 
-[[dailybyte.d16#go]]
+[[algos.dailybyte.d16#go]]
 
-[[dailybyte.d17#go]]
+[[algos.dailybyte.d17#go]]
 
-[[dailybyte.d18#go]]
+[[algos.dailybyte.d18#go]]
 
-[[dailybyte.d19#go]]
+[[algos.dailybyte.d19#go]]
 
-[[dailybyte.d20#go]]
+[[algos.dailybyte.d20#go]]
 
-[[dailybyte.d21#go]]
+[[algos.dailybyte.d21#go]]
 
-[[dailybyte.d22#go]]
+[[algos.dailybyte.d22#go]]
 
-[[dailybyte.d23#go]]
+[[algos.dailybyte.d23#go]]
 
-[[dailybyte.d24#go]]
+[[algos.dailybyte.d24#go]]
 
-[[dailybyte.d25#go]]
+[[algos.dailybyte.d25#go]]
 
-[[dailybyte.d26#go]]
+[[algos.dailybyte.d26#go]]
 
-[[dailybyte.d27#go]]
+[[algos.dailybyte.d27#go]]

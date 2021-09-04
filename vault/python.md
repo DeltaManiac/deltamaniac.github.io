@@ -15,50 +15,50 @@ stub: false
 
 [[algos.dailybyte.d3#python]]
 
-[[dailybyte.d4#python]]
+[[algos.dailybyte.d4#python]]
 
-[[dailybyte.d5#python]]
+[[algos.dailybyte.d5#python]]
 
-[[dailybyte.d6#python]]
+[[algos.dailybyte.d6#python]]
 
-[[dailybyte.d7#python]]
+[[algos.dailybyte.d7#python]]
 
-[[dailybyte.d8#python]]
+[[algos.dailybyte.d8#python]]
 
-[[dailybyte.d9#python]]
+[[algos.dailybyte.d9#python]]
 
-[[dailybyte.d10#python]]
+[[algos.dailybyte.d10#python]]
 
-[[dailybyte.d11#python]]
+[[algos.dailybyte.d11#python]]
 
-[[dailybyte.d12#python]]
+[[algos.dailybyte.d12#python]]
 
-[[dailybyte.d13#python]]
+[[algos.dailybyte.d13#python]]
 
-[[dailybyte.d14#python]]
+[[algos.dailybyte.d14#python]]
 
-[[dailybyte.d15#python]]
+[[algos.dailybyte.d15#python]]
 
-[[dailybyte.d16#python]]
+[[algos.dailybyte.d16#python]]
 
-[[dailybyte.d17#python]]
+[[algos.dailybyte.d17#python]]
 
-[[dailybyte.d18#python]]
+[[algos.dailybyte.d18#python]]
 
-[[dailybyte.d19#python]]
+[[algos.dailybyte.d19#python]]
 
-[[dailybyte.d20#python]]
+[[algos.dailybyte.d20#python]]
 
-[[dailybyte.d21#python]]
+[[algos.dailybyte.d21#python]]
 
-[[dailybyte.d22#python]]
+[[algos.dailybyte.d22#python]]
 
-[[dailybyte.d23#python]]
+[[algos.dailybyte.d23#python]]
 
-[[dailybyte.d24#python]]
+[[algos.dailybyte.d24#python]]
 
-[[dailybyte.d25#python]]
+[[algos.dailybyte.d25#python]]
 
-[[dailybyte.d26#python]]
+[[algos.dailybyte.d26#python]]
 
-[[dailybyte.d27#python]]
+[[algos.dailybyte.d27#python]]
