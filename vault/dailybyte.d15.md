@@ -1,5 +1,5 @@
 ---
-id: my4RiJMT1PiDRIDt7nKCJ
+id: oBXH1mHBh4xsA5Cll2r1c
 title: Merge Sorted Linked Lists
 desc: ''
 updated: 1629039673383
@@ -23,7 +23,6 @@ Ex: Given the following lists...
 ## [[python]]
 
 ```python
-
 class LinkedList:
     def __init__(self,value):
         self.value = value

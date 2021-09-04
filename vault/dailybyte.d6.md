@@ -1,5 +1,5 @@
 ---
-id: diI4VBMv8iMMUStWIFnUE
+id: lf4b9qYd73ucvZmtfWbCe
 title: Longest Common Shared Prefix
 desc: ''
 updated: 1629045544705

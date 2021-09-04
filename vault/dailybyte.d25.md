@@ -1,11 +1,10 @@
 ---
-id: cAmRmCV8llN7jThulyHoH
+id: 6keo0GNJTy31TX50W2gGi
 title: Next Greater Element
 desc: ''
 updated: 1629876324437
 created: 1629875166729
 nav_order: 25
-
 ---
 
 # Problem

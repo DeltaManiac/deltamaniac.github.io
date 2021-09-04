@@ -1,5 +1,5 @@
 ---
-id: ECAFhubjh3AwN5o9aVQaK
+id: hd98RcCNx9sfZXcbQ9YB1
 title: Minimum Difference
 desc: ''
 updated: 1630760619236
@@ -39,7 +39,6 @@ return 98.
 
 ## [[python]]
  ```python
-
  def getMinDiff(root):
      def solve(node,low,high):
          if not node: return high-low

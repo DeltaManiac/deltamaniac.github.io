@@ -1,5 +1,5 @@
 ---
-id: xHgFqqxNncRAMblbUiOww
+id: H1wJyDAOzWFw3TdkXGi7q
 title: Queue Based Stack
 desc: ''
 updated: 1630115743926
@@ -15,7 +15,6 @@ Your class, `QueueStack`, should support the following stack methods: `push()` (
 ## [[python]]
 
 ```python
-
 Class QueueStack:
     def __init__(self):
         self.q = []

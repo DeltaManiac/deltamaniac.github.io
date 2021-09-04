@@ -1,11 +1,12 @@
 ---
-id: 18962325-b097-4283-9f8e-23a89a24511b
+id: A6TBKYAcFVjBqZpdbHuaS
 title: Rust
 desc: ''
 updated: 1629953869997
 created: 1602919579698
 stub: false
 ---
+
 
 # Rust
 
@@ -25,11 +26,11 @@ stub: false
 
 # DailyByte
 
-[[dailybyte.d1#rust]]
+[[algos.dailybyte.d1#rust]]
 
-[[dailybyte.d2#rust]]
+[[algos.dailybyte.d2#rust]]
 
-[[dailybyte.d3#rust]]
+[[algos.dailybyte.d3#rust]]
 
 [[dailybyte.d4#rust]]
 

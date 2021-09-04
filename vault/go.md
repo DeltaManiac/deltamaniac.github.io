@@ -1,5 +1,5 @@
 ---
-id: 72f47187-278f-4a21-a56f-4abda62fea03
+id: 96Hj5nYpnUciwlTenFpoU
 title: Go
 desc: ''
 updated: 1629953905755
@@ -22,11 +22,11 @@ stub: false
 
 # DailyByte
 
-[[dailybyte.d1#go]]
+[[algos.dailybyte.d1#go]]
 
-[[dailybyte.d2#go]]
+[[algos.dailybyte.d2#go]]
 
-[[dailybyte.d3#go]]
+[[algos.dailybyte.d3#go]]
 
 [[dailybyte.d4#go]]
 

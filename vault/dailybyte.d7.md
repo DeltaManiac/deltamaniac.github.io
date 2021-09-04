@@ -1,7 +1,7 @@
 ---
-id: OyydTG024M8K7pkeZzgAF
+id: Pq0Rr7JIDCP22r3K6Q5Ne
 title: Is Palindrome Again ??
-desc: 'You can remove one character to make it a palindrome now'
+desc: You can remove one character to make it a palindrome now
 updated: 1629045601457
 created: 1628435096755
 nav_order: 7

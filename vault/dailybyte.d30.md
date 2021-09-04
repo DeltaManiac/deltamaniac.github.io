@@ -1,5 +1,5 @@
 ---
-id: 0V8pmgzSOknJsuu3eqXFk
+id: DvmbT3vPCATaSEHoFRCEF
 title: Convert Binary Search Tree to Sorted Linked List
 desc: ''
 updated: 1630507587787
@@ -70,9 +70,7 @@ return...
 
 ## [[python]]
 ```python
-
 class Node:
-
     def __init__(self):
         self.key = 0
         self.left = None

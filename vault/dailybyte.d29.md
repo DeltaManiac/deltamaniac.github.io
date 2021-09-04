@@ -1,5 +1,5 @@
 ---
-id: HHRv3Y3IE4GqSELhFZWvL
+id: FZobsmu89KORgvQbdEc20
 title: Find Value in BST
 desc: ''
 updated: 1630116182853
@@ -44,7 +44,6 @@ and the search value 7 return null.
 ## [[python]]
 
 ```python
-
 def search(self, root, val):
         def search_rec(root):
             if root:

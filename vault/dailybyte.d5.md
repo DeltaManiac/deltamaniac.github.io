@@ -1,5 +1,5 @@
 ---
-id: eN5kq8a6uewxD6Lgvlj9V
+id: T0YTzM8pRMQyCXaKIqFqV
 title: Binary Sum
 desc: ''
 updated: 1629045496417

@@ -1,5 +1,5 @@
 ---
-id: 6ywEeMzNQG1KazrhY8KFk
+id: 1r7C4Tb7AuTkVtwUweem1
 title: Remove nth to last node
 desc: ''
 updated: 1629157816193

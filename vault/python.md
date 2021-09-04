@@ -1,5 +1,5 @@
 ---
-id: TloiYhmlCN5QxTpf
+id: 7kyCk8YAkDvIrxLtAUFkG
 title: Python
 desc: ''
 updated: 1629953836994
@@ -9,11 +9,11 @@ stub: false
 
 # DailyByte
 
-[[dailybyte.d1#python]]
+[[algos.dailybyte.d1#python]]
 
-[[dailybyte.d2#python]]
+[[algos.dailybyte.d2#python]]
 
-[[dailybyte.d3#python]]
+[[algos.dailybyte.d3#python]]
 
 [[dailybyte.d4#python]]
 

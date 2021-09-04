@@ -1,5 +1,5 @@
 ---
-id: Q9haohHcTQ1Cvozyrz17f
+id: cLtsyzn8ZbTojiSTjw4yz
 title: Sorted Array to Binary Search Tree
 desc: ''
 updated: 1630508913173
@@ -36,7 +36,6 @@ nums = [1, 2, 3, 4, 5, 6] return a reference to the following tree...
 ## [[python]]
 
 ```python
-
 class Node:
     def __init__(self,val):
         self.val = val

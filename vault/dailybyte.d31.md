@@ -1,5 +1,5 @@
 ---
-id: bGVpZyUeyyzYYpdZZRI9Z
+id: 0Qdow7U8nEa3MP4rOUgId
 title: Lowest Common Ancestor
 desc: ''
 updated: 1630508336493

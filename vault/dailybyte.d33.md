@@ -1,5 +1,5 @@
 ---
-id: AvMCxXrwif4jROb60U8wW
+id: lEQkcBXYTfMOn5SK9BYtp
 title: Identical Trees
 desc: ''
 updated: 1630509774482
@@ -66,7 +66,6 @@ return false.
 ## [[python]]
 
 ```python
-
 class Node:
     def __init__(self,val):
         self.val = val

@@ -1,5 +1,5 @@
 ---
-id: ntUHj2XM938RWkHDS7u6j
+id: Bajllusd45BCEy2LWvGGi
 title: Moving Average
 desc: ''
 updated: 1629953802575

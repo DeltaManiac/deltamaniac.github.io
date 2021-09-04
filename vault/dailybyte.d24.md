@@ -1,5 +1,5 @@
 ---
-id: 8t7YNvufpspeCNGMpPBJ3
+id: NrfqZ1XT6IxUMfJcr15O7
 title: Remove Adjacent Chars
 desc: ''
 updated: 1629874696155

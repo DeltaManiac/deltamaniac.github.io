@@ -1,5 +1,5 @@
 ---
-id: AjrZkkDJ4DuQesiQxwsHs
+id: iy0XsO219wG3GO2TQhbSg
 title: Find Mode
 desc: ''
 updated: 1630761153418
@@ -20,7 +20,7 @@ Ex: Given the following tree...
        / \
       1   2
 return 2.
-</pre
+</pre>
 
 <pre>
 Ex: Given the following tree...

@@ -1,11 +1,12 @@
 ---
-id: 8CvV1rkawfYZGgMX
+id: F8T9e84ZfLZkwMuCBotm9
 title: Is Palindrome ??
 desc: ''
 updated: 1629045670812
 created: 1628005470068
 nav_order: 2
 ---
+
 
 # Problem
 

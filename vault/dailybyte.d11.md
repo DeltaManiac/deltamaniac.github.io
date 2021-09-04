@@ -1,5 +1,5 @@
 ---
-id: MK4zqoIqZbpAulNuIoBLk
+id: S0VXUqxdAlLm4YlClUBfD
 title: First Unique Character Index
 desc: ''
 updated: 1628702602884

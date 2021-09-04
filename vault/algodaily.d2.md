@@ -1,5 +1,5 @@
 ---
-id: 48GQUWmr4bcXyRgI4xubE
+id: yFM6PkqFMakUoKtnuXCct
 title: Fizz Buzz
 desc: ''
 updated: 1630542909780

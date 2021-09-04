@@ -1,5 +1,5 @@
 ---
-id: UEoXlw6FLqsYyqXRSSw6C
+id: XrDduhPcocbvnuxNIgJnx
 title: Two Sum
 desc: ''
 updated: 1629045654042
