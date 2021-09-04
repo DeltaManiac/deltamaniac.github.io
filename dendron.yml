@@ -8,11 +8,13 @@ noAutoCreateOnDefinition: true
 noLegacyNoteRef: true
 noXVaultWikiLink: true
 lookupConfirmVaultOnCreate: false
+generateChangelog: true
 mermaid: true
 useKatex: true
 autoFoldFrontmatter: true
 dev:
     enablePreviewV2: true
+    enableWebUI: true
 lookup:
     note:
         selectionType: selectionExtract
