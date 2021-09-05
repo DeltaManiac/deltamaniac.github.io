@@ -2,7 +2,7 @@
 id: INDH1D7my74PgGKOjkDop
 title: Compare Keystrokes
 desc: ''
-updated: 1629874570833
+updated: 1630816557346
 created: 1629873991703
 nav_order: 23
 ---
@@ -14,11 +14,13 @@ Given two strings s and t, which represents a sequence of keystrokes, where # de
 
 Ex: Given the following strings...
 
-> s = "ABC#", t = "CD##AB", return true
->
-> s = "como#pur#ter", t = "computer", return true
->
-> s = "cof#dim#ng", t = "code", return false
+<pre>
+s = "ABC#", t = "CD##AB", return true
+
+s = "como#pur#ter", t = "computer", return true
+
+s = "cof#dim#ng", t = "code", return false
+</pre>
 
 ## [[python]]
 
