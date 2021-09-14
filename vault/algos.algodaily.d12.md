@@ -28,7 +28,7 @@ Constraints
     Expected space complexity : O(1)
 
 
-##[python]
+## [python]
 ```python
 def substr(haystack, needle):
     n, h = len(needle), len(haystack)
