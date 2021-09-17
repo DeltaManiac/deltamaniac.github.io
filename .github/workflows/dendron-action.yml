@@ -27,9 +27,6 @@ jobs:
     - name: Install npm dependencies
       run: yarn
 
-    - name: update npm dependencies
-      run: yarn upgrade
-
     - name: Initialize .next
       run: yarn dendron publish init
 
