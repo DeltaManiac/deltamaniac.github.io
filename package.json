@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/DeltaManiac/DeltaManiac#readme",
   "dependencies": {
-    "@dendronhq/dendron-11ty": "*",
     "@dendronhq/dendron-cli": "*"
   }
 }
