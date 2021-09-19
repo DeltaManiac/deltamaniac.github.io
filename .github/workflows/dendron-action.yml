@@ -28,7 +28,7 @@ jobs:
       run: yarn
 
     - name: Initialize .next
-      run:  dendron publish init
+      run:  yarn dendron publish init
 
     - name: Install dependencies
       run: cd .next && yarn && cd ..
