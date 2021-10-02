@@ -10,7 +10,7 @@ nav_order: 47
 # Problem
 Given a binary tree, return the sum of all left leaves of the tree. Ex: Given the following tree…
 
-<pre>
+<pre
     5
    / \
   2   12
