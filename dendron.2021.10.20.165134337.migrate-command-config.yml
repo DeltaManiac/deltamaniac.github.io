@@ -1,0 +1,49 @@
+version: 1
+vaults:
+    -
+        fsPath: vault
+useFMTitle: true
+useNoteTitleForLink: true
+noAutoCreateOnDefinition: true
+noLegacyNoteRef: true
+noXVaultWikiLink: true
+lookupConfirmVaultOnCreate: false
+generateChangelog: true
+mermaid: true
+useKatex: true
+autoFoldFrontmatter: true
+dev:
+    enablePreviewV2: true
+    enableWebUI: true
+lookup:
+    note:
+        selectionType: selectionExtract
+journal:
+    dailyDomain: daily
+    name: journal
+    dateFormat: y.MM.dd
+    addBehavior: childOfDomain
+    firstDayOfWeek: 1
+scratch:
+    name: scratch
+    dateFormat: y.MM.dd.HHmmss
+    addBehavior: asOwnDomain
+site:
+    siteUrl: 'https://deltamaniac.github.io/'
+    siteHierarchies:
+        - root
+    siteRootDir: docs
+    usePrettyRefs: true
+    copyAssets: true
+    title: BrainMatter
+    gh_edit_repository: 'https://github.com/DeltaManiac/deltamaniac.github.io'
+    gh_edit_branch: main
+    author: DeltaManiac
+    siteLastModified: true
+    twitter: delta_maniac
+    writeStubs: true
+    config:
+        root:
+            publishByDefault: true
+initializeRemoteVaults: true
+dendronVersion: 0.56.0
