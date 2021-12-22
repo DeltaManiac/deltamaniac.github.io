@@ -6,3 +6,5 @@ node_modules
 .dendron.port
 .dendron.ws
 .dendron.port
+.dendron.port
+.dendron.ws
