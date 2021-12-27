@@ -2,8 +2,9 @@
 id: wfOGHenRJP9nCVGtK2e5V
 title: Reliable TCP Streams
 desc: ''
-updated: 1640537757982
+updated: 1640619233740
 created: 1640531504058
+nav_order: 3
 ---
 
 # TCP
@@ -21,14 +22,14 @@ Established with a three-way handshake
 
 <pre>
 
-                        Client                              Server
-                    Dial  |                                        | Listen
-                            |                                        |
-                            | ----------SYN-----------> |
-                            |                                        | Accept
-                            | <-------SYN/ACK------- |
-        Established  |                                        |
-                            | ----------ACK-----------> | Established
+                   CLIENT                      SERVER
+               Dial  |                           | Listen
+                     |                           |
+                     | ----------SYN-----------> |
+                     |                           | Accept
+                     | <-------SYN/ACK---------- |
+        Established  |                           |
+                     | ----------ACK-----------> | Established
 
 </pre>
 
@@ -44,17 +45,17 @@ Established with a three-way handshake
 #### Acknowledgin Receipt of Packets by using Sequence Number
 <pre>
 
-                         CLIENT                             SERVER
-                               |        SYN (Seq = X)            |
-                               |-------------------------------->|
-                               |                                             | Received
-                               |        SYN (Seq = Y)            | Client Seq = X
-                               |<--------------------------------|
-               Received |        ACK (Seq = X+1)        |
-     Server Seq = Y |                                              |
-                               |--------------------------------->|
-                               |        ACK (Seq = Y+1          |
-                               |                                              |
+                 CLIENT                             SERVER
+                    |        SYN (Seq = X)            |
+                    |-------------------------------->|
+                    |                                 | Received
+                    |        SYN (Seq = Y)            | Client Seq = X
+                    |<--------------------------------|
+           Received |        ACK (Seq = X+1)          |
+     Server Seq = Y |                                 |
+                    |-------------------------------->|
+                    |        ACK (Seq = Y+1)          |
+                    |                                 |
 </pre>
 
 Sequence number is determined by the sender of the message

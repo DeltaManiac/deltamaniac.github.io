@@ -2,8 +2,9 @@
 id: qeciETQdP6y5coUZpEL1W
 title: Resource Locating and Traffic Routing
 desc: ''
-updated: 1640420519144
+updated: 1640612909137
 created: 1640232890111
+nav_order: 2
 ---
 
 # Internet Protocol
