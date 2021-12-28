@@ -2,7 +2,7 @@
 id: wfOGHenRJP9nCVGtK2e5V
 title: Reliable TCP Streams
 desc: ''
-updated: 1640619233740
+updated: 1640657064412
 created: 1640531504058
 nav_order: 3
 ---
@@ -68,3 +68,44 @@ Receiver must advertise to the sender how much space it have available in its re
 
 **Receive Buffer**: per connection block of memory reserved for incoming data on a network connection
 
+**Window Size**: Information in the ACK packet which is the number of bytes the sender can transmit to the receiver without requiring an acknowledgement
+
+<pre>
+              Client                         Server
+                |                               |
+                |   ACK (Window size = 3072)    |
+Acknowledging   |------------------------------>| Client can Receive 3072 bytes
+data            |                               |
+                |                               |
+                |         (1024 bytes)          |
+                |<------------------------------|
+                |                               |
+                |         (1024 bytes)          |
+                |<------------------------------|
+                |                               |
+                |         (1024 bytes)          |
+Buffer full     |<------------------------------|
+with 3072 bytes |                               |
+                |                               |
+                |   ACK (Window size = 2048)    |
+Acknowledging   |------------------------------>| Client can Receive 2048 bytes
+data            |                               |
+                |         (1024 bytes)          |
+                |<------------------------------|
+                |                               |
+                |         (1024 bytes)          |
+Buffer full     |<------------------------------|
+with 2048 bytes |                               |
+</pre>
+
+### Termination TCP Sessions
+
+1. Client connections changes from `ESTABLISHED` to `FIN_WAIT_1`
+
+2. Server acknowledges the client's `FIN` and changes its state from `ESTABLISHED` to `CLOSE_WAIT`
+
+3. Server sends it own `FIN` packet changing its state to `LAST_ACK` and waits for final acknowledgement from client
+
+4. The client acknowledges the server's `FIN` and enters `TIME_WAIT` state and sends the final`ACK`
+
+5. The client waits for the the *maximum segment life-time* then changes its connection state to `CLOSED`

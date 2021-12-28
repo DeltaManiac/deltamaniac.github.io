@@ -2,7 +2,7 @@
 id: qeciETQdP6y5coUZpEL1W
 title: Resource Locating and Traffic Routing
 desc: ''
-updated: 1640612909137
+updated: 1640654060801
 created: 1640232890111
 nav_order: 2
 ---
@@ -81,7 +81,6 @@ CIDR Prefix length | Subnet Mask     | Available Networks | Hosts/Network
 30                 | 255.255.255.252 | 4,194,304          | 2
 
 <pre>
-<b>
 e.g. For address 192.168.1.1/9 the mask is the first 9 bits
     192  |    168   |   1      |     1
 11000000 | 10101000 | 00000001 | 00000001
@@ -100,7 +99,6 @@ Mask the first 9 bits
     192  |     1    |     0    |     0
 
 so the possible IP addresses could be 192.1.0.0 and 192.0.0.0
-</b>
 </pre>
 
 Each network has 2 reserved host addresses.
@@ -111,7 +109,6 @@ The first Ip address in e.g. 192.168.0.0/16 is 192.168.0.0 is the network addres
 
 IpAddr: 192.168.156.97/19
 <pre>
-<b>
             192  |    168   |   156    |    97
         11000000 | 10101000 | 10011100 | 01100001
 
@@ -128,7 +125,6 @@ Host ID
                                  ----------------
         00000000 | 00000000 | 00011100 | 01100001
            0     |     0    |  28      |   97
-</b>
 </pre>
 
 ### Network Address Translation
