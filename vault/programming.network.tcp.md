@@ -2,7 +2,7 @@
 id: wfOGHenRJP9nCVGtK2e5V
 title: Reliable TCP Streams
 desc: ''
-updated: 1640657064412
+updated: 1640709030363
 created: 1640531504058
 nav_order: 3
 ---
@@ -109,3 +109,31 @@ with 2048 bytes |                               |
 4. The client acknowledges the server's `FIN` and enters `TIME_WAIT` state and sends the final`ACK`
 
 5. The client waits for the the *maximum segment life-time* then changes its connection state to `CLOSED`
+
+<pre>
+              Client                         Server
+                |                               |
+    Established |                               | Established
+                |                               |
+                |           FIN                 |
+    FIN_WAIT_1  |------------------------------>|
+                |           ACK                 | CLOSE_WAIT
+                |<------------------------------|
+    FIN_WAIT_2  |                               |
+                |                               |
+                |                               |
+                |           FIN                 |
+                |<------------------------------| LAST_ACK
+     TIME_WAIT  |           ACK                 |
+                |------------------------------>|
+                |                               | CLOSED
+        CLOSED  |                               |
+</pre>
+
+
+### Handling Less Graceful Terminations
+
+When connections are closed/terminated, any connection from the other side of the connection will prompt the closed side of the connection to return  `RST` packet(reset)
+
+
+## Establishing a TCP Connection
