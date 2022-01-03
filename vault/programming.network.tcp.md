@@ -2,7 +2,7 @@
 id: wfOGHenRJP9nCVGtK2e5V
 title: Reliable TCP Streams
 desc: ''
-updated: 1640709030363
+updated: 1641226457245
 created: 1640531504058
 nav_order: 3
 ---
@@ -42,7 +42,7 @@ Established with a three-way handshake
 3. Client responds with ac ACK packet to acknowledge the server's SYN packet.
 
 
-#### Acknowledgin Receipt of Packets by using Sequence Number
+#### Acknowledging Receipt of Packets by using Sequence Number
 <pre>
 
                  CLIENT                             SERVER
@@ -134,6 +134,3 @@ with 2048 bytes |                               |
 ### Handling Less Graceful Terminations
 
 When connections are closed/terminated, any connection from the other side of the connection will prompt the closed side of the connection to return  `RST` packet(reset)
-
-
-## Establishing a TCP Connection
