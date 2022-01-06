@@ -2,7 +2,7 @@
 id: s4VCxV9Bg3TNzXGBonKY1
 title: Selection Sort
 desc: ''
-updated: 1641311805207
+updated: 1641424076388
 created: 1641310120941
 ---
 
@@ -23,7 +23,7 @@ Selection sort finds the smallest element in the array and place it on the first
 
 # Implementation
 
-# [[python]]
+## [[python]]
 
 ```python
 def selectionSort(arr):
