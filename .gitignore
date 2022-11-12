@@ -8,3 +8,6 @@ node_modules
 .dendron.port
 .dendron.port
 .dendron.ws
+
+.backup
+.next

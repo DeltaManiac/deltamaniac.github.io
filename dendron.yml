@@ -1,29 +1,6 @@
-useFMTitle: true
-useNoteTitleForLink: true
-mermaid: true
-useKatex: true
 dev:
     enablePreviewV2: true
-    enableWebUI: true
-site:
-    siteUrl: 'https://deltamaniac.github.io/'
-    siteHierarchies:
-        - root
-    siteRootDir: docs
-    usePrettyRefs: true
-    copyAssets: true
-    title: BrainMatter
-    gh_edit_repository: 'https://github.com/DeltaManiac/deltamaniac.github.io'
-    gh_edit_branch: main
-    author: DeltaManiac
-    siteLastModified: true
-    twitter: delta_maniac
-    writeStubs: true
-    config:
-        root:
-            publishByDefault: true
-    description: Personal knowledge space
-version: 4
+version: 5
 generateChangelog: true
 commands:
     lookup:
@@ -32,6 +9,8 @@ commands:
             confirmVaultOnCreate: false
             leaveTrace: false
             bubbleUpCreateNew: true
+            vaultSelectionModeOnCreate: smart
+            fuzzThreshold: 0.2
     randomNote: {}
     insertNote:
         initialValue: templates
@@ -40,8 +19,11 @@ commands:
         enableMultiSelect: false
     insertNoteIndex:
         enableMarker: false
+    copyNoteLink:
+        aliasMode: title
+    templateHierarchy: template
 workspace:
-    dendronVersion: 0.71.0
+    dendronVersion: 0.83.0
     vaults:
         -
             fsPath: vault
@@ -56,6 +38,7 @@ workspace:
         addBehavior: asOwnDomain
     graph:
         zoomSpeed: 1
+        createStub: false
     enableAutoCreateOnDefinition: false
     enableXVaultWikiLink: false
     enableRemoteVaultInit: true
@@ -83,11 +66,50 @@ workspace:
             L: low
         todoIntegration: false
         createTaskSelectionType: selection2link
+        taskCompleteStatus:
+            - done
+            - x
     enableUserTags: true
     enableHashTags: true
+    enableEditorDecorations: true
+    enableFullHierarchyNoteTitle: false
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
-    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    automaticallyShowPreview: false
+publishing:
+    enableFMTitle: true
+    enableNoteTitleForLink: true
+    enablePrettyRefs: true
+    enableKatex: true
+    copyAssets: true
+    siteHierarchies:
+        - root
+    enableSiteLastModified: true
+    siteRootDir: docs
+    siteUrl: https://deltamaniac.github.io/
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    enableRandomlyColoredTags: true
+    hierarchy:
+        root:
+            publishByDefault: true
+    writeStubs: true
+    seo:
+        title: BrainMatter
+        description: Personal knowledge space
+        author: DeltaManiac
+        twitter: delta_maniac
+    github:
+        enableEditLink: true
+        editLinkText: Edit this page on GitHub
+        editBranch: main
+        editViewMode: tree
+        editRepository: https://github.com/DeltaManiac/deltamaniac.github.io
+    enablePrettyLinks: true
+    enableTaskNotes: true
+    searchMode: lookup
