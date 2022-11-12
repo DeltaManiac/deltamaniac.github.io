@@ -2,7 +2,7 @@
 id: umAO61qBwGGbLPh5ktmvO
 title: '31904'
 desc: ''
-updated: 1608970836859
+updated: 1668266683547
 created: 1608966877189
 ---
 ## Sequence Counter
@@ -34,10 +34,12 @@ MOV ACC DOWN
 MOV 0 ACC
 
 @3
+
+@4
 MOV RIGHT ACC
 MOV ACC RIGHT
 
-@4
+@5
 START:
 MOV UP ACC
 JNZ ADD
@@ -53,11 +55,8 @@ SWP
 MOV ACC DOWN
 MOV 0 ACC
 
-@5
-MOV UP DOWN
-
 @6
-
+MOV UP DOWN
 
 @7
 

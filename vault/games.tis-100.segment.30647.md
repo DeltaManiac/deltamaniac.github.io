@@ -2,7 +2,7 @@
 id: 6RRCb93zuX7qI8pXKxr4N
 title: '30647'
 desc: ''
-updated: 1604591974172
+updated: 1668270491972
 created: 1604591909867
 ---
 ## Sequence Generator
@@ -70,6 +70,8 @@ MOV -2,ACC
 JMP START
 
 @10
+
+@11
 
 ```
 

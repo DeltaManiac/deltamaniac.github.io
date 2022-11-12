@@ -2,7 +2,7 @@
 id: yjIzJAoRDamPUAIHBQNy1
 title: '20176'
 desc: ''
-updated: 1604591808021
+updated: 1668267408570
 created: 1603641982728
 stub: false
 ---
@@ -50,6 +50,8 @@ MOV UP,DOWN
 MOV UP,DOWN
 
 @10
+
+y
 
 ```
 

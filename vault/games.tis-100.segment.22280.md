@@ -2,7 +2,7 @@
 id: ogdoy0dH15fNSg4M3irNS
 title: '22280'
 desc: ''
-updated: 1604591865587
+updated: 1668267431208
 created: 1604591692143
 ---
 ## Signal Multiplexer
@@ -55,6 +55,8 @@ MOV UP,LEFT
 MOV UP,DOWN
 
 @10
+
+@11
 
 ```
 

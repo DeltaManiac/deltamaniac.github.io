@@ -2,7 +2,7 @@
 id: JCl9JZAKJwQjFwhESx2Ac
 title: '00150'
 desc: ''
-updated: 1603641053546
+updated: 1668267392934
 created: 1603641053546
 stub: false
 ---
@@ -34,6 +34,15 @@ MOV UP,RIGHT
 
 @7
 MOV LEFT,DOWN
+
+@8
+
+@9
+
+@10
+
+@11
+
 ```
 
 # Solution

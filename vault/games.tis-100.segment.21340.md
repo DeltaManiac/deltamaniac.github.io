@@ -2,7 +2,7 @@
 id: zjsqCWBOt29JUBq6ZeOey
 title: '21340'
 desc: ''
-updated: 1604591804221
+updated: 1668267425984
 created: 1604591513725
 ---
 ## Signal Comparator
@@ -67,6 +67,14 @@ JMP START
 WRITE1:
 MOV 1,DOWN
 JMP START
+
+
+@9
+
+@10
+
+@11
+
 ```
 
 # Solution

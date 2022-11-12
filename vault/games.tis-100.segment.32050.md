@@ -1,0 +1,61 @@
+---
+id: oui26s3o8wsu1uvj78b8wdw
+title: '32050'
+desc: ''
+updated: 1668268350387
+created: 1668267255212
+---
+## Signal Edge Detector
+
+# Solution 
+```
+@0
+
+@1
+MOV UP ACC
+MOV ACC RIGHT
+MOV ACC RIGHT
+
+@2
+SUB LEFT
+JLZ NEG
+JMP SIG
+NEG:
+NEG
+SIG:
+MOV ACC,DOWN
+MOV LEFT, ACC
+
+@3
+
+@4
+
+@5
+
+@6
+START:
+MOV UP,ACC
+SUB 10
+JLZ SIG0
+SIG1:
+MOV 1,DOWN
+JMP START
+
+SIG0:
+MOV 0,DOWN
+
+@7
+
+@8
+
+@9 
+
+@10
+MOV UP, DOWN
+
+@11
+
+```
+
+# Solution
+![](/assets/images/2022-11-22-17-33-16.png)

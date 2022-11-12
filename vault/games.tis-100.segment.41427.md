@@ -1,0 +1,81 @@
+---
+id: tljsjqw1422w8cb28kqrrsp
+title: '41427'
+desc: ''
+updated: 1668271509612
+created: 1668271382597
+---
+## Sequence Peak Detector
+
+# Solution
+
+```
+@0
+
+@1
+MOV UP,ACC
+MOV ACC,RIGHT
+MOV ACC,DOWN
+
+@2
+MOV LEFT,DOWN
+
+@3
+
+@4
+
+@5
+MOV UP ,ACC
+MOV ACC,DOWN
+MOV ACC,DOWN
+
+@6
+MOV UP,ACC
+MOV ACC,DOWN
+MOV ACC,DOWN
+
+@7
+
+@8
+
+@9
+MOV 999,ACC
+IN:
+SAV
+SUB UP
+JGZ NEW
+ADD UP
+JMP IN
+
+NEW:
+MOV UP,ACC
+JGZ IN
+
+OUT:
+SWP
+MOV ACC,DOWN
+
+@10
+IN:
+SAV
+SUB UP
+JLZ NEW
+MOV UP,ACC
+JEZ OUT
+SWP
+JMP IN
+NEW: 
+MOV UP,ACC
+JGZ IN
+
+OUT: SWP
+MOV ACC,DOWN
+MOV 0,ACC
+
+@11
+
+```
+
+# Solution
+
+![](/assets/images/2022-11-12-22-14-43.png)
