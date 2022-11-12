@@ -11,3 +11,5 @@ node_modules
 
 .backup
 .next
+.dendron.ws
+.dendron.port
