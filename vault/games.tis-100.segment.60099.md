@@ -1,0 +1,75 @@
+---
+id: kuyv1m9uuolykukq8nqonml
+title: '6009'
+desc: ''
+updated: 1668315751289
+created: 1668315654301
+---
+## Signal Window Filter
+
+# Solution
+
+```
+@0
+
+@1
+MOV UP DOWN
+
+@2
+MOV 0 RIGHT
+MOV 0 RIGHT
+MOV 0 RIGHT
+MOV 0 RIGHT
+MOV 0 RIGHT
+HLT: JMP HLT
+
+@3
+
+@4
+
+@5
+MOV RIGHT DOWN
+MOV UP ACC
+MOV ACC RIGHT
+MOV ACC DOWN
+
+@6
+MOV RIGHT DOWN
+MOV RIGHT LEFT
+MOV LEFT  ACC
+MOV ACC   RIGHT
+MOV ACC   DOWN
+
+@7
+MOV UP   LEFT #-5
+MOV UP   DOWN #-4
+MOV UP   ACC  #-3
+MOV ACC  LEFT
+MOV ACC  DOWN
+MOV UP   DOWN #-2
+MOV UP   DOWN #-1
+MOV LEFT UP # 0
+MOV DOWN UP
+MOV DOWN UP
+MOV DOWN UP
+MOV DOWN UP
+
+@8
+
+@9
+SUB UP
+ADD UP
+MOV ACC DOWN
+
+@10
+SUB UP
+ADD UP
+MOV ACC DOWN
+
+@11
+
+```
+
+# Solution
+
+![](/assets/images/2022-11-13-10-32-25.png)
