@@ -1,0 +1,42 @@
+<h1 id="reverse-string">Reverse String<a aria-hidden="true" class="anchor-heading icon-link" href="#reverse-string"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Google.</p>
+<p>Given a string, reverse all of its characters and return the resulting string.</p>
+<p>Ex: Given the following strings...</p>
+<blockquote>
+<p>"Cat", return "taC"</p>
+<p>"The Daily Byte", return "etyB yliaD ehT"</p>
+<p>"civic", return "civic"</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">reverse</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> word<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">reverse</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Handle UTF-16</span>
+    rns <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">rune</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> j <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>rns<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> j<span class="token punctuation">;</span> i<span class="token punctuation">,</span> j <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> j<span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">{</span>
+        rns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> rns<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> rns<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> rns<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">string</span><span class="token punctuation">(</span>rns<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<pre class="language-rust"><code class="language-rust"><span class="token comment">// Handle UTF-16</span>
+<span class="token keyword">use</span> unicode_segementation<span class="token punctuation">:</span><span class="token class-name">UnicodeSegmentation</span><span class="token punctuation">;</span>
+<span class="token keyword">fn</span> <span class="token function-definition function">reverse</span><span class="token punctuation">(</span>word<span class="token punctuation">:</span><span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span><span class="token punctuation">-></span> <span class="token class-name">String</span><span class="token punctuation">{</span>
+    word
+        <span class="token punctuation">.</span><span class="token function">graphemes</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">rev</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">flat_map</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>g<span class="token closure-punctuation punctuation">|</span></span> g<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

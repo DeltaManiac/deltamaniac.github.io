@@ -1,0 +1,44 @@
+<h1 id="find-value-in-bst">Find Value in BST<a aria-hidden="true" class="anchor-heading icon-link" href="#find-value-in-bst"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Google.</p>
+<p>Given the reference to the root of a binary search tree and a search value, return the reference to the node that contains the value if it exists and null otherwise.</p>
+<p>Note: all values in the binary search tree will be unique.</p>
+<p>Ex: Given the tree...</p>
+<blockquote>
+<pre><code>   3
+  / \
+ 1   4
+</code></pre>
+</blockquote>
+<p>and the search value 1 return a reference to the node containing 1.</p>
+<p>Ex: Given the following tree...</p>
+<blockquote>
+<pre><code>    7
+   / \
+  5   9
+     / \
+    8   10
+</code></pre>
+</blockquote>
+<p>and the search value 9 return a reference to the node containing 9.</p>
+<p>Ex: Given the following tree...</p>
+<blockquote>
+<pre><code>   8
+  / \
+ 6   9
+</code></pre>
+</blockquote>
+<p>and the search value 7 return null.</p>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">def</span> <span class="token function">search_rec</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> root<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> root<span class="token punctuation">.</span>val <span class="token operator">==</span> val<span class="token punctuation">:</span> <span class="token keyword">return</span> root
+                <span class="token keyword">elif</span> root<span class="token punctuation">.</span>val <span class="token operator">&#x3C;</span> val<span class="token punctuation">:</span> <span class="token keyword">return</span> search_rec<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+                <span class="token keyword">return</span> search_rec<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+
+        <span class="token keyword">return</span> rec<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
+
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

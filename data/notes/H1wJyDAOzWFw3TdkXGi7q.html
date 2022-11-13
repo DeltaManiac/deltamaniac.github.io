@@ -1,0 +1,32 @@
+<h1 id="queue-based-stack">Queue Based Stack<a aria-hidden="true" class="anchor-heading icon-link" href="#queue-based-stack"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>Design a class to implement a stack using only a single queue.</p>
+<p>Your class, <code>QueueStack</code>, should support the following stack methods: <code>push()</code> (adding an item), <code>pop()</code> (removing an item), <code>peek()</code> (returning the top value without removing it), and <code>empty()</code> (whether or not the stack is empty).</p>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python">Class <span class="token class-name">QueueStack</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>q <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">append</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>val<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        size <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>q<span class="token punctuation">)</span>
+        q<span class="token punctuation">.</span>append<span class="token punctuation">[</span>val<span class="token punctuation">]</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            q<span class="token punctuation">.</span>append<span class="token punctuation">(</span>q<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">pop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>q<span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">None</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>q<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">peek</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>q<span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">None</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>q<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">empty</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>q<span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

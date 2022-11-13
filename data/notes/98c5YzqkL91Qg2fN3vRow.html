@@ -1,0 +1,61 @@
+<h1 id="capitalized-properly-">Capitalized Properly ??<a aria-hidden="true" class="anchor-heading icon-link" href="#capitalized-properly-"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Google.</p>
+<p>Given a string, return whether or not it uses capitalization correctly. A string correctly uses capitalization if all letters are capitalized, no letters are capitalized, or only the first letter is capitalized.</p>
+<p>Ex: Given the following strings...</p>
+<blockquote>
+<p>"USA", return true</p>
+<p>"Calvin", return true</p>
+<p>"compUter", return false</p>
+<p>"coding", return true</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">check</span><span class="token punctuation">(</span>word<span class="token punctuation">:</span><span class="token builtin">str</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span><span class="token builtin">bool</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> word<span class="token punctuation">.</span>isupper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">if</span> word<span class="token punctuation">.</span>islower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">if</span> word<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isupper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">and</span> word<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span>islower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">check</span><span class="token punctuation">(</span>word <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> <span class="token function">isUpper</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span> <span class="token function">isLower</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span> <span class="token function">isUpper</span><span class="token punctuation">(</span>word<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&#x26;&#x26;</span> <span class="token function">isLower</span><span class="token punctuation">(</span>word<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">isUpper</span><span class="token punctuation">(</span>word <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> c <span class="token operator">:=</span> <span class="token keyword">range</span> word <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token operator">!</span>unicode<span class="token punctuation">.</span><span class="token function">IsUpper</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token boolean">false</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">isLower</span><span class="token punctuation">(</span>word <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> c <span class="token operator">:=</span> <span class="token keyword">range</span> word <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token operator">!</span>unicode<span class="token punctuation">.</span><span class="token function">IsLower</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token boolean">false</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

@@ -1,0 +1,41 @@
+<h1 id="gather-column">Gather Column<a aria-hidden="true" class="anchor-heading icon-link" href="#gather-column"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>Given a binary tree, return its column order traversal from top to bottom and left to right.</p>
+<p> Note: if two nodes are in the same row and column, order them from left to right.</p>
+<p>Ex: Given the following tree…</p>
+<pre>    8
+   / \
+  2   29
+     /  \
+    3    9
+return [[2], [8, 3], [29], [9]]
+</pre>
+<p>Ex: Given the following tree…</p>
+<pre>     100
+    /   \
+  53     78
+ / \    /  \
+32  3  9    20
+return [[32], [53], [100, 3, 9], [78], [20]]
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">helper</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> placement<span class="token punctuation">,</span>level<span class="token punctuation">,</span> root<span class="token punctuation">,</span> dic<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">not</span> root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+    dic<span class="token punctuation">[</span>placement<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>level<span class="token punctuation">,</span> root<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>helper<span class="token punctuation">(</span>placement<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> level<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> root<span class="token punctuation">.</span>left<span class="token punctuation">,</span> dic<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>helper<span class="token punctuation">(</span>placement<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> level<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> root<span class="token punctuation">.</span>right<span class="token punctuation">,</span> dic<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">verticalTraversal</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    dic <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>helper<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span> root<span class="token punctuation">,</span> dic<span class="token punctuation">)</span>
+    result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>dic<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        temp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>dic<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            temp<span class="token punctuation">.</span>append<span class="token punctuation">(</span>j<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> result
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

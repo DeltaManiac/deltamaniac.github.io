@@ -1,0 +1,81 @@
+<h1 id="binary-tree-traversal">Binary Tree Traversal<a aria-hidden="true" class="anchor-heading icon-link" href="#binary-tree-traversal"></a></h1>
+<h2 id="graph">Graph<a aria-hidden="true" class="anchor-heading icon-link" href="#graph"></a></h2>
+<p><img src="/assets/images/2021-07-17-12-08-23.png"></p>
+<h1 id="preorder">PreOrder<a aria-hidden="true" class="anchor-heading icon-link" href="#preorder"></a></h1>
+<h2 id="root----left----right">Root --> Left --> Right<a aria-hidden="true" class="anchor-heading icon-link" href="#root----left----right"></a></h2>
+<h2 id="f-b-a-d-c-e-g-i-h">F B A D C E G I H<a aria-hidden="true" class="anchor-heading icon-link" href="#f-b-a-d-c-e-g-i-h"></a></h2>
+<h2 id="code">Code<a aria-hidden="true" class="anchor-heading icon-link" href="#code"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">preorderTraversal</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> root <span class="token operator">==</span> <span class="token boolean">None</span> <span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    res<span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> root<span class="token punctuation">.</span>left<span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> res <span class="token operator">+</span> self<span class="token punctuation">.</span>preorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> root<span class="token punctuation">.</span>right<span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> res <span class="token operator">+</span> self<span class="token punctuation">.</span>preorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res
+</code></pre>
+<h1 id="inorder">InOrder<a aria-hidden="true" class="anchor-heading icon-link" href="#inorder"></a></h1>
+<h2 id="left----root----right">Left --> Root --> Right<a aria-hidden="true" class="anchor-heading icon-link" href="#left----root----right"></a></h2>
+<h2 id="a-b-c-d-e-f-g-i-j">A B C D E F G I J<a aria-hidden="true" class="anchor-heading icon-link" href="#a-b-c-d-e-f-g-i-j"></a></h2>
+<h2 id="code-1">Code<a aria-hidden="true" class="anchor-heading icon-link" href="#code-1"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">inorderTraversal</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> root <span class="token operator">==</span> <span class="token boolean">None</span> <span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">if</span> root<span class="token punctuation">.</span>left<span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> res <span class="token operator">+</span> self<span class="token punctuation">.</span>inorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> root<span class="token punctuation">.</span>right<span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> res <span class="token operator">+</span> self<span class="token punctuation">.</span>inorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res
+</code></pre>
+<h1 id="post-order">Post Order<a aria-hidden="true" class="anchor-heading icon-link" href="#post-order"></a></h1>
+<h2 id="left----right----root">Left --> Right --> Root<a aria-hidden="true" class="anchor-heading icon-link" href="#left----right----root"></a></h2>
+<h2 id="a-c-e-d-b-h-i-g-f">A C E D B H I G F<a aria-hidden="true" class="anchor-heading icon-link" href="#a-c-e-d-b-h-i-g-f"></a></h2>
+<h2 id="code-2">Code<a aria-hidden="true" class="anchor-heading icon-link" href="#code-2"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">postorderTraversal</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> root <span class="token operator">==</span> <span class="token boolean">None</span> <span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    res<span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">if</span> root<span class="token punctuation">.</span>left<span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> res <span class="token operator">+</span> self<span class="token punctuation">.</span>postorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> root<span class="token punctuation">.</span>right<span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> res <span class="token operator">+</span> self<span class="token punctuation">.</span>postorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res
+</code></pre>
+<h1 id="iterative-tree">Iterative Tree<a aria-hidden="true" class="anchor-heading icon-link" href="#iterative-tree"></a></h1>
+<h2 id="use-stack">Use Stack<a aria-hidden="true" class="anchor-heading icon-link" href="#use-stack"></a></h2>
+<ol>
+<li>Push Root to stack</li>
+<li>Pop From Stack</li>
+<li>Push Popped Item left tree</li>
+<li>Push Popped Item right tree</li>
+</ol>
+<h1 id="level-order">Level Order<a aria-hidden="true" class="anchor-heading icon-link" href="#level-order"></a></h1>
+<h2 id="use-queue">Use Queue<a aria-hidden="true" class="anchor-heading icon-link" href="#use-queue"></a></h2>
+<ol>
+<li>Take Node</li>
+<li>Push Children into Queue</li>
+<li>Remove From Queue</li>
+<li>Go to Step 1</li>
+</ol>
+<h2 id="f-b-g-a-d-i-c-e-h">F, B G, A D I, C E H<a aria-hidden="true" class="anchor-heading icon-link" href="#f-b-g-a-d-i-c-e-h"></a></h2>
+<h2 id="code-3">Code<a aria-hidden="true" class="anchor-heading icon-link" href="#code-3"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">levelOrder</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    res<span class="token punctuation">,</span> temp<span class="token punctuation">,</span> queue<span class="token punctuation">,</span> flag<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> queue<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">iter</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>queue<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            ptr <span class="token operator">=</span> queue<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+            temp<span class="token operator">+=</span><span class="token punctuation">[</span>ptr<span class="token punctuation">.</span>val<span class="token punctuation">]</span>
+            <span class="token keyword">if</span> ptr<span class="token punctuation">.</span>left<span class="token punctuation">:</span> queue<span class="token operator">+=</span><span class="token punctuation">[</span>ptr<span class="token punctuation">.</span>left<span class="token punctuation">]</span>
+            <span class="token keyword">if</span> ptr<span class="token punctuation">.</span>right<span class="token punctuation">:</span> queue<span class="token operator">+=</span><span class="token punctuation">[</span>ptr<span class="token punctuation">.</span>right<span class="token punctuation">]</span>
+        res<span class="token operator">+=</span><span class="token punctuation">[</span>temp<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span>flag<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        temp<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+        flag <span class="token operator">=</span> flag<span class="token operator">*</span><span class="token operator">-</span><span class="token number">1</span>
+    <span class="token keyword">return</span> res
+</code></pre>

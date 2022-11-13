@@ -1,0 +1,35 @@
+<h1 id="generate-search-message">Generate Search Message<a aria-hidden="true" class="anchor-heading icon-link" href="#generate-search-message"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>This question is asked by Google.</p>
+<p>Given a string of digits, return all possible text messages those digits could send.</p>
+<p>Note: The mapping of digits to letters is as follows…</p>
+<pre><code>0 -> null
+1 -> null
+2 -> "abc"
+3 -> "def"
+4 -> "ghi"
+5 -> "jkl"
+6 -> "mno"
+7 -> "pqrs"
+8 -> "tuv"
+9 -> "wxyz"
+</code></pre>
+<pre><code>Ex: digits = "23" return ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
+</code></pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">generateMessage</span><span class="token punctuation">(</span>digits<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    chars_map <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">2</span><span class="token punctuation">:</span> <span class="token string">"abc"</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">:</span><span class="token string">"def"</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">:</span><span class="token string">"ghi"</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">:</span><span class="token string">"jkl"</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">:</span><span class="token string">"mno"</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">:</span><span class="token string">"pqrs"</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">:</span><span class="token string">"tuv"</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">:</span><span class="token string">"wxyz"</span><span class="token punctuation">}</span>
+    message <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> c <span class="token keyword">in</span> digits<span class="token punctuation">:</span>
+        digit <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+        chars <span class="token operator">=</span> chars_map<span class="token punctuation">.</span>get<span class="token punctuation">(</span>digit<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> chars <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">continue</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            message <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>chars<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            perms <span class="token operator">=</span> <span class="token punctuation">[</span> head <span class="token operator">+</span> char <span class="token keyword">for</span> head <span class="token keyword">in</span> perms <span class="token keyword">for</span> char <span class="token keyword">in</span> chars<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> perms
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

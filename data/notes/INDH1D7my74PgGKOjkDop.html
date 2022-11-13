@@ -1,0 +1,36 @@
+<h1 id="compare-keystrokes">Compare Keystrokes<a aria-hidden="true" class="anchor-heading icon-link" href="#compare-keystrokes"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Amazon.</p>
+<p>Given two strings s and t, which represents a sequence of keystrokes, where # denotes a backspace, return whether or not the sequences produce the same result.</p>
+<p>Ex: Given the following strings...</p>
+<pre>s = "ABC#", t = "CD##AB", return true
+
+s = "como#pur#ter", t = "computer", return true
+
+s = "cof#dim#ng", t = "code", return false
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compare_keystrokes</span><span class="token punctuation">(</span>s1<span class="token punctuation">,</span>s2<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+    stk <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    stk2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> x <span class="token keyword">in</span> s1<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token string">'#'</span><span class="token punctuation">:</span>
+            stk<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            stk<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> x <span class="token keyword">in</span> s2<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token string">'#'</span><span class="token punctuation">:</span>
+            stk2<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            stk2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> stk<span class="token operator">==</span>stk2
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

@@ -1,0 +1,28 @@
+<h1 id="longest-common-shared-prefix">Longest Common Shared Prefix<a aria-hidden="true" class="anchor-heading icon-link" href="#longest-common-shared-prefix"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Microsoft.</p>
+<p>Given an array of strings, return the longest common prefix that is shared amongst all strings.</p>
+<p>Note: you may assume all strings only contain lowercase alphabetical characters.</p>
+<p>Ex: Given the following arrays...</p>
+<blockquote>
+<p>["colorado", "color", "cold"], return "col"</p>
+<p>["a", "b", "c"], return ""</p>
+<p>["spot", "spotty", "spotted"], return "spot"</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">longestCommonPrefix</span><span class="token punctuation">(</span>strs<span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span>string<span class="token punctuation">:</span>
+        sz<span class="token punctuation">,</span> ret <span class="token operator">=</span> <span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token operator">*</span>strs<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">""</span>
+        <span class="token keyword">for</span> c <span class="token keyword">in</span> sz<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">:</span> <span class="token keyword">break</span>
+            ret <span class="token operator">+=</span> c<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> ret
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

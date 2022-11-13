@@ -1,0 +1,32 @@
+<h1 id="sum-left-leaves">Sum Left Leaves<a aria-hidden="true" class="anchor-heading icon-link" href="#sum-left-leaves"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>Given a binary tree, return the sum of all left leaves of the tree. Ex: Given the following tree…</p>
+<pre 2="" 3="" 5="" 8="" 12="" \="" return="" (i.e.="" +="" 3)="" &#x3C;="" pre="">
+<p>Ex: Given the following tree…</p>
+<pre>       2
+      / \
+    4    2
+   / \
+  3   9
+return 3
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">isLeaf</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> node <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token keyword">if</span> node<span class="token punctuation">.</span>left <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">and</span> node<span class="token punctuation">.</span>right <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+<span class="token keyword">def</span> <span class="token function">leftLeavesSum</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    res <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">if</span> root <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> isLeaf<span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            res <span class="token operator">+=</span> root<span class="token punctuation">.</span>left<span class="token punctuation">.</span>key
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            res <span class="token operator">+=</span> leftLeavesSum<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+        res <span class="token operator">+=</span> leftLeavesSum<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2></pre>

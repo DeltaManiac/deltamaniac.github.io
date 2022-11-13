@@ -1,0 +1,27 @@
+<h1 id="max-depth">Max Depth<a aria-hidden="true" class="anchor-heading icon-link" href="#max-depth"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>Given a binary tree, return its maximum depth.</p>
+<p>Note: the maximum depth is defined as the number of nodes along the longest path from root node to leaf node.</p>
+<p>Ex: Given the following tree…</p>
+<pre>    9
+   / \
+  1   2
+return 2
+</pre>
+<p>Ex: Given the following tree…</p>
+<pre>    5
+   / \
+  1  29
+    /  \
+   4   13
+
+return 3
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> root <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span>maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

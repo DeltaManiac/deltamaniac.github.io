@@ -1,0 +1,45 @@
+<h1 id="lowest-common-ancestor">Lowest Common Ancestor<a aria-hidden="true" class="anchor-heading icon-link" href="#lowest-common-ancestor"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>Given a binary search tree that contains unique values and two nodes within the tree, a, and b, return their lowest common ancestor.</p>
+<p>Note: the lowest common ancestor of two nodes is the deepest node within the tree such that both nodes are descendants of it.</p>
+<p>Ex: Given the following tree...</p>
+<pre>       7
+      / \
+    2    9
+   / \
+  1   5
+
+and a = 1, b = 9, return a reference to the node containing 7.
+</pre>
+<p>Ex: Given the following tree...</p>
+<pre>        8
+       / \
+      3   9
+     / \
+    2   6
+
+and a = 2, b = 6, return a reference to the node containing 3.
+</pre>
+<p>Ex: Given the following tree...</p>
+<pre>        8
+       / \
+      6   9
+
+and a = 6, b = 8, return a reference to the node containing 8.
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> x
+        self<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">lowestCommonAncestor</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> p<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> q<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token string">'TreeNode'</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> root <span class="token keyword">in</span> <span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">,</span> p<span class="token punctuation">,</span> q<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">return</span> root
+            left <span class="token operator">=</span> self<span class="token punctuation">.</span>lowestCommonAncestor<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span>p<span class="token punctuation">,</span>q<span class="token punctuation">)</span>
+            right <span class="token operator">=</span> self<span class="token punctuation">.</span>lowestCommonAncestor<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span>p<span class="token punctuation">,</span>q<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> root <span class="token keyword">if</span> left <span class="token keyword">and</span> right <span class="token keyword">else</span> left <span class="token keyword">or</span> right
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

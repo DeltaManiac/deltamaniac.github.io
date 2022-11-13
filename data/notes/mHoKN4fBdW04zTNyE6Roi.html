@@ -1,0 +1,114 @@
+<h1 id="day-12">Day 12<a aria-hidden="true" class="anchor-heading icon-link" href="#day-12"></a></h1>
+<h2 id="day-12-jsabacusframeworkio">Day 12: JSAbacusFramework.io<a aria-hidden="true" class="anchor-heading icon-link" href="#day-12-jsabacusframeworkio"></a></h2>
+<h1 id="part-i">Part I<a aria-hidden="true" class="anchor-heading icon-link" href="#part-i"></a></h1>
+<p>Santa's Accounting-Elves need help balancing the books after a recent order. Unfortunately, their accounting software uses a peculiar storage format. That's where you come in.</p>
+<p>They have a JSON document which contains a variety of things: arrays (<code>[1,2,3]</code>), objects (<code>{"a":1, "b":2}</code>), numbers, and strings.</p>
+<p> Your first job is to simply find all of the numbers throughout the document and add them together.</p>
+<p>For example:</p>
+<blockquote>
+<p><code>[1,2,3]</code> and <code>{"a":2,"b":4}</code> both have a sum of <code>6</code>.</p>
+<p><code>[[[3]]] and {"a":{"b":4},"c":-1}</code> both have a sum of <code>3</code>.</p>
+<p><code>{"a":[-1,1]} and [-1,{"a":1}]</code> both have a sum of <code>0</code>.</p>
+<p><code>[]</code> and <code>{}</code> both have a sum of <code>0</code>.</p>
+</blockquote>
+<p>You will not encounter any strings containing numbers.</p>
+<p>What is the sum of all numbers in the document?</p>
+<h2 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h2>
+<h2 id="without-serde">Without Serde<a aria-hidden="true" class="anchor-heading icon-link" href="#without-serde"></a></h2>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">part1</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">i32</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> value <span class="token operator">=</span> <span class="token number">0i32</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> tmp_val <span class="token operator">=</span> <span class="token number">0i32</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> last<span class="token punctuation">:</span> <span class="token keyword">char</span> <span class="token operator">=</span> <span class="token char">'\x00'</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> multiplier <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> ch <span class="token keyword">in</span> input<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        value <span class="token operator">+=</span> <span class="token keyword">match</span> ch <span class="token punctuation">{</span>
+            <span class="token char">'0'</span><span class="token punctuation">...</span><span class="token char">'9'</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> last <span class="token operator">==</span> <span class="token char">'-'</span> <span class="token punctuation">{</span>
+                    multiplier <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                tmp_val <span class="token operator">=</span> tmp_val <span class="token operator">*</span> <span class="token number">10</span>
+                    <span class="token operator">+</span> <span class="token keyword">match</span> ch<span class="token punctuation">.</span><span class="token function">to_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">::</span><span class="token operator">&#x3C;</span><span class="token keyword">i32</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token class-name">Ok</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">=></span> x<span class="token punctuation">,</span>
+                        <span class="token class-name">Err</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token macro property">panic!</span><span class="token punctuation">(</span><span class="token string">"Help! {}"</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+                <span class="token number">0</span>
+            <span class="token punctuation">}</span>
+            _ <span class="token keyword">if</span> last<span class="token punctuation">.</span><span class="token function">is_digit</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                <span class="token keyword">let</span> tmp <span class="token operator">=</span> tmp_val <span class="token operator">*</span> multiplier<span class="token punctuation">;</span>
+                tmp_val <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                multiplier <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+                tmp
+            <span class="token punctuation">}</span>
+            _ <span class="token operator">=></span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        last <span class="token operator">=</span> ch<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    value
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="with-serde">With Serde<a aria-hidden="true" class="anchor-heading icon-link" href="#with-serde"></a></h3>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">sum</span><span class="token punctuation">(</span>v<span class="token punctuation">:</span> <span class="token class-name">Value</span><span class="token punctuation">,</span> use_red<span class="token punctuation">:</span> <span class="token keyword">bool</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">i64</span> <span class="token punctuation">{</span>
+    <span class="token keyword">match</span> v <span class="token punctuation">{</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Null</span> <span class="token operator">=></span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Bool</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Number</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">=></span> n<span class="token punctuation">.</span><span class="token function">as_i64</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">String</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Array</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">=></span> v<span class="token punctuation">.</span><span class="token function">into_iter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>e<span class="token closure-punctuation punctuation">|</span></span> <span class="token function">sum</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> use_red<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Object</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> <span class="token keyword">mut</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> v <span class="token keyword">in</span> v<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>v <span class="token operator">==</span> <span class="token string">"red"</span><span class="token punctuation">)</span> <span class="token operator">&#x26;&#x26;</span> <span class="token operator">!</span>use_red <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                max <span class="token operator">+=</span> <span class="token function">sum</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> use_red<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token attribute attr-name">#[aoc(day11, part1, Serde)]</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">part1_serde</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">i64</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token namespace">serde_json<span class="token punctuation">::</span></span><span class="token function">from_str</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span>input<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<h2 id="part-ii">Part II<a aria-hidden="true" class="anchor-heading icon-link" href="#part-ii"></a></h2>
+<p>Uh oh - the Accounting-Elves have realized that they double-counted everything red.</p>
+<p>Ignore any object (and all of its children) which has any property with the value <code>"red"</code>. Do this only for objects (<code>{...}</code>), not arrays (<code>[...]</code>).</p>
+<blockquote>
+<p>[1,2,3] still has a sum of 6.</p>
+<p>[1,{"c":"red","b":2},3] now has a sum of 4, because the middle object is ignored.</p>
+<p>{"d":"red","e":[1,2,3,4],"f":5} now has a sum of 0, because the entire structure is ignored.</p>
+<p>[1,"red",5] has a sum of 6, because "red" in an array has no effect.</p>
+</blockquote>
+<h2 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h2>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">sum</span><span class="token punctuation">(</span>v<span class="token punctuation">:</span> <span class="token class-name">Value</span><span class="token punctuation">,</span> use_red<span class="token punctuation">:</span> <span class="token keyword">bool</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">i64</span> <span class="token punctuation">{</span>
+    <span class="token keyword">match</span> v <span class="token punctuation">{</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Null</span> <span class="token operator">=></span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Bool</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Number</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">=></span> n<span class="token punctuation">.</span><span class="token function">as_i64</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">String</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Array</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">=></span> v<span class="token punctuation">.</span><span class="token function">into_iter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>e<span class="token closure-punctuation punctuation">|</span></span> <span class="token function">sum</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> use_red<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token class-name">Value</span><span class="token punctuation">::</span><span class="token class-name">Object</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> <span class="token keyword">mut</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> v <span class="token keyword">in</span> v<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>v <span class="token operator">==</span> <span class="token string">"red"</span><span class="token punctuation">)</span> <span class="token operator">&#x26;&#x26;</span> <span class="token operator">!</span>use_red <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                max <span class="token operator">+=</span> <span class="token function">sum</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> use_red<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token attribute attr-name">#[aoc(day11, part2, Serde)]</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">part2_serde</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">i64</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token namespace">serde_json<span class="token punctuation">::</span></span><span class="token function">from_str</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span>input<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>

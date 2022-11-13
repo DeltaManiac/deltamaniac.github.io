@@ -1,0 +1,34 @@
+<h1 id="where-cycle-">Where Cycle ?!<a aria-hidden="true" class="anchor-heading icon-link" href="#where-cycle-"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Apple.</p>
+<p>Given a potentially cyclical linked list where each value is unique, return the node at which the cycle starts. If the list does not contain a cycle, return null.</p>
+<p>Ex: Given the following linked lists...</p>
+<blockquote>
+<p>1->2->3, return null</p>
+<p>1->2->3->4->5->2 (5 points back to 2), return a reference to the node containing 2</p>
+<p>1->9->3->7->7 (7 points to itself), return a reference to the node containing 7</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">whereCycle</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span>Node<span class="token punctuation">:</span>
+    slow <span class="token operator">=</span> fast <span class="token operator">=</span> head
+    <span class="token keyword">while</span> fast <span class="token keyword">and</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">:</span>
+        slow <span class="token operator">=</span> slow<span class="token punctuation">.</span><span class="token builtin">next</span>
+        fast <span class="token operator">=</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+        <span class="token keyword">if</span> slow <span class="token operator">==</span> fast<span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">None</span>
+    <span class="token keyword">while</span> head <span class="token operator">!=</span> slow<span class="token punctuation">:</span>
+        slow <span class="token operator">=</span> slow<span class="token punctuation">.</span><span class="token builtin">next</span>
+        head <span class="token operator">=</span> head<span class="token punctuation">.</span><span class="token builtin">next</span>
+    <span class="token keyword">return</span> head
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

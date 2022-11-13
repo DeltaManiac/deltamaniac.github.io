@@ -1,0 +1,67 @@
+<h1 id="least-frequently-used-cache">Least Frequently Used Cache<a aria-hidden="true" class="anchor-heading icon-link" href="#least-frequently-used-cache"></a></h1>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
+<span class="token keyword">from</span> collections <span class="token keyword">import</span> OrderedDict
+
+
+<span class="token keyword">class</span> <span class="token class-name">Node</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>key<span class="token punctuation">,</span>val<span class="token punctuation">,</span>count<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>key <span class="token operator">=</span> key
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> val
+        self<span class="token punctuation">.</span>count <span class="token operator">=</span> count
+
+<span class="token keyword">class</span> <span class="token class-name">LFUCache</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>capacity<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>cap <span class="token operator">=</span> capacity
+        self<span class="token punctuation">.</span>key_to_node <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        self<span class="token punctuation">.</span>count_to_node <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span>OrderedDict<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>minCount <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> key <span class="token keyword">not</span> <span class="token keyword">in</span> self<span class="token punctuation">.</span>key_to_node<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
+
+        node <span class="token operator">=</span> self<span class="token punctuation">.</span>key_to_node<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+        <span class="token keyword">del</span> self<span class="token punctuation">.</span>count_to_node<span class="token punctuation">[</span>node<span class="token punctuation">.</span>count<span class="token punctuation">]</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+
+        <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>count_to_node<span class="token punctuation">[</span>node<span class="token punctuation">.</span>count<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">del</span> self<span class="token punctuation">.</span>count_to_node<span class="token punctuation">[</span>node<span class="token punctuation">.</span>count<span class="token punctuation">]</span>
+
+        node<span class="token punctuation">.</span>count <span class="token operator">+=</span><span class="token number">1</span>
+        self<span class="token punctuation">.</span>count_to_node<span class="token punctuation">[</span>node<span class="token punctuation">.</span>count<span class="token punctuation">]</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> node
+
+        <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>count_to_node<span class="token punctuation">[</span>self<span class="token punctuation">.</span>minCount<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>minCount <span class="token operator">+=</span> <span class="token number">1</span>
+
+        <span class="token keyword">return</span> node<span class="token punctuation">.</span>val
+
+    <span class="token keyword">def</span> <span class="token function">put</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>cap<span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+
+        <span class="token keyword">if</span> key <span class="token keyword">in</span> self<span class="token punctuation">.</span>key_to_node<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>key_to_node<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">.</span>val <span class="token operator">=</span> value
+            self<span class="token punctuation">.</span>get<span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+
+        <span class="token keyword">if</span> <span class="token builtin">len</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>key_to_node<span class="token punctuation">)</span> <span class="token operator">==</span> self<span class="token punctuation">.</span>cap<span class="token punctuation">:</span>
+            k<span class="token punctuation">,</span>n <span class="token operator">=</span> self<span class="token punctuation">.</span>count_to_node<span class="token punctuation">[</span>self<span class="token punctuation">.</span>minCount<span class="token punctuation">]</span><span class="token punctuation">.</span>popitem<span class="token punctuation">(</span>last <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span>
+            <span class="token keyword">del</span> self<span class="token punctuation">.</span>key_to_node<span class="token punctuation">[</span>k<span class="token punctuation">]</span>
+
+        self<span class="token punctuation">.</span>count_to_node<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>key_to_node<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> Node<span class="token punctuation">(</span>key<span class="token punctuation">,</span>value<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>minCount <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span>
+
+
+lfu <span class="token operator">=</span>  LFUCache<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+lfu<span class="token punctuation">.</span>put<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+lfu<span class="token punctuation">.</span>put<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+lfu<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+lfu<span class="token punctuation">.</span>put<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+lfu<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+lfu<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+lfu<span class="token punctuation">.</span>put<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+lfu<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+lfu<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+lfu<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>

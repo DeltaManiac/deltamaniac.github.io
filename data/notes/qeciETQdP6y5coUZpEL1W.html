@@ -1,0 +1,273 @@
+<h1 id="resource-locating-and-traffic-routing">Resource Locating and Traffic Routing<a aria-hidden="true" class="anchor-heading icon-link" href="#resource-locating-and-traffic-routing"></a></h1>
+<h1 id="internet-protocol">Internet Protocol<a aria-hidden="true" class="anchor-heading icon-link" href="#internet-protocol"></a></h1>
+<p>Set of rules that dictate the format of the data send over a network</p>
+<h2 id="ipv4-addressing">IPv4 Addressing<a aria-hidden="true" class="anchor-heading icon-link" href="#ipv4-addressing"></a></h2>
+<p>32-bit numbers as 4 octets</p>
+<h3 id="network-and-host-ids">Network and Host IDs<a aria-hidden="true" class="anchor-heading icon-link" href="#network-and-host-ids"></a></h3>
+<p>IPv4 address represents two component : networkID and host ID</p>
+<p><strong>NetworkID</strong>: informs the network devices(routers) responsible for shuttling packets toward their destination about the the next appropriate hop in the transmission</p>
+<p><strong>HostID</strong>: router uses the hostID to deliver data to a specific recipient</p>
+<p>For a 32-bit IPv4 address depending on the network size the networkID is computed and the remaining bits compute the hostID</p>
+<p>e.g. in a 16-bit Network the first two octets determine the networkID and the remaining two octets determine the hostID</p>
+<p>For address 192.168.212.056 in a 16-bit network</p>
+<pre>
+       IPv4 Address
+     ---------------
+     192.168.212.056
+            |
+            |
+192.168.0.0 | 0.0.212.056
+------------|------------
+NetworkID   | HostID
+</pre>
+<h3 id="subdividing-ipv4-addresses-into-subnets">Subdividing IPv4 Addresses into Subnets<a aria-hidden="true" class="anchor-heading icon-link" href="#subdividing-ipv4-addresses-into-subnets"></a></h3>
+<p><strong>Subnets</strong>: Nodes that have same NetworkID but unique HostID</p>
+<p><strong>CIDR</strong>: Classless Inter-Domain Routing</p>
+<p>Indicate number of bits in the networkID by appending a network prefix for each IP address. It consists of a forward slash and an integer</p>
+<p>Network IP derived by applying a subnet mask</p>
+<p>e.g. 192.168.15.69/16 -> 16 bit network and the first 16 bits are the networkID</p>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>CIDR Prefix length</th><th>Subnet Mask</th><th>Available Networks</th><th>Hosts/Network</th></tr></thead><tbody><tr><td>8</td><td>255.0.0.0</td><td>1</td><td>16,777,214</td></tr><tr><td>9</td><td>255.128.0.0</td><td>2</td><td>8,388,606</td></tr><tr><td>10</td><td>255.192.0.0</td><td>4</td><td>4,194,302</td></tr><tr><td>11</td><td>255.224.0.0</td><td>8</td><td>2,097,150</td></tr><tr><td>12</td><td>255.240.0.0</td><td>16</td><td>1,048,574</td></tr><tr><td>13</td><td>255.248.0.0</td><td>32</td><td>524,286</td></tr><tr><td>14</td><td>255.252.0.0</td><td>64</td><td>262,142</td></tr><tr><td>15</td><td>255.254.0.0</td><td>128</td><td>131,070</td></tr><tr><td>16</td><td>255.255.0.0</td><td>256</td><td>65,534</td></tr><tr><td>17</td><td>255.255.128.0</td><td>512</td><td>32,766</td></tr><tr><td>18</td><td>255.255.192.0</td><td>1,024</td><td>16,382</td></tr><tr><td>19</td><td>255.255.224.0</td><td>2,048</td><td>8,190</td></tr><tr><td>20</td><td>255.255.240.0</td><td>4,096</td><td>4,094</td></tr><tr><td>21</td><td>255.255.248.0</td><td>8,192</td><td>2,046</td></tr><tr><td>22</td><td>255.255.252.0</td><td>16,384</td><td>1,022</td></tr><tr><td>23</td><td>255.255.254.0</td><td>32,768</td><td>510</td></tr><tr><td>24</td><td>255.255.255.0</td><td>65,536</td><td>254</td></tr><tr><td>25</td><td>255.255.255.128</td><td>131,072</td><td>126</td></tr><tr><td>26</td><td>255.255.255.192</td><td>262,144</td><td>62</td></tr><tr><td>27</td><td>255.255.255.224</td><td>524,288</td><td>30</td></tr><tr><td>28</td><td>255.255.255.240</td><td>1,048,576</td><td>14</td></tr><tr><td>29</td><td>255.255.255.248</td><td>2,097,152</td><td>6</td></tr><tr><td>30</td><td>255.255.255.252</td><td>4,194,304</td><td>2</td></tr></tbody></table></div>
+<pre>e.g. For address 192.168.1.1/9 the mask is the first 9 bits
+    192  |    168   |   1      |     1
+11000000 | 10101000 | 00000001 | 00000001
+
+Mask the first 9 bits
+
+11111111 | 10000000 | 00000000 | 00000000
+ 255     |    0     |     0    |     0
+
+ Network IP -> Ip Address &#x26; Mask
+11000000 | 10101000 | 00000001 | 00000001
+                AND
+11111111 | 10000000 | 00000000 | 00000000
+-------------------------------------------
+11000000 | 10000000 | 00000000 | 00000000
+    192  |     1    |     0    |     0
+
+so the possible IP addresses could be 192.1.0.0 and 192.0.0.0
+</pre>
+<p>Each network has 2 reserved host addresses.</p>
+<p>The first Ip address in e.g. 192.168.0.0/16 is 192.168.0.0 is the network address and the last address 192.168.255.255 is the broadcast address</p>
+<h3 id="allocating-networks-that-dont-break-at-an-octet-boundary">Allocating Networks that don't break at an Octet Boundary<a aria-hidden="true" class="anchor-heading icon-link" href="#allocating-networks-that-dont-break-at-an-octet-boundary"></a></h3>
+<p>IpAddr: 192.168.156.97/19</p>
+<pre>            192  |    168   |   156    |    97
+        11000000 | 10101000 | 10011100 | 01100001
+
+Network ID
+
+    |         19-Bits       |
+    -------------------------
+    11000000 | 10101000 | 10000000 | 00000000
+        192  |   168    |    128   |    0
+
+
+Host ID
+                                 |    13-Bits   |
+                                 ----------------
+        00000000 | 00000000 | 00011100 | 01100001
+           0     |     0    |  28      |   97
+</pre>
+<h3 id="network-address-translation">Network Address Translation<a aria-hidden="true" class="anchor-heading icon-link" href="#network-address-translation"></a></h3>
+<p><strong>Network Address Translation</strong>: Process that allows numerous nodes to share the same public address</p>
+<p>Devices: Firewall, Load Balancer, Router</p>
+<p><img src="/assets/images/2021-12-23-17-53-46.png"></p>
+<h5 id="steps">Steps<a aria-hidden="true" class="anchor-heading icon-link" href="#steps"></a></h5>
+<ol>
+<li>
+<p>NAT Capable device receives a connection from the client socket 10.0.0.3:50926</p>
+</li>
+<li>
+<p>NAT requests the destination with its own IP 1.2.3.4:50926 and port being mapped to the internal client</p>
+</li>
+<li>
+<p>The response received is then sent to the client</p>
+</li>
+</ol>
+<h3 id="unicast-multicast-and-broadcast">Unicast, Multicast and Broadcast<a aria-hidden="true" class="anchor-heading icon-link" href="#unicast-multicast-and-broadcast"></a></h3>
+<p><strong>Unicast</strong>: Sending packets from one IP address to another IP address</p>
+<p><strong>Multicast</strong>: Sending a singe message to a group of nodes</p>
+<p><strong>Broadcast</strong>: Concurrently deliver a message to all IP addresses in a network (Achieved via sending messages to the broadcast address of its subnet)</p>
+<h3 id="resolving-mac-address-to-a-physical-network-connection">Resolving MAC Address to a Physical Network Connection<a aria-hidden="true" class="anchor-heading icon-link" href="#resolving-mac-address-to-a-physical-network-connection"></a></h3>
+<p>The MAC address is relevant to only the local network.</p>
+<h2 id="ipv6-addressing">IPv6 Addressing<a aria-hidden="true" class="anchor-heading icon-link" href="#ipv6-addressing"></a></h2>
+<p>128-bit numbers arranged in colon-separated groups of 16bits(hextets)</p>
+<p>e.g. 4d61 : 6e64 : 792c : 2042 : 656e : 2c20 : 4c69 : 6c79</p>
+<h4 id="simplifying-ipv6">Simplifying IPv6<a aria-hidden="true" class="anchor-heading icon-link" href="#simplifying-ipv6"></a></h4>
+<p>To simplify an IPv6 address e.g. <code>fd00:4700:0010:0000:0000:0000:6814:d10</code></p>
+<ol>
+<li>
+<p>Safely remove all leading zeros in each hextet</p>
+<p><code>fd00:4700:10:0:0:0:6814:d103</code></p>
+</li>
+<li>
+<p>Replace leftmost group of consecutive zero-valued hextets with double colons</p>
+<p><code>00:4700:10::6814:d103</code></p>
+</li>
+</ol>
+<h4 id="ipv6-network-and-host-addresses">IPv6 Network and Host Addresses<a aria-hidden="true" class="anchor-heading icon-link" href="#ipv6-network-and-host-addresses"></a></h4>
+<p><strong>Network Address</strong>: 0-64Bits</p>
+<p><strong>Global Routing Prefix</strong>: 0-48 bits</p>
+<p><strong>Subnet Id</strong>: 49-64 bits</p>
+<pre>+------Network Address-----+
+|                          |
+|4d61 : 6e64 : 792c : 2042 : 656e : 2c20 : 4c69 : 6c79|
+|_________GRP_______|      | |                        |
+                    |______| |                        |
+                    SubnetID +-----Interface ID-------+
+</pre>
+<h4 id="ipv6-address-categories">IPv6 Address Categories<a aria-hidden="true" class="anchor-heading icon-link" href="#ipv6-address-categories"></a></h4>
+<h5 id="unicast">Unicast<a aria-hidden="true" class="anchor-heading icon-link" href="#unicast"></a></h5>
+<p>Uniquely identifies a node. Enables 1:1 communication</p>
+<h5 id="multicast">Multicast<a aria-hidden="true" class="anchor-heading icon-link" href="#multicast"></a></h5>
+<p>Multicast addresses represents a group of nodes. Enables 1:n communication</p>
+<h4 id="anycast">Anycast<a aria-hidden="true" class="anchor-heading icon-link" href="#anycast"></a></h4>
+<p>Anycast addresses represents a group of node listening to the same address.</p>

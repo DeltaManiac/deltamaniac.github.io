@@ -1,0 +1,273 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><link rel="icon" href="/favicon.ico"/><title>Resource Locating and Traffic Routing</title><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="description" content="Personal knowledge space"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:site" content="delta_maniac"/><meta name="twitter:creator" content="delta_maniac"/><meta property="og:title" content="Resource Locating and Traffic Routing"/><meta property="og:description" content="Personal knowledge space"/><meta property="og:url" content="https://deltamaniac.github.io//notes/qeciETQdP6y5coUZpEL1W/"/><meta property="og:type" content="article"/><meta property="article:published_time" content="12/23/2021"/><meta property="article:modified_time" content="12/28/2021"/><link rel="canonical" href="https://deltamaniac.github.io//notes/qeciETQdP6y5coUZpEL1W/"/><meta name="next-head-count" content="17"/><link rel="preload" href="/_next/static/css/8e7b7e4bce421c0a.css" as="style"/><link rel="stylesheet" href="/_next/static/css/8e7b7e4bce421c0a.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-3d209faeb64f2f97.js" defer=""></script><script src="/_next/static/chunks/framework-28c999baf2863c3d.js" defer=""></script><script src="/_next/static/chunks/main-104451f3d1a5c4bc.js" defer=""></script><script src="/_next/static/chunks/pages/_app-9d8e0603730b15a3.js" defer=""></script><script src="/_next/static/chunks/935-4dee79e80b8641c6.js" defer=""></script><script src="/_next/static/chunks/6-50972def09142ee2.js" defer=""></script><script src="/_next/static/chunks/pages/notes/%5Bid%5D-78d472fa3b924116.js" defer=""></script><script src="/_next/static/uwaFLQSct0mTPwxN4Nqr7/_buildManifest.js" defer=""></script><script src="/_next/static/uwaFLQSct0mTPwxN4Nqr7/_ssgManifest.js" defer=""></script></head><body><div id="__next" data-reactroot=""><section class="ant-layout" style="width:100%;min-height:100%"><header class="ant-layout-header" style="position:fixed;isolation:isolate;z-index:1;width:100%;border-bottom:1px solid #d4dadf;height:64px;padding:0 24px 0 2px"><div class="ant-row ant-row-center" style="max-width:992px;justify-content:space-between;margin:0 auto"><div style="display:flex" class="ant-col ant-col-xs-20 ant-col-sm-4"></div><div class="ant-col gutter-row ant-col-xs-0 ant-col-sm-20 ant-col-md-20 ant-col-lg-19"><div class="ant-select ant-select-lg ant-select-auto-complete ant-select-single ant-select-allow-clear ant-select-show-search" style="width:100%"><div class="ant-select-selector"><span class="ant-select-selection-search"><input type="search" autoComplete="off" class="ant-select-selection-search-input" role="combobox" aria-haspopup="listbox" aria-owns="undefined_list" aria-autocomplete="list" aria-controls="undefined_list" aria-activedescendant="undefined_list_0" value=""/></span><span class="ant-select-selection-placeholder">For full text search please use the &#x27;?&#x27; prefix. e.g. ? Onboarding</span></div></div></div><div style="display:none;align-items:center;justify-content:center" class="ant-col ant-col-xs-4 ant-col-sm-4 ant-col-md-0 ant-col-lg-0"><span role="img" aria-label="menu" style="font-size:24px" tabindex="-1" class="anticon anticon-menu"><svg viewBox="64 64 896 896" focusable="false" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></span></div></div></header><section class="ant-layout" style="margin-top:64px;display:flex;flex-direction:row"><div class="site-layout-sidebar" style="flex:0 0 auto;width:calc(max((100% - 992px) / 2, 0px) + 200px);min-width:200px;padding-left:calc((100% - 992px) / 2)"><aside class="ant-layout-sider ant-layout-sider-dark" style="position:fixed;overflow:auto;height:calc(100vh - 64px);background-color:transparent;flex:0 0 200px;max-width:200px;min-width:200px;width:200px"><div class="ant-layout-sider-children"></div></aside></div><main class="ant-layout-content side-layout-main" style="max-width:1200px;min-width:0;display:block"><div style="padding:0 24px"><div class="main-content" role="main"><div class="ant-row"><div class="ant-col ant-col-24"><div class="ant-row" style="margin-left:-10px;margin-right:-10px"><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-24 ant-col-md-18"><div><h1 id="resource-locating-and-traffic-routing">Resource Locating and Traffic Routing<a aria-hidden="true" class="anchor-heading icon-link" href="#resource-locating-and-traffic-routing"></a></h1>
+<h1 id="internet-protocol">Internet Protocol<a aria-hidden="true" class="anchor-heading icon-link" href="#internet-protocol"></a></h1>
+<p>Set of rules that dictate the format of the data send over a network</p>
+<h2 id="ipv4-addressing">IPv4 Addressing<a aria-hidden="true" class="anchor-heading icon-link" href="#ipv4-addressing"></a></h2>
+<p>32-bit numbers as 4 octets</p>
+<h3 id="network-and-host-ids">Network and Host IDs<a aria-hidden="true" class="anchor-heading icon-link" href="#network-and-host-ids"></a></h3>
+<p>IPv4 address represents two component : networkID and host ID</p>
+<p><strong>NetworkID</strong>: informs the network devices(routers) responsible for shuttling packets toward their destination about the the next appropriate hop in the transmission</p>
+<p><strong>HostID</strong>: router uses the hostID to deliver data to a specific recipient</p>
+<p>For a 32-bit IPv4 address depending on the network size the networkID is computed and the remaining bits compute the hostID</p>
+<p>e.g. in a 16-bit Network the first two octets determine the networkID and the remaining two octets determine the hostID</p>
+<p>For address 192.168.212.056 in a 16-bit network</p>
+<pre>
+       IPv4 Address
+     ---------------
+     192.168.212.056
+            |
+            |
+192.168.0.0 | 0.0.212.056
+------------|------------
+NetworkID   | HostID
+</pre>
+<h3 id="subdividing-ipv4-addresses-into-subnets">Subdividing IPv4 Addresses into Subnets<a aria-hidden="true" class="anchor-heading icon-link" href="#subdividing-ipv4-addresses-into-subnets"></a></h3>
+<p><strong>Subnets</strong>: Nodes that have same NetworkID but unique HostID</p>
+<p><strong>CIDR</strong>: Classless Inter-Domain Routing</p>
+<p>Indicate number of bits in the networkID by appending a network prefix for each IP address. It consists of a forward slash and an integer</p>
+<p>Network IP derived by applying a subnet mask</p>
+<p>e.g. 192.168.15.69/16 -> 16 bit network and the first 16 bits are the networkID</p>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>CIDR Prefix length</th><th>Subnet Mask</th><th>Available Networks</th><th>Hosts/Network</th></tr></thead><tbody><tr><td>8</td><td>255.0.0.0</td><td>1</td><td>16,777,214</td></tr><tr><td>9</td><td>255.128.0.0</td><td>2</td><td>8,388,606</td></tr><tr><td>10</td><td>255.192.0.0</td><td>4</td><td>4,194,302</td></tr><tr><td>11</td><td>255.224.0.0</td><td>8</td><td>2,097,150</td></tr><tr><td>12</td><td>255.240.0.0</td><td>16</td><td>1,048,574</td></tr><tr><td>13</td><td>255.248.0.0</td><td>32</td><td>524,286</td></tr><tr><td>14</td><td>255.252.0.0</td><td>64</td><td>262,142</td></tr><tr><td>15</td><td>255.254.0.0</td><td>128</td><td>131,070</td></tr><tr><td>16</td><td>255.255.0.0</td><td>256</td><td>65,534</td></tr><tr><td>17</td><td>255.255.128.0</td><td>512</td><td>32,766</td></tr><tr><td>18</td><td>255.255.192.0</td><td>1,024</td><td>16,382</td></tr><tr><td>19</td><td>255.255.224.0</td><td>2,048</td><td>8,190</td></tr><tr><td>20</td><td>255.255.240.0</td><td>4,096</td><td>4,094</td></tr><tr><td>21</td><td>255.255.248.0</td><td>8,192</td><td>2,046</td></tr><tr><td>22</td><td>255.255.252.0</td><td>16,384</td><td>1,022</td></tr><tr><td>23</td><td>255.255.254.0</td><td>32,768</td><td>510</td></tr><tr><td>24</td><td>255.255.255.0</td><td>65,536</td><td>254</td></tr><tr><td>25</td><td>255.255.255.128</td><td>131,072</td><td>126</td></tr><tr><td>26</td><td>255.255.255.192</td><td>262,144</td><td>62</td></tr><tr><td>27</td><td>255.255.255.224</td><td>524,288</td><td>30</td></tr><tr><td>28</td><td>255.255.255.240</td><td>1,048,576</td><td>14</td></tr><tr><td>29</td><td>255.255.255.248</td><td>2,097,152</td><td>6</td></tr><tr><td>30</td><td>255.255.255.252</td><td>4,194,304</td><td>2</td></tr></tbody></table></div>
+<pre>e.g. For address 192.168.1.1/9 the mask is the first 9 bits
+    192  |    168   |   1      |     1
+11000000 | 10101000 | 00000001 | 00000001
+
+Mask the first 9 bits
+
+11111111 | 10000000 | 00000000 | 00000000
+ 255     |    0     |     0    |     0
+
+ Network IP -> Ip Address &#x26; Mask
+11000000 | 10101000 | 00000001 | 00000001
+                AND
+11111111 | 10000000 | 00000000 | 00000000
+-------------------------------------------
+11000000 | 10000000 | 00000000 | 00000000
+    192  |     1    |     0    |     0
+
+so the possible IP addresses could be 192.1.0.0 and 192.0.0.0
+</pre>
+<p>Each network has 2 reserved host addresses.</p>
+<p>The first Ip address in e.g. 192.168.0.0/16 is 192.168.0.0 is the network address and the last address 192.168.255.255 is the broadcast address</p>
+<h3 id="allocating-networks-that-dont-break-at-an-octet-boundary">Allocating Networks that don't break at an Octet Boundary<a aria-hidden="true" class="anchor-heading icon-link" href="#allocating-networks-that-dont-break-at-an-octet-boundary"></a></h3>
+<p>IpAddr: 192.168.156.97/19</p>
+<pre>            192  |    168   |   156    |    97
+        11000000 | 10101000 | 10011100 | 01100001
+
+Network ID
+
+    |         19-Bits       |
+    -------------------------
+    11000000 | 10101000 | 10000000 | 00000000
+        192  |   168    |    128   |    0
+
+
+Host ID
+                                 |    13-Bits   |
+                                 ----------------
+        00000000 | 00000000 | 00011100 | 01100001
+           0     |     0    |  28      |   97
+</pre>
+<h3 id="network-address-translation">Network Address Translation<a aria-hidden="true" class="anchor-heading icon-link" href="#network-address-translation"></a></h3>
+<p><strong>Network Address Translation</strong>: Process that allows numerous nodes to share the same public address</p>
+<p>Devices: Firewall, Load Balancer, Router</p>
+<p><img src="/assets/images/2021-12-23-17-53-46.png"></p>
+<h5 id="steps">Steps<a aria-hidden="true" class="anchor-heading icon-link" href="#steps"></a></h5>
+<ol>
+<li>
+<p>NAT Capable device receives a connection from the client socket 10.0.0.3:50926</p>
+</li>
+<li>
+<p>NAT requests the destination with its own IP 1.2.3.4:50926 and port being mapped to the internal client</p>
+</li>
+<li>
+<p>The response received is then sent to the client</p>
+</li>
+</ol>
+<h3 id="unicast-multicast-and-broadcast">Unicast, Multicast and Broadcast<a aria-hidden="true" class="anchor-heading icon-link" href="#unicast-multicast-and-broadcast"></a></h3>
+<p><strong>Unicast</strong>: Sending packets from one IP address to another IP address</p>
+<p><strong>Multicast</strong>: Sending a singe message to a group of nodes</p>
+<p><strong>Broadcast</strong>: Concurrently deliver a message to all IP addresses in a network (Achieved via sending messages to the broadcast address of its subnet)</p>
+<h3 id="resolving-mac-address-to-a-physical-network-connection">Resolving MAC Address to a Physical Network Connection<a aria-hidden="true" class="anchor-heading icon-link" href="#resolving-mac-address-to-a-physical-network-connection"></a></h3>
+<p>The MAC address is relevant to only the local network.</p>
+<h2 id="ipv6-addressing">IPv6 Addressing<a aria-hidden="true" class="anchor-heading icon-link" href="#ipv6-addressing"></a></h2>
+<p>128-bit numbers arranged in colon-separated groups of 16bits(hextets)</p>
+<p>e.g. 4d61 : 6e64 : 792c : 2042 : 656e : 2c20 : 4c69 : 6c79</p>
+<h4 id="simplifying-ipv6">Simplifying IPv6<a aria-hidden="true" class="anchor-heading icon-link" href="#simplifying-ipv6"></a></h4>
+<p>To simplify an IPv6 address e.g. <code>fd00:4700:0010:0000:0000:0000:6814:d10</code></p>
+<ol>
+<li>
+<p>Safely remove all leading zeros in each hextet</p>
+<p><code>fd00:4700:10:0:0:0:6814:d103</code></p>
+</li>
+<li>
+<p>Replace leftmost group of consecutive zero-valued hextets with double colons</p>
+<p><code>00:4700:10::6814:d103</code></p>
+</li>
+</ol>
+<h4 id="ipv6-network-and-host-addresses">IPv6 Network and Host Addresses<a aria-hidden="true" class="anchor-heading icon-link" href="#ipv6-network-and-host-addresses"></a></h4>
+<p><strong>Network Address</strong>: 0-64Bits</p>
+<p><strong>Global Routing Prefix</strong>: 0-48 bits</p>
+<p><strong>Subnet Id</strong>: 49-64 bits</p>
+<pre>+------Network Address-----+
+|                          |
+|4d61 : 6e64 : 792c : 2042 : 656e : 2c20 : 4c69 : 6c79|
+|_________GRP_______|      | |                        |
+                    |______| |                        |
+                    SubnetID +-----Interface ID-------+
+</pre>
+<h4 id="ipv6-address-categories">IPv6 Address Categories<a aria-hidden="true" class="anchor-heading icon-link" href="#ipv6-address-categories"></a></h4>
+<h5 id="unicast">Unicast<a aria-hidden="true" class="anchor-heading icon-link" href="#unicast"></a></h5>
+<p>Uniquely identifies a node. Enables 1:1 communication</p>
+<h5 id="multicast">Multicast<a aria-hidden="true" class="anchor-heading icon-link" href="#multicast"></a></h5>
+<p>Multicast addresses represents a group of nodes. Enables 1:n communication</p>
+<h4 id="anycast">Anycast<a aria-hidden="true" class="anchor-heading icon-link" href="#anycast"></a></h4>
+<p>Anycast addresses represents a group of node listening to the same address.</p></div></div><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-0 ant-col-md-6"><div><div class=""><div class="ant-anchor-wrapper dendron-toc" style="max-height:calc(100vh - 64px);z-index:1"><div class="ant-anchor"><div class="ant-anchor-ink"><span class="ant-anchor-ink-ball"></span></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#internet-protocol" title="Internet Protocol">Internet Protocol</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#ipv4-addressing" title="IPv4 Addressing">IPv4 Addressing</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#network-and-host-ids" title="Network and Host IDs">Network and Host IDs</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#subdividing-ipv4-addresses-into-subnets" title="Subdividing IPv4 Addresses into Subnets">Subdividing IPv4 Addresses into Subnets</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#allocating-networks-that-dont-break-at-an-octet-boundary" title="Allocating Networks that don&#x27;t break at an Octet Boundary">Allocating Networks that don&#x27;t break at an Octet Boundary</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#network-address-translation" title="Network Address Translation">Network Address Translation</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#steps" title="Steps">Steps</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#unicast-multicast-and-broadcast" title="Unicast, Multicast and Broadcast">Unicast, Multicast and Broadcast</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#resolving-mac-address-to-a-physical-network-connection" title="Resolving MAC Address to a Physical Network Connection">Resolving MAC Address to a Physical Network Connection</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#ipv6-addressing" title="IPv6 Addressing">IPv6 Addressing</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#simplifying-ipv6" title="Simplifying IPv6">Simplifying IPv6</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#ipv6-network-and-host-addresses" title="IPv6 Network and Host Addresses">IPv6 Network and Host Addresses</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#ipv6-address-categories" title="IPv6 Address Categories">IPv6 Address Categories</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#unicast" title="Unicast">Unicast</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#multicast" title="Multicast">Multicast</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#anycast" title="Anycast">Anycast</a></div></div></div></div></div></div></div></div></div></div></div><div class="ant-divider ant-divider-horizontal" role="separator"></div><footer class="ant-layout-footer" style="padding:0 24px 24px"></footer></main></section></section></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"note":{"id":"qeciETQdP6y5coUZpEL1W","title":"Resource Locating and Traffic Routing","desc":"","updated":1640654060801,"created":1640232890111,"nav_order":2,"custom":{"nav_order":2},"fname":"programming.network.loc_route","type":"note","vault":{"fsPath":"vault"},"contentHash":"a4c138df6fd09e5c9cf5ef945e922620","links":[],"anchors":{"internet-protocol":{"type":"header","text":"Internet Protocol","value":"internet-protocol","line":9,"column":0,"depth":1},"ipv4-addressing":{"type":"header","text":"IPv4 Addressing","value":"ipv4-addressing","line":13,"column":0,"depth":2},"network-and-host-ids":{"type":"header","text":"Network and Host IDs","value":"network-and-host-ids","line":17,"column":0,"depth":3},"subdividing-ipv4-addresses-into-subnets":{"type":"header","text":"Subdividing IPv4 Addresses into Subnets","value":"subdividing-ipv4-addresses-into-subnets","line":43,"column":0,"depth":3},"allocating-networks-that-dont-break-at-an-octet-boundary":{"type":"header","text":"Allocating Networks that don't break at an Octet Boundary","value":"allocating-networks-that-dont-break-at-an-octet-boundary","line":107,"column":0,"depth":3},"network-address-translation":{"type":"header","text":"Network Address Translation","value":"network-address-translation","line":129,"column":0,"depth":3},"steps":{"type":"header","text":"Steps","value":"steps","line":137,"column":0,"depth":5},"unicast-multicast-and-broadcast":{"type":"header","text":"Unicast, Multicast and Broadcast","value":"unicast-multicast-and-broadcast","line":145,"column":0,"depth":3},"resolving-mac-address-to-a-physical-network-connection":{"type":"header","text":"Resolving MAC Address to a Physical Network Connection","value":"resolving-mac-address-to-a-physical-network-connection","line":153,"column":0,"depth":3},"ipv6-addressing":{"type":"header","text":"IPv6 Addressing","value":"ipv6-addressing","line":158,"column":0,"depth":2},"simplifying-ipv6":{"type":"header","text":"Simplifying IPv6","value":"simplifying-ipv6","line":164,"column":0,"depth":4},"ipv6-network-and-host-addresses":{"type":"header","text":"IPv6 Network and Host Addresses","value":"ipv6-network-and-host-addresses","line":176,"column":0,"depth":4},"ipv6-address-categories":{"type":"header","text":"IPv6 Address Categories","value":"ipv6-address-categories","line":193,"column":0,"depth":4},"unicast":{"type":"header","text":"Unicast","value":"unicast","line":195,"column":0,"depth":5},"multicast":{"type":"header","text":"Multicast","value":"multicast","line":199,"column":0,"depth":5},"anycast":{"type":"header","text":"Anycast","value":"anycast","line":203,"column":0,"depth":4}},"children":[],"parent":"t5w4acej37neksi1gifrvfo","data":{}},"body":"\u003ch1 id=\"resource-locating-and-traffic-routing\"\u003eResource Locating and Traffic Routing\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#resource-locating-and-traffic-routing\"\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003ch1 id=\"internet-protocol\"\u003eInternet Protocol\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#internet-protocol\"\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eSet of rules that dictate the format of the data send over a network\u003c/p\u003e\n\u003ch2 id=\"ipv4-addressing\"\u003eIPv4 Addressing\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#ipv4-addressing\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e32-bit numbers as 4 octets\u003c/p\u003e\n\u003ch3 id=\"network-and-host-ids\"\u003eNetwork and Host IDs\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#network-and-host-ids\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eIPv4 address represents two component : networkID and host ID\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eNetworkID\u003c/strong\u003e: informs the network devices(routers) responsible for shuttling packets toward their destination about the the next appropriate hop in the transmission\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eHostID\u003c/strong\u003e: router uses the hostID to deliver data to a specific recipient\u003c/p\u003e\n\u003cp\u003eFor a 32-bit IPv4 address depending on the network size the networkID is computed and the remaining bits compute the hostID\u003c/p\u003e\n\u003cp\u003ee.g. in a 16-bit Network the first two octets determine the networkID and the remaining two octets determine the hostID\u003c/p\u003e\n\u003cp\u003eFor address 192.168.212.056 in a 16-bit network\u003c/p\u003e\n\u003cpre\u003e\n       IPv4 Address\n     ---------------\n     192.168.212.056\n            |\n            |\n192.168.0.0 | 0.0.212.056\n------------|------------\nNetworkID   | HostID\n\u003c/pre\u003e\n\u003ch3 id=\"subdividing-ipv4-addresses-into-subnets\"\u003eSubdividing IPv4 Addresses into Subnets\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#subdividing-ipv4-addresses-into-subnets\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003eSubnets\u003c/strong\u003e: Nodes that have same NetworkID but unique HostID\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eCIDR\u003c/strong\u003e: Classless Inter-Domain Routing\u003c/p\u003e\n\u003cp\u003eIndicate number of bits in the networkID by appending a network prefix for each IP address. It consists of a forward slash and an integer\u003c/p\u003e\n\u003cp\u003eNetwork IP derived by applying a subnet mask\u003c/p\u003e\n\u003cp\u003ee.g. 192.168.15.69/16 -\u003e 16 bit network and the first 16 bits are the networkID\u003c/p\u003e\n\u003cdiv class=\"table-responsive\"\u003e\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eCIDR Prefix length\u003c/th\u003e\u003cth\u003eSubnet Mask\u003c/th\u003e\u003cth\u003eAvailable Networks\u003c/th\u003e\u003cth\u003eHosts/Network\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003e8\u003c/td\u003e\u003ctd\u003e255.0.0.0\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003e16,777,214\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e9\u003c/td\u003e\u003ctd\u003e255.128.0.0\u003c/td\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd\u003e8,388,606\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e10\u003c/td\u003e\u003ctd\u003e255.192.0.0\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003e4,194,302\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e11\u003c/td\u003e\u003ctd\u003e255.224.0.0\u003c/td\u003e\u003ctd\u003e8\u003c/td\u003e\u003ctd\u003e2,097,150\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e12\u003c/td\u003e\u003ctd\u003e255.240.0.0\u003c/td\u003e\u003ctd\u003e16\u003c/td\u003e\u003ctd\u003e1,048,574\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e13\u003c/td\u003e\u003ctd\u003e255.248.0.0\u003c/td\u003e\u003ctd\u003e32\u003c/td\u003e\u003ctd\u003e524,286\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e14\u003c/td\u003e\u003ctd\u003e255.252.0.0\u003c/td\u003e\u003ctd\u003e64\u003c/td\u003e\u003ctd\u003e262,142\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e15\u003c/td\u003e\u003ctd\u003e255.254.0.0\u003c/td\u003e\u003ctd\u003e128\u003c/td\u003e\u003ctd\u003e131,070\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e16\u003c/td\u003e\u003ctd\u003e255.255.0.0\u003c/td\u003e\u003ctd\u003e256\u003c/td\u003e\u003ctd\u003e65,534\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e17\u003c/td\u003e\u003ctd\u003e255.255.128.0\u003c/td\u003e\u003ctd\u003e512\u003c/td\u003e\u003ctd\u003e32,766\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e18\u003c/td\u003e\u003ctd\u003e255.255.192.0\u003c/td\u003e\u003ctd\u003e1,024\u003c/td\u003e\u003ctd\u003e16,382\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e19\u003c/td\u003e\u003ctd\u003e255.255.224.0\u003c/td\u003e\u003ctd\u003e2,048\u003c/td\u003e\u003ctd\u003e8,190\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e20\u003c/td\u003e\u003ctd\u003e255.255.240.0\u003c/td\u003e\u003ctd\u003e4,096\u003c/td\u003e\u003ctd\u003e4,094\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e21\u003c/td\u003e\u003ctd\u003e255.255.248.0\u003c/td\u003e\u003ctd\u003e8,192\u003c/td\u003e\u003ctd\u003e2,046\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e22\u003c/td\u003e\u003ctd\u003e255.255.252.0\u003c/td\u003e\u003ctd\u003e16,384\u003c/td\u003e\u003ctd\u003e1,022\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e23\u003c/td\u003e\u003ctd\u003e255.255.254.0\u003c/td\u003e\u003ctd\u003e32,768\u003c/td\u003e\u003ctd\u003e510\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e24\u003c/td\u003e\u003ctd\u003e255.255.255.0\u003c/td\u003e\u003ctd\u003e65,536\u003c/td\u003e\u003ctd\u003e254\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e25\u003c/td\u003e\u003ctd\u003e255.255.255.128\u003c/td\u003e\u003ctd\u003e131,072\u003c/td\u003e\u003ctd\u003e126\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e26\u003c/td\u003e\u003ctd\u003e255.255.255.192\u003c/td\u003e\u003ctd\u003e262,144\u003c/td\u003e\u003ctd\u003e62\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e27\u003c/td\u003e\u003ctd\u003e255.255.255.224\u003c/td\u003e\u003ctd\u003e524,288\u003c/td\u003e\u003ctd\u003e30\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e28\u003c/td\u003e\u003ctd\u003e255.255.255.240\u003c/td\u003e\u003ctd\u003e1,048,576\u003c/td\u003e\u003ctd\u003e14\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e29\u003c/td\u003e\u003ctd\u003e255.255.255.248\u003c/td\u003e\u003ctd\u003e2,097,152\u003c/td\u003e\u003ctd\u003e6\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e30\u003c/td\u003e\u003ctd\u003e255.255.255.252\u003c/td\u003e\u003ctd\u003e4,194,304\u003c/td\u003e\u003ctd\u003e2\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e\n\u003cpre\u003ee.g. For address 192.168.1.1/9 the mask is the first 9 bits\n    192  |    168   |   1      |     1\n11000000 | 10101000 | 00000001 | 00000001\n\nMask the first 9 bits\n\n11111111 | 10000000 | 00000000 | 00000000\n 255     |    0     |     0    |     0\n\n Network IP -\u003e Ip Address \u0026#x26; Mask\n11000000 | 10101000 | 00000001 | 00000001\n                AND\n11111111 | 10000000 | 00000000 | 00000000\n-------------------------------------------\n11000000 | 10000000 | 00000000 | 00000000\n    192  |     1    |     0    |     0\n\nso the possible IP addresses could be 192.1.0.0 and 192.0.0.0\n\u003c/pre\u003e\n\u003cp\u003eEach network has 2 reserved host addresses.\u003c/p\u003e\n\u003cp\u003eThe first Ip address in e.g. 192.168.0.0/16 is 192.168.0.0 is the network address and the last address 192.168.255.255 is the broadcast address\u003c/p\u003e\n\u003ch3 id=\"allocating-networks-that-dont-break-at-an-octet-boundary\"\u003eAllocating Networks that don't break at an Octet Boundary\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#allocating-networks-that-dont-break-at-an-octet-boundary\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eIpAddr: 192.168.156.97/19\u003c/p\u003e\n\u003cpre\u003e            192  |    168   |   156    |    97\n        11000000 | 10101000 | 10011100 | 01100001\n\nNetwork ID\n\n    |         19-Bits       |\n    -------------------------\n    11000000 | 10101000 | 10000000 | 00000000\n        192  |   168    |    128   |    0\n\n\nHost ID\n                                 |    13-Bits   |\n                                 ----------------\n        00000000 | 00000000 | 00011100 | 01100001\n           0     |     0    |  28      |   97\n\u003c/pre\u003e\n\u003ch3 id=\"network-address-translation\"\u003eNetwork Address Translation\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#network-address-translation\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003eNetwork Address Translation\u003c/strong\u003e: Process that allows numerous nodes to share the same public address\u003c/p\u003e\n\u003cp\u003eDevices: Firewall, Load Balancer, Router\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/images/2021-12-23-17-53-46.png\"\u003e\u003c/p\u003e\n\u003ch5 id=\"steps\"\u003eSteps\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#steps\"\u003e\u003c/a\u003e\u003c/h5\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eNAT Capable device receives a connection from the client socket 10.0.0.3:50926\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eNAT requests the destination with its own IP 1.2.3.4:50926 and port being mapped to the internal client\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe response received is then sent to the client\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch3 id=\"unicast-multicast-and-broadcast\"\u003eUnicast, Multicast and Broadcast\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#unicast-multicast-and-broadcast\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003eUnicast\u003c/strong\u003e: Sending packets from one IP address to another IP address\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eMulticast\u003c/strong\u003e: Sending a singe message to a group of nodes\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eBroadcast\u003c/strong\u003e: Concurrently deliver a message to all IP addresses in a network (Achieved via sending messages to the broadcast address of its subnet)\u003c/p\u003e\n\u003ch3 id=\"resolving-mac-address-to-a-physical-network-connection\"\u003eResolving MAC Address to a Physical Network Connection\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#resolving-mac-address-to-a-physical-network-connection\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eThe MAC address is relevant to only the local network.\u003c/p\u003e\n\u003ch2 id=\"ipv6-addressing\"\u003eIPv6 Addressing\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#ipv6-addressing\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e128-bit numbers arranged in colon-separated groups of 16bits(hextets)\u003c/p\u003e\n\u003cp\u003ee.g. 4d61 : 6e64 : 792c : 2042 : 656e : 2c20 : 4c69 : 6c79\u003c/p\u003e\n\u003ch4 id=\"simplifying-ipv6\"\u003eSimplifying IPv6\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#simplifying-ipv6\"\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eTo simplify an IPv6 address e.g. \u003ccode\u003efd00:4700:0010:0000:0000:0000:6814:d10\u003c/code\u003e\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eSafely remove all leading zeros in each hextet\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003efd00:4700:10:0:0:0:6814:d103\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eReplace leftmost group of consecutive zero-valued hextets with double colons\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003e00:4700:10::6814:d103\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch4 id=\"ipv6-network-and-host-addresses\"\u003eIPv6 Network and Host Addresses\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#ipv6-network-and-host-addresses\"\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003e\u003cstrong\u003eNetwork Address\u003c/strong\u003e: 0-64Bits\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eGlobal Routing Prefix\u003c/strong\u003e: 0-48 bits\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eSubnet Id\u003c/strong\u003e: 49-64 bits\u003c/p\u003e\n\u003cpre\u003e+------Network Address-----+\n|                          |\n|4d61 : 6e64 : 792c : 2042 : 656e : 2c20 : 4c69 : 6c79|\n|_________GRP_______|      | |                        |\n                    |______| |                        |\n                    SubnetID +-----Interface ID-------+\n\u003c/pre\u003e\n\u003ch4 id=\"ipv6-address-categories\"\u003eIPv6 Address Categories\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#ipv6-address-categories\"\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003ch5 id=\"unicast\"\u003eUnicast\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#unicast\"\u003e\u003c/a\u003e\u003c/h5\u003e\n\u003cp\u003eUniquely identifies a node. Enables 1:1 communication\u003c/p\u003e\n\u003ch5 id=\"multicast\"\u003eMulticast\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#multicast\"\u003e\u003c/a\u003e\u003c/h5\u003e\n\u003cp\u003eMulticast addresses represents a group of nodes. Enables 1:n communication\u003c/p\u003e\n\u003ch4 id=\"anycast\"\u003eAnycast\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#anycast\"\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eAnycast addresses represents a group of node listening to the same address.\u003c/p\u003e","noteIndex":{"id":"root","title":"BrainMatter","desc":"","updated":1668313955403,"created":1602915435296,"stub":false,"nav_order":0,"custom":{"stub":false,"nav_order":0,"permalink":"/"},"fname":"root","type":"note","vault":{"fsPath":"vault"},"contentHash":"7b584540f5ff09a7953c66d95b7ee329","links":[],"anchors":{},"children":["ovOjtfOpF3vhfFUZi6DHp","3dNch4I3rcDy5xXFn3R6B","BWzIJm01jQ6aNNg56CwnS","96Hj5nYpnUciwlTenFpoU","6Wl0i0BjF7yD85uM5RTyK","o3yahkxofd7qighsrvpg893","7kyCk8YAkDvIrxLtAUFkG","A6TBKYAcFVjBqZpdbHuaS","w3B0c1Y72MfzhwoVNx7vx","t6ilpq115sipjv378ambtkv"],"parent":null,"data":{},"body":"\n\n![DeltaManiac](https://raw.githubusercontent.com/DeltaManiac/DeltaManiac/main/vault/assets/banner.svg)\n\n- 🔭 I’m currently playing Destiny 2\n- 🌱 I’m currently learning [Rust](https://www.rust-lang.org) at night and [Go](https://golang.org/) at work\n- 📫 How to reach me: [twitter](https://twitter.com/Delta_Maniac)\n- 😄 Pronouns: He/Him\n\u003c!-- - ⚡ Fun fact: The banner was provided by [Pushkar Anand](https://github.com/pushkar8723) sourced from [Responsive Cow Jumps Over the Moooooon](https://codepen.io/sdras/pen/doZReX) --\u003e\n\u003c!-- // - 👯 I’m looking to collaborate on ...\n// - 🤔 I’m looking for help with ...\n// - 💬 Ask me about ... --\u003e\n"},"collectionChildren":null,"customHeadContent":null,"config":{"version":5,"dev":{"enablePreviewV2":true},"commands":{"lookup":{"note":{"selectionMode":"extract","confirmVaultOnCreate":false,"leaveTrace":false,"bubbleUpCreateNew":true,"vaultSelectionModeOnCreate":"smart","fuzzThreshold":0.2}},"randomNote":{},"insertNote":{"initialValue":"templates"},"insertNoteLink":{"aliasMode":"none","enableMultiSelect":false},"insertNoteIndex":{"enableMarker":false},"copyNoteLink":{"aliasMode":"title"},"templateHierarchy":"template"},"workspace":{"dendronVersion":"0.83.0","vaults":[{"fsPath":"vault"}],"journal":{"dailyDomain":"daily","name":"journal","dateFormat":"y.MM.dd","addBehavior":"childOfDomain"},"scratch":{"name":"scratch","dateFormat":"y.MM.dd.HHmmss","addBehavior":"asOwnDomain"},"graph":{"zoomSpeed":1,"createStub":false},"enableAutoCreateOnDefinition":false,"enableXVaultWikiLink":false,"enableRemoteVaultInit":true,"workspaceVaultSyncMode":"noCommit","enableAutoFoldFrontmatter":true,"maxPreviewsCached":10,"maxNoteLength":204800,"task":{"name":"","dateFormat":"","addBehavior":"childOfCurrent","statusSymbols":{"":" ","wip":"w","done":"x","assigned":"a","moved":"m","blocked":"b","delegated":"l","dropped":"d","pending":"y"},"prioritySymbols":{"H":"high","M":"medium","L":"low"},"todoIntegration":false,"createTaskSelectionType":"selection2link","taskCompleteStatus":["done","x"]},"enableUserTags":true,"enableHashTags":true,"enableEditorDecorations":true,"enableFullHierarchyNoteTitle":false},"preview":{"enableFMTitle":true,"enableNoteTitleForLink":true,"enablePrettyRefs":true,"enableKatex":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"automaticallyShowPreview":false},"publishing":{"enableFMTitle":true,"enableNoteTitleForLink":true,"enablePrettyRefs":true,"enableKatex":true,"copyAssets":true,"siteHierarchies":["root"],"writeStubs":true,"siteRootDir":"docs","seo":{"title":"BrainMatter","description":"Personal knowledge space","author":"DeltaManiac","twitter":"delta_maniac"},"github":{"enableEditLink":true,"editLinkText":"Edit this page on GitHub","editBranch":"main","editViewMode":"tree","editRepository":"https://github.com/DeltaManiac/deltamaniac.github.io"},"enableSiteLastModified":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"enableRandomlyColoredTags":true,"enableTaskNotes":true,"enablePrettyLinks":true,"searchMode":"lookup","siteUrl":"https://deltamaniac.github.io/","hierarchy":{"root":{"publishByDefault":true}},"siteFaviconPath":"favicon.ico","siteIndex":"root"},"generateChangelog":true}},"__N_SSG":true},"page":"/notes/[id]","query":{"id":"qeciETQdP6y5coUZpEL1W"},"buildId":"uwaFLQSct0mTPwxN4Nqr7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

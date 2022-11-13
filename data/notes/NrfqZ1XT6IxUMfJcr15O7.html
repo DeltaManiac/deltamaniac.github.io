@@ -1,0 +1,30 @@
+<h1 id="remove-adjacent-chars">Remove Adjacent Chars<a aria-hidden="true" class="anchor-heading icon-link" href="#remove-adjacent-chars"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Facebook.</p>
+<p>Given a string s containing only lowercase letters, continuously remove adjacent characters that are the same and return the result.</p>
+<p>Ex: Given the following strings...</p>
+<blockquote>
+<p>s = "abccba", return ""</p>
+<p>s = "foobar", return "fbar"</p>
+<p>s = "abccbefggfe", return "a"</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">remove_adjacent</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    stk <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> x <span class="token keyword">in</span> s1<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>stk<span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span> <span class="token keyword">and</span> stk<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> x<span class="token punctuation">:</span>
+            stk<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            stk<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>stk<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

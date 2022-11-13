@@ -1,0 +1,44 @@
+<h1 id="zig-zag-order">Zig Zag Order<a aria-hidden="true" class="anchor-heading icon-link" href="#zig-zag-order"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>Given a binary tree, return its zig-zag level order traversal (i.e. its level order traversal from left to right the first level, right to left the level the second, etc.).</p>
+<p>Ex: Given the following tree…</p>
+<pre>    1
+   / \
+  2   3
+return [[1], [3, 2]]
+</pre>
+<p>Ex: Given the following tree…</p>
+<pre>    8
+   / \
+  2  29
+    /  \
+   3    9
+return [[8], [29, 2], [3, 9]]
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">zigZagOrderTraversal</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    q <span class="token operator">=</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+    view <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    order <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> <span class="token builtin">len</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        temp_arr <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+        n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            temp <span class="token operator">=</span> q<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            q<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+            temp_arr<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+
+            <span class="token keyword">if</span> temp<span class="token punctuation">.</span>left<span class="token punctuation">:</span>
+                q<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+
+            <span class="token keyword">if</span> temp<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+                q<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+        view<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp_arr<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span>order<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        order <span class="token operator">=</span> order <span class="token operator">*</span> <span class="token operator">-</span><span class="token number">1</span>
+    <span class="token keyword">return</span> view
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

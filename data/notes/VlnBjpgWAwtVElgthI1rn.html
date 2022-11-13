@@ -1,0 +1,36 @@
+<h1 id="detect-substring-in-string">Detect Substring in String<a aria-hidden="true" class="anchor-heading icon-link" href="#detect-substring-in-string"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>How would you write a function to detect a substring in a string?</p>
+<p>If the substring can be found in the string, return the index at which it starts. Otherwise, return -1.</p>
+<pre><code>function detectSubstring(str, subStr) {
+  return -1;
+}
+</code></pre>
+<p>Important-- do not use the native String class's built-in substring or substr method. This exercise is to understand the underlying implementation of that method.</p>
+<p>Constraints</p>
+<pre><code>Length of both the given strings &#x3C;=100000
+The strings would never be null
+The strings will only consist of lowercase letters
+Expected time complexity : O(n)
+Expected space complexity : O(1)
+</code></pre>
+<h2 id="python">[python]<a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">substr</span><span class="token punctuation">(</span>haystack<span class="token punctuation">,</span> needle<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n<span class="token punctuation">,</span> h <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>needle<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>haystack<span class="token punctuation">)</span>
+    i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> nxt <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span>n
+    <span class="token keyword">while</span> i <span class="token operator">&#x3C;</span> n<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> j <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">or</span> needle<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> needle<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            i <span class="token operator">+=</span> <span class="token number">1</span>
+            j <span class="token operator">+=</span> <span class="token number">1</span>
+            nxt<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> j
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            j <span class="token operator">=</span> nxt<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+    i <span class="token operator">=</span> j <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">while</span> i <span class="token operator">&#x3C;</span> h <span class="token keyword">and</span> j <span class="token operator">&#x3C;</span> n<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> j <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">or</span> haystack<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> needle<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            i <span class="token operator">+=</span> <span class="token number">1</span>
+            j <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            j <span class="token operator">=</span> nxt<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> i<span class="token operator">-</span>j <span class="token keyword">if</span> j <span class="token operator">==</span> n <span class="token keyword">else</span> <span class="token operator">-</span><span class="token number">1</span>
+</code></pre>

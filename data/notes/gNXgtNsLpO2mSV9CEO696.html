@@ -1,0 +1,44 @@
+<h1 id="call-counter">Call Counter<a aria-hidden="true" class="anchor-heading icon-link" href="#call-counter"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Google.</p>
+<p>Create a class <code>CallCounter</code> that tracks the number of calls a client has made within the last 3 seconds.</p>
+<p>Your class should contain one method, <code>ping(int t)</code> that receives the current timestamp (in milliseconds) of a new call being made and returns the number of calls made within the last 3 seconds.</p>
+<p>Note: you may assume that the time associated with each subsequent call to <code>ping</code> is strictly increasing.</p>
+<p>Ex: Given the following calls to ping…</p>
+<blockquote>
+<p>ping(1), return 1 (1 call within the last 3 seconds)</p>
+<p>ping(300), return 2 (2 calls within the last 3 seconds)</p>
+<p>ping(3000), return 3 (3 calls within the last 3 seconds)</p>
+<p>ping(3002), return 3 (3 calls within the last 3 seconds)</p>
+<p>ping(7000), return 1 (1 call within the last 3 seconds)</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">CallCounter</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>ts_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">def</span> <span class="token function">ping</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>timestamp<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> timestamp <span class="token keyword">not</span> <span class="token keyword">in</span> self<span class="token punctuation">.</span>ts_dict<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>ts_dict<span class="token punctuation">[</span>timestamp<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>ts_dict<span class="token punctuation">[</span>timestamp<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>getPings<span class="token punctuation">(</span>timestamp<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">getPings</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>timestamp<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        t1 <span class="token operator">=</span> timestamp <span class="token operator">-</span> <span class="token number">3000</span>
+        tc <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">for</span> ts<span class="token punctuation">,</span> c <span class="token keyword">in</span> self<span class="token punctuation">.</span>ts_dict<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> ts <span class="token operator">></span> t1<span class="token punctuation">:</span>
+                tc <span class="token operator">+=</span> c
+        <span class="token keyword">return</span> tc
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

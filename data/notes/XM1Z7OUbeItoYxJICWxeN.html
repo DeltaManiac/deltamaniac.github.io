@@ -1,0 +1,70 @@
+<h1 id="will-it-return-">Will It Return ??<a aria-hidden="true" class="anchor-heading icon-link" href="#will-it-return-"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Amazon.</p>
+<p> Given a string representing the sequence of moves a robot vacuum makes, return whether or not it will return to its original position. The string will only contain L, R, U, and D characters, representing left, right, up, and down respectively.</p>
+<p>Ex: Given the following strings...</p>
+<blockquote>
+<p>"LR", return true</p>
+<p>"URURD", return false</p>
+<p>"RUULLDRD", return true</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">does_it_return</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span><span class="token builtin">bool</span><span class="token punctuation">:</span>
+    x<span class="token punctuation">,</span>y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span>
+    <span class="token keyword">for</span> c <span class="token keyword">in</span> word<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> c <span class="token operator">==</span> <span class="token string">'R'</span><span class="token punctuation">:</span>
+            x<span class="token operator">+=</span><span class="token number">1</span>
+        <span class="token keyword">elif</span> c <span class="token operator">==</span> <span class="token string">'L'</span><span class="token punctuation">:</span>
+            x<span class="token operator">-=</span><span class="token number">1</span>
+        <span class="token keyword">elif</span> c <span class="token operator">==</span> <span class="token string">'U'</span><span class="token punctuation">:</span>
+            y <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">elif</span> c <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">:</span>
+            y<span class="token operator">-=</span><span class="token number">1</span>
+    <span class="token keyword">return</span> x<span class="token operator">==</span><span class="token number">0</span> <span class="token keyword">and</span> y<span class="token operator">==</span><span class="token number">0</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">doesitreturn</span><span class="token punctuation">(</span>word <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	x <span class="token operator">:=</span> <span class="token number">0</span>
+	y <span class="token operator">:=</span> <span class="token number">00</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> c <span class="token operator">:=</span> <span class="token keyword">range</span> word <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> c <span class="token operator">==</span> <span class="token char">'R'</span> <span class="token punctuation">{</span>
+			x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">1</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> c <span class="token operator">==</span> <span class="token char">'L'</span> <span class="token punctuation">{</span>
+			x <span class="token operator">=</span> x <span class="token operator">-</span> <span class="token number">1</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> c <span class="token operator">==</span> <span class="token char">'U'</span> <span class="token punctuation">{</span>
+			y <span class="token operator">+=</span> <span class="token number">1</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> c <span class="token operator">==</span> <span class="token char">'D'</span> <span class="token punctuation">{</span>
+			y <span class="token operator">-=</span> <span class="token number">1</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> x <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&#x26;&#x26;</span> y <span class="token operator">==</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">does_it_return</span><span class="token punctuation">(</span>word<span class="token punctuation">:</span><span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span><span class="token punctuation">-></span><span class="token keyword">bool</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> c <span class="token keyword">in</span> word<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> c <span class="token operator">==</span> <span class="token char">'R'</span> <span class="token punctuation">{</span>
+            x <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> c <span class="token operator">==</span> <span class="token char">'L'</span> <span class="token punctuation">{</span>
+            x <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> c <span class="token operator">==</span> <span class="token char">'U'</span> <span class="token punctuation">{</span>
+            y <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            y <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    x <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&#x26;&#x26;</span> y <span class="token operator">==</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

@@ -1,0 +1,41 @@
+<h1 id="bottoms-up">Bottoms Up<a aria-hidden="true" class="anchor-heading icon-link" href="#bottoms-up"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>Given a binary tree, returns of all its levels in a bottom-up fashion (i.e. last level towards the root). Ex: Given the following tree…</p>
+<pre>        2
+       / \
+      1   2
+return [[1, 2], [2]]
+</pre>
+<p>Ex: Given the following tree…</p>
+<pre>       7
+      / \
+    6    2
+   / \
+  3   3
+return [[3, 3], [6, 2], [7]]
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">bottomToTop</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    q <span class="token operator">=</span> q<span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+    view <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">while</span> <span class="token builtin">len</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        temp_arr <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+        n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            temp <span class="token operator">=</span> q<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            q<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+            temp_arr<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+
+            <span class="token keyword">if</span> temp<span class="token punctuation">.</span>left<span class="token punctuation">:</span>
+                temp_arr<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+
+            <span class="token keyword">if</span> temp<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+                temp_arr<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+        view<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp_arr<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> view<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

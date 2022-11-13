@@ -1,0 +1,57 @@
+<h1 id="moving-average">Moving Average<a aria-hidden="true" class="anchor-heading icon-link" href="#moving-average"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Microsoft.</p>
+<p>Design a class, MovingAverage, which contains a method, next that is responsible for returning the moving average from a stream of integers.</p>
+<p>Note: a moving average is the average of a subset of data at a given point in time.</p>
+<p>Ex: Given the following series of events...</p>
+<blockquote>
+<p>// i.e. the moving average has a capacity of 3.</p>
+<p>MovingAverage movingAverage = new MovingAverage(3);</p>
+<p>m.next(3) returns 3 because (3 / 1) = 3</p>
+<p>m.next(5) returns 4 because (3 + 5) / 2 = 4</p>
+<p>m.next(7) = returns 5 because (3 + 5 + 7) / 3 = 5</p>
+<p>m.next(6) = returns 6 because (5 + 7 + 6) / 3 = 6</p>
+</blockquote>
+<p>MovingAverage class definition:</p>
+<pre><code>public class MovingAverage {
+    // TODO: declare any instance variables you require.
+
+    /**
+    * Initializes a MovingAverage with a
+    * capacity of `size`.
+    */
+    public MovingAverage(int size) {
+    // TODO: initialize your MovingAverage.
+    }
+
+    /**
+    * Adds `val` to the stream of numbers
+    * and returns the current average of the numbers.
+    */
+    public double next(int val) {
+    // TODO: implement this method.
+    }
+
+}
+</code></pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> deque
+
+<span class="token keyword">class</span> <span class="token class-name">MovingAverage</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>size<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>size <span class="token operator">=</span> size
+        self<span class="token punctuation">.</span>q <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>maxlen<span class="token operator">=</span>size<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">next</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>val<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>q<span class="token punctuation">.</span>append<span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>q<span class="token punctuation">)</span><span class="token operator">/</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>q<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

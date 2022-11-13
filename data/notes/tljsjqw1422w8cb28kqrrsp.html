@@ -1,0 +1,70 @@
+<h1 id="41427">41427<a aria-hidden="true" class="anchor-heading icon-link" href="#41427"></a></h1>
+<h2 id="sequence-peak-detector">Sequence Peak Detector<a aria-hidden="true" class="anchor-heading icon-link" href="#sequence-peak-detector"></a></h2>
+<h1 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h1>
+<pre><code>@0
+
+@1
+MOV UP,ACC
+MOV ACC,RIGHT
+MOV ACC,DOWN
+
+@2
+MOV LEFT,DOWN
+
+@3
+
+@4
+
+@5
+MOV UP ,ACC
+MOV ACC,DOWN
+MOV ACC,DOWN
+
+@6
+MOV UP,ACC
+MOV ACC,DOWN
+MOV ACC,DOWN
+
+@7
+
+@8
+
+@9
+MOV 999,ACC
+IN:
+SAV
+SUB UP
+JGZ NEW
+ADD UP
+JMP IN
+
+NEW:
+MOV UP,ACC
+JGZ IN
+
+OUT:
+SWP
+MOV ACC,DOWN
+
+@10
+IN:
+SAV
+SUB UP
+JLZ NEW
+MOV UP,ACC
+JEZ OUT
+SWP
+JMP IN
+NEW: 
+MOV UP,ACC
+JGZ IN
+
+OUT: SWP
+MOV ACC,DOWN
+MOV 0,ACC
+
+@11
+
+</code></pre>
+<h1 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h1>
+<p><img src="/assets/images/2022-11-12-22-14-43.png"></p>

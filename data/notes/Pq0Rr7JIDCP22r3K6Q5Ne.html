@@ -1,0 +1,30 @@
+<h1 id="is-palindrome-again-">Is Palindrome Again ??<a aria-hidden="true" class="anchor-heading icon-link" href="#is-palindrome-again-"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Facebook.</p>
+<p>Given a string and the ability to delete at most one character, return whether or not it can form a palindrome.</p>
+<p>Note: a palindrome is a sequence of characters that reads the same forwards and backwards.</p>
+<p>Ex: Given the following strings...</p>
+<blockquote>
+<p>"abcba", return true</p>
+<p>"foobof", return true (remove the first 'o', the second 'o', or 'b')</p>
+<p>"abccab", return false</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">validPalindrome</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    left<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> left <span class="token operator">&#x3C;</span> right<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> s<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">!=</span> s<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            one<span class="token punctuation">,</span> two <span class="token operator">=</span> s<span class="token punctuation">[</span>left<span class="token punctuation">:</span>right<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span>right <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
+            <span class="token keyword">return</span> one <span class="token operator">==</span> one<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">or</span> two <span class="token operator">==</span> two<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+        left<span class="token punctuation">,</span> right <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> right <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

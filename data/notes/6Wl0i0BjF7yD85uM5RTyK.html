@@ -1,0 +1,115 @@
+<h1 id="kafka">Kafka<a aria-hidden="true" class="anchor-heading icon-link" href="#kafka"></a></h1>
+<h2 id="apache-kafka">Apache Kafka<a aria-hidden="true" class="anchor-heading icon-link" href="#apache-kafka"></a></h2>
+<ul>
+<li>
+<p>pub-sub messaging system</p>
+</li>
+<li>
+<p>basic unit --> message =><code>{ Body :[u8], Key:[u8]}</code></p>
+</li>
+<li>
+<p>writes are mainly batch operations => <code>Vec&#x3C;Messages></code></p>
+</li>
+<li>
+<p>does not track acknowledgments from consumers but allows consumers to use Kafka to track their position (offset) in each partition.</p>
+</li>
+<li>
+<p>Schema --> governs structure of message</p>
+<ul>
+<li>eg JSON/XML/<a href="https://avro.apache.org/docs/current/">Apache Avro</a></li>
+</ul>
+</li>
+<li>
+<p>Topics --> collection of messages "about something same"</p>
+</li>
+<li>
+<p>Topics made of n partitions => Append only queue-like
+<img src="/assets/images/2020-10-11-20-30-05.png"></p>
+</li>
+<li>
+<p>Stream => Single topic of data irrespective of partitions</p>
+</li>
+<li>
+<p><a href="/notes/wkazkGBnDMXJcyTJckPiu">Producer</a></p>
+<ul>
+<li>produce message for a topic, can sometimes specify which partition to store</li>
+</ul>
+</li>
+<li>
+<p><a href="/notes/PeDQmsjlEYcdja9yj2nNL">Consumer</a></p>
+<ul>
+<li>Reads message</li>
+<li>Subscribes 1:n topics</li>
+<li>FIFO Read (Queue like)</li>
+<li>track of consumed messages via offset</li>
+<li><strong>Ownership</strong> mapping of consumer to partitions</li>
+</ul>
+</li>
+<li>
+<p>Consumer Group -> 1 or more consumers that work together to consumer a topic</p>
+</li>
+<li>
+<p>Kafka Broker -> Single Kafka server</p>
+<ul>
+<li>Receives messages from Producers</li>
+<li>Assign offset</li>
+<li>Commit to disk</li>
+</ul>
+</li>
+<li>
+<p>Kafka Cluster</p>
+<ul>
+<li>
+<p>Collection of brokers</p>
+</li>
+<li>
+<p><strong>1</strong> automatically elected broker will function as the cluster <strong>controller</strong></p>
+</li>
+<li>
+<p>Controller responsibilities</p>
+<ul>
+<li>administrative operations</li>
+<li>assigning partitions to broker</li>
+<li>monitor for broker failures</li>
+</ul>
+<p><img src="/assets/images/2020-10-11-20-31-20.png"></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Retention -> Configurable for a period of time or size of topic (GB/MB)</p>
+</li>
+<li>
+<p>Kafka : Pitch</p>
+<ul>
+<li>Multiple Producers x Multiple Topics</li>
+<li>Multiple Consumers</li>
+<li>Disk Based Retention --> No data loss</li>
+<li>Scalable</li>
+<li>High Performance</li>
+</ul>
+</li>
+</ul>
+<h2 id="starting-kafka-on-osx">Starting Kafka on OSX<a aria-hidden="true" class="anchor-heading icon-link" href="#starting-kafka-on-osx"></a></h2>
+<pre class="language-shell"><code class="language-shell"><span class="token comment"># Start ZooKeeper</span>
+<span class="token comment"># `zkServer` DOESNT WORK IN TMUX!!!</span>
+zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties <span class="token operator">&#x26;</span> kafka-server-start /usr/local/etc/kafka/server.properties
+
+<span class="token comment"># Start kafka server</span>
+kafka-server-start.sh /usr/local/etc/kafka/server.properties
+
+<span class="token comment"># Create a topic</span>
+kafka-topics --create --zookeeper localhost:2181 --replication-factor <span class="token number">1</span> --partitions <span class="token number">1</span> --topic temptopic
+
+<span class="token comment"># Start a producer to temptopic</span>
+kafka-console-producer --broker-list localhost:9092 --topic temptopic
+
+<span class="token comment"># In another tab start a consumer to temptopic</span>
+kafka-console-producer --broker-list localhost:9092 --topic temptopic --from-beginning
+</code></pre>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/notes/PeDQmsjlEYcdja9yj2nNL">Consumer</a></li>
+<li><a href="/notes/wkazkGBnDMXJcyTJckPiu">Producer</a></li>
+</ol>

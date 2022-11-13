@@ -1,0 +1,44 @@
+<h1 id="gather-level">Gather Level<a aria-hidden="true" class="anchor-heading icon-link" href="#gather-level"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>Given a binary tree, return its level order traversal where the nodes in each level are ordered from left to right.</p>
+<pre>Ex: Given the following tree...
+
+    4
+   / \
+  2   7
+return [[4], [2, 7]]
+</pre>
+<pre>Ex: Given the following tree...
+
+    2
+   / \
+  10  15
+        \
+         20
+return [[2], [10, 15], [20]]
+</pre>
+<pre>Ex: Given the following tree...
+
+    1
+   / \
+  9   32
+ /      \
+3        78
+return [[1], [9, 32], [3, 78]]
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">levelOrder</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span> <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    result<span class="token punctuation">,</span> temp<span class="token punctuation">,</span> queue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+    <span class="token keyword">while</span> queue<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">iter</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>queue<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            q <span class="token operator">=</span> queue<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+            temp <span class="token operator">+=</span> <span class="token punctuation">[</span>q<span class="token punctuation">.</span>val<span class="token punctuation">]</span>
+            <span class="token keyword">if</span> q<span class="token punctuation">.</span>left<span class="token punctuation">:</span> queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span>q<span class="token punctuation">.</span>left <span class="token punctuation">)</span>
+            <span class="token keyword">if</span> q<span class="token punctuation">.</span>right<span class="token punctuation">:</span> queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span>q<span class="token punctuation">.</span>right <span class="token punctuation">)</span>
+            result <span class="token operator">+=</span> <span class="token punctuation">[</span>temp<span class="token punctuation">]</span>
+            temp<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> result
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

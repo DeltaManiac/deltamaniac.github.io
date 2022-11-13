@@ -1,0 +1,312 @@
+<h1 id="primer">Primer<a aria-hidden="true" class="anchor-heading icon-link" href="#primer"></a></h1>
+<p>Interpreted Language</p>
+<p>Object Oriented</p>
+<h2 id="built-ins">Built Ins<a aria-hidden="true" class="anchor-heading icon-link" href="#built-ins"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Desc</th><th>Immutable</th></tr></thead><tbody><tr><td>bool</td><td>boolean value</td><td>True</td></tr><tr><td>int</td><td>integer (arbitrary magnitude)</td><td>True</td></tr><tr><td>float</td><td>floating-point number</td><td>True</td></tr><tr><td>list</td><td>mutable sequence of objects</td><td>False</td></tr><tr><td>tuple</td><td>immutable sequence of objects</td><td>True</td></tr><tr><td>str</td><td>character string</td><td>True</td></tr><tr><td>set</td><td>unordered set of distinct objects</td><td>False</td></tr><tr><td>frozenset</td><td>immutable form of set class</td><td>True</td></tr><tr><td>dict</td><td>associative mapping (aka dictionary)</td><td>False</td></tr></tbody></table></div>
+<h2 id="bool">Bool<a aria-hidden="true" class="anchor-heading icon-link" href="#bool"></a></h2>
+<p>Numbers evaluate to False if 0</p>
+<p>Sequences Strings Lists Dicts to False if empty</p>
+<h2 id="int">int<a aria-hidden="true" class="anchor-heading icon-link" href="#int"></a></h2>
+<p>The <code>int()</code> constructor returns 0 by default</p>
+<p>int(3.14) -> 3</p>
+<p>int(-123.3) -> -123</p>
+<p>int('5442') -> 5442 : Automatic handling of <code>atoi</code></p>
+<p>int('lol')  -> ValueError</p>
+<p>int('7f',16) -> 127 ->int(strval,base)</p>
+<h2 id="float">float<a aria-hidden="true" class="anchor-heading icon-link" href="#float"></a></h2>
+<p>fixed-precision representation</p>
+<p>Similar to Double in cpp</p>
+<p>The <code>float()</code> constructor returns 0 by default</p>
+<p>float(2) -> 2.0</p>
+<p>float('3.14') -> 3.14</p>
+<p>float('meh') -> ValueError</p>
+<h2 id="sequence-types">Sequence Types<a aria-hidden="true" class="anchor-heading icon-link" href="#sequence-types"></a></h2>
+<ul>
+<li><strong>list</strong> -> array</li>
+<li><strong>tuple</strong> -> immutable list</li>
+<li><strong>str</strong> -> immutable sequence of char</li>
+</ul>
+<h3 id="list">list<a aria-hidden="true" class="anchor-heading icon-link" href="#list"></a></h3>
+<ul>
+<li>Stores sequence of objects</li>
+<li>Referential Structure -> stores sequence of references to its elements</li>
+<li>zero-indexed</li>
+</ul>
+<p>The <code>list()</code> constructor produces empty list [ ] by default</p>
+<p>The <code>list()</code> constructor will accept any parameter that is of <strong>iterable</strong> type</p>
+<p>list('hello') -> [h,e,l,l,o]</p>
+<h2 id="set-and-frozenset">set and frozenset<a aria-hidden="true" class="anchor-heading icon-link" href="#set-and-frozenset"></a></h2>
+<ul>
+<li>unordered collection of elements without duplicate</li>
+<li>optimized to check existence of elements -> hashtable</li>
+<li>accepts only immutable types</li>
+</ul>
+<p>The <code>set()</code> constructor produces an empty set</p>
+<p>set('hello') -> { h,e,l,o}</p>
+<h2 id="dicts">dicts<a aria-hidden="true" class="anchor-heading icon-link" href="#dicts"></a></h2>
+<p>mapping of distinct keys to associated values</p>
+<h2 id="operator-precedence">Operator precedence<a aria-hidden="true" class="anchor-heading icon-link" href="#operator-precedence"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Type</th><th>Symbol</th></tr></thead><tbody><tr><td>member access</td><td>expr.member</td></tr><tr><td>function/method calls <br> container subscripts/slices</td><td>expr(...) <br> expr[...]</td></tr><tr><td>exponentiation</td><td>**</td></tr><tr><td>unary operators</td><td>+expr, −expr,  ~expr</td></tr><tr><td>multiplication, division</td><td>*, /, //, %</td></tr><tr><td>addition, subtraction</td><td>+, −</td></tr><tr><td>bitwise shifting</td><td>&#x3C;&#x3C;, >></td></tr><tr><td>bitwise-and</td><td>&#x26;</td></tr><tr><td>bitwise-xor</td><td>ˆ</td></tr><tr><td>bitwise-or</td><td>|</td></tr><tr><td>comparisons <br>  containment</td><td><strong>is</strong>, <strong>is</strong> <strong>not</strong>, ==, !=, &#x3C;, &#x3C;=, >, >= <br> <strong>in</strong>,<strong> not in </strong></td></tr><tr><td>logical-not</td><td><strong>not</strong> expr</td></tr><tr><td>logical-and</td><td><strong>and</strong></td></tr><tr><td>logical-or</td><td><strong>or</strong></td></tr><tr><td>conditional</td><td>val1 <strong>if</strong> cond <strong>else</strong> val2</td></tr><tr><td>assignments</td><td>=, +=, −=, =, etc</td></tr></tbody></table></div>
+<h2 id="built-in-functions">Built-In Functions<a aria-hidden="true" class="anchor-heading icon-link" href="#built-in-functions"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Call Syntax</th><th>Description</th></tr></thead><tbody><tr><td>abs(x)</td><td>Return the absolute value of a number.</td></tr><tr><td>all(iterable)</td><td>Return True if bool(e) is True for each element e.</td></tr><tr><td>any(iterable)</td><td>Return True if bool(e) is True for at least one element e.</td></tr><tr><td>chr(integer)</td><td>Return a one-character string with the given Unicode code point.</td></tr><tr><td>divmod(x, y)</td><td>Return (x // y, x % y) as tuple, if x and y are integers.</td></tr><tr><td>hash(obj)</td><td>Return an integer hash value for the object (see Chapter 10).</td></tr><tr><td>id(obj)</td><td>Return the unique integer serving as an “identity” for the object.</td></tr><tr><td>input(prompt)</td><td>Return a string from standard input; the prompt is optional.</td></tr><tr><td>isinstance(obj, cls)</td><td>Determine if obj is an instance of the class (or a subclass).</td></tr><tr><td>iter(iterable)</td><td>Return a new iterator object for the parameter (see Section 1.8).</td></tr><tr><td>len(iterable)</td><td>Return the number of elements in the given iteration.</td></tr><tr><td>map(f, iter1, iter2, ...)</td><td>Return an iterator yielding the result of function calls f(e1, e2, ...) for respective elements e1 ∈iter1, e2 ∈iter2, ...</td></tr><tr><td>max(iterable)</td><td>Return the largest element of the given iteration.</td></tr><tr><td>max(a, b, c, ...)</td><td>Return the largest of the arguments.</td></tr><tr><td>min(iterable)</td><td>Return the smallest element of the given iteration.</td></tr><tr><td>min(a, b, c, ...)</td><td>Return the smallest of the arguments.</td></tr><tr><td>next(iterator)</td><td>Return the next element reported by the iterator (see Section 1.8).</td></tr><tr><td>open(filename, mode)</td><td>Open a file with the given name and access mode.</td></tr><tr><td>ord(char)</td><td>Return the Unicode code point of the given character.</td></tr><tr><td>pow(x, y)</td><td>Return the value xy (as an integer if x and y are integers);<br> equivalent to x**y.</td></tr><tr><td>pow(x, y, z)</td><td>Return the value (xy mod z) as an integer.</td></tr><tr><td>print(obj1, obj2, ...)</td><td>Print the arguments, with separating spaces and trailing newline.</td></tr><tr><td>range(stop)</td><td>Construct an iteration of values 0, 1, . . . ,  stop −1.</td></tr><tr><td>range(start, stop)</td><td>Construct an iteration of values start, start + 1, . . . ,  stop −1.</td></tr><tr><td>range(start, stop, step)</td><td>Construct an iteration of values start, start + step, start + 2 step, . . .</td></tr><tr><td>reversed(sequence)</td><td>Return an iteration of the sequence in reverse.</td></tr><tr><td>round(x)</td><td>Return the nearest int value (a tie is broken toward the even value).</td></tr><tr><td>round(x, k)</td><td>Return the value rounded to the nearest 10−k (return-type matches x).</td></tr><tr><td>sorted(iterable)</td><td>Return a list containing elements of the iterable in sorted order.</td></tr><tr><td>sum(iterable)</td><td>Return the sum of the elements in the iterable (must be numeric).</td></tr><tr><td>type(obj)</td><td>Return the class to which the instance obj belongs.</td></tr></tbody></table></div>

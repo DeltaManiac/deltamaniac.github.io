@@ -1,0 +1,32 @@
+<h1 id="remove-nth-to-last-node">Remove nth to last node<a aria-hidden="true" class="anchor-heading icon-link" href="#remove-nth-to-last-node"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Facebook.</p>
+<p>Given a linked list and a value n, remove the nth to last node and return the resulting list.</p>
+<p>Ex: Given the following linked lists...</p>
+<blockquote>
+<p>1->2->3->null, n = 1, return 1->2->null</p>
+<p>1->2->3->null, n = 2, return 1->3->null</p>
+<p>1->2->3->null, n = 3, return 2->3->null</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">removeNthFromEnd</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> ListNode<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> ListNode<span class="token punctuation">:</span>
+    fast <span class="token operator">=</span> slow <span class="token operator">=</span> head
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        fast <span class="token operator">=</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> fast<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> head<span class="token punctuation">.</span><span class="token builtin">next</span>
+    <span class="token keyword">while</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">:</span>
+        fast <span class="token operator">=</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span>
+        slow <span class="token operator">=</span> slow<span class="token punctuation">.</span><span class="token builtin">next</span>
+    slow<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> slow<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+    <span class="token keyword">return</span> head
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

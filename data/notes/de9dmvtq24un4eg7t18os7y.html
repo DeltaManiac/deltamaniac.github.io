@@ -1,0 +1,31 @@
+<h1 id="javascript">JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#javascript"></a></h1>
+<h1 id="array-buffer">Array Buffer<a aria-hidden="true" class="anchor-heading icon-link" href="#array-buffer"></a></h1>
+<p>The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer.
+Synonymous to Byte Buffer</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> buffer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayBuffer</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 8 Bytes = 8*8bits = 64bits</span>
+<span class="token keyword">const</span> view <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Int32Array</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// can store 2 elements of 32bit in buffer</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>view<span class="token punctuation">)</span>
+<span class="token operator">></span>    int32Array <span class="token punctuation">[</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">]</span>
+<span class="token operator">></span>      <span class="token number">0</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token operator">></span>      <span class="token number">1</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token operator">></span>      buffer<span class="token operator">:</span> <span class="token known-class-name class-name">ArrayBuffer</span> <span class="token punctuation">{</span> <span class="token literal-property property">byteLength</span><span class="token operator">:</span> <span class="token number">8</span> <span class="token punctuation">}</span>
+<span class="token operator">></span>      byteLength<span class="token operator">:</span> <span class="token number">8</span>
+<span class="token operator">></span>      byteOffset<span class="token operator">:</span> <span class="token number">0</span>
+<span class="token operator">></span>      length<span class="token operator">:</span> <span class="token number">2</span>
+<span class="token operator">></span>      <span class="token operator">&#x3C;</span>prototype<span class="token operator">></span><span class="token operator">:</span> <span class="token class-name">Int32Array</span><span class="token punctuation">.</span><span class="token property-access">prototype</span> <span class="token punctuation">{</span> … <span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> view2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Int16Array</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// can store 4 elments of 16bit in buffer</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>view2<span class="token punctuation">)</span>
+<span class="token operator">></span>    int16Array <span class="token punctuation">[</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">]</span>
+<span class="token operator">></span>      <span class="token number">0</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token operator">></span>      <span class="token number">1</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token operator">></span>      <span class="token number">2</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token operator">></span>      <span class="token number">3</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token operator">></span>      buffer<span class="token operator">:</span> <span class="token known-class-name class-name">ArrayBuffer</span> <span class="token punctuation">{</span> <span class="token literal-property property">byteLength</span><span class="token operator">:</span> <span class="token number">8</span> <span class="token punctuation">}</span>
+<span class="token operator">></span>      byteLength<span class="token operator">:</span> <span class="token number">8</span>
+<span class="token operator">></span>      byteOffset<span class="token operator">:</span> <span class="token number">0</span>
+<span class="token operator">></span>      length<span class="token operator">:</span> <span class="token number">4</span>
+<span class="token operator">></span>      <span class="token operator">&#x3C;</span>prototype<span class="token operator">></span><span class="token operator">:</span> <span class="token class-name">Int16Array</span><span class="token punctuation">.</span><span class="token property-access">prototype</span> <span class="token punctuation">{</span> … <span class="token punctuation">}</span>
+</code></pre>
+<h1 id="shared-array-buffer">Shared Array Buffer<a aria-hidden="true" class="anchor-heading icon-link" href="#shared-array-buffer"></a></h1>
+<p>The SharedArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer, similar to the ArrayBuffer object, but in a way that they can be used to create views on shared memory. A SharedArrayBuffer is not a Transferable Object, unlike an ArrayBuffer which is transferable.</p>

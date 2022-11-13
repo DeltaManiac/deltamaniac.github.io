@@ -1,0 +1,97 @@
+<h1 id="33762">33762<a aria-hidden="true" class="anchor-heading icon-link" href="#33762"></a></h1>
+<h2 id="interrupt-handler">Interrupt Handler<a aria-hidden="true" class="anchor-heading icon-link" href="#interrupt-handler"></a></h2>
+<h1 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h1>
+<pre><code>@0
+START:
+MOV UP,ACC
+JGZ CHECK
+SWP
+JMP NEXT
+
+CHECK:
+SWP
+JGZ NEXT
+MOV 1,DOWN
+JMP START
+
+NEXT:
+MOV 0,DOWN
+
+@1
+START:
+MOV UP,ACC
+JGZ CHECK
+SWP
+JMP NEXT
+
+CHECK:
+SWP
+JGZ NEXT
+MOV 2,DOWN
+JMP START
+
+NEXT:
+MOV 0,DOWN
+
+@2
+START:
+MOV UP,ACC
+JGZ CHECK
+SWP
+JMP NEXT
+
+CHECK:
+SWP
+JGZ NEXT
+MOV 3,DOWN
+JMP START
+
+NEXT:
+MOV 0,DOWN
+
+@3
+START:
+MOV UP,ACC
+JGZ CHECK
+SWP
+JMP NEXT
+
+CHECK:
+SWP
+JGZ NEXT
+MOV 4,DOWN
+JMP START
+
+NEXT:
+MOV 0,DOWN
+
+@4
+MOV UP,RIGHT
+
+@5
+MOV UP,RIGHT
+MOV LEFT,RIGHT
+
+@6
+ADD UP
+ADD RIGHT
+ADD LEFT
+ADD LEFT
+MOV ACC,DOWN
+MOV 0,ACC
+
+@7
+MOV UP,LEFT
+
+@8
+
+@9
+MOV UP,DOWN
+
+@10
+
+@11
+
+</code></pre>
+<h1 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h1>
+<p><img src="/assets/images/2022-11-12-21-46-16.png"></p>

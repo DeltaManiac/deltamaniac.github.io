@@ -1,0 +1,45 @@
+<h1 id="42656">42656<a aria-hidden="true" class="anchor-heading icon-link" href="#42656"></a></h1>
+<h2 id="sequence-reverser">Sequence Reverser<a aria-hidden="true" class="anchor-heading icon-link" href="#sequence-reverser"></a></h2>
+<h1 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h1>
+<pre><code>@0
+
+@1
+MOV UP,DOWN
+
+@2
+
+@3
+
+@4
+
+@5
+MOV UP,RIGHT
+
+@6
+MOV 0,UP
+
+FORWARD: 
+MOV LEFT,ACC
+MOV ACC,UP
+JGZ FORWARD
+MOV UP,NIL
+
+REVERSE: 
+MOV UP,ACC
+MOV ACC,DOWN
+JGZ REVERSE
+
+@7
+
+@8
+
+@9
+
+@10
+MOV UP,DOWN
+
+@11
+
+</code></pre>
+<h1 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h1>
+<p><img src="/assets/images/2022-11-12-22-21-37.png"></p>

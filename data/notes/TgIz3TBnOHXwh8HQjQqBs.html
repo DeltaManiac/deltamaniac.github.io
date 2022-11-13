@@ -1,0 +1,64 @@
+<h1 id="same-leaves">Same Leaves<a aria-hidden="true" class="anchor-heading icon-link" href="#same-leaves"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>Given two binary trees, return whether or not both trees have the same leaf sequence.</p>
+<p>Two trees have the same leaf sequence if both trees’ leaves read the same from left to right.</p>
+<p>Ex: Given the following trees…</p>
+<pre>   1
+ /   \
+1     3
+</pre>
+<p>and</p>
+<pre>   7
+ /   \
+1     2
+</pre>
+<p>return false as both the trees' leaves don't read the same from left to right (i.e. [1, 3] and [1, 2]).</p>
+<p>Ex: Given the following trees…</p>
+<pre>    8
+   / \
+  2   29
+    /  \
+   3    9
+</pre>
+<p>and</p>
+<pre>    8
+   / \
+  2  29
+ /   /  \
+2   3    9
+     \
+      3
+</pre>
+<p>return true as both the trees' leaves read the same from left to right (i.e. [2, 3, 9] and [2, 3, 9]).</p>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">sameleaves</span><span class="token punctuation">(</span>root1<span class="token punctuation">,</span> root2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    output1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    output2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    get_leaves<span class="token punctuation">(</span>root1<span class="token punctuation">,</span> output1<span class="token punctuation">)</span>
+    get_leaves<span class="token punctuation">(</span>root2<span class="token punctuation">,</span> output2<span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>output1<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>output2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+
+    <span class="token keyword">for</span> el1<span class="token punctuation">,</span>el2 <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>output1<span class="token punctuation">,</span> output2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> el1 <span class="token operator">!=</span> el2<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+
+<span class="token keyword">def</span> <span class="token function">get_leaves</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span> output<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">if</span> <span class="token keyword">not</span> node<span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+
+    <span class="token keyword">if</span> <span class="token keyword">not</span> node<span class="token punctuation">.</span>left <span class="token keyword">and</span> <span class="token keyword">not</span> node<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+        output<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+
+    get_leaves<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">,</span> output<span class="token punctuation">)</span>
+    get_leaves<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">,</span> output<span class="token punctuation">)</span>
+
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

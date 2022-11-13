@@ -1,0 +1,70 @@
+<h1 id="day-10">Day 10<a aria-hidden="true" class="anchor-heading icon-link" href="#day-10"></a></h1>
+<h2 id="elves-look-elves-say">Elves Look, Elves Say<a aria-hidden="true" class="anchor-heading icon-link" href="#elves-look-elves-say"></a></h2>
+<h2 id="part-i">Part I<a aria-hidden="true" class="anchor-heading icon-link" href="#part-i"></a></h2>
+<p>Today, the Elves are playing a game called look-and-say. They take turns making sequences by reading aloud the previous sequence and using that reading as the next sequence. For example, 211 is read as "one two, two ones", which becomes <code>1221</code> (<code>1</code> <code>2</code>, <code>2</code> <code>1</code>s).</p>
+<p>Look-and-say sequences are generated iteratively, using the previous value as input for the next step. For each step, take the previous value, and replace each run of digits (like <code>111</code>) with the number of digits (<code>3</code>) followed by the digit itself (<code>1</code>).</p>
+<p>For example:</p>
+<blockquote>
+<p><code>1</code> becomes <code>11</code> (<code>1</code> copy of digit <code>1</code>).</p>
+<p><code>11</code> becomes <code>21</code> (<code>2</code> copies of digit <code>1</code>).</p>
+<p><code>21</code> becomes <code>1211</code> (one <code>2</code> followed by one <code>1</code>).</p>
+<p><code>1211</code> becomes <code>111221</code> (one <code>1</code>, one <code>2</code>, and two <code>1</code>s).</p>
+<p><code>111221</code> becomes <code>312211</code> (three <code>1</code>s, two <code>2</code>s, and one <code>1</code>).</p>
+</blockquote>
+<p>Starting with the digits in your puzzle input, apply this process 40 times.</p>
+<p> What is the length of the result?</p>
+<h2 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h2>
+<pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[aoc(day10, part1)]</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">part1</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">usize</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> s <span class="token operator">=</span> input<span class="token punctuation">.</span><span class="token function">to_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token number">0</span><span class="token punctuation">..</span><span class="token number">40</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> <span class="token keyword">mut</span> v<span class="token punctuation">:</span> <span class="token class-name">Vec</span><span class="token operator">&#x3C;</span><span class="token punctuation">(</span><span class="token keyword">u16</span><span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token punctuation">)</span><span class="token operator">></span> <span class="token operator">=</span> <span class="token class-name">Vec</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> <span class="token keyword">mut</span> iter <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> <span class="token keyword">mut</span> curr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> iter<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> iter <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> i <span class="token operator">!=</span> curr<span class="token number">.1</span> <span class="token punctuation">{</span>
+                v<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>curr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                curr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                curr<span class="token number">.0</span> <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        v<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>curr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        s<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> v <span class="token punctuation">{</span>
+            s<span class="token punctuation">.</span><span class="token function">push_str</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span>i<span class="token number">.0</span><span class="token punctuation">.</span><span class="token function">to_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            s<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token number">.1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    s<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="part-ii">Part II<a aria-hidden="true" class="anchor-heading icon-link" href="#part-ii"></a></h2>
+<p>Neat, right? You might also enjoy hearing John Conway talking about this sequence (that's Conway of Conway's Game of Life fame).</p>
+<p>Now, starting again with the digits in your puzzle input, apply this process 50 times. What is the length of the new result?</p>
+<h2 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h2>
+<pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[aoc(day10, part2)]</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">part2</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">usize</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> s <span class="token operator">=</span> input<span class="token punctuation">.</span><span class="token function">to_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token number">0</span><span class="token punctuation">..</span><span class="token number">50</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> <span class="token keyword">mut</span> v<span class="token punctuation">:</span> <span class="token class-name">Vec</span><span class="token operator">&#x3C;</span><span class="token punctuation">(</span><span class="token keyword">u16</span><span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token punctuation">)</span><span class="token operator">></span> <span class="token operator">=</span> <span class="token class-name">Vec</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> <span class="token keyword">mut</span> iter <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> <span class="token keyword">mut</span> curr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> iter<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> iter <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> i <span class="token operator">!=</span> curr<span class="token number">.1</span> <span class="token punctuation">{</span>
+                v<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>curr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                curr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                curr<span class="token number">.0</span> <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        v<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>curr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        s<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> v <span class="token punctuation">{</span>
+            s<span class="token punctuation">.</span><span class="token function">push_str</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span>i<span class="token number">.0</span><span class="token punctuation">.</span><span class="token function">to_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            s<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token number">.1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    s<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>

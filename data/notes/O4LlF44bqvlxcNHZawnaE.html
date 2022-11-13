@@ -1,0 +1,31 @@
+<h1 id="is-symmetric-tree">Is Symmetric Tree<a aria-hidden="true" class="anchor-heading icon-link" href="#is-symmetric-tree"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>Given a binary tree, return whether or not it forms a reflection across its center (i.e. a line drawn straight down starting from the root).
+Note: a reflection is when an image, flipped across a specified line, forms the same image.</p>
+<p>Ex: Given the following tree…</p>
+<pre>   2
+ /   \
+1     1
+</pre>
+<p>return true as when the tree is reflected across its center all the nodes match.</p>
+<p>Ex: Given the following tree…</p>
+<pre>    1
+   / \
+  5   5
+   \    \
+    7    7
+</pre>
+<p>return false as when the tree is reflected across its center the nodes containing sevens do not match.</p>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">isSymmetric</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> self<span class="token punctuation">.</span>isMirror<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span> root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">isMirror</span><span class="token punctuation">(</span>t1<span class="token punctuation">,</span>t2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> t1 <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">and</span> t2 <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">if</span> t1 <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">or</span> t2 <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> t1<span class="token punctuation">.</span>val <span class="token operator">==</span> t2<span class="token punctuation">.</span>val <span class="token keyword">and</span> isMirror<span class="token punctuation">(</span>t1<span class="token punctuation">.</span>right<span class="token punctuation">,</span>t2<span class="token punctuation">.</span>left<span class="token punctuation">)</span> <span class="token keyword">and</span> isMirror<span class="token punctuation">(</span>t1<span class="token punctuation">.</span>right<span class="token punctuation">,</span>t2<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

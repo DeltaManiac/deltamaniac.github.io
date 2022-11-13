@@ -1,0 +1,52 @@
+<h1 id="32050">32050<a aria-hidden="true" class="anchor-heading icon-link" href="#32050"></a></h1>
+<h2 id="signal-edge-detector">Signal Edge Detector<a aria-hidden="true" class="anchor-heading icon-link" href="#signal-edge-detector"></a></h2>
+<h1 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h1>
+<pre><code>@0
+
+@1
+MOV UP ACC
+MOV ACC RIGHT
+MOV ACC RIGHT
+
+@2
+SUB LEFT
+JLZ NEG
+JMP SIG
+NEG:
+NEG
+SIG:
+MOV ACC,DOWN
+MOV LEFT, ACC
+
+@3
+
+@4
+
+@5
+
+@6
+START:
+MOV UP,ACC
+SUB 10
+JLZ SIG0
+SIG1:
+MOV 1,DOWN
+JMP START
+
+SIG0:
+MOV 0,DOWN
+
+@7
+
+@8
+
+@9 
+
+@10
+MOV UP, DOWN
+
+@11
+
+</code></pre>
+<h1 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h1>
+<p><img src="/assets/images/2022-11-22-17-33-16.png"></p>

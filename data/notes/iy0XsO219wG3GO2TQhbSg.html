@@ -1,0 +1,40 @@
+<h1 id="find-mode">Find Mode<a aria-hidden="true" class="anchor-heading icon-link" href="#find-mode"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>Given a binary search tree, return its mode (you may assume the answer is unique). If the tree is empty, return -1.</p>
+<p>Note: the mode is the most frequently occurring value in the tree.</p>
+<pre>Ex: Given the following tree...
+
+        2
+       / \
+      1   2
+return 2.
+</pre>
+<pre>Ex: Given the following tree...
+
+         7
+        / \
+      4     9
+     / \   / \
+    1   4 8   9
+               \
+                9
+return 9.
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">findMode</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    counts <span class="token operator">=</span> collections<span class="token punctuation">.</span>Counter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    modeValue <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token keyword">def</span> <span class="token function">helper</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">nonlocal</span> modeValue
+        <span class="token keyword">if</span> <span class="token keyword">not</span> node<span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        counts<span class="token punctuation">[</span>node<span class="token punctuation">.</span>val<span class="token punctuation">]</span> <span class="token operator">+=</span><span class="token number">1</span>
+        modeValue <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>mv<span class="token punctuation">,</span>counts<span class="token punctuation">[</span>node<span class="token punctuation">.</span>val<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        helper<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+        helper<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+    helper<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>k <span class="token keyword">for</span> k<span class="token punctuation">,</span>v <span class="token keyword">in</span> counts<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> v <span class="token operator">==</span> mv<span class="token punctuation">]</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

@@ -1,0 +1,34 @@
+<h1 id="balanced-brackets">Balanced Brackets<a aria-hidden="true" class="anchor-heading icon-link" href="#balanced-brackets"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Google.</p>
+<p>Given a string only containing the following characters <code>(</code>, <code>)</code>, <code>{</code>, <code>}</code>, <code>[</code>, and <code>]</code> return whether or not the opening and closing characters are in a valid order.</p>
+<p>Ex: Given the following strings...</p>
+<blockquote>
+<p>"(){}[]", return true</p>
+<p>"(({[]}))", return true</p>
+<p>"{(})", return false</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">check_brackets</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    stk <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    chars <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"{"</span><span class="token punctuation">:</span><span class="token string">"}"</span><span class="token punctuation">,</span><span class="token string">"["</span><span class="token punctuation">:</span><span class="token string">"]"</span><span class="token punctuation">,</span><span class="token string">"("</span><span class="token punctuation">:</span><span class="token string">")"</span><span class="token punctuation">}</span>
+    <span class="token keyword">for</span> x <span class="token keyword">in</span> a<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> x <span class="token keyword">in</span> chars<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            stk<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> x <span class="token keyword">in</span> chars<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> x<span class="token operator">==</span> chars<span class="token punctuation">.</span>get<span class="token punctuation">(</span>stk<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                stk<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+    <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>stk<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

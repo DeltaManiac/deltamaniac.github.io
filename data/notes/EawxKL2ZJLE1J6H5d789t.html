@@ -1,0 +1,43 @@
+<h1 id="quick-sort">Quick Sort<a aria-hidden="true" class="anchor-heading icon-link" href="#quick-sort"></a></h1>
+<h1 id="quick-sort-1">Quick Sort<a aria-hidden="true" class="anchor-heading icon-link" href="#quick-sort-1"></a></h1>
+<p>It is a Divide and Conquer Algorithm.</p>
+<p>Pick an element in the array as <code>pivot</code> and move all elements less than pivot to its left and all elements greater to its right</p>
+<h2 id="time-complexity">Time Complexity<a aria-hidden="true" class="anchor-heading icon-link" href="#time-complexity"></a></h2>
+<h3 id="best-onlogn">Best: O(nlog(n))<a aria-hidden="true" class="anchor-heading icon-link" href="#best-onlogn"></a></h3>
+<h3 id="average-onlogn">Average: O(nlog(n))<a aria-hidden="true" class="anchor-heading icon-link" href="#average-onlogn"></a></h3>
+<h3 id="worst-onn">Worst: O(n*n)<a aria-hidden="true" class="anchor-heading icon-link" href="#worst-onn"></a></h3>
+<h2 id="space-complexity-ologn">Space Complexity: O(log(n))<a aria-hidden="true" class="anchor-heading icon-link" href="#space-complexity-ologn"></a></h2>
+<h1 id="implementation">Implementation<a aria-hidden="true" class="anchor-heading icon-link" href="#implementation"></a></h1>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quickSort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    quickSortHelper<span class="token punctuation">(</span>nums<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">quickSortHelper</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> low<span class="token punctuation">,</span> high<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> low <span class="token operator">&#x3C;</span> high<span class="token punctuation">:</span>
+        partitionIdx <span class="token operator">=</span> partition<span class="token punctuation">(</span>nums<span class="token punctuation">,</span> low<span class="token punctuation">,</span> high<span class="token punctuation">)</span>
+        quickSortHelper<span class="token punctuation">(</span>nums<span class="token punctuation">,</span> low<span class="token punctuation">,</span> partitionIdx<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        quickSortHelper<span class="token punctuation">(</span>nums<span class="token punctuation">,</span> partitionIdx<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> high<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">partition</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> low<span class="token punctuation">,</span> high<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ptr <span class="token operator">=</span> low
+    pivot <span class="token operator">=</span> nums<span class="token punctuation">[</span>ptr<span class="token punctuation">]</span>
+    <span class="token keyword">while</span> low <span class="token operator">&#x3C;</span> high<span class="token punctuation">:</span>
+        <span class="token keyword">while</span> low <span class="token operator">&#x3C;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token keyword">and</span> nums<span class="token punctuation">[</span>low<span class="token punctuation">]</span> <span class="token operator">&#x3C;=</span> pivot<span class="token punctuation">:</span>
+            low <span class="token operator">=</span> low <span class="token operator">+</span> <span class="token number">1</span>
+        <span class="token keyword">while</span> nums<span class="token punctuation">[</span>high<span class="token punctuation">]</span> <span class="token operator">></span> pivot<span class="token punctuation">:</span>
+            high <span class="token operator">=</span> high <span class="token operator">-</span> <span class="token number">1</span>
+        <span class="token keyword">if</span> low <span class="token operator">&#x3C;</span> high<span class="token punctuation">:</span>
+            nums<span class="token punctuation">[</span>low<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>high<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>high<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>low<span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>high<span class="token punctuation">,</span> ptr<span class="token punctuation">)</span>
+    nums<span class="token punctuation">[</span>high<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>ptr<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>ptr<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>high<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> high
+
+
+array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+quickSort<span class="token punctuation">(</span>array<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span>
+
+
+</code></pre>

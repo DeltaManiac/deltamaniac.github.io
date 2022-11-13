@@ -1,0 +1,21 @@
+<h1 id="web-assembly">Web Assembly<a aria-hidden="true" class="anchor-heading icon-link" href="#web-assembly"></a></h1>
+<h2 id="wasm">WASM<a aria-hidden="true" class="anchor-heading icon-link" href="#wasm"></a></h2>
+<ul>
+<li>Simple Machine Model </li>
+<li>Executable Format</li>
+</ul>
+<p>Two formats</p>
+<pre><code>- `.wat` -> [[programming.S-Expressions]] Text format
+
+- `.wasm` -> Binary Format
+</code></pre>
+<p><code>.wat</code> representation of adding two numbers</p>
+<pre class="language-scheme"><code class="language-scheme"><span class="token punctuation">(</span><span class="token function">module</span>
+  <span class="token punctuation">(</span><span class="token function">func</span> <span class="token punctuation">(</span><span class="token keyword">export</span> <span class="token string">"addTwo"</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token function">param</span> i32 i32<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token function">result</span> i32<span class="token punctuation">)</span>
+    local.get <span class="token number">0</span>
+    local.get <span class="token number">1</span>
+    i32.add<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="linear-memory-model-memory">Linear Memory Model Memory<a aria-hidden="true" class="anchor-heading icon-link" href="#linear-memory-model-memory"></a></h2>
+<p>WebAssembly has a very simple memory model. A wasm module has access to a single "linear memory", which is essentially a flat array of bytes</p>
+<p>Wasm cannot access the GC-ed heap memory of JS. However JS can access the Linear Memory of WASM modules as Scalar <code>ArrayBuffer</code> type.</p>

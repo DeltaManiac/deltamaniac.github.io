@@ -1,0 +1,62 @@
+<h1 id="day-1">Day 1<a aria-hidden="true" class="anchor-heading icon-link" href="#day-1"></a></h1>
+<h2 id="not-quite-lisp">Not Quite Lisp<a aria-hidden="true" class="anchor-heading icon-link" href="#not-quite-lisp"></a></h2>
+<p>Santa was hoping for a white Christmas, but his weather machine's "snow" function is powered by stars, and he's fresh out! To save Christmas, he needs you to collect fifty stars by December 25th.</p>
+<h2 id="part-i">Part I<a aria-hidden="true" class="anchor-heading icon-link" href="#part-i"></a></h2>
+<p>Santa is trying to deliver presents in a large apartment building, but he can't find the right floor - the directions he got are a little confusing.
+He starts on the ground floor (floor <code>0</code>) and then follows the instructions one character at a time.</p>
+<p>An opening parenthesis, <code>(</code>, means he should go up one floor, and a closing parenthesis, ), means he should go down one floor.</p>
+<p>The apartment building is very tall, and the basement is very deep; he will never find the top or bottom floors.</p>
+<p>For example:</p>
+<blockquote>
+<p><code>(())</code> and <code>()()</code> both result in floor <code>0</code>.</p>
+<p><code>(((</code> and <code>(()(()(</code> both result in floor <code>3</code>.</p>
+<p><code>))(((((</code> also results in floor <code>3</code>.</p>
+<p><code>())</code> and <code>))(</code> both result in floor <code>-1</code> (the first basement
+level).</p>
+<p><code>)))</code> and <code>)())())</code> both result in floor <code>-3</code>.</p>
+</blockquote>
+<p>To what floor do the instructions take Santa?</p>
+<h2 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h2>
+<p>The easiest way to solve this problem would be to split the input string into chars and iterate over each character.</p>
+<p>After that we use the <a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold">iterator::fold</a> method of the iterator over the characters.</p>
+<p>For each <code>(</code> we increment a sum value by 1 and for ')' we decrement a sum value by 1.</p>
+<pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[aoc(day1, part1)]</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">part1</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">i32</span> <span class="token punctuation">{</span>
+    input<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fold</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>sum<span class="token punctuation">,</span> c<span class="token closure-punctuation punctuation">|</span></span> <span class="token keyword">match</span> c <span class="token punctuation">{</span>
+        <span class="token char">'('</span> <span class="token operator">=></span> sum <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token char">')'</span> <span class="token operator">=></span> sum <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        _ <span class="token operator">=></span> <span class="token macro property">unreachable!</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="part-ii">Part II<a aria-hidden="true" class="anchor-heading icon-link" href="#part-ii"></a></h2>
+<p>Now, given the same instructions, find the position of the first character that causes him to enter the basement (floor -1).</p>
+<p> The first character in the instructions has position 1, the second character has position 2, and so on.</p>
+<p>For example:</p>
+<blockquote>
+<p><code>)</code> causes him to enter the basement at character position <code>1</code>.</p>
+<p><code>()())</code> causes him to enter the basement at character position <code>5</code>.</p>
+</blockquote>
+<p>What is the position of the character that causes Santa to first enter the basement?</p>
+<h2 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h2>
+<p>The easiest way to solve this would be be to keep a check if the sum value every becomes less than 0.</p>
+<p>This condition can be easily identified by using the <a href="https://doc.rust-lang.org/std/primitive.isize.html#method.checked_sub">checked_sub</a></p>
+<pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[aoc(day1, part2)]</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">part2</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">usize</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> sum<span class="token punctuation">:</span> <span class="token keyword">u32</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token keyword">in</span> input<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">enumerate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">match</span> c <span class="token punctuation">{</span>
+            <span class="token char">'('</span> <span class="token operator">=></span> sum <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token char">')'</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token keyword">let</span> <span class="token class-name">Some</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">=</span> sum<span class="token punctuation">.</span><span class="token function">checked_sub</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    sum <span class="token operator">=</span> s<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            _ <span class="token operator">=></span> <span class="token macro property">unreachable!</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token macro property">unreachable!</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>

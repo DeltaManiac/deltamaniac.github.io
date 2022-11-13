@@ -1,0 +1,74 @@
+<h1 id="overview">Overview<a aria-hidden="true" class="anchor-heading icon-link" href="#overview"></a></h1>
+<h1 id="intro">Intro<a aria-hidden="true" class="anchor-heading icon-link" href="#intro"></a></h1>
+<p><strong>Computer Network</strong> : Connection between two or more devices/nodes that allow each node to share data</p>
+<h1 id="network-topologies">Network Topologies<a aria-hidden="true" class="anchor-heading icon-link" href="#network-topologies"></a></h1>
+<p><strong>Topology</strong> : Organization of nodes in a network</p>
+<h3 id="point-to-point">Point to Point<a aria-hidden="true" class="anchor-heading icon-link" href="#point-to-point"></a></h3>
+<p><img src="/assets/images/2021-12-22-06-51-39.png"></p>
+<h3 id="daisy-chain">Daisy Chain<a aria-hidden="true" class="anchor-heading icon-link" href="#daisy-chain"></a></h3>
+<p><strong>Hop</strong>: Intermediate Node between source and destination node</p>
+<p><img src="/assets/images/2021-12-22-06-52-01.png"></p>
+<h3 id="bus">Bus<a aria-hidden="true" class="anchor-heading icon-link" href="#bus"></a></h3>
+<p><img src="/assets/images/2021-12-22-06-55-34.png"></p>
+<p>Most common in wireless networks</p>
+<h3 id="ring">Ring<a aria-hidden="true" class="anchor-heading icon-link" href="#ring"></a></h3>
+<p><img src="/assets/images/2021-12-22-06-58-10.png"></p>
+<p>Traffic travels in a single direction</p>
+<p>Speed can be limited by slowest node in the network</p>
+<h3 id="star">Star<a aria-hidden="true" class="anchor-heading icon-link" href="#star"></a></h3>
+<p><img src="/assets/images/2021-12-22-07-21-27.png"></p>
+<p>Most common in wireless networks</p>
+<p>Central node is mostly a network switch</p>
+<p>Data can traverse on a single hop</p>
+<h3 id="mesh">Mesh<a aria-hidden="true" class="anchor-heading icon-link" href="#mesh"></a></h3>
+<p><img src="/assets/images/2021-12-22-07-27-34.png"></p>
+<h3 id="hybrid">Hybrid<a aria-hidden="true" class="anchor-heading icon-link" href="#hybrid"></a></h3>
+<p><img src="/assets/images/2021-12-22-07-30-29.png"></p>
+<h1 id="open-systems-interconnection-reference-model">Open Systems Interconnection Reference Model<a aria-hidden="true" class="anchor-heading icon-link" href="#open-systems-interconnection-reference-model"></a></h1>
+<p>OSI Model standardizes networking</p>
+<p><strong>Protocols</strong>: Rules and procedures that determine the format and order of data sent over a network</p>
+<p><img src="/assets/images/2021-12-22-20-11-06.png"></p>
+<h2 id="layer-7---application">Layer 7 - Application<a aria-hidden="true" class="anchor-heading icon-link" href="#layer-7---application"></a></h2>
+<p>Responsible for identifying hosts and retrieving resources</p>
+<p>e.g. Browsers, Torrent Client</p>
+<h2 id="layer-6---presentation">Layer 6 - Presentation<a aria-hidden="true" class="anchor-heading icon-link" href="#layer-6---presentation"></a></h2>
+<p>Prepares data for the network layer when data moves down the stack and for application layer when data moves up the stack</p>
+<p>Functions: Encryption/Decryption Encoding</p>
+<h2 id="layer-5---session">Layer 5 - Session<a aria-hidden="true" class="anchor-heading icon-link" href="#layer-5---session"></a></h2>
+<p>Manages connection lifecycle between nodes on a network</p>
+<p>Functions: Connection establishment, managing connection timeouts, coordinating the mode of operation and connection termination</p>
+<h2 id="layer-4---transport">Layer 4 - Transport<a aria-hidden="true" class="anchor-heading icon-link" href="#layer-4---transport"></a></h2>
+<p>Controls and coordinates transfer of data between nodes while maintaining the reliability</p>
+<p>Functions: Correcting errors, speed control, chunking data, ack-ing received data</p>
+<h2 id="layer-3---network">Layer 3 - Network<a aria-hidden="true" class="anchor-heading icon-link" href="#layer-3---network"></a></h2>
+<p>Transmits data between nodes without having a direct point to point connection to the remote node</p>
+<p>Functions: Network management protocols for routing, addressing, multicasting and traffic control</p>
+<h2 id="layer-2---data-link">Layer 2 - Data Link<a aria-hidden="true" class="anchor-heading icon-link" href="#layer-2---data-link"></a></h2>
+<p>Handles data transfers between two directly connected nodes</p>
+<p>Function: Error detection and Error Correction</p>
+<h2 id="layer-1---physical">Layer 1 - Physical<a aria-hidden="true" class="anchor-heading icon-link" href="#layer-1---physical"></a></h2>
+<p>Converts bits from the network stack to the physical medium</p>
+<p>Controls bit rate</p>
+<h1 id="sending-traffic-by-using-data-encapsulation">Sending Traffic by Using Data Encapsulation<a aria-hidden="true" class="anchor-heading icon-link" href="#sending-traffic-by-using-data-encapsulation"></a></h1>
+<p><strong>Payload</strong>: Data travelling down the stack</p>
+<p><strong>Horizontal Communication</strong>: Communication between client and server on the same layer</p>
+<p><img src="/assets/images/2021-12-22-21-08-28.png"></p>
+<p><img src="/assets/images/2021-12-22-21-09-23.png"></p>
+<h1 id="tcpip-model">TCP/IP Model<a aria-hidden="true" class="anchor-heading icon-link" href="#tcpip-model"></a></h1>
+<p><strong>End-to-End Principle</strong>: Each network segment includes only enough functionality to properly transmit and route bits; all other functionality belongs to the endpoints.</p>
+<p><img src="/assets/images/2021-12-22-21-30-48.png"></p>
+<h2 id="application-layer">Application Layer<a aria-hidden="true" class="anchor-heading icon-link" href="#application-layer"></a></h2>
+<p>Interacts directly with software applications</p>
+<p>Encompasses three OSI layers</p>
+<p>Protocols: FTP, HTTP, SMTP</p>
+<p>Function: DHCP, DNS</p>
+<h2 id="transport-layer">Transport Layer<a aria-hidden="true" class="anchor-heading icon-link" href="#transport-layer"></a></h2>
+<p>Handles transfer of data between two node</p>
+<p>Ensures data integrity</p>
+<p>Protocols: TCP, UDP</p>
+<h2 id="internet-layer">Internet Layer<a aria-hidden="true" class="anchor-heading icon-link" href="#internet-layer"></a></h2>
+<p>Responsible for routing packets of data</p>
+<p>Protocols: IPv4, IPv6, BGP, ICMP, IGMP, IPsec</p>
+<p>Function: Data Delivery</p>
+<h2 id="link-layer">Link Layer<a aria-hidden="true" class="anchor-heading icon-link" href="#link-layer"></a></h2>
+<p>ARP Translates nodes IP address to MAC address of network interface</p>

@@ -1,0 +1,44 @@
+<h1 id="dynamic-programming">Dynamic Programming<a aria-hidden="true" class="anchor-heading icon-link" href="#dynamic-programming"></a></h1>
+<h1 id="intro">Intro<a aria-hidden="true" class="anchor-heading icon-link" href="#intro"></a></h1>
+<p>Dynamic programming is a powerful tool because it can break a complex problem into manageable subproblems, avoid unnecessary recalculation of overlapping subproblems, and use the results of those subproblems to solve the initial complex problem.</p>
+<p>Most common features of a dp problem</p>
+<ul>
+<li>
+<p>The problem can be broken down into "overlapping subproblems" - smaller versions of the original problem that are re-used multiple times</p>
+</li>
+<li>
+<p>The problem has an "optimal substructure" - an optimal solution can be formed from optimal solutions to the overlapping subproblems of the original problem</p>
+</li>
+</ul>
+<h1 id="two-ways-for-dp">Two Ways for DP<a aria-hidden="true" class="anchor-heading icon-link" href="#two-ways-for-dp"></a></h1>
+<h2 id="memoization">Memoization<a aria-hidden="true" class="anchor-heading icon-link" href="#memoization"></a></h2>
+<blockquote>
+<p><strong>memoizing</strong> a result means to store the result of a function call, usually in a hashmap or an array, so that when the same function call is made again, we can simply return the memoized result instead of recalculating the result.</p>
+</blockquote>
+<ul>
+<li>Top Down approach</li>
+<li>Implemented via recursion and optimized via memoization</li>
+</ul>
+<h2 id="tabulation">Tabulation<a aria-hidden="true" class="anchor-heading icon-link" href="#tabulation"></a></h2>
+<ul>
+<li>Bottom Up Approach</li>
+<li>Implemented via iteration</li>
+</ul>
+<h1 id="identifying-dp">Identifying DP<a aria-hidden="true" class="anchor-heading icon-link" href="#identifying-dp"></a></h1>
+<p>The <strong>first characteristic</strong> that is common in DP problems is that the problem will ask for the optimum value (maximum or minimum) of something, or the number of ways there are to do something.</p>
+<p>For example:</p>
+<blockquote>
+<p>What is the minimum cost of doing...
+What is the maximum profit from...
+How many ways are there to do...
+What is the longest possible...
+Is it possible to reach a certain point...</p>
+</blockquote>
+<p>The <strong>second characteristic</strong> that is common in DP problems is that future "decisions" depend on earlier decisions. Deciding to do something at one step may affect the ability to do something in a later step.
+This characteristic is what makes a greedy algorithm invalid for a DP problem - we need to factor in results from previous decisions.</p>
+<h1 id="the-framework">The Framework<a aria-hidden="true" class="anchor-heading icon-link" href="#the-framework"></a></h1>
+<ol>
+<li>A function or data structure that will compute/contain the answer to the problem for every given state.</li>
+<li>A recurrence relation to transition between states.</li>
+<li>Base cases, so that our recurrence relation doesn't go on infinitely.</li>
+</ol>

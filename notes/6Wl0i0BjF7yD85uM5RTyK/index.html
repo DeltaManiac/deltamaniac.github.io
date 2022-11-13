@@ -1,0 +1,115 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><link rel="icon" href="/favicon.ico"/><title>Kafka</title><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="description" content="Personal knowledge space"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:site" content="delta_maniac"/><meta name="twitter:creator" content="delta_maniac"/><meta property="og:title" content="Kafka"/><meta property="og:description" content="Personal knowledge space"/><meta property="og:url" content="https://deltamaniac.github.io//notes/6Wl0i0BjF7yD85uM5RTyK/"/><meta property="og:type" content="article"/><meta property="article:published_time" content="10/17/2020"/><meta property="article:modified_time" content="10/17/2020"/><link rel="canonical" href="https://deltamaniac.github.io//notes/6Wl0i0BjF7yD85uM5RTyK/"/><meta name="next-head-count" content="17"/><link rel="preload" href="/_next/static/css/8e7b7e4bce421c0a.css" as="style"/><link rel="stylesheet" href="/_next/static/css/8e7b7e4bce421c0a.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-3d209faeb64f2f97.js" defer=""></script><script src="/_next/static/chunks/framework-28c999baf2863c3d.js" defer=""></script><script src="/_next/static/chunks/main-104451f3d1a5c4bc.js" defer=""></script><script src="/_next/static/chunks/pages/_app-9d8e0603730b15a3.js" defer=""></script><script src="/_next/static/chunks/935-4dee79e80b8641c6.js" defer=""></script><script src="/_next/static/chunks/6-50972def09142ee2.js" defer=""></script><script src="/_next/static/chunks/pages/notes/%5Bid%5D-78d472fa3b924116.js" defer=""></script><script src="/_next/static/uwaFLQSct0mTPwxN4Nqr7/_buildManifest.js" defer=""></script><script src="/_next/static/uwaFLQSct0mTPwxN4Nqr7/_ssgManifest.js" defer=""></script></head><body><div id="__next" data-reactroot=""><section class="ant-layout" style="width:100%;min-height:100%"><header class="ant-layout-header" style="position:fixed;isolation:isolate;z-index:1;width:100%;border-bottom:1px solid #d4dadf;height:64px;padding:0 24px 0 2px"><div class="ant-row ant-row-center" style="max-width:992px;justify-content:space-between;margin:0 auto"><div style="display:flex" class="ant-col ant-col-xs-20 ant-col-sm-4"></div><div class="ant-col gutter-row ant-col-xs-0 ant-col-sm-20 ant-col-md-20 ant-col-lg-19"><div class="ant-select ant-select-lg ant-select-auto-complete ant-select-single ant-select-allow-clear ant-select-show-search" style="width:100%"><div class="ant-select-selector"><span class="ant-select-selection-search"><input type="search" autoComplete="off" class="ant-select-selection-search-input" role="combobox" aria-haspopup="listbox" aria-owns="undefined_list" aria-autocomplete="list" aria-controls="undefined_list" aria-activedescendant="undefined_list_0" value=""/></span><span class="ant-select-selection-placeholder">For full text search please use the &#x27;?&#x27; prefix. e.g. ? Onboarding</span></div></div></div><div style="display:none;align-items:center;justify-content:center" class="ant-col ant-col-xs-4 ant-col-sm-4 ant-col-md-0 ant-col-lg-0"><span role="img" aria-label="menu" style="font-size:24px" tabindex="-1" class="anticon anticon-menu"><svg viewBox="64 64 896 896" focusable="false" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></span></div></div></header><section class="ant-layout" style="margin-top:64px;display:flex;flex-direction:row"><div class="site-layout-sidebar" style="flex:0 0 auto;width:calc(max((100% - 992px) / 2, 0px) + 200px);min-width:200px;padding-left:calc((100% - 992px) / 2)"><aside class="ant-layout-sider ant-layout-sider-dark" style="position:fixed;overflow:auto;height:calc(100vh - 64px);background-color:transparent;flex:0 0 200px;max-width:200px;min-width:200px;width:200px"><div class="ant-layout-sider-children"></div></aside></div><main class="ant-layout-content side-layout-main" style="max-width:1200px;min-width:0;display:block"><div style="padding:0 24px"><div class="main-content" role="main"><div class="ant-row"><div class="ant-col ant-col-24"><div class="ant-row" style="margin-left:-10px;margin-right:-10px"><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-24 ant-col-md-18"><div><h1 id="kafka">Kafka<a aria-hidden="true" class="anchor-heading icon-link" href="#kafka"></a></h1>
+<h2 id="apache-kafka">Apache Kafka<a aria-hidden="true" class="anchor-heading icon-link" href="#apache-kafka"></a></h2>
+<ul>
+<li>
+<p>pub-sub messaging system</p>
+</li>
+<li>
+<p>basic unit --> message =><code>{ Body :[u8], Key:[u8]}</code></p>
+</li>
+<li>
+<p>writes are mainly batch operations => <code>Vec&#x3C;Messages></code></p>
+</li>
+<li>
+<p>does not track acknowledgments from consumers but allows consumers to use Kafka to track their position (offset) in each partition.</p>
+</li>
+<li>
+<p>Schema --> governs structure of message</p>
+<ul>
+<li>eg JSON/XML/<a href="https://avro.apache.org/docs/current/">Apache Avro</a></li>
+</ul>
+</li>
+<li>
+<p>Topics --> collection of messages "about something same"</p>
+</li>
+<li>
+<p>Topics made of n partitions => Append only queue-like
+<img src="/assets/images/2020-10-11-20-30-05.png"></p>
+</li>
+<li>
+<p>Stream => Single topic of data irrespective of partitions</p>
+</li>
+<li>
+<p><a href="/notes/wkazkGBnDMXJcyTJckPiu">Producer</a></p>
+<ul>
+<li>produce message for a topic, can sometimes specify which partition to store</li>
+</ul>
+</li>
+<li>
+<p><a href="/notes/PeDQmsjlEYcdja9yj2nNL">Consumer</a></p>
+<ul>
+<li>Reads message</li>
+<li>Subscribes 1:n topics</li>
+<li>FIFO Read (Queue like)</li>
+<li>track of consumed messages via offset</li>
+<li><strong>Ownership</strong> mapping of consumer to partitions</li>
+</ul>
+</li>
+<li>
+<p>Consumer Group -> 1 or more consumers that work together to consumer a topic</p>
+</li>
+<li>
+<p>Kafka Broker -> Single Kafka server</p>
+<ul>
+<li>Receives messages from Producers</li>
+<li>Assign offset</li>
+<li>Commit to disk</li>
+</ul>
+</li>
+<li>
+<p>Kafka Cluster</p>
+<ul>
+<li>
+<p>Collection of brokers</p>
+</li>
+<li>
+<p><strong>1</strong> automatically elected broker will function as the cluster <strong>controller</strong></p>
+</li>
+<li>
+<p>Controller responsibilities</p>
+<ul>
+<li>administrative operations</li>
+<li>assigning partitions to broker</li>
+<li>monitor for broker failures</li>
+</ul>
+<p><img src="/assets/images/2020-10-11-20-31-20.png"></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Retention -> Configurable for a period of time or size of topic (GB/MB)</p>
+</li>
+<li>
+<p>Kafka : Pitch</p>
+<ul>
+<li>Multiple Producers x Multiple Topics</li>
+<li>Multiple Consumers</li>
+<li>Disk Based Retention --> No data loss</li>
+<li>Scalable</li>
+<li>High Performance</li>
+</ul>
+</li>
+</ul>
+<h2 id="starting-kafka-on-osx">Starting Kafka on OSX<a aria-hidden="true" class="anchor-heading icon-link" href="#starting-kafka-on-osx"></a></h2>
+<pre class="language-shell"><code class="language-shell"><span class="token comment"># Start ZooKeeper</span>
+<span class="token comment"># `zkServer` DOESNT WORK IN TMUX!!!</span>
+zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties <span class="token operator">&#x26;</span> kafka-server-start /usr/local/etc/kafka/server.properties
+
+<span class="token comment"># Start kafka server</span>
+kafka-server-start.sh /usr/local/etc/kafka/server.properties
+
+<span class="token comment"># Create a topic</span>
+kafka-topics --create --zookeeper localhost:2181 --replication-factor <span class="token number">1</span> --partitions <span class="token number">1</span> --topic temptopic
+
+<span class="token comment"># Start a producer to temptopic</span>
+kafka-console-producer --broker-list localhost:9092 --topic temptopic
+
+<span class="token comment"># In another tab start a consumer to temptopic</span>
+kafka-console-producer --broker-list localhost:9092 --topic temptopic --from-beginning
+</code></pre>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/notes/PeDQmsjlEYcdja9yj2nNL">Consumer</a></li>
+<li><a href="/notes/wkazkGBnDMXJcyTJckPiu">Producer</a></li>
+</ol></div></div><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-0 ant-col-md-6"><div><div class=""><div class="ant-anchor-wrapper dendron-toc" style="max-height:calc(100vh - 64px);z-index:1"><div class="ant-anchor"><div class="ant-anchor-ink"><span class="ant-anchor-ink-ball"></span></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#apache-kafka" title="Apache Kafka">Apache Kafka</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#starting-kafka-on-osx" title="Starting Kafka on OSX">Starting Kafka on OSX</a></div></div></div></div></div></div></div></div></div></div></div><div class="ant-divider ant-divider-horizontal" role="separator"></div><footer class="ant-layout-footer" style="padding:0 24px 24px"></footer></main></section></section></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"note":{"id":"6Wl0i0BjF7yD85uM5RTyK","title":"Kafka","desc":"","updated":1602919711854,"created":1602919711854,"stub":false,"custom":{"stub":false},"fname":"kafka","type":"note","vault":{"fsPath":"vault"},"contentHash":"135d03a173eb1a38ee1684be649e8c7d","links":[{"type":"wiki","from":{"fname":"kafka","id":"6Wl0i0BjF7yD85uM5RTyK","vaultName":"vault"},"value":"kafka.producer","alias":"Producer","position":{"start":{"line":21,"column":3,"offset":631},"end":{"line":21,"column":30,"offset":658},"indent":[]},"xvault":false,"sameFile":false,"to":{"fname":"kafka.producer"}},{"type":"wiki","from":{"fname":"kafka","id":"6Wl0i0BjF7yD85uM5RTyK","vaultName":"vault"},"value":"kafka.consumer","alias":"Consumer","position":{"start":{"line":24,"column":3,"offset":742},"end":{"line":24,"column":30,"offset":769},"indent":[]},"xvault":false,"sameFile":false,"to":{"fname":"kafka.consumer"}}],"anchors":{"apache-kafka":{"type":"header","text":"Apache Kafka","value":"apache-kafka","line":8,"column":0,"depth":2},"starting-kafka-on-osx":{"type":"header","text":"Starting Kafka on OSX","value":"starting-kafka-on-osx","line":67,"column":0,"depth":2}},"children":["PeDQmsjlEYcdja9yj2nNL","wkazkGBnDMXJcyTJckPiu"],"parent":"root","data":{}},"body":"\u003ch1 id=\"kafka\"\u003eKafka\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#kafka\"\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003ch2 id=\"apache-kafka\"\u003eApache Kafka\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#apache-kafka\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003epub-sub messaging system\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003ebasic unit --\u003e message =\u003e\u003ccode\u003e{ Body :[u8], Key:[u8]}\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003ewrites are mainly batch operations =\u003e \u003ccode\u003eVec\u0026#x3C;Messages\u003e\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003edoes not track acknowledgments from consumers but allows consumers to use Kafka to track their position (offset) in each partition.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSchema --\u003e governs structure of message\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eeg JSON/XML/\u003ca href=\"https://avro.apache.org/docs/current/\"\u003eApache Avro\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTopics --\u003e collection of messages \"about something same\"\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTopics made of n partitions =\u003e Append only queue-like\n\u003cimg src=\"/assets/images/2020-10-11-20-30-05.png\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eStream =\u003e Single topic of data irrespective of partitions\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"/notes/wkazkGBnDMXJcyTJckPiu\"\u003eProducer\u003c/a\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eproduce message for a topic, can sometimes specify which partition to store\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"/notes/PeDQmsjlEYcdja9yj2nNL\"\u003eConsumer\u003c/a\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eReads message\u003c/li\u003e\n\u003cli\u003eSubscribes 1:n topics\u003c/li\u003e\n\u003cli\u003eFIFO Read (Queue like)\u003c/li\u003e\n\u003cli\u003etrack of consumed messages via offset\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eOwnership\u003c/strong\u003e mapping of consumer to partitions\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eConsumer Group -\u003e 1 or more consumers that work together to consumer a topic\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eKafka Broker -\u003e Single Kafka server\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eReceives messages from Producers\u003c/li\u003e\n\u003cli\u003eAssign offset\u003c/li\u003e\n\u003cli\u003eCommit to disk\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eKafka Cluster\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eCollection of brokers\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e1\u003c/strong\u003e automatically elected broker will function as the cluster \u003cstrong\u003econtroller\u003c/strong\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eController responsibilities\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eadministrative operations\u003c/li\u003e\n\u003cli\u003eassigning partitions to broker\u003c/li\u003e\n\u003cli\u003emonitor for broker failures\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cimg src=\"/assets/images/2020-10-11-20-31-20.png\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eRetention -\u003e Configurable for a period of time or size of topic (GB/MB)\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eKafka : Pitch\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eMultiple Producers x Multiple Topics\u003c/li\u003e\n\u003cli\u003eMultiple Consumers\u003c/li\u003e\n\u003cli\u003eDisk Based Retention --\u003e No data loss\u003c/li\u003e\n\u003cli\u003eScalable\u003c/li\u003e\n\u003cli\u003eHigh Performance\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"starting-kafka-on-osx\"\u003eStarting Kafka on OSX\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#starting-kafka-on-osx\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cpre class=\"language-shell\"\u003e\u003ccode class=\"language-shell\"\u003e\u003cspan class=\"token comment\"\u003e# Start ZooKeeper\u003c/span\u003e\n\u003cspan class=\"token comment\"\u003e# `zkServer` DOESNT WORK IN TMUX!!!\u003c/span\u003e\nzookeeper-server-start /usr/local/etc/kafka/zookeeper.properties \u003cspan class=\"token operator\"\u003e\u0026#x26;\u003c/span\u003e kafka-server-start /usr/local/etc/kafka/server.properties\n\n\u003cspan class=\"token comment\"\u003e# Start kafka server\u003c/span\u003e\nkafka-server-start.sh /usr/local/etc/kafka/server.properties\n\n\u003cspan class=\"token comment\"\u003e# Create a topic\u003c/span\u003e\nkafka-topics --create --zookeeper localhost:2181 --replication-factor \u003cspan class=\"token number\"\u003e1\u003c/span\u003e --partitions \u003cspan class=\"token number\"\u003e1\u003c/span\u003e --topic temptopic\n\n\u003cspan class=\"token comment\"\u003e# Start a producer to temptopic\u003c/span\u003e\nkafka-console-producer --broker-list localhost:9092 --topic temptopic\n\n\u003cspan class=\"token comment\"\u003e# In another tab start a consumer to temptopic\u003c/span\u003e\nkafka-console-producer --broker-list localhost:9092 --topic temptopic --from-beginning\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003cstrong\u003eChildren\u003c/strong\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/notes/PeDQmsjlEYcdja9yj2nNL\"\u003eConsumer\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/notes/wkazkGBnDMXJcyTJckPiu\"\u003eProducer\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e","noteIndex":{"id":"root","title":"BrainMatter","desc":"","updated":1668313955403,"created":1602915435296,"stub":false,"nav_order":0,"custom":{"stub":false,"nav_order":0,"permalink":"/"},"fname":"root","type":"note","vault":{"fsPath":"vault"},"contentHash":"7b584540f5ff09a7953c66d95b7ee329","links":[],"anchors":{},"children":["ovOjtfOpF3vhfFUZi6DHp","3dNch4I3rcDy5xXFn3R6B","BWzIJm01jQ6aNNg56CwnS","96Hj5nYpnUciwlTenFpoU","6Wl0i0BjF7yD85uM5RTyK","o3yahkxofd7qighsrvpg893","7kyCk8YAkDvIrxLtAUFkG","A6TBKYAcFVjBqZpdbHuaS","w3B0c1Y72MfzhwoVNx7vx","t6ilpq115sipjv378ambtkv"],"parent":null,"data":{},"body":"\n\n![DeltaManiac](https://raw.githubusercontent.com/DeltaManiac/DeltaManiac/main/vault/assets/banner.svg)\n\n- 🔭 I’m currently playing Destiny 2\n- 🌱 I’m currently learning [Rust](https://www.rust-lang.org) at night and [Go](https://golang.org/) at work\n- 📫 How to reach me: [twitter](https://twitter.com/Delta_Maniac)\n- 😄 Pronouns: He/Him\n\u003c!-- - ⚡ Fun fact: The banner was provided by [Pushkar Anand](https://github.com/pushkar8723) sourced from [Responsive Cow Jumps Over the Moooooon](https://codepen.io/sdras/pen/doZReX) --\u003e\n\u003c!-- // - 👯 I’m looking to collaborate on ...\n// - 🤔 I’m looking for help with ...\n// - 💬 Ask me about ... --\u003e\n"},"collectionChildren":null,"customHeadContent":null,"config":{"version":5,"dev":{"enablePreviewV2":true},"commands":{"lookup":{"note":{"selectionMode":"extract","confirmVaultOnCreate":false,"leaveTrace":false,"bubbleUpCreateNew":true,"vaultSelectionModeOnCreate":"smart","fuzzThreshold":0.2}},"randomNote":{},"insertNote":{"initialValue":"templates"},"insertNoteLink":{"aliasMode":"none","enableMultiSelect":false},"insertNoteIndex":{"enableMarker":false},"copyNoteLink":{"aliasMode":"title"},"templateHierarchy":"template"},"workspace":{"dendronVersion":"0.83.0","vaults":[{"fsPath":"vault"}],"journal":{"dailyDomain":"daily","name":"journal","dateFormat":"y.MM.dd","addBehavior":"childOfDomain"},"scratch":{"name":"scratch","dateFormat":"y.MM.dd.HHmmss","addBehavior":"asOwnDomain"},"graph":{"zoomSpeed":1,"createStub":false},"enableAutoCreateOnDefinition":false,"enableXVaultWikiLink":false,"enableRemoteVaultInit":true,"workspaceVaultSyncMode":"noCommit","enableAutoFoldFrontmatter":true,"maxPreviewsCached":10,"maxNoteLength":204800,"task":{"name":"","dateFormat":"","addBehavior":"childOfCurrent","statusSymbols":{"":" ","wip":"w","done":"x","assigned":"a","moved":"m","blocked":"b","delegated":"l","dropped":"d","pending":"y"},"prioritySymbols":{"H":"high","M":"medium","L":"low"},"todoIntegration":false,"createTaskSelectionType":"selection2link","taskCompleteStatus":["done","x"]},"enableUserTags":true,"enableHashTags":true,"enableEditorDecorations":true,"enableFullHierarchyNoteTitle":false},"preview":{"enableFMTitle":true,"enableNoteTitleForLink":true,"enablePrettyRefs":true,"enableKatex":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"automaticallyShowPreview":false},"publishing":{"enableFMTitle":true,"enableNoteTitleForLink":true,"enablePrettyRefs":true,"enableKatex":true,"copyAssets":true,"siteHierarchies":["root"],"writeStubs":true,"siteRootDir":"docs","seo":{"title":"BrainMatter","description":"Personal knowledge space","author":"DeltaManiac","twitter":"delta_maniac"},"github":{"enableEditLink":true,"editLinkText":"Edit this page on GitHub","editBranch":"main","editViewMode":"tree","editRepository":"https://github.com/DeltaManiac/deltamaniac.github.io"},"enableSiteLastModified":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"enableRandomlyColoredTags":true,"enableTaskNotes":true,"enablePrettyLinks":true,"searchMode":"lookup","siteUrl":"https://deltamaniac.github.io/","hierarchy":{"root":{"publishByDefault":true}},"siteFaviconPath":"favicon.ico","siteIndex":"root"},"generateChangelog":true}},"__N_SSG":true},"page":"/notes/[id]","query":{"id":"6Wl0i0BjF7yD85uM5RTyK"},"buildId":"uwaFLQSct0mTPwxN4Nqr7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

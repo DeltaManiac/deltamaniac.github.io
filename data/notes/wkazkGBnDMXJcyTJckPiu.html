@@ -1,0 +1,211 @@
+<h1 id="producer">Producer<a aria-hidden="true" class="anchor-heading icon-link" href="#producer"></a></h1>
+<h2 id="producer-1">Producer<a aria-hidden="true" class="anchor-heading icon-link" href="#producer-1"></a></h2>
+<p>Kafka has a binary wire protocol.This means that it is possible for applications to read messages from Kafka or write messages to Kafka simply by sending the correct byte sequences to Kafka’s network port.</p>
+<p>Key Structure is <code>ProducerRecord</code></p>
+<p><img src="/assets/images/2020-10-11-20-37-00.png"></p>
+<h1 id="serializer">Serializer<a aria-hidden="true" class="anchor-heading icon-link" href="#serializer"></a></h1>
+<p>Converts between wire format and code</p>
+<p><a href="https://https://avro.apache.org/docs/current">Apache Avro</a>
+Define a common schema for serialization and deserialization
+Store in schema Registry
+Store schema identifier in produced message
+<img src="/assets/images/2020-10-11-20-37-15.png"></p>
+<h1 id="creating-a-producer">Creating a Producer<a aria-hidden="true" class="anchor-heading icon-link" href="#creating-a-producer"></a></h1>
+<h2 id="in-rust">In <a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#in-rust"></a></h2>
+<p>Crate : <a href="https://crates.io/crates/kafka">kafka</a></p>
+<pre class="language-rust"><code class="language-rust"><span class="token comment">// Producer Code</span>
+<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>fmt<span class="token punctuation">::</span></span><span class="token class-name">Write</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>time<span class="token punctuation">::</span></span><span class="token class-name">Duration</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">kafka<span class="token punctuation">::</span>producer<span class="token punctuation">::</span></span><span class="token punctuation">{</span><span class="token class-name">Producer</span><span class="token punctuation">,</span> <span class="token class-name">Record</span><span class="token punctuation">,</span> <span class="token class-name">RequiredAcks</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token keyword">mut</span> producer <span class="token operator">=</span> <span class="token class-name">Producer</span><span class="token punctuation">::</span><span class="token function">from_hosts</span><span class="token punctuation">(</span><span class="token macro property">vec!</span><span class="token punctuation">(</span><span class="token string">"localhost:9092"</span><span class="token punctuation">.</span><span class="token function">to_owned</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">with_ack_timeout</span><span class="token punctuation">(</span><span class="token class-name">Duration</span><span class="token punctuation">::</span><span class="token function">from_secs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">with_required_acks</span><span class="token punctuation">(</span><span class="token class-name">RequiredAcks</span><span class="token punctuation">::</span><span class="token class-name">One</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token keyword">mut</span> buf <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">::</span>with<span class="token operator">*</span><span class="token function">capacity</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token number">0</span><span class="token punctuation">..</span><span class="token number">10</span> <span class="token punctuation">{</span>
+<span class="token keyword">let</span> <span class="token operator">*</span> <span class="token operator">=</span> <span class="token macro property">write!</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span><span class="token keyword">mut</span> buf<span class="token punctuation">,</span> <span class="token string">"{}"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// some computation of the message data to be sent</span>
+producer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span><span class="token class-name">Record</span><span class="token punctuation">::</span><span class="token function">from_value</span><span class="token punctuation">(</span><span class="token string">"my-topic"</span><span class="token punctuation">,</span> buf<span class="token punctuation">.</span><span class="token function">as_bytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+buf<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Crate : <a href="https://crates.io/crates/rdkafka">rdkafka</a></p>
+<pre class="language-rust"><code class="language-rust"> sync <span class="token keyword">fn</span> <span class="token function-definition function">produce</span><span class="token punctuation">(</span>brokers<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">,</span> topic_name<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> producer<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token class-name">FutureProducer</span> <span class="token operator">=</span> <span class="token operator">&#x26;</span><span class="token class-name">ClientConfig</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"bootstrap.servers"</span><span class="token punctuation">,</span> brokers<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"message.timeout.ms"</span><span class="token punctuation">,</span> <span class="token string">"5000"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">expect</span><span class="token punctuation">(</span><span class="token string">"Producer creation error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// This loop is non blocking: all messages will be sent one after the other, without waiting</span>
+    <span class="token comment">// for the results.</span>
+    <span class="token keyword">let</span> futures <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">..</span><span class="token number">5</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>i<span class="token closure-punctuation punctuation">|</span></span> <span class="token keyword">async</span> <span class="token keyword">move</span> <span class="token punctuation">{</span>
+            <span class="token comment">// The send operation on the topic returns a future, which will be</span>
+            <span class="token comment">// completed once the result or failure from Kafka is received.</span>
+            <span class="token keyword">let</span> delivery_status <span class="token operator">=</span> producer
+                <span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>
+                    <span class="token class-name">FutureRecord</span><span class="token punctuation">::</span><span class="token function">to</span><span class="token punctuation">(</span>topic_name<span class="token punctuation">)</span>
+                        <span class="token punctuation">.</span><span class="token function">payload</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span><span class="token macro property">format!</span><span class="token punctuation">(</span><span class="token string">"Message {}"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">.</span><span class="token function">key</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span><span class="token macro property">format!</span><span class="token punctuation">(</span><span class="token string">"Key {}"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">.</span><span class="token function">headers</span><span class="token punctuation">(</span><span class="token class-name">OwnedHeaders</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"header_key"</span><span class="token punctuation">,</span> <span class="token string">"header_value"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token class-name">Duration</span><span class="token punctuation">::</span><span class="token function">from_secs</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token keyword">await</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// This will be executed when the result is received.</span>
+            <span class="token macro property">info!</span><span class="token punctuation">(</span><span class="token string">"Delivery status for message {} received"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            delivery_status
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">::</span><span class="token operator">&#x3C;</span><span class="token class-name">Vec</span><span class="token operator">&#x3C;</span>_<span class="token operator">>></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// This loop will wait until all delivery statuses have been received.</span>
+    <span class="token keyword">for</span> future <span class="token keyword">in</span> futures <span class="token punctuation">{</span>
+        <span class="token macro property">info!</span><span class="token punctuation">(</span><span class="token string">"Future completed. Result: {:?}"</span><span class="token punctuation">,</span> future<span class="token punctuation">.</span><span class="token keyword">await</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<p>Schema Registry for confluent : <a href="https://github.com/gklijs/schema_registry_converter">https://github.com/gklijs/schema_registry_converter</a></p>
+<p>Confluent Write up : <a href="https://www.confluent.io/blog/getting-started-with-rust-and-kafka/">https://www.confluent.io/blog/getting-started-with-rust-and-kafka/</a></p>
+<hr>
+<h2 id="in-go">In <a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#in-go"></a></h2>
+<p>Package : <a href="https://github.com/confluentinc/confluent-kafka-go">Confluent Inc</a></p>
+<pre class="language-golang"><code class="language-golang">func main() {
+
+	p, err := kafka.NewProducer(&#x26;kafka.ConfigMap{"bootstrap.servers": "localhost"})
+	if err != nil {
+		panic(err)
+	}
+
+	defer p.Close()
+
+	// Delivery report handler for produced messages
+	go func() {
+		for e := range p.Events() {
+			switch ev := e.(type) {
+			case *kafka.Message:
+				if ev.TopicPartition.Error != nil {
+					fmt.Printf("Delivery failed: %v\n", ev.TopicPartition)
+				} else {
+					fmt.Printf("Delivered message to %v\n", ev.TopicPartition)
+				}
+			}
+		}
+	}()
+
+	// Produce messages to topic (asynchronously)
+	topic := "myTopic"
+	for _, word := range []string{"Welcome", "to", "the", "Confluent", "Kafka", "Golang", "client"} {
+		p.Produce(&#x26;kafka.Message{
+			TopicPartition: kafka.TopicPartition{Topic: &#x26;topic, Partition: kafka.PartitionAny},
+			Value:          []byte(word),
+		}, nil)
+	}
+
+	// Wait for message deliveries before shutting down
+	p.Flush(15 * 1000)
+}
+</code></pre>
+<p>Package : <a href="https://github.com/segmentio/kafka-go">SegmentIO</a></p>
+<pre class="language-golang"><code class="language-golang">func producer() {
+
+    topic := "my-topic"
+    partition := 0
+
+    conn, _ := kafka.DialLeader(context.Background(), "tcp", "localhost:9092", topic, partition)
+
+    conn.SetWriteDeadline(time.Now().Add(10*time.Second))
+    conn.WriteMessages(
+    kafka.Message{Value: []byte("one!")},
+    kafka.Message{Value: []byte("two!")},
+    kafka.Message{Value: []byte("three!")},
+    )
+
+    conn.Close()
+}
+</code></pre>
+<p>Package : <a href="https://github.com/Shopify/sarama">Sarama</a></p>
+<pre class="language-golang"><code class="language-golang">//Sync Producer
+func newDataCollector(brokerList []string) sarama.SyncProducer {
+
+	// For the data collector, we are looking for strong consistency semantics.
+	// Because we don't change the flush settings, sarama will try to produce messages
+	// as fast as possible to keep latency low.
+	config := sarama.NewConfig()
+	config.Producer.RequiredAcks = sarama.WaitForAll // Wait for all in-sync replicas to ack the message
+	config.Producer.Retry.Max = 10                   // Retry up to 10 times to produce the message
+	config.Producer.Return.Successes = true
+	tlsConfig := createTlsConfiguration()
+	if tlsConfig != nil {
+		config.Net.TLS.Config = tlsConfig
+		config.Net.TLS.Enable = true
+	}
+
+	// On the broker side, you may want to change the following settings to get
+	// stronger consistency guarantees:
+	// - For your broker, set `unclean.leader.election.enable` to false
+	// - For the topic, you could increase `min.insync.replicas`.
+
+	producer, err := sarama.NewSyncProducer(brokerList, config)
+	if err != nil {
+		log.Fatalln("Failed to start Sarama producer:", err)
+	}
+
+	return producer
+}
+
+// Async Producer
+func newAccessLogProducer(brokerList []string) sarama.AsyncProducer {
+
+	// For the access log, we are looking for AP semantics, with high throughput.
+	// By creating batches of compressed messages, we reduce network I/O at a cost of more latency.
+	config := sarama.NewConfig()
+	tlsConfig := createTlsConfiguration()
+	if tlsConfig != nil {
+		config.Net.TLS.Enable = true
+		config.Net.TLS.Config = tlsConfig
+	}
+	config.Producer.RequiredAcks = sarama.WaitForLocal       // Only wait for the leader to ack
+	config.Producer.Compression = sarama.CompressionSnappy   // Compress messages
+	config.Producer.Flush.Frequency = 500 * time.Millisecond // Flush batches every 500ms
+
+	producer, err := sarama.NewAsyncProducer(brokerList, config)
+	if err != nil {
+		log.Fatalln("Failed to start Sarama producer:", err)
+	}
+
+	// We will just log to STDOUT if we're not able to produce messages.
+	// Note: messages will only be returned here after all retry attempts are exhausted.
+	go func() {
+		for err := range producer.Errors() {
+			log.Println("Failed to write access log entry:", err)
+		}
+	}()
+
+	return producer
+}
+
+go func sendMessage(){
+        // Synch
+		partition, offset, err := s.DataCollector.SendMessage(&#x26;sarama.ProducerMessage{
+			Topic: "important",
+			Value: sarama.StringEncoder(r.URL.RawQuery),
+        })
+        // Async
+        s.AccessLogProducer.Input() &#x3C;- &#x26;sarama.ProducerMessage{
+			Topic: "access_log",
+			Key:   sarama.StringEncoder(r.RemoteAddr),
+			Value: entry,
+		}
+}
+</code></pre>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/6Wl0i0BjF7yD85uM5RTyK">Kafka</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

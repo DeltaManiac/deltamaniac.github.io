@@ -1,0 +1,244 @@
+<h1 id="consumer">Consumer<a aria-hidden="true" class="anchor-heading icon-link" href="#consumer"></a></h1>
+<h2 id="consumer-1">Consumer<a aria-hidden="true" class="anchor-heading icon-link" href="#consumer-1"></a></h2>
+<ul>
+<li>
+<p>Subscribes to topics and receives message</p>
+</li>
+<li>
+<p>Consumer Group -> method of scaling consumption</p>
+<ul>
+<li>Membership triggered by a <code>JoinGroup</code> call</li>
+<li>First member is the de-facto group leader</li>
+<li>leader assigns partitions to consumers in the consumer group</li>
+<li>Membership is maintained by sending <em>heartbeats</em> at intervals regularly to the <em>group coordinator</em></li>
+<li>Sent during <code>poll</code> and <code>commit</code></li>
+<li>missing heartbeats for a period will trigger rebalance as the consumer is thought to be dead</li>
+</ul>
+</li>
+<li>
+<p><em>Rebalance</em> moving partition ownership from one consumer to another</p>
+<ul>
+<li>high scalability and availability</li>
+<li>creates a short unavailability window</li>
+</ul>
+</li>
+</ul>
+<p><img src="/assets/images/2020-10-11-20-47-04.png"></p>
+<h1 id="creating-a-consumer">Creating a Consumer<a aria-hidden="true" class="anchor-heading icon-link" href="#creating-a-consumer"></a></h1>
+<h2 id="in-rust">In <a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#in-rust"></a></h2>
+<p>Crate : <a href="https://crates.io/crates/kafka">kafka</a></p>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">use</span> <span class="token namespace">kafka<span class="token punctuation">::</span>consumer<span class="token punctuation">::</span></span><span class="token punctuation">{</span><span class="token class-name">Consumer</span><span class="token punctuation">,</span> <span class="token class-name">FetchOffset</span><span class="token punctuation">,</span> <span class="token class-name">GroupOffsetStorage</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token keyword">mut</span> consumer <span class="token operator">=</span>
+   <span class="token class-name">Consumer</span><span class="token punctuation">::</span><span class="token function">from_hosts</span><span class="token punctuation">(</span><span class="token macro property">vec!</span><span class="token punctuation">(</span><span class="token string">"localhost:9092"</span><span class="token punctuation">.</span><span class="token function">to_owned</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">with_topic_partitions</span><span class="token punctuation">(</span><span class="token string">"my-topic"</span><span class="token punctuation">.</span><span class="token function">to_owned</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&#x26;</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">with_fallback_offset</span><span class="token punctuation">(</span><span class="token class-name">FetchOffset</span><span class="token punctuation">::</span><span class="token class-name">Earliest</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">with_group</span><span class="token punctuation">(</span><span class="token string">"my-group"</span><span class="token punctuation">.</span><span class="token function">to_owned</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">with_offset_storage</span><span class="token punctuation">(</span><span class="token class-name">GroupOffsetStorage</span><span class="token punctuation">::</span><span class="token class-name">Kafka</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">loop</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> ms <span class="token keyword">in</span> consumer<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">iter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> m <span class="token keyword">in</span> ms<span class="token punctuation">.</span><span class="token function">messages</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"{:?}"</span><span class="token punctuation">,</span> m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    consumer<span class="token punctuation">.</span><span class="token function">consume_messageset</span><span class="token punctuation">(</span>ms<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  consumer<span class="token punctuation">.</span><span class="token function">commit_consumed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Crate : <a href="https://crates.io/crates/rdkafka">rdkafka</a></p>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">async</span> <span class="token keyword">fn</span> <span class="token function-definition function">consume</span><span class="token punctuation">(</span>brokers<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">,</span> group_id<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">,</span> topics<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token punctuation">[</span><span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> context <span class="token operator">=</span> <span class="token class-name">CustomContext</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> consumer<span class="token punctuation">:</span> <span class="token class-name">LoggingConsumer</span> <span class="token operator">=</span> <span class="token class-name">ClientConfig</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"group.id"</span><span class="token punctuation">,</span> group_id<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"bootstrap.servers"</span><span class="token punctuation">,</span> brokers<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"enable.partition.eof"</span><span class="token punctuation">,</span> <span class="token string">"false"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"session.timeout.ms"</span><span class="token punctuation">,</span> <span class="token string">"6000"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"enable.auto.commit"</span><span class="token punctuation">,</span> <span class="token string">"true"</span><span class="token punctuation">)</span>
+        <span class="token comment">//.set("statistics.interval.ms", "30000")</span>
+        <span class="token comment">//.set("auto.offset.reset", "smallest")</span>
+        <span class="token punctuation">.</span><span class="token function">set_log_level</span><span class="token punctuation">(</span><span class="token class-name">RDKafkaLogLevel</span><span class="token punctuation">::</span><span class="token class-name">Debug</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">create_with_context</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">expect</span><span class="token punctuation">(</span><span class="token string">"Consumer creation failed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    consumer
+        <span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span>topics<span class="token punctuation">.</span><span class="token function">to_vec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">expect</span><span class="token punctuation">(</span><span class="token string">"Can't subscribe to specified topics"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// consumer.start() returns a stream. The stream can be used ot chain together expensive steps,</span>
+    <span class="token comment">// such as complex computations on a thread pool or asynchronous IO.</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> message_stream <span class="token operator">=</span> consumer<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span> <span class="token keyword">let</span> <span class="token class-name">Some</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token operator">=</span> message_stream<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">await</span> <span class="token punctuation">{</span>
+        <span class="token keyword">match</span> message <span class="token punctuation">{</span>
+            <span class="token class-name">Err</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token macro property">warn!</span><span class="token punctuation">(</span><span class="token string">"Kafka error: {}"</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">Ok</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                <span class="token keyword">let</span> payload <span class="token operator">=</span> <span class="token keyword">match</span> m<span class="token punctuation">.</span><span class="token function">payload_view</span><span class="token punctuation">::</span><span class="token operator">&#x3C;</span><span class="token keyword">str</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">None</span> <span class="token operator">=></span> <span class="token string">""</span><span class="token punctuation">,</span>
+                    <span class="token class-name">Some</span><span class="token punctuation">(</span><span class="token class-name">Ok</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=></span> s<span class="token punctuation">,</span>
+                    <span class="token class-name">Some</span><span class="token punctuation">(</span><span class="token class-name">Err</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                        <span class="token macro property">warn!</span><span class="token punctuation">(</span><span class="token string">"Error while deserializing message payload: {:?}"</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token string">""</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                <span class="token macro property">info!</span><span class="token punctuation">(</span><span class="token string">"key: '{:?}', payload: '{}', topic: {}, partition: {}, offset: {}, timestamp: {:?}"</span><span class="token punctuation">,</span>
+                      m<span class="token punctuation">.</span><span class="token function">key</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> payload<span class="token punctuation">,</span> m<span class="token punctuation">.</span><span class="token function">topic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> m<span class="token punctuation">.</span><span class="token function">partition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> m<span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> m<span class="token punctuation">.</span><span class="token function">timestamp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token keyword">let</span> <span class="token class-name">Some</span><span class="token punctuation">(</span>headers<span class="token punctuation">)</span> <span class="token operator">=</span> m<span class="token punctuation">.</span><span class="token function">headers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token number">0</span><span class="token punctuation">..</span>headers<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">let</span> header <span class="token operator">=</span> headers<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token macro property">info!</span><span class="token punctuation">(</span><span class="token string">"  Header {:#?}: {:?}"</span><span class="token punctuation">,</span> header<span class="token number">.0</span><span class="token punctuation">,</span> header<span class="token number">.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                consumer<span class="token punctuation">.</span><span class="token function">commit_message</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span>m<span class="token punctuation">,</span> <span class="token class-name">CommitMode</span><span class="token punctuation">::</span><span class="token class-name">Async</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h2 id="in-go">In <a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#in-go"></a></h2>
+<p>Package : <a href="https://github.com/confluentinc/confluent-kafka-go">Confluent Inc</a></p>
+<pre class="language-golang"><code class="language-golang">func main() {
+
+	c, err := kafka.NewConsumer(&#x26;kafka.ConfigMap{
+		"bootstrap.servers": "localhost",
+		"group.id":          "myGroup",
+		"auto.offset.reset": "earliest",
+	})
+
+	if err != nil {
+		panic(err)
+	}
+
+	c.SubscribeTopics([]string{"myTopic", "^aRegex.*[Tt]opic"}, nil)
+
+	for {
+		msg, err := c.ReadMessage(-1)
+		if err == nil {
+			fmt.Printf("Message on %s: %s\n", msg.TopicPartition, string(msg.Value))
+		} else {
+			// The client will automatically try to recover from all errors.
+			fmt.Printf("Consumer error: %v (%v)\n", err, msg)
+		}
+	}
+
+	c.Close()
+}
+</code></pre>
+<h2 id="package--segmentio">Package : <a href="https://github.com/segmentio/kafka-go">SegmentIO</a><a aria-hidden="true" class="anchor-heading icon-link" href="#package--segmentio"></a></h2>
+<pre class="language-golang"><code class="language-golang">func consumer(){
+  r := kafka.NewReader(kafka.ReaderConfig{
+      Brokers:   []string{"localhost:9092"},
+      Topic:     "topic-A",
+      Partition: 0,
+      MinBytes:  10e3, // 10KB
+      MaxBytes:  10e6, // 10MB
+  })
+  r.SetOffset(42)
+
+  for {
+      m, err := r.ReadMessage(context.Background())
+      if err != nil {
+          break
+      }
+      fmt.Printf("message at offset %d: %s = %s\n", m.Offset, string(m.Key), string(m.Value))
+  }
+
+  r.Close()
+}
+</code></pre>
+<p>Package : <a href="https://github.com/Shopify/sarama">Sarama</a></p>
+<pre class="language-golang"><code class="language-golang">// ConsumeClaim must start a consumer loop of ConsumerGroupClaim's Messages().
+func (consumer *Consumer) ConsumeClaim(session sarama.ConsumerGroupSession, claim sarama.ConsumerGroupClaim) error {
+
+	// NOTE:
+	// Do not move the code below to a goroutine.
+	// The `ConsumeClaim` itself is called within a goroutine, see:
+	// https://github.com/Shopify/sarama/blob/master/consumer_group.go#L27-L29
+	for message := range claim.Messages() {
+		log.Printf("Message claimed: value = %s, timestamp = %v, topic = %s", string(message.Value), message.Timestamp, message.Topic)
+		session.MarkMessage(message, "")
+	}
+
+	return nil
+}
+
+go func() comsumer{
+		defer wg.Done()
+		for {
+			// `Consume` should be called inside an infinite loop, when a
+			// server-side rebalance happens, the consumer session will need to be
+			// recreated to get the new claims
+			if err := client.Consume(ctx, strings.Split(topics, ","), &#x26;consumer); err != nil {
+				log.Panicf("Error from consumer: %v", err)
+			}
+			// check if context was cancelled, signaling that the consumer should stop
+			if ctx.Err() != nil {
+				return
+			}
+			consumer.ready = make(chan bool)
+		}
+	}()
+
+</code></pre>
+<h1 id="commits">Commits<a aria-hidden="true" class="anchor-heading icon-link" href="#commits"></a></h1>
+<ul>
+<li>
+<p>Consumers use kafka to track their position in each partition</p>
+</li>
+<li>
+<p><code>commit</code> act of updating current position in kafka</p>
+</li>
+<li>
+<p>message <code>__consumer_offsets</code> topic with the offset for each partition</p>
+</li>
+<li>
+<p>when rebalance each consumer receives a new partition and obtains the latest committed offset from where to start reading</p>
+</li>
+<li>
+<p>Commit Strategy</p>
+<ul>
+<li>
+<p>Automatic</p>
+<ul>
+<li>Done by consumer every 5 seconds configurable</li>
+<li>Commits largest offset from <code>poll</code></li>
+<li>call to <code>poll</code> will always commit the last offset</li>
+<li>results in double processing if <code>rebalance</code> occurs in between a 5 sec window</li>
+</ul>
+</li>
+<li>
+<p>Commit Current Offset</p>
+<ul>
+<li>Gives control to the developer</li>
+<li><code>commitSync</code> triggers commit of the last offset returned by <code>poll</code></li>
+<li>must be called after processing all messages</li>
+<li>Synchronous call blocks the application</li>
+<li>Auto retry till success of non retry-able failure</li>
+</ul>
+</li>
+<li>
+<p>Asynchronous Commit</p>
+<ul>
+<li>Fire and forget till we get a callback</li>
+<li>Does not auto retry as a later commit request might have latest Offset</li>
+</ul>
+</li>
+<li>
+<p>Async + Sync Commit</p>
+<ul>
+<li><code>CommitAsync</code> always</li>
+<li>Trigger a CommitSync just before exit</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/6Wl0i0BjF7yD85uM5RTyK">Kafka</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

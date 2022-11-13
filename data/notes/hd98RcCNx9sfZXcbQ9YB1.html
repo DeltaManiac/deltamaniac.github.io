@@ -1,0 +1,35 @@
+<h1 id="minimum-difference">Minimum Difference<a aria-hidden="true" class="anchor-heading icon-link" href="#minimum-difference"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>Given a binary search tree, return the minimum difference between any two nodes in the tree.</p>
+<pre>Ex: Given the following tree...
+        2
+       / \
+      3   1
+return 1.
+</pre>
+<pre>Ex: Given the following tree...
+        29
+       /  \
+     17   50
+    /     / \
+   1    42  59
+return 8.
+</pre>
+<pre>Ex: Given the following tree...
+        2
+         \
+         100
+return 98.
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">getMinDiff</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">solve</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span>low<span class="token punctuation">,</span>high<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> node<span class="token punctuation">:</span> <span class="token keyword">return</span> high<span class="token operator">-</span>low
+        left <span class="token operator">=</span> solve<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">,</span>low<span class="token punctuation">,</span>node<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+        right <span class="token operator">=</span> solve<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">,</span>node<span class="token punctuation">.</span>val<span class="token punctuation">,</span>high<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token builtin">min</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span>
+   <span class="token keyword">return</span> solve<span class="token punctuation">(</span>root<span class="token punctuation">,</span><span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">'-inf'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">'inf'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

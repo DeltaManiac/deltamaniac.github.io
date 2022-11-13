@@ -1,0 +1,30 @@
+<h1 id="reverse-linked-list">Reverse Linked List<a aria-hidden="true" class="anchor-heading icon-link" href="#reverse-linked-list"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Facebook.</p>
+<p>Given a linked list, containing unique values, reverse it, and return the result.</p>
+<p>Ex: Given the following linked lists...</p>
+<blockquote>
+<p>1->2->3->null, return a reference to the node that contains 3 which points to a list that looks like the following: 3->2->1->null</p>
+<p>7->15->9->2->null, return a reference to the node that contains 2 which points to a list that looks like the following: 2->9->15->7->null</p>
+<p>1->null, return a reference to the node that contains 1 which points to a list that looks like the following: 1->null</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> ListNode<span class="token punctuation">:</span>
+    prev <span class="token operator">=</span> <span class="token boolean">None</span>
+    curr <span class="token operator">=</span> head
+    <span class="token keyword">while</span> curr<span class="token punctuation">:</span>
+        temp <span class="token operator">=</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span>
+        curr<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> prev
+        prev <span class="token operator">=</span> curr
+        curr <span class="token operator">=</span> temp
+    <span class="token keyword">return</span> prev
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

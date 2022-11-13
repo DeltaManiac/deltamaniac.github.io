@@ -1,0 +1,1454 @@
+{
+  "roots": [
+    {
+      "key": "ovOjtfOpF3vhfFUZi6DHp",
+      "title": "Algos",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "uy2GpkGV4z7MUJFLjpcqG",
+          "title": "Algodaily",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "lbJg6JrDgt8y1Zx9h0zF4",
+              "title": "Array Intersection",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "yFM6PkqFMakUoKtnuXCct",
+              "title": "Fizz Buzz",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "yN60NwY48svexBLDole4V",
+              "title": "Sum Digits Until One",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "BTLbjy2oU8Dy7nHAlKH4e",
+              "title": "Dollar Sign Deletion",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "VlnBjpgWAwtVElgthI1rn",
+              "title": "Detect Substring in String",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "7fxempkap6zxdsnjpgtpxua",
+          "title": "Cache",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "C5ybTwOXmAqV4XdcTA06w",
+              "title": "Least Frequently Used Cache",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "hXfo1GFtYfbMpCOVkr1Gp",
+          "title": "DailyByte",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "ohFCtqpYV2G0Z6JgQ6Yct",
+              "title": "Reverse String",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "F8T9e84ZfLZkwMuCBotm9",
+              "title": "Is Palindrome ??",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "XM1Z7OUbeItoYxJICWxeN",
+              "title": "Will It Return ??",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "98c5YzqkL91Qg2fN3vRow",
+              "title": "Capitalized Properly ??",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "T0YTzM8pRMQyCXaKIqFqV",
+              "title": "Binary Sum",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "lf4b9qYd73ucvZmtfWbCe",
+              "title": "Longest Common Shared Prefix",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "Pq0Rr7JIDCP22r3K6Q5Ne",
+              "title": "Is Palindrome Again ??",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "XrDduhPcocbvnuxNIgJnx",
+              "title": "Two Sum",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "jDjW3jGOXcJKC6sDf0eqs",
+              "title": "Stones and Jewels",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "tGccsbCXczBCjyc2nPURz",
+              "title": "Is Anagram ??",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "S0VXUqxdAlLm4YlClUBfD",
+              "title": "First Unique Character Index",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "nGdyBIzwQA4j6bvruVV5t",
+              "title": "Find Randomly Added Letter",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "ywfcHxiAryUBBe1kiRN3L",
+              "title": "Intersection Of Two Arrays",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "BHdKfMQ9cEOwiEPcANiIi",
+              "title": "String Symmetric Difference",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "oBXH1mHBh4xsA5Cll2r1c",
+              "title": "Merge Sorted Linked Lists",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "1r7C4Tb7AuTkVtwUweem1",
+              "title": "Remove nth to last node",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "te1G5xV9W3AHqpf0FjIxq",
+              "title": "Remove All Node Containing Value",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "uAHrrPQGbQnXmrMZWRmzL",
+              "title": "Middle Node of Linked List",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "7Hc5ffEoLnA0BZkmQW0ww",
+              "title": "Has Cycle ?!",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "QWfFbHdElCWirOdCzK3Cw",
+              "title": "Where Cycle ?!",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "kctoRCv8BRIfKdZOP9Iuz",
+              "title": "Reverse Linked List",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "EYkHwmoLGwKnbCfebglYG",
+              "title": "Balanced Brackets",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "INDH1D7my74PgGKOjkDop",
+              "title": "Compare Keystrokes",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "NrfqZ1XT6IxUMfJcr15O7",
+              "title": "Remove Adjacent Chars",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "6keo0GNJTy31TX50W2gGi",
+              "title": "Next Greater Element",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "gNXgtNsLpO2mSV9CEO696",
+              "title": "Call Counter",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "Bajllusd45BCEy2LWvGGi",
+              "title": "Moving Average",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "H1wJyDAOzWFw3TdkXGi7q",
+              "title": "Queue Based Stack",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "FZobsmu89KORgvQbdEc20",
+              "title": "Find Value in BST",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "DvmbT3vPCATaSEHoFRCEF",
+              "title": "Convert Binary Search Tree to Sorted Linked List",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "0Qdow7U8nEa3MP4rOUgId",
+              "title": "Lowest Common Ancestor",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "cLtsyzn8ZbTojiSTjw4yz",
+              "title": "Sorted Array to Binary Search Tree",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "lEQkcBXYTfMOn5SK9BYtp",
+              "title": "Identical Trees",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "hd98RcCNx9sfZXcbQ9YB1",
+              "title": "Minimum Difference",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "iy0XsO219wG3GO2TQhbSg",
+              "title": "Find Mode",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "Xkc7XPLPXKzeXbspwLs5J",
+              "title": "Gather Level",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "PHHaN0NCzRlfDJqfdMUCi",
+              "title": "Visible Values",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "5GsjtpVi5R49cqEt35d0t",
+              "title": "Bottoms Up",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "Jtz474L8lIyU5v4LsKrng",
+              "title": "Zig Zag Order",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "wQlIvY7nuhvKUdbd9Evns",
+              "title": "Gather N-ary Tree Levels",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "uSlHmjy4qGkkDP6oh5BTE",
+              "title": "Gather Column",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "6SyXABwFD3MumOuo9WbRS",
+              "title": "Max Depth",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "zXrFEIR5wQ6WLeyozLyK2",
+              "title": "Root To Leaf Paths",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "PFrP8aKT5l1JjVnRtPi3P",
+              "title": "Binary Path Sum",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "O4LlF44bqvlxcNHZawnaE",
+              "title": "Is Symmetric Tree",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "xMMy8j9SD0l9bcxNQvZJX",
+              "title": "Sum Left Leaves",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "DNzpfMaT5e4pDB445xYUo",
+              "title": "String Permutations",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "l66OlsoH7P9OOtSgFeAqO",
+              "title": "Generate Search Message",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "CwswPH6qeAQB1bnCFmbuF",
+              "title": "Word Search",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "TgIz3TBnOHXwh8HQjQqBs",
+              "title": "Same Leaves",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "1PLvwxFhDyuPv3J6ADQAD",
+          "title": "Dynamic Programming",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "ap9g9q7jgmn9b40chjgtnrk",
+          "title": "Lc",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "h7LfhXpQk2bqw3BDpHQkj",
+              "title": "Find First and Last position of element in a sorted array",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "kbradtcrbqkdj9bfxsnd6x5",
+          "title": "Sort",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "EawxKL2ZJLE1J6H5d789t",
+              "title": "Quick Sort",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "s4VCxV9Bg3TNzXGBonKY1",
+              "title": "Selection Sort",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "GHvqJvI4mwQzdaMjrbnHA",
+          "title": "Trees",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "FYompRqwHhSWOGvRdKWBt",
+              "title": "Binary Tree",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "3HX0EpU6Mix3n7Fn0PBMQ",
+                  "title": "Binary Tree Traversal",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "key": "J4cjNbOaIWUbDboR51IlI",
+              "title": "maxDepth",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "3dNch4I3rcDy5xXFn3R6B",
+      "title": "Advent of Code",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "nR8UBV96SJ5mwTb2gLMzw",
+          "title": "2015",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "L2cril5ljHqTytRB1Ful5",
+              "title": "Day 1",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "dCrlmw2LQFyXx0gtBSeoY",
+              "title": "Day 2",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "cjSvVPWm3nrMzwz3jMBEB",
+              "title": "Day 3",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "owOmNHbs0ZFkz2ipLXGHE",
+              "title": "Day 4",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "qiqmYUbwRjOhJPc3wLO3B",
+              "title": "Day 5",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "z3nQKvaJ2yB7hqaRlslpO",
+              "title": "Day 6",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "xyhWsTJOM1CdKck9dPGZw",
+              "title": "Day 7",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "Eth9B3GzVXKyze1tKYyMp",
+              "title": "Day 8",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "VeoZxynLIY90RkDY4qSQa",
+              "title": "Day 9",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "iM1PBcBQxW1CgPLUmzGq2",
+              "title": "Day 10",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "FYLGIs4Dh2Nsq1v5Jw0UD",
+              "title": "Day 11",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "mHoKN4fBdW04zTNyE6Roi",
+              "title": "Day 12",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "BWzIJm01jQ6aNNg56CwnS",
+      "title": "Games",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "GxCx0RuJn9aZnTttGiwAV",
+          "title": "Destiny",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "CCb9z44x6tToDKsRo1C6v",
+              "title": "Gamerdungeon",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "eypVVToVojb6pv5KaHqZe",
+                  "title": "Lore",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": [
+                    {
+                      "key": "bmfksVF45TgBHDdyUJsQS",
+                      "title": "Chimi",
+                      "icon": null,
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "vault",
+                      "children": []
+                    },
+                    {
+                      "key": "m7rFJ4VATbLr8HxjQggV1",
+                      "title": "Lucan",
+                      "icon": null,
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "vault",
+                      "children": []
+                    },
+                    {
+                      "key": "ZitkEWdUmq0xjuPdkT8uR",
+                      "title": "Swift",
+                      "icon": null,
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "vault",
+                      "children": []
+                    },
+                    {
+                      "key": "YVrkjsKWMdIVBDgQOfonU",
+                      "title": "Zek",
+                      "icon": null,
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "vault",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "33nmklapwax1duczowxks4d",
+              "title": "Project",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "Vbsrk5GfrD7i1z2CvyX6w",
+                  "title": "Striker",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "IJB8jrcnIdK13sDITqOjy",
+          "title": "Tis-100",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "4FBpReEDijjQUM3H004Bu",
+              "title": "Segment",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "JCl9JZAKJwQjFwhESx2Ac",
+                  "title": "00150",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "vubGYGeiBWg3n7rewTEVi",
+                  "title": "10981",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "yjIzJAoRDamPUAIHBQNy1",
+                  "title": "20176",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "zjsqCWBOt29JUBq6ZeOey",
+                  "title": "21340",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "ogdoy0dH15fNSg4M3irNS",
+                  "title": "22280",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "6RRCb93zuX7qI8pXKxr4N",
+                  "title": "30647",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "umAO61qBwGGbLPh5ktmvO",
+                  "title": "31904",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "oui26s3o8wsu1uvj78b8wdw",
+                  "title": "32050",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "pazryrtkvt7sy1pmo08mnid",
+                  "title": "33762",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "tx7vdzc98otmxpyuwcj6gx9",
+                  "title": "40196",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "tljsjqw1422w8cb28kqrrsp",
+                  "title": "41427",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "qvsve4bcorl4qxchnfiuusf",
+                  "title": "42656",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "csrtis7rmu85wxfivpn3yt5",
+                  "title": "43786",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "32ycg85z2dqmwgyi4utxrvc",
+                  "title": "50370",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "e2jtqtbl4kn4i83qd55w6ak",
+                  "title": "51781",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "ssadkvxk0ugta7xeszqbgp0",
+                  "title": "52544",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "7nz7hjw4g7pyim1gsb9q116",
+                  "title": "53897",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "kuyv1m9uuolykukq8nqonml",
+                  "title": "6009",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "5nfj75v8jhkg73gr87oizxs",
+                  "title": "61212",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "zn6yh2g7c7m27m7spggt3fl",
+                  "title": "62711",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "jiv4ktdgw664fs4h0c9xsub",
+                  "title": "63534",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "ewqv4lbm2vq1beb1lusaii8",
+                  "title": "70601",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "y6nz0uimi67mvlffm6waxga",
+                  "title": "UNKNOWN",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "96Hj5nYpnUciwlTenFpoU",
+      "title": "Go",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "OmHkA6xzHAPClubvCFwQt",
+          "title": "Framework",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "QNZTT1U9ZBung828xTuQz",
+              "title": "Gokit",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "6Wl0i0BjF7yD85uM5RTyK",
+      "title": "Kafka",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "PeDQmsjlEYcdja9yj2nNL",
+          "title": "Consumer",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "wkazkGBnDMXJcyTJckPiu",
+          "title": "Producer",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "o3yahkxofd7qighsrvpg893",
+      "title": "Programming",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "mx8mxexglr76f2wexrst5rh",
+          "title": "S-expressions",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "de9dmvtq24un4eg7t18os7y",
+          "title": "JavaScript",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "t5w4acej37neksi1gifrvfo",
+          "title": "Network",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "Vlru1TrIpjjC4viiNvcMa",
+              "title": "Overview",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "qeciETQdP6y5coUZpEL1W",
+              "title": "Resource Locating and Traffic Routing",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "wfOGHenRJP9nCVGtK2e5V",
+              "title": "Reliable TCP Streams",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "m61vpgg6kf66r1yh8tmio24",
+          "title": "Web Assembly",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "7kyCk8YAkDvIrxLtAUFkG",
+      "title": "Python",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "7E5TbfhNUcQdeVfn9wKKb",
+          "title": "Primer",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "bKosBjYdFUM5XpRKYA0MT",
+          "title": "Object Oriented Programming",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "A6TBKYAcFVjBqZpdbHuaS",
+      "title": "Rust",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "qOyBUuT4UMS8TYis4MnIv",
+          "title": "Bots",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "rtmKu8OspeorpBFZQCAGS",
+              "title": "Reddit",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "t6ilpq115sipjv378ambtkv",
+      "title": "Templates",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "yxevpvuphxqyx4s5ujhfl6u",
+          "title": "Tis 100 Solution Template",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "w3B0c1Y72MfzhwoVNx7vx",
+      "title": "Todo",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": []
+    }
+  ],
+  "child2parent": {
+    "ovOjtfOpF3vhfFUZi6DHp": null,
+    "uy2GpkGV4z7MUJFLjpcqG": "ovOjtfOpF3vhfFUZi6DHp",
+    "lbJg6JrDgt8y1Zx9h0zF4": "uy2GpkGV4z7MUJFLjpcqG",
+    "yFM6PkqFMakUoKtnuXCct": "uy2GpkGV4z7MUJFLjpcqG",
+    "yN60NwY48svexBLDole4V": "uy2GpkGV4z7MUJFLjpcqG",
+    "BTLbjy2oU8Dy7nHAlKH4e": "uy2GpkGV4z7MUJFLjpcqG",
+    "VlnBjpgWAwtVElgthI1rn": "uy2GpkGV4z7MUJFLjpcqG",
+    "7fxempkap6zxdsnjpgtpxua": "ovOjtfOpF3vhfFUZi6DHp",
+    "C5ybTwOXmAqV4XdcTA06w": "7fxempkap6zxdsnjpgtpxua",
+    "hXfo1GFtYfbMpCOVkr1Gp": "ovOjtfOpF3vhfFUZi6DHp",
+    "ohFCtqpYV2G0Z6JgQ6Yct": "hXfo1GFtYfbMpCOVkr1Gp",
+    "F8T9e84ZfLZkwMuCBotm9": "hXfo1GFtYfbMpCOVkr1Gp",
+    "XM1Z7OUbeItoYxJICWxeN": "hXfo1GFtYfbMpCOVkr1Gp",
+    "98c5YzqkL91Qg2fN3vRow": "hXfo1GFtYfbMpCOVkr1Gp",
+    "T0YTzM8pRMQyCXaKIqFqV": "hXfo1GFtYfbMpCOVkr1Gp",
+    "lf4b9qYd73ucvZmtfWbCe": "hXfo1GFtYfbMpCOVkr1Gp",
+    "Pq0Rr7JIDCP22r3K6Q5Ne": "hXfo1GFtYfbMpCOVkr1Gp",
+    "XrDduhPcocbvnuxNIgJnx": "hXfo1GFtYfbMpCOVkr1Gp",
+    "jDjW3jGOXcJKC6sDf0eqs": "hXfo1GFtYfbMpCOVkr1Gp",
+    "tGccsbCXczBCjyc2nPURz": "hXfo1GFtYfbMpCOVkr1Gp",
+    "S0VXUqxdAlLm4YlClUBfD": "hXfo1GFtYfbMpCOVkr1Gp",
+    "nGdyBIzwQA4j6bvruVV5t": "hXfo1GFtYfbMpCOVkr1Gp",
+    "ywfcHxiAryUBBe1kiRN3L": "hXfo1GFtYfbMpCOVkr1Gp",
+    "BHdKfMQ9cEOwiEPcANiIi": "hXfo1GFtYfbMpCOVkr1Gp",
+    "oBXH1mHBh4xsA5Cll2r1c": "hXfo1GFtYfbMpCOVkr1Gp",
+    "1r7C4Tb7AuTkVtwUweem1": "hXfo1GFtYfbMpCOVkr1Gp",
+    "te1G5xV9W3AHqpf0FjIxq": "hXfo1GFtYfbMpCOVkr1Gp",
+    "uAHrrPQGbQnXmrMZWRmzL": "hXfo1GFtYfbMpCOVkr1Gp",
+    "7Hc5ffEoLnA0BZkmQW0ww": "hXfo1GFtYfbMpCOVkr1Gp",
+    "QWfFbHdElCWirOdCzK3Cw": "hXfo1GFtYfbMpCOVkr1Gp",
+    "kctoRCv8BRIfKdZOP9Iuz": "hXfo1GFtYfbMpCOVkr1Gp",
+    "EYkHwmoLGwKnbCfebglYG": "hXfo1GFtYfbMpCOVkr1Gp",
+    "INDH1D7my74PgGKOjkDop": "hXfo1GFtYfbMpCOVkr1Gp",
+    "NrfqZ1XT6IxUMfJcr15O7": "hXfo1GFtYfbMpCOVkr1Gp",
+    "6keo0GNJTy31TX50W2gGi": "hXfo1GFtYfbMpCOVkr1Gp",
+    "gNXgtNsLpO2mSV9CEO696": "hXfo1GFtYfbMpCOVkr1Gp",
+    "Bajllusd45BCEy2LWvGGi": "hXfo1GFtYfbMpCOVkr1Gp",
+    "H1wJyDAOzWFw3TdkXGi7q": "hXfo1GFtYfbMpCOVkr1Gp",
+    "FZobsmu89KORgvQbdEc20": "hXfo1GFtYfbMpCOVkr1Gp",
+    "DvmbT3vPCATaSEHoFRCEF": "hXfo1GFtYfbMpCOVkr1Gp",
+    "0Qdow7U8nEa3MP4rOUgId": "hXfo1GFtYfbMpCOVkr1Gp",
+    "cLtsyzn8ZbTojiSTjw4yz": "hXfo1GFtYfbMpCOVkr1Gp",
+    "lEQkcBXYTfMOn5SK9BYtp": "hXfo1GFtYfbMpCOVkr1Gp",
+    "hd98RcCNx9sfZXcbQ9YB1": "hXfo1GFtYfbMpCOVkr1Gp",
+    "iy0XsO219wG3GO2TQhbSg": "hXfo1GFtYfbMpCOVkr1Gp",
+    "Xkc7XPLPXKzeXbspwLs5J": "hXfo1GFtYfbMpCOVkr1Gp",
+    "PHHaN0NCzRlfDJqfdMUCi": "hXfo1GFtYfbMpCOVkr1Gp",
+    "5GsjtpVi5R49cqEt35d0t": "hXfo1GFtYfbMpCOVkr1Gp",
+    "Jtz474L8lIyU5v4LsKrng": "hXfo1GFtYfbMpCOVkr1Gp",
+    "wQlIvY7nuhvKUdbd9Evns": "hXfo1GFtYfbMpCOVkr1Gp",
+    "uSlHmjy4qGkkDP6oh5BTE": "hXfo1GFtYfbMpCOVkr1Gp",
+    "6SyXABwFD3MumOuo9WbRS": "hXfo1GFtYfbMpCOVkr1Gp",
+    "zXrFEIR5wQ6WLeyozLyK2": "hXfo1GFtYfbMpCOVkr1Gp",
+    "PFrP8aKT5l1JjVnRtPi3P": "hXfo1GFtYfbMpCOVkr1Gp",
+    "O4LlF44bqvlxcNHZawnaE": "hXfo1GFtYfbMpCOVkr1Gp",
+    "xMMy8j9SD0l9bcxNQvZJX": "hXfo1GFtYfbMpCOVkr1Gp",
+    "DNzpfMaT5e4pDB445xYUo": "hXfo1GFtYfbMpCOVkr1Gp",
+    "l66OlsoH7P9OOtSgFeAqO": "hXfo1GFtYfbMpCOVkr1Gp",
+    "CwswPH6qeAQB1bnCFmbuF": "hXfo1GFtYfbMpCOVkr1Gp",
+    "TgIz3TBnOHXwh8HQjQqBs": "hXfo1GFtYfbMpCOVkr1Gp",
+    "1PLvwxFhDyuPv3J6ADQAD": "ovOjtfOpF3vhfFUZi6DHp",
+    "ap9g9q7jgmn9b40chjgtnrk": "ovOjtfOpF3vhfFUZi6DHp",
+    "h7LfhXpQk2bqw3BDpHQkj": "ap9g9q7jgmn9b40chjgtnrk",
+    "kbradtcrbqkdj9bfxsnd6x5": "ovOjtfOpF3vhfFUZi6DHp",
+    "EawxKL2ZJLE1J6H5d789t": "kbradtcrbqkdj9bfxsnd6x5",
+    "s4VCxV9Bg3TNzXGBonKY1": "kbradtcrbqkdj9bfxsnd6x5",
+    "GHvqJvI4mwQzdaMjrbnHA": "ovOjtfOpF3vhfFUZi6DHp",
+    "FYompRqwHhSWOGvRdKWBt": "GHvqJvI4mwQzdaMjrbnHA",
+    "3HX0EpU6Mix3n7Fn0PBMQ": "FYompRqwHhSWOGvRdKWBt",
+    "J4cjNbOaIWUbDboR51IlI": "GHvqJvI4mwQzdaMjrbnHA",
+    "3dNch4I3rcDy5xXFn3R6B": null,
+    "nR8UBV96SJ5mwTb2gLMzw": "3dNch4I3rcDy5xXFn3R6B",
+    "L2cril5ljHqTytRB1Ful5": "nR8UBV96SJ5mwTb2gLMzw",
+    "dCrlmw2LQFyXx0gtBSeoY": "nR8UBV96SJ5mwTb2gLMzw",
+    "cjSvVPWm3nrMzwz3jMBEB": "nR8UBV96SJ5mwTb2gLMzw",
+    "owOmNHbs0ZFkz2ipLXGHE": "nR8UBV96SJ5mwTb2gLMzw",
+    "qiqmYUbwRjOhJPc3wLO3B": "nR8UBV96SJ5mwTb2gLMzw",
+    "z3nQKvaJ2yB7hqaRlslpO": "nR8UBV96SJ5mwTb2gLMzw",
+    "xyhWsTJOM1CdKck9dPGZw": "nR8UBV96SJ5mwTb2gLMzw",
+    "Eth9B3GzVXKyze1tKYyMp": "nR8UBV96SJ5mwTb2gLMzw",
+    "VeoZxynLIY90RkDY4qSQa": "nR8UBV96SJ5mwTb2gLMzw",
+    "iM1PBcBQxW1CgPLUmzGq2": "nR8UBV96SJ5mwTb2gLMzw",
+    "FYLGIs4Dh2Nsq1v5Jw0UD": "nR8UBV96SJ5mwTb2gLMzw",
+    "mHoKN4fBdW04zTNyE6Roi": "nR8UBV96SJ5mwTb2gLMzw",
+    "BWzIJm01jQ6aNNg56CwnS": null,
+    "GxCx0RuJn9aZnTttGiwAV": "BWzIJm01jQ6aNNg56CwnS",
+    "CCb9z44x6tToDKsRo1C6v": "GxCx0RuJn9aZnTttGiwAV",
+    "eypVVToVojb6pv5KaHqZe": "CCb9z44x6tToDKsRo1C6v",
+    "bmfksVF45TgBHDdyUJsQS": "eypVVToVojb6pv5KaHqZe",
+    "m7rFJ4VATbLr8HxjQggV1": "eypVVToVojb6pv5KaHqZe",
+    "ZitkEWdUmq0xjuPdkT8uR": "eypVVToVojb6pv5KaHqZe",
+    "YVrkjsKWMdIVBDgQOfonU": "eypVVToVojb6pv5KaHqZe",
+    "33nmklapwax1duczowxks4d": "GxCx0RuJn9aZnTttGiwAV",
+    "Vbsrk5GfrD7i1z2CvyX6w": "33nmklapwax1duczowxks4d",
+    "IJB8jrcnIdK13sDITqOjy": "BWzIJm01jQ6aNNg56CwnS",
+    "4FBpReEDijjQUM3H004Bu": "IJB8jrcnIdK13sDITqOjy",
+    "JCl9JZAKJwQjFwhESx2Ac": "4FBpReEDijjQUM3H004Bu",
+    "vubGYGeiBWg3n7rewTEVi": "4FBpReEDijjQUM3H004Bu",
+    "yjIzJAoRDamPUAIHBQNy1": "4FBpReEDijjQUM3H004Bu",
+    "zjsqCWBOt29JUBq6ZeOey": "4FBpReEDijjQUM3H004Bu",
+    "ogdoy0dH15fNSg4M3irNS": "4FBpReEDijjQUM3H004Bu",
+    "6RRCb93zuX7qI8pXKxr4N": "4FBpReEDijjQUM3H004Bu",
+    "umAO61qBwGGbLPh5ktmvO": "4FBpReEDijjQUM3H004Bu",
+    "oui26s3o8wsu1uvj78b8wdw": "4FBpReEDijjQUM3H004Bu",
+    "pazryrtkvt7sy1pmo08mnid": "4FBpReEDijjQUM3H004Bu",
+    "tx7vdzc98otmxpyuwcj6gx9": "4FBpReEDijjQUM3H004Bu",
+    "tljsjqw1422w8cb28kqrrsp": "4FBpReEDijjQUM3H004Bu",
+    "qvsve4bcorl4qxchnfiuusf": "4FBpReEDijjQUM3H004Bu",
+    "csrtis7rmu85wxfivpn3yt5": "4FBpReEDijjQUM3H004Bu",
+    "32ycg85z2dqmwgyi4utxrvc": "4FBpReEDijjQUM3H004Bu",
+    "e2jtqtbl4kn4i83qd55w6ak": "4FBpReEDijjQUM3H004Bu",
+    "ssadkvxk0ugta7xeszqbgp0": "4FBpReEDijjQUM3H004Bu",
+    "7nz7hjw4g7pyim1gsb9q116": "4FBpReEDijjQUM3H004Bu",
+    "kuyv1m9uuolykukq8nqonml": "4FBpReEDijjQUM3H004Bu",
+    "5nfj75v8jhkg73gr87oizxs": "4FBpReEDijjQUM3H004Bu",
+    "zn6yh2g7c7m27m7spggt3fl": "4FBpReEDijjQUM3H004Bu",
+    "jiv4ktdgw664fs4h0c9xsub": "4FBpReEDijjQUM3H004Bu",
+    "ewqv4lbm2vq1beb1lusaii8": "4FBpReEDijjQUM3H004Bu",
+    "y6nz0uimi67mvlffm6waxga": "4FBpReEDijjQUM3H004Bu",
+    "96Hj5nYpnUciwlTenFpoU": null,
+    "OmHkA6xzHAPClubvCFwQt": "96Hj5nYpnUciwlTenFpoU",
+    "QNZTT1U9ZBung828xTuQz": "OmHkA6xzHAPClubvCFwQt",
+    "6Wl0i0BjF7yD85uM5RTyK": null,
+    "PeDQmsjlEYcdja9yj2nNL": "6Wl0i0BjF7yD85uM5RTyK",
+    "wkazkGBnDMXJcyTJckPiu": "6Wl0i0BjF7yD85uM5RTyK",
+    "o3yahkxofd7qighsrvpg893": null,
+    "mx8mxexglr76f2wexrst5rh": "o3yahkxofd7qighsrvpg893",
+    "de9dmvtq24un4eg7t18os7y": "o3yahkxofd7qighsrvpg893",
+    "t5w4acej37neksi1gifrvfo": "o3yahkxofd7qighsrvpg893",
+    "Vlru1TrIpjjC4viiNvcMa": "t5w4acej37neksi1gifrvfo",
+    "qeciETQdP6y5coUZpEL1W": "t5w4acej37neksi1gifrvfo",
+    "wfOGHenRJP9nCVGtK2e5V": "t5w4acej37neksi1gifrvfo",
+    "m61vpgg6kf66r1yh8tmio24": "o3yahkxofd7qighsrvpg893",
+    "7kyCk8YAkDvIrxLtAUFkG": null,
+    "7E5TbfhNUcQdeVfn9wKKb": "7kyCk8YAkDvIrxLtAUFkG",
+    "bKosBjYdFUM5XpRKYA0MT": "7kyCk8YAkDvIrxLtAUFkG",
+    "A6TBKYAcFVjBqZpdbHuaS": null,
+    "qOyBUuT4UMS8TYis4MnIv": "A6TBKYAcFVjBqZpdbHuaS",
+    "rtmKu8OspeorpBFZQCAGS": "qOyBUuT4UMS8TYis4MnIv",
+    "t6ilpq115sipjv378ambtkv": null,
+    "yxevpvuphxqyx4s5ujhfl6u": "t6ilpq115sipjv378ambtkv",
+    "w3B0c1Y72MfzhwoVNx7vx": null
+  },
+  "notesLabelById": {
+    "ovOjtfOpF3vhfFUZi6DHp": "Algos",
+    "uy2GpkGV4z7MUJFLjpcqG": "Algodaily",
+    "lbJg6JrDgt8y1Zx9h0zF4": "Array Intersection",
+    "yFM6PkqFMakUoKtnuXCct": "Fizz Buzz",
+    "yN60NwY48svexBLDole4V": "Sum Digits Until One",
+    "BTLbjy2oU8Dy7nHAlKH4e": "Dollar Sign Deletion",
+    "VlnBjpgWAwtVElgthI1rn": "Detect Substring in String",
+    "7fxempkap6zxdsnjpgtpxua": "Cache",
+    "C5ybTwOXmAqV4XdcTA06w": "Least Frequently Used Cache",
+    "hXfo1GFtYfbMpCOVkr1Gp": "DailyByte",
+    "ohFCtqpYV2G0Z6JgQ6Yct": "Reverse String",
+    "F8T9e84ZfLZkwMuCBotm9": "Is Palindrome ??",
+    "XM1Z7OUbeItoYxJICWxeN": "Will It Return ??",
+    "98c5YzqkL91Qg2fN3vRow": "Capitalized Properly ??",
+    "T0YTzM8pRMQyCXaKIqFqV": "Binary Sum",
+    "lf4b9qYd73ucvZmtfWbCe": "Longest Common Shared Prefix",
+    "Pq0Rr7JIDCP22r3K6Q5Ne": "Is Palindrome Again ??",
+    "XrDduhPcocbvnuxNIgJnx": "Two Sum",
+    "jDjW3jGOXcJKC6sDf0eqs": "Stones and Jewels",
+    "tGccsbCXczBCjyc2nPURz": "Is Anagram ??",
+    "S0VXUqxdAlLm4YlClUBfD": "First Unique Character Index",
+    "nGdyBIzwQA4j6bvruVV5t": "Find Randomly Added Letter",
+    "ywfcHxiAryUBBe1kiRN3L": "Intersection Of Two Arrays",
+    "BHdKfMQ9cEOwiEPcANiIi": "String Symmetric Difference",
+    "oBXH1mHBh4xsA5Cll2r1c": "Merge Sorted Linked Lists",
+    "1r7C4Tb7AuTkVtwUweem1": "Remove nth to last node",
+    "te1G5xV9W3AHqpf0FjIxq": "Remove All Node Containing Value",
+    "uAHrrPQGbQnXmrMZWRmzL": "Middle Node of Linked List",
+    "7Hc5ffEoLnA0BZkmQW0ww": "Has Cycle ?!",
+    "QWfFbHdElCWirOdCzK3Cw": "Where Cycle ?!",
+    "kctoRCv8BRIfKdZOP9Iuz": "Reverse Linked List",
+    "EYkHwmoLGwKnbCfebglYG": "Balanced Brackets",
+    "INDH1D7my74PgGKOjkDop": "Compare Keystrokes",
+    "NrfqZ1XT6IxUMfJcr15O7": "Remove Adjacent Chars",
+    "6keo0GNJTy31TX50W2gGi": "Next Greater Element",
+    "gNXgtNsLpO2mSV9CEO696": "Call Counter",
+    "Bajllusd45BCEy2LWvGGi": "Moving Average",
+    "H1wJyDAOzWFw3TdkXGi7q": "Queue Based Stack",
+    "FZobsmu89KORgvQbdEc20": "Find Value in BST",
+    "DvmbT3vPCATaSEHoFRCEF": "Convert Binary Search Tree to Sorted Linked List",
+    "0Qdow7U8nEa3MP4rOUgId": "Lowest Common Ancestor",
+    "cLtsyzn8ZbTojiSTjw4yz": "Sorted Array to Binary Search Tree",
+    "lEQkcBXYTfMOn5SK9BYtp": "Identical Trees",
+    "hd98RcCNx9sfZXcbQ9YB1": "Minimum Difference",
+    "iy0XsO219wG3GO2TQhbSg": "Find Mode",
+    "Xkc7XPLPXKzeXbspwLs5J": "Gather Level",
+    "PHHaN0NCzRlfDJqfdMUCi": "Visible Values",
+    "5GsjtpVi5R49cqEt35d0t": "Bottoms Up",
+    "Jtz474L8lIyU5v4LsKrng": "Zig Zag Order",
+    "wQlIvY7nuhvKUdbd9Evns": "Gather N-ary Tree Levels",
+    "uSlHmjy4qGkkDP6oh5BTE": "Gather Column",
+    "6SyXABwFD3MumOuo9WbRS": "Max Depth",
+    "zXrFEIR5wQ6WLeyozLyK2": "Root To Leaf Paths",
+    "PFrP8aKT5l1JjVnRtPi3P": "Binary Path Sum",
+    "O4LlF44bqvlxcNHZawnaE": "Is Symmetric Tree",
+    "xMMy8j9SD0l9bcxNQvZJX": "Sum Left Leaves",
+    "DNzpfMaT5e4pDB445xYUo": "String Permutations",
+    "l66OlsoH7P9OOtSgFeAqO": "Generate Search Message",
+    "CwswPH6qeAQB1bnCFmbuF": "Word Search",
+    "TgIz3TBnOHXwh8HQjQqBs": "Same Leaves",
+    "1PLvwxFhDyuPv3J6ADQAD": "Dynamic Programming",
+    "ap9g9q7jgmn9b40chjgtnrk": "Lc",
+    "h7LfhXpQk2bqw3BDpHQkj": "Find First and Last position of element in a sorted array",
+    "kbradtcrbqkdj9bfxsnd6x5": "Sort",
+    "EawxKL2ZJLE1J6H5d789t": "Quick Sort",
+    "s4VCxV9Bg3TNzXGBonKY1": "Selection Sort",
+    "GHvqJvI4mwQzdaMjrbnHA": "Trees",
+    "FYompRqwHhSWOGvRdKWBt": "Binary Tree",
+    "3HX0EpU6Mix3n7Fn0PBMQ": "Binary Tree Traversal",
+    "J4cjNbOaIWUbDboR51IlI": "maxDepth",
+    "3dNch4I3rcDy5xXFn3R6B": "Advent of Code",
+    "nR8UBV96SJ5mwTb2gLMzw": "2015",
+    "L2cril5ljHqTytRB1Ful5": "Day 1",
+    "dCrlmw2LQFyXx0gtBSeoY": "Day 2",
+    "cjSvVPWm3nrMzwz3jMBEB": "Day 3",
+    "owOmNHbs0ZFkz2ipLXGHE": "Day 4",
+    "qiqmYUbwRjOhJPc3wLO3B": "Day 5",
+    "z3nQKvaJ2yB7hqaRlslpO": "Day 6",
+    "xyhWsTJOM1CdKck9dPGZw": "Day 7",
+    "Eth9B3GzVXKyze1tKYyMp": "Day 8",
+    "VeoZxynLIY90RkDY4qSQa": "Day 9",
+    "iM1PBcBQxW1CgPLUmzGq2": "Day 10",
+    "FYLGIs4Dh2Nsq1v5Jw0UD": "Day 11",
+    "mHoKN4fBdW04zTNyE6Roi": "Day 12",
+    "BWzIJm01jQ6aNNg56CwnS": "Games",
+    "GxCx0RuJn9aZnTttGiwAV": "Destiny",
+    "CCb9z44x6tToDKsRo1C6v": "Gamerdungeon",
+    "eypVVToVojb6pv5KaHqZe": "Lore",
+    "bmfksVF45TgBHDdyUJsQS": "Chimi",
+    "m7rFJ4VATbLr8HxjQggV1": "Lucan",
+    "ZitkEWdUmq0xjuPdkT8uR": "Swift",
+    "YVrkjsKWMdIVBDgQOfonU": "Zek",
+    "33nmklapwax1duczowxks4d": "Project",
+    "Vbsrk5GfrD7i1z2CvyX6w": "Striker",
+    "IJB8jrcnIdK13sDITqOjy": "Tis-100",
+    "4FBpReEDijjQUM3H004Bu": "Segment",
+    "JCl9JZAKJwQjFwhESx2Ac": "00150",
+    "vubGYGeiBWg3n7rewTEVi": "10981",
+    "yjIzJAoRDamPUAIHBQNy1": "20176",
+    "zjsqCWBOt29JUBq6ZeOey": "21340",
+    "ogdoy0dH15fNSg4M3irNS": "22280",
+    "6RRCb93zuX7qI8pXKxr4N": "30647",
+    "umAO61qBwGGbLPh5ktmvO": "31904",
+    "oui26s3o8wsu1uvj78b8wdw": "32050",
+    "pazryrtkvt7sy1pmo08mnid": "33762",
+    "tx7vdzc98otmxpyuwcj6gx9": "40196",
+    "tljsjqw1422w8cb28kqrrsp": "41427",
+    "qvsve4bcorl4qxchnfiuusf": "42656",
+    "csrtis7rmu85wxfivpn3yt5": "43786",
+    "32ycg85z2dqmwgyi4utxrvc": "50370",
+    "e2jtqtbl4kn4i83qd55w6ak": "51781",
+    "ssadkvxk0ugta7xeszqbgp0": "52544",
+    "7nz7hjw4g7pyim1gsb9q116": "53897",
+    "kuyv1m9uuolykukq8nqonml": "6009",
+    "5nfj75v8jhkg73gr87oizxs": "61212",
+    "zn6yh2g7c7m27m7spggt3fl": "62711",
+    "jiv4ktdgw664fs4h0c9xsub": "63534",
+    "ewqv4lbm2vq1beb1lusaii8": "70601",
+    "y6nz0uimi67mvlffm6waxga": "UNKNOWN",
+    "96Hj5nYpnUciwlTenFpoU": "Go",
+    "OmHkA6xzHAPClubvCFwQt": "Framework",
+    "QNZTT1U9ZBung828xTuQz": "Gokit",
+    "6Wl0i0BjF7yD85uM5RTyK": "Kafka",
+    "PeDQmsjlEYcdja9yj2nNL": "Consumer",
+    "wkazkGBnDMXJcyTJckPiu": "Producer",
+    "o3yahkxofd7qighsrvpg893": "Programming",
+    "mx8mxexglr76f2wexrst5rh": "S-expressions",
+    "de9dmvtq24un4eg7t18os7y": "JavaScript",
+    "t5w4acej37neksi1gifrvfo": "Network",
+    "Vlru1TrIpjjC4viiNvcMa": "Overview",
+    "qeciETQdP6y5coUZpEL1W": "Resource Locating and Traffic Routing",
+    "wfOGHenRJP9nCVGtK2e5V": "Reliable TCP Streams",
+    "m61vpgg6kf66r1yh8tmio24": "Web Assembly",
+    "7kyCk8YAkDvIrxLtAUFkG": "Python",
+    "7E5TbfhNUcQdeVfn9wKKb": "Primer",
+    "bKosBjYdFUM5XpRKYA0MT": "Object Oriented Programming",
+    "A6TBKYAcFVjBqZpdbHuaS": "Rust",
+    "qOyBUuT4UMS8TYis4MnIv": "Bots",
+    "rtmKu8OspeorpBFZQCAGS": "Reddit",
+    "t6ilpq115sipjv378ambtkv": "Templates",
+    "yxevpvuphxqyx4s5ujhfl6u": "Tis 100 Solution Template",
+    "w3B0c1Y72MfzhwoVNx7vx": "Todo"
+  }
+}

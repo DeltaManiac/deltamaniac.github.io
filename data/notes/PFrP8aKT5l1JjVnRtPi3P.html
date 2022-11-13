@@ -1,0 +1,31 @@
+<h1 id="binary-path-sum">Binary Path Sum<a aria-hidden="true" class="anchor-heading icon-link" href="#binary-path-sum"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>Given a binary tree and a target, return whether or not there exists a root to leaf path such that all values along the path sum to the target.</p>
+<p>Ex: Given the following tree…</p>
+<pre>      1
+     / \
+    5   2
+   /   / \
+  1  12   29
+</pre>
+<p>and a target of 15, return true as the path 1->2->12 sums to 15.</p>
+<p>Ex: Given the following tree…</p>
+<pre>     104
+    /   \
+  39     31
+ / \    /  \
+32  1  9    10
+and a target of 175, return true as the path 104->39->32 sums to 175.
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">hasPathSum</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> TreeNode<span class="token punctuation">,</span> targetSum<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> root <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+        targetSum <span class="token operator">-=</span> root<span class="token punctuation">.</span>val
+        <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>left <span class="token keyword">and</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> targetSum<span class="token operator">==</span><span class="token number">0</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>hasPathSum<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span>targetSum<span class="token punctuation">)</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>hasPathSum<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span> targetSum<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

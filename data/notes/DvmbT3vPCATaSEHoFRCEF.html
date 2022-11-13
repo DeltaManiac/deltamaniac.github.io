@@ -1,0 +1,81 @@
+<h1 id="convert-binary-search-tree-to-sorted-linked-list">Convert Binary Search Tree to Sorted Linked List<a aria-hidden="true" class="anchor-heading icon-link" href="#convert-binary-search-tree-to-sorted-linked-list"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>Given a binary search tree, rearrange the tree such that it forms a linked list where all its values are in ascending order.</p>
+<p>Ex: Given the following tree...</p>
+<pre>        5
+       / \
+      1   6
+</pre>
+<p>return...</p>
+<pre> 1
+  \
+   5
+    \
+     6
+</pre>
+<p>Ex: Given the following tree...</p>
+<pre>       5
+      / \
+    2    9
+   / \
+  1   3
+</pre>
+<p>return...</p>
+<pre> 1
+  \
+   2
+    \
+     3
+      \
+       5
+        \
+         9
+</pre>
+<p>Ex: Given the following tree...</p>
+<pre> 5
+  \
+   6
+</pre>
+<p>return...</p>
+<pre> 5
+  \
+   6
+</pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Node</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>key <span class="token operator">=</span> <span class="token number">0</span>
+        self<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token keyword">def</span> <span class="token function">newNode</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    node <span class="token operator">=</span> Node<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    node<span class="token punctuation">.</span>key <span class="token operator">=</span> key
+    node<span class="token punctuation">.</span>left <span class="token operator">=</span> node<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token boolean">None</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">flatten</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token boolean">None</span> <span class="token keyword">or</span> root<span class="token punctuation">.</span>left <span class="token operator">==</span> <span class="token boolean">None</span> <span class="token keyword">and</span>
+                        root<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>root<span class="token punctuation">.</span>left <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        flatten<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+
+        tmpRight <span class="token operator">=</span> root<span class="token punctuation">.</span>right
+        root<span class="token punctuation">.</span>right <span class="token operator">=</span> root<span class="token punctuation">.</span>left
+        root<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token boolean">None</span>
+
+        t <span class="token operator">=</span> root<span class="token punctuation">.</span>right
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>t<span class="token punctuation">.</span>right <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            t <span class="token operator">=</span> t<span class="token punctuation">.</span>right
+
+        t<span class="token punctuation">.</span>right <span class="token operator">=</span> tmpRight
+
+    flatten<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+
+
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>

@@ -1,0 +1,54 @@
+<h1 id="22280">22280<a aria-hidden="true" class="anchor-heading icon-link" href="#22280"></a></h1>
+<h2 id="signal-multiplexer">Signal Multiplexer<a aria-hidden="true" class="anchor-heading icon-link" href="#signal-multiplexer"></a></h2>
+<h1 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h1>
+<pre><code>@0
+
+
+@1
+MOV UP,DOWN
+
+@2
+MOV UP,DOWN
+
+@3
+MOV UP,DOWN
+
+@4
+
+
+@5
+MOV UP,RIGHT
+
+@6
+START:
+MOV UP,ACC
+JEZ READ_BOTH
+JGZ READ_RIGHT
+MOV RIGHT,ACC
+MOV LEFT,DOWN
+JMP START
+READ_RIGHT:
+MOV LEFT,ACC
+MOV RIGHT,DOWN
+JMP START
+READ_BOTH:
+MOV RIGHT,ACC
+ADD LEFT
+MOV ACC,DOWN
+
+@7
+MOV UP,LEFT
+
+@8
+
+
+@9
+MOV UP,DOWN
+
+@10
+
+@11
+
+</code></pre>
+<h1 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h1>
+<p><img src="/assets/images/2020-11-05-21-27-40.png"></p>

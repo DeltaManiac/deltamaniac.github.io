@@ -1,0 +1,22 @@
+<h1 id="selection-sort">Selection Sort<a aria-hidden="true" class="anchor-heading icon-link" href="#selection-sort"></a></h1>
+<h1 id="selection-sort-1">Selection Sort<a aria-hidden="true" class="anchor-heading icon-link" href="#selection-sort-1"></a></h1>
+<p>Selection sort finds the smallest element in the array and place it on the first place on the list, then it finds the second smallest element in the array and place it on the second place.</p>
+<h2 id="time-complexity">Time Complexity<a aria-hidden="true" class="anchor-heading icon-link" href="#time-complexity"></a></h2>
+<h3 id="best-onn">Best: O(n*n)<a aria-hidden="true" class="anchor-heading icon-link" href="#best-onn"></a></h3>
+<h3 id="average-onn">Average: O(n*n)<a aria-hidden="true" class="anchor-heading icon-link" href="#average-onn"></a></h3>
+<h3 id="worst-onn">Worst: O(n*n)<a aria-hidden="true" class="anchor-heading icon-link" href="#worst-onn"></a></h3>
+<h2 id="space-complexity-o1">Space Complexity: O(1)<a aria-hidden="true" class="anchor-heading icon-link" href="#space-complexity-o1"></a></h2>
+<h1 id="implementation">Implementation<a aria-hidden="true" class="anchor-heading icon-link" href="#implementation"></a></h1>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">selectionSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        minIdx <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> arr<span class="token punctuation">[</span>minIdx<span class="token punctuation">]</span><span class="token operator">></span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                arr<span class="token punctuation">[</span>minIdx<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>minIdx<span class="token punctuation">]</span>
+
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span>
+selectionSort<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">#[11, 12, 22, 25, 64]</span>
+
+</code></pre>

@@ -1,0 +1,214 @@
+<h1 id="object-oriented-programming">Object Oriented Programming<a aria-hidden="true" class="anchor-heading icon-link" href="#object-oriented-programming"></a></h1>
+<h2 id="classes">Classes<a aria-hidden="true" class="anchor-heading icon-link" href="#classes"></a></h2>
+<h2 id="sample">Sample<a aria-hidden="true" class="anchor-heading icon-link" href="#sample"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">CreditCard</span><span class="token punctuation">:</span>
+ <span class="token triple-quoted-string string">""" A CC for consumer """</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>customer<span class="token punctuation">,</span>bank<span class="token punctuation">,</span>acn<span class="token punctuation">,</span>limit<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>_customer <span class="token operator">=</span> customer
+        self<span class="token punctuation">.</span>_bank <span class="token operator">=</span> bank
+        self<span class="token punctuation">.</span>_account <span class="token operator">=</span> acn
+        self<span class="token punctuation">.</span>_limit <span class="token operator">=</span> limit
+
+    <span class="token keyword">def</span> <span class="token function">get_customer</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>_customer
+
+    <span class="token keyword">def</span> <span class="token function">make_payment</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>amount<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>account <span class="token operator">-=</span> amount
+</code></pre>
+<h2 id="special-methods">Special Methods<a aria-hidden="true" class="anchor-heading icon-link" href="#special-methods"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Syntax</th><th>Special Method</th></tr></thead><tbody><tr><td>a + b</td><td>a.__add\<strong>(b) or b.__radd\</strong>(a)</td></tr><tr><td>a - b</td><td>a.__sub\__(b) or b.__rsub__(a)</td></tr><tr><td>a * b</td><td>a.__mul__(b) or b.__rmul__(a)</td></tr><tr><td>a / b</td><td>a.__truediv__(b) or b.__rtruediv__(a)</td></tr><tr><td>a // b</td><td>a.__floordiv__(b) or b.__rfloordiv__(a)</td></tr><tr><td>a % b</td><td>a.__mod__(b) or b.__rmod__(a)</td></tr><tr><td>a ** b</td><td>a.__pow__(b) or b.__rpow__(a)</td></tr><tr><td>a &#x3C;&#x3C; b</td><td>a.__lshift__(b) or b.__rlshift__(a)</td></tr><tr><td>a >> b</td><td>a.__rshift__(b) or b.__rrshift__(a)</td></tr><tr><td>a &#x26; b</td><td>a.__and__(b) or b.__rand__(a)</td></tr><tr><td>a ^ b</td><td>a.__xor__(b) or b.__rxor__(a)</td></tr><tr><td>a | b</td><td>a.__or__(b) or b.__ror__(a)</td></tr><tr><td>a += b <br> a -= b <br> a *= b <br> ...</td><td>a.__iadd__(b) <br> a.__isub__(b) <br> a.__imul__(b)<br> ...</td></tr><tr><td>+a</td><td>a.__pos__()</td></tr><tr><td>-a</td><td>a.__neg__()</td></tr><tr><td>~a</td><td>a.__invert__()</td></tr><tr><td>abs(a)</td><td>a.__abs__()</td></tr><tr><td>a &#x3C; b</td><td>a.__lt__(b)</td></tr><tr><td>a &#x3C;= b</td><td>a.__le__(b)</td></tr><tr><td>a > b</td><td>a.__gt__(b)</td></tr><tr><td>a >= b</td><td>a.__ge__(b)</td></tr><tr><td>a == b</td><td>a.__eq__(b)</td></tr><tr><td>a != b</td><td>a.__ne__(b)</td></tr><tr><td>v in a</td><td>a.__contains__(v)</td></tr><tr><td>a[k]</td><td>a.__getitem__(k)</td></tr><tr><td>a[k]=v</td><td>a.__setitem__(k,v)</td></tr><tr><td>del a[k]</td><td>a.__delitem__(k)</td></tr><tr><td>a(arg1, arg2)</td><td>a.__call__(arg1,arg2)</td></tr><tr><td>len(a)</td><td>a.__len__()</td></tr><tr><td>hash(a)</td><td>a.__hash__()</td></tr><tr><td>iter(a)</td><td>a.__iter__()</td></tr><tr><td>next(a)</td><td>a.__next__()</td></tr><tr><td>bool(a)</td><td>a.__bool__()</td></tr><tr><td>float(a)</td><td>a.__float__()</td></tr><tr><td>int(a)</td><td>a.__int__()</td></tr><tr><td>repr(a)</td><td>a.__repr__()</td></tr><tr><td>reversed(a)</td><td>a.__reversed__()</td></tr><tr><td>str(a)</td><td>a.__str__()</td></tr></tbody></table></div>
+<h2 id="operator-overloading">Operator Overloading<a aria-hidden="true" class="anchor-heading icon-link" href="#operator-overloading"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Vector</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>d<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>_coords <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> d
+
+    <span class="token keyword">def</span> <span class="token function">__len__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>_coords<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>_coords<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">__setitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>j<span class="token punctuation">,</span>val<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>_coords<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> val
+
+    <span class="token keyword">def</span> <span class="token function">__add__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValurError<span class="token punctuation">(</span><span class="token string">'Dimensions must agree'</span><span class="token punctuation">)</span>
+        result <span class="token operator">=</span> Vector<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            result<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> other<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+        <span class="token keyword">return</span> result
+
+    <span class="token keyword">def</span> <span class="token function">__eq__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>_coords <span class="token operator">==</span> other<span class="token punctuation">.</span>_coords
+
+    <span class="token keyword">def</span> <span class="token function">__ne__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token keyword">not</span> self <span class="token operator">==</span> other
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">'&#x3C;'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>_coords<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span><span class="token string">'>'</span>
+
+</code></pre>
+<h2 id="iterators">Iterators<a aria-hidden="true" class="anchor-heading icon-link" href="#iterators"></a></h2>

@@ -1,0 +1,80 @@
+<h1 id="day-5">Day 5<a aria-hidden="true" class="anchor-heading icon-link" href="#day-5"></a></h1>
+<h2 id="doesnt-he-have-intern-elves-for-this">Doesn't He Have Intern-Elves For This?<a aria-hidden="true" class="anchor-heading icon-link" href="#doesnt-he-have-intern-elves-for-this"></a></h2>
+<h2 id="part-i">Part I<a aria-hidden="true" class="anchor-heading icon-link" href="#part-i"></a></h2>
+<p>Santa needs help figuring out which strings in his text file are naughty or nice.</p>
+<p>A nice string is one with all of the following properties:</p>
+<blockquote>
+<p>It contains at least three vowels (<code>aeiou</code> only), like <code>aei</code>, <code>xazegov</code>, or <code>aeiouaeiouaeiou</code>.</p>
+<p>It contains at least one letter that appears twice in a row, like <code>xx</code>, <code>abcdde</code> (<code>dd</code>), or <code>aabbccdd</code> (<code>aa</code>, <code>bb</code>, <code>cc</code>, or <code>dd</code>).</p>
+<p>It does not contain the strings <code>ab</code>, <code>cd</code>, <code>pq</code>, or <code>xy</code>, even if they are part of one of the other requirements.</p>
+</blockquote>
+<p>For example:</p>
+<blockquote>
+<p><code>ugknbfddgicrmopn</code> is nice because it has at least three vowels (<code>u...i...o...</code>), a double letter (<code>...dd...</code>), and none of the disallowed substrings.</p>
+<p><code>aaa</code> is nice because it has at least three vowels and a double letter, even though the letters used by different rules overlap.</p>
+<p><code>jchzalrnumimnmhp</code> is naughty because it has no double letter.</p>
+<p><code>haegwjzuvuyypxyu</code> is naughty because it contains the string xy.</p>
+<p><code>dvszwmarrgswjxmb</code> is naughty because it contains only one vowel.</p>
+</blockquote>
+<p>How many strings are nice?</p>
+<h2 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h2>
+<p>Iterating the input line by line we can pass it through filters which would apply the conditions so as to eliminate all strings that are not <code>nice</code>.</p>
+<p>The answer is the count of all the remaining strings.</p>
+<pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[aoc(day5, part1)]</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">part1</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">usize</span> <span class="token punctuation">{</span>
+    input
+        <span class="token punctuation">.</span><span class="token function">lines</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>w<span class="token closure-punctuation punctuation">|</span></span> <span class="token operator">!</span><span class="token punctuation">(</span>w<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"ab"</span><span class="token punctuation">)</span> <span class="token operator">||</span> w<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"cd"</span><span class="token punctuation">)</span> <span class="token operator">||</span> w<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"pq"</span><span class="token punctuation">)</span> <span class="token operator">||</span> w<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"xy"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>x<span class="token closure-punctuation punctuation">|</span></span> <span class="token punctuation">{</span>
+            x<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>c<span class="token closure-punctuation punctuation">|</span></span> <span class="token operator">*</span>c <span class="token operator">==</span> <span class="token char">'a'</span> <span class="token operator">||</span> <span class="token operator">*</span>c <span class="token operator">==</span> <span class="token char">'e'</span> <span class="token operator">||</span> <span class="token operator">*</span>c <span class="token operator">==</span> <span class="token char">'i'</span> <span class="token operator">||</span> <span class="token operator">*</span>c <span class="token operator">==</span> <span class="token char">'o'</span> <span class="token operator">||</span> <span class="token operator">*</span>c <span class="token operator">==</span> <span class="token char">'u'</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token operator">></span> <span class="token number">2</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>y<span class="token closure-punctuation punctuation">|</span></span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> <span class="token keyword">mut</span> c <span class="token operator">=</span> y<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">::</span><span class="token operator">&#x3C;</span><span class="token class-name">Vec</span><span class="token operator">&#x3C;</span><span class="token keyword">char</span><span class="token operator">>></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> l <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">len</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            c<span class="token punctuation">.</span><span class="token function">dedup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            l <span class="token operator">!=</span> c<span class="token punctuation">.</span><span class="token function">len</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="part-ii">Part II<a aria-hidden="true" class="anchor-heading icon-link" href="#part-ii"></a></h2>
+<p>Realizing the error of his ways, Santa has switched to a better model of determining whether a string is naughty or nice. None of the old rules apply, as they are all clearly ridiculous.</p>
+<p>Now, a nice string is one with all of the following properties:</p>
+<blockquote>
+<p>It contains a pair of any two letters that appears at least twice in the string without overlapping, like <code>xyxy</code> (<code>xy</code>) or <code>aabcdefgaa</code> (<code>aa</code>), but not like <code>aaa</code> (<code>aa</code>, but it overlaps).</p>
+<p>It contains at least one letter which repeats with exactly one letter between them, like <code>xyx</code>, <code>abcdefeghi</code> (<code>efe</code>), or even <code>aaa</code>.</p>
+</blockquote>
+<p>For example:</p>
+<blockquote>
+<p><code>qjhvhtzxzqqjkmpb</code> is nice because is has a pair that appears twice (<code>qj</code>) and a letter that repeats with exactly one letter between them (<code>zxz</code>).</p>
+<p><code>xxyxx</code> is nice because it has a pair that appears twice and a letter that repeats with one between, even though the letters used by each rule overlap.</p>
+<p><code>uurcxstgmygtbstg</code> is naughty because it has a pair (<code>tg</code>) but no repeat with a single letter between them.</p>
+<p><code>ieodomkazucvgmuy</code> is naughty because it has a repeating letter with one between (<code>odo</code>), but no pair that appears twice.</p>
+</blockquote>
+<p>How many strings are nice under these new rules?</p>
+<h2 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h2>
+<p>A recursive function <code>repeat_xx</code> provides the check for condition we then filter out on the strings that match.</p>
+<p>The answer is the count of all the remaining strings after the filters have been applied.</p>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">repeat_xx</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">bool</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> string<span class="token punctuation">.</span><span class="token function">len</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&#x3C;</span> <span class="token number">4</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">let</span> pair <span class="token operator">=</span> <span class="token operator">&#x26;</span>string<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">..</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> remain <span class="token operator">=</span> <span class="token operator">&#x26;</span>string<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    remain<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>pair<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">repeat_xx</span><span class="token punctuation">(</span><span class="token operator">&#x26;</span>string<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">..</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token attribute attr-name">#[aoc(day5, part2)]</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">part2</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token operator">&#x26;</span><span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">usize</span> <span class="token punctuation">{</span>
+    input
+        <span class="token punctuation">.</span><span class="token function">lines</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>y<span class="token closure-punctuation punctuation">|</span></span> <span class="token function">repeat_xx</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>z<span class="token closure-punctuation punctuation">|</span></span> z<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">zip</span><span class="token punctuation">(</span>z<span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">skip</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">any</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token closure-punctuation punctuation">|</span></span> a <span class="token operator">==</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>

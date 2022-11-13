@@ -1,0 +1,42 @@
+<h1 id="maxdepth">maxDepth<a aria-hidden="true" class="anchor-heading icon-link" href="#maxdepth"></a></h1>
+<h2 id="maximum-depth-of-binary-tree">Maximum Depth of Binary Tree<a aria-hidden="true" class="anchor-heading icon-link" href="#maximum-depth-of-binary-tree"></a></h2>
+<p>Given the <code>root</code> of a binary tree, return its maximum depth</p>
+<h2 id="binary-tree">Binary Tree<a aria-hidden="true" class="anchor-heading icon-link" href="#binary-tree"></a></h2>
+<p><img src="/assets/images/2021-07-17-12-08-23.png"></p>
+<h2 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h2>
+<h3 id="python">Python<a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h3>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span>TreeNode<span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token builtin">max</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span>
+</code></pre>
+<h3 id="go">Go<a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">import</span><span class="token punctuation">(</span>
+<span class="token string">"math"</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">func</span> <span class="token function">maxDepth</span><span class="token punctuation">(</span>root <span class="token operator">*</span>TreeNode<span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> root <span class="token operator">==</span> <span class="token boolean">nil</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">int</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span><span class="token function">Max</span><span class="token punctuation">(</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>Left<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">float64</span><span class="token punctuation">(</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>Right<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="rust">Rust<a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h3>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span><span class="token class-name">Option</span><span class="token operator">&#x3C;</span><span class="token class-name">Rc</span><span class="token operator">&#x3C;</span><span class="token class-name">RefCell</span><span class="token operator">&#x3C;</span><span class="token class-name">TreeNode</span><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">-></span> <span class="token keyword">i32</span><span class="token punctuation">{</span>
+ <span class="token keyword">match</span> root <span class="token punctuation">{</span>
+            <span class="token class-name">Some</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                <span class="token keyword">let</span> l <span class="token operator">=</span> <span class="token class-name">Solution</span><span class="token punctuation">::</span><span class="token function">max_depth</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">borrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>left<span class="token punctuation">.</span><span class="token function">clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">let</span> r <span class="token operator">=</span> <span class="token class-name">Solution</span><span class="token punctuation">::</span><span class="token function">max_depth</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">borrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>right<span class="token punctuation">.</span><span class="token function">clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token namespace">std<span class="token punctuation">::</span>cmp<span class="token punctuation">::</span></span><span class="token function">max</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> r<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token class-name">None</span> <span class="token operator">=></span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

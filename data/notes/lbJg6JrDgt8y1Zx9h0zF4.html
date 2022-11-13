@@ -1,0 +1,29 @@
+<h1 id="array-intersection">Array Intersection<a aria-hidden="true" class="anchor-heading icon-link" href="#array-intersection"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>Write a function that takes two arrays as inputs and returns to us their intersection?</p>
+<p>Ex</p>
+<blockquote>
+<p>const nums1 = [1, 2, 2, 1];
+const nums2 = [2, 2];</p>
+<p>intersection(nums1, nums2);
+// [2]</p>
+</blockquote>
+<p><strong>Constraints</strong></p>
+<ul>
+<li>
+<p>Length of the array &#x3C;= 100000</p>
+</li>
+<li>
+<p>The values in the array will be in the range -1000000000 and 1000000000</p>
+</li>
+<li>
+<p>Expected time complexity: O(n+m) where n and m are the lengths of the array.</p>
+</li>
+<li>
+<p>Expected space complexity: O(max(n,m)).</p>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+</li>
+</ul>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">intersection</span><span class="token punctuation">(</span>arr1<span class="token punctuation">,</span>arr2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token punctuation">.</span>intersection<span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>arr2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>

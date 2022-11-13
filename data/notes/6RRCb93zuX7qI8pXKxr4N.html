@@ -1,0 +1,69 @@
+<h1 id="30647">30647<a aria-hidden="true" class="anchor-heading icon-link" href="#30647"></a></h1>
+<h2 id="sequence-generator">Sequence Generator<a aria-hidden="true" class="anchor-heading icon-link" href="#sequence-generator"></a></h2>
+<h1 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h1>
+<pre><code>@0
+
+
+@1
+MOV UP, ACC
+MOV ACC,RIGHT
+MOV ACC,DOWN
+
+@2
+MOV UP,ACC
+SAV
+SUB LEFT
+MOV ACC,DOWN
+SWP
+MOV ACC DOWN
+
+@3
+
+
+@4
+
+
+@5
+MOV UP,RIGHT
+
+@6
+START:
+MOV UP,ACC
+JLZ ACCEPT_TOP
+
+ACCEPT_LEFT:
+MOV LEFT,DOWN
+MOV UP,DOWN
+JMP START
+
+ACCEPT_TOP:
+MOV UP,DOWN
+MOV LEFT,DOWN
+JMP START
+
+@7
+
+
+@8
+
+
+@9
+MOV -2,ACC
+START:
+JEZ RESET
+MOV UP,DOWN
+ADD 1
+JMP START
+
+RESET:
+MOV 0,DOWN
+MOV -2,ACC
+JMP START
+
+@10
+
+@11
+
+</code></pre>
+<h1 id="solution-1">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution-1"></a></h1>
+<p><img src="/assets/images/2020-11-05-21-29-23.png"></p>

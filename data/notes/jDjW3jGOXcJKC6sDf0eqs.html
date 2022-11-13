@@ -1,0 +1,23 @@
+<h1 id="stones-and-jewels">Stones and Jewels<a aria-hidden="true" class="anchor-heading icon-link" href="#stones-and-jewels"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Amazon.</p>
+<p>Given a string representing your stones and another string representing a list of jewels, return the number of stones that you have that are also jewels.</p>
+<p>Ex: Given the following jewels and stones...</p>
+<blockquote>
+<p>jewels = "abc", stones = "ac", return 2</p>
+<p>jewels = "Af", stones = "AaaddfFf", return 3</p>
+<p>jewels = "AYOPD", stones = "ayopd", return 0</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">is_jewel_and_stone</span><span class="token punctuation">(</span>jewels<span class="token punctuation">,</span>stones<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>jewels<span class="token punctuation">)</span><span class="token punctuation">.</span>intersection<span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>stones<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

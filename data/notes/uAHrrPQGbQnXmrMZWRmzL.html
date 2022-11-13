@@ -1,0 +1,27 @@
+<h1 id="middle-node-of-linked-list">Middle Node of Linked List<a aria-hidden="true" class="anchor-heading icon-link" href="#middle-node-of-linked-list"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>This question is asked by Amazon.</p>
+<p>Given a non-empty linked list, return the middle node of the list. If the linked list contains an even number of elements, return the node closer to the end.</p>
+<p>Ex: Given the following linked lists...</p>
+<blockquote>
+<p>1->2->3->null, return 2</p>
+<p>1->2->3->4->null, return 3</p>
+<p>1->null, return 1</p>
+</blockquote>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">middleNode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    slow <span class="token operator">=</span> fast <span class="token operator">=</span> head
+    <span class="token keyword">while</span> fast <span class="token keyword">and</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">:</span>
+        slow <span class="token operator">=</span> slow<span class="token punctuation">.</span><span class="token builtin">next</span>
+        fast <span class="token operator">=</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+    <span class="token keyword">return</span> slow
+</code></pre>
+<h2 id="go"><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a><a aria-hidden="true" class="anchor-heading icon-link" href="#go"></a></h2>
+<h2 id="rust"><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a><a aria-hidden="true" class="anchor-heading icon-link" href="#rust"></a></h2>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/96Hj5nYpnUciwlTenFpoU">Go</a></li>
+<li><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a></li>
+<li><a href="/notes/A6TBKYAcFVjBqZpdbHuaS">Rust</a></li>
+</ul>

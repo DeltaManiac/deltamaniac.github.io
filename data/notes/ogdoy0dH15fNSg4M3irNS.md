@@ -1,0 +1,59 @@
+## Signal Multiplexer
+
+# Solution
+
+```
+@0
+
+
+@1
+MOV UP,DOWN
+
+@2
+MOV UP,DOWN
+
+@3
+MOV UP,DOWN
+
+@4
+
+
+@5
+MOV UP,RIGHT
+
+@6
+START:
+MOV UP,ACC
+JEZ READ_BOTH
+JGZ READ_RIGHT
+MOV RIGHT,ACC
+MOV LEFT,DOWN
+JMP START
+READ_RIGHT:
+MOV LEFT,ACC
+MOV RIGHT,DOWN
+JMP START
+READ_BOTH:
+MOV RIGHT,ACC
+ADD LEFT
+MOV ACC,DOWN
+
+@7
+MOV UP,LEFT
+
+@8
+
+
+@9
+MOV UP,DOWN
+
+@10
+
+@11
+
+```
+
+# Solution
+
+![](/assets/images/2020-11-05-21-27-40.png)
+

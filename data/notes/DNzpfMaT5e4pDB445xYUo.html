@@ -1,0 +1,26 @@
+<h1 id="string-permutations">String Permutations<a aria-hidden="true" class="anchor-heading icon-link" href="#string-permutations"></a></h1>
+<h1 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h1>
+<p>This question is asked by Amazon. Given a string s consisting of only letters and digits, where we are allowed to transform any letter to uppercase or lowercase, return a list containing all possible permutations of the string.</p>
+<p>Ex: Given the following string…</p>
+<pre><code>S = "c7w2", return ["c7w2", "c7W2", "C7w2", "C7W2"]
+</code></pre>
+<h2 id="python"><a href="/notes/7kyCk8YAkDvIrxLtAUFkG">Python</a><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">letterCasePermutation</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> S<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">backtrack</span><span class="token punctuation">(</span>sub<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">,</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sub<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">len</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sub<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> S<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                backtrack<span class="token punctuation">(</span>sub <span class="token operator">+</span> S<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>swapcase<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            backtrack<span class="token punctuation">(</span>sub <span class="token operator">+</span> S<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+    res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    backtrack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res
+``
+<span class="token comment">## [[go]]</span>
+
+<span class="token comment">## [[rust]]</span>
+
+
+</code></pre>
