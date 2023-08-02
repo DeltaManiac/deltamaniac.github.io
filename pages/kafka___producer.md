@@ -11,7 +11,7 @@
   Store in schema Registry
   Store schema identifier in produced message
   ![image.png](../assets/image_1690986471537_0.png)
-- ### In [[rust]]
+- ### In [[programming/rust]]
 	- Crate : [kafka](https://crates.io/crates/kafka)
 	  id:: 64ca6686-5994-4224-b3af-31c1a0e11d40
 	  ```rust
@@ -72,7 +72,7 @@
 	  Schema Registry for confluent : <https://github.com/gklijs/schema_registry_converter>
 	  
 	  Confluent Write up : <https://www.confluent.io/blog/getting-started-with-rust-and-kafka/>
-- ## In [[go]]
+- ## In [[programming/go]]
   Package : [Confluent Inc](https://github.com/confluentinc/confluent-kafka-go)
   ``` go
   func main() {

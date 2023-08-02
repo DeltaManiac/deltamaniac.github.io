@@ -12,7 +12,7 @@
 	- creates a short unavailability window
 	  ![image.png](../assets/image_1690987376438_0.png)
 - # Creating a Consumer
-- ## In [[rust]] 
+- ## In [[programming/rust]] 
   id:: 64ca64fe-fe7c-4ff3-a202-d9c3d1d82e64
   
   Crate : [kafka](https://crates.io/crates/kafka)
@@ -90,7 +90,7 @@
   ```
   
   * * *
-- ## In [[go]]
+- ## In [[programming/go]]
   
   Package : [Confluent Inc](https://github.com/confluentinc/confluent-kafka-go)
   
