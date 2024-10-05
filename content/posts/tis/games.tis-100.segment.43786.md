@@ -1,0 +1,83 @@
++++
+title = "TIS-100 Segment : 43786"
+date = "2022-11-12T22:28:48.044000+05:30"
+tags = ["games", "TIS-100"]
+draft = false
+type = "post"
++++
+
+# Signal Multiplier
+
+### Solution
+
+![](/images/games/tis-100/segment/43786/1.png) 
+
+### Solution
+
+```
+@0
+
+@1
+MOV UP,ACC
+MOV ACC,RIGHT
+MOV ACC,RIGHT
+
+@2
+IN: 
+MOV UP,ACC
+SAV
+SUB LEFT
+JGZ A>B
+B>A:
+SWP
+MOV LEFT,DOWN
+MOV ACC,DOWN
+JMP IN
+A>B:
+SWP
+MOV ACC,DOWN
+MOV LEFT,DOWN
+
+@3
+
+@4
+
+@5
+
+@6
+IN:
+MOV UP,ACC
+SAV
+MOV UP,ACC
+JEZ END
+
+LOOP:
+SWP
+MOV ACC,DOWN
+SWP
+SUB 1
+JGZ LOOP
+
+END: 
+MOV 0,DOWN
+
+@7
+
+@8
+
+@9
+MOV RIGHT,RIGHT
+@10
+LOOP:
+MOV ACC,LEFT
+MOV UP,ACC
+JEZ END
+ADD LEFT
+JMP LOOP
+
+END: 
+MOV LEFT,DOWN
+MOV 0 ACC
+@11
+
+```

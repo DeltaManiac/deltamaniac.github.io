@@ -1,0 +1,77 @@
++++
+title = "TIS-100 Segment : 31904"
+date = "2020-12-26T12:44:37.189000+05:30"
+tags = ["games", "TIS-100"]
+draft = false
+type = "post"
++++
+
+# Sequence Counter
+
+### Solution
+
+![](/images/games/tis-100/segment/31904/1.png)
+
+### Solution
+
+```
+@0
+
+
+@1
+MOV UP ACC
+MOV ACC RIGHT
+MOV ACC DOWN
+
+@2
+START:
+MOV LEFT ACC
+JNZ ADD
+JMP TERMINATE
+ADD:
+SWP
+ADD 1
+SAV
+JMP START
+TERMINATE:
+SWP
+MOV ACC DOWN
+MOV 0 ACC
+
+@3
+
+@4
+MOV RIGHT ACC
+MOV ACC RIGHT
+
+@5
+START:
+MOV UP ACC
+JNZ ADD
+JMP TERMINATE
+ADD:
+MOV ACC LEFT
+SWP
+ADD LEFT
+SAV
+JMP START
+TERMINATE:
+SWP
+MOV ACC DOWN
+MOV 0 ACC
+
+@6
+MOV UP DOWN
+
+@7
+
+
+@8
+MOV UP DOWN
+
+@9
+MOV UP DOWN
+
+@10
+
+```

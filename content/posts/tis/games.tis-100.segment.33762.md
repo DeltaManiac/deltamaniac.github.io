@@ -1,0 +1,109 @@
++++
+title = "TIS-100 Segment : 33762"
+date = "2022-11-12T21:41:21.075000+05:30"
+tags = ["games", "TIS-100"]
+draft = false
+type = "post"
++++
+
+# Interrupt Handler
+
+### Solution
+
+![](/images/games/tis-100/segment/33762/1.png)
+
+### Solution
+
+```
+@0
+START:
+MOV UP,ACC
+JGZ CHECK
+SWP
+JMP NEXT
+
+CHECK:
+SWP
+JGZ NEXT
+MOV 1,DOWN
+JMP START
+
+NEXT:
+MOV 0,DOWN
+
+@1
+START:
+MOV UP,ACC
+JGZ CHECK
+SWP
+JMP NEXT
+
+CHECK:
+SWP
+JGZ NEXT
+MOV 2,DOWN
+JMP START
+
+NEXT:
+MOV 0,DOWN
+
+@2
+START:
+MOV UP,ACC
+JGZ CHECK
+SWP
+JMP NEXT
+
+CHECK:
+SWP
+JGZ NEXT
+MOV 3,DOWN
+JMP START
+
+NEXT:
+MOV 0,DOWN
+
+@3
+START:
+MOV UP,ACC
+JGZ CHECK
+SWP
+JMP NEXT
+
+CHECK:
+SWP
+JGZ NEXT
+MOV 4,DOWN
+JMP START
+
+NEXT:
+MOV 0,DOWN
+
+@4
+MOV UP,RIGHT
+
+@5
+MOV UP,RIGHT
+MOV LEFT,RIGHT
+
+@6
+ADD UP
+ADD RIGHT
+ADD LEFT
+ADD LEFT
+MOV ACC,DOWN
+MOV 0,ACC
+
+@7
+MOV UP,LEFT
+
+@8
+
+@9
+MOV UP,DOWN
+
+@10
+
+@11
+
+```

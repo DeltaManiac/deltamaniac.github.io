@@ -1,0 +1,79 @@
++++
+title = 'TIS-100 Segment : UKNOWN'
+date = "2022-11-13T10:42:38.460000+05:30"
+tags = ["games", "TIS-100"]
+draft = false
+type = "post"
++++
+
+# UNKNOWN
+
+### Solution
+
+![](/images/games/tis-100/segment/UNKOWN/1.png) 
+
+### Solution
+
+```
+@0
+
+@1
+ MOV -1  ACC
+ SAV
+ MOV UP  ACC
+DIV: JLZ OUT
+ SUB 27
+ SWP
+ ADD 1
+ SWP
+ JMP DIV
+OUT: SWP
+ MOV ACC DOWN
+
+@2
+
+@3
+
+@4
+
+@5
+ MOV UP  ACC
+ MOV ACC DOWN
+ MOV ACC RIGHT
+ 
+@6
+MOV LEFT DOWN
+
+@7
+
+@8
+
+@9
+MOV UP  ACC
+MOV ACC DOWN
+MOV ACC RIGHT
+
+@10
+RST: MOV UP ACC
+ SAV
+CMP: SWP
+ SAV
+ SUB LEFT
+ JNZ OUT
+ MOV UP    NIL
+ MOV RIGHT NIL
+ MOV 1     RIGHT
+ JMP CMP
+OUT: SWP
+ MOV RIGHT DOWN
+ MOV -999  RIGHT
+ MOV ACC  DOWN
+ 
+@11
+RUN: MOV ACC LEFT
+ ADD LEFT
+ JLZ CLR
+ JMP RUN
+CLR: MOV 1   ACC
+
+```

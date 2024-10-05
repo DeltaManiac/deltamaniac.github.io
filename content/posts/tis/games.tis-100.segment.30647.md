@@ -1,0 +1,81 @@
++++
+title = "TIS-100 Segment : 30647"
+date = "2020-11-05T21:28:29.867000+05:30"
+tags = ["games", "TIS-100"]
+draft = false
+type = "post"
++++
+
+# Sequence Generator
+
+### Solution
+
+![](/images/games/tis-100/segment/30647/1.png)
+
+### Solution
+
+```
+@0
+
+
+@1
+MOV UP, ACC
+MOV ACC,RIGHT
+MOV ACC,DOWN
+
+@2
+MOV UP,ACC
+SAV
+SUB LEFT
+MOV ACC,DOWN
+SWP
+MOV ACC DOWN
+
+@3
+
+
+@4
+
+
+@5
+MOV UP,RIGHT
+
+@6
+START:
+MOV UP,ACC
+JLZ ACCEPT_TOP
+
+ACCEPT_LEFT:
+MOV LEFT,DOWN
+MOV UP,DOWN
+JMP START
+
+ACCEPT_TOP:
+MOV UP,DOWN
+MOV LEFT,DOWN
+JMP START
+
+@7
+
+
+@8
+
+
+@9
+MOV -2,ACC
+START:
+JEZ RESET
+MOV UP,DOWN
+ADD 1
+JMP START
+
+RESET:
+MOV 0,DOWN
+MOV -2,ACC
+JMP START
+
+@10
+
+@11
+
+```
