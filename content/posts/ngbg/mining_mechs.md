@@ -12,11 +12,11 @@ type = "post"
 
 Steam Link : https://store.steampowered.com/app/1603180/Mining_Mechs/
 
-Savefile Location : C:\Users\\%PROFILE%\AppData\Local\Mining_Mechs
+Savefile Location : _C:\Users\\%PROFILE%\AppData\Local\Mining_Mechs_
 
-File Name : save_data_0.sav
+File Name : _save_data_0.sav_
 
-Format : JSON
+Format : _JSON_
 
 ## What is this game about?
 
@@ -35,10 +35,14 @@ The save game is a plain JSON file, although it's quite large. It contains infor
 
 ![](/images/ngbg/mining_mechs/2.png)
 
+Open the file in a text editor of your choice, I've used VS Code here.
 To quickly find which field to modify, search for that value in the save file. Open your favorite text editor, hit `Ctrl+F`, and paste the value. In my case, it was __5370__, and I found it under `root.player_<id>.money`. I changed it to an arbitrary value __69420__ and the next time I launched the game, the change was reflected.
 
 ![](/images/ngbg/mining_mechs/3.png)
 
-Have fun—no more grinding necessary for materials!
 
 ![](/images/ngbg/mining_mechs/4.png)
+
+---
+
+Have fun—no more grinding necessary for materials!
