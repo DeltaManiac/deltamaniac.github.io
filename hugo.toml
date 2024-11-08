@@ -93,4 +93,5 @@ togglePreviousAndNextButtons = "true"
 
 customHeadHTML = '''
  <meta name="fediverse:creator" content="@DeltaManiac@hachyderm.io">
+ <link rel="me" href="https://hachyderm.io/@DeltaManiac"/>
 '''
