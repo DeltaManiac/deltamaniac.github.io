@@ -8,7 +8,7 @@ type = "post"
 
 # Cobalt Core
 
-![](/images/ngbg/cobalt_core/1.png)
+![](/images/ngbg/cobalt_core/cobalt_core_1.png)
 
 Steam Link : https://store.steampowered.com/app/2179850/Cobalt_Core/
 
