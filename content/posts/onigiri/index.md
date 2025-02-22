@@ -18,10 +18,7 @@ Picture this: It's 3 AM, production is acting up, and I'm staring at my terminal
 
 Why Onigiri? Well, just like how these Japanese rice balls wrap delicious fillings in a neat package, I wanted something to wrap my messy SSH tunnels in a clean GUI. Plus, _Santoryu_, if you know you know.
 
-![](/images/onigiri/onigiri_1.png)
-![](/images/onigiri/onigiri_2.png)
-![](/images/onigiri/onigiri_3.png)
-
+![](/images/onigiri/onigiri_4.png)
 
 ### The Tech Stack
 
