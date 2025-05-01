@@ -47,9 +47,9 @@ For those who’d like to skip the grind and tweak their save file, the process 
 3. **Step 3:** Copy the decoded value into a text editor and modify the values. The key resources that can be modified are `ArtifactFragment`, `DreamCrystal` and `DreamShard`.
 ![](/images/ngbg/nightmare_the_lunatic/nightmare_the_lunatic_5.png)
 
-4. **step 4:** Copy and paste the modified contents into a base64 encoder, here we use  [base64encode.org](https://www.base64encode.org/) 
+4. **Step 4:** Copy and paste the modified contents into a base64 encoder, here we use  [base64encode.org](https://www.base64encode.org/) 
 
-5. **step 5:** Copy the newly encoded text back into your SAVE_1.dat file and save it.
+5. **Step 5:** Copy the newly encoded text back into your SAVE_1.dat file and save it.
 
 ![](/images/ngbg/nightmare_the_lunatic/nightmare_the_lunatic_6.png)
 
